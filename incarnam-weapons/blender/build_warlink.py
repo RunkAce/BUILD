@@ -340,6 +340,8 @@ if __name__ == '__main__':
     bpy.ops.file.pack_all()
     bpy.ops.wm.save_as_mainfile(filepath=os.path.join(src_dir, f'{NAME}.blend'))
     print(json.dumps(stats, indent=1))
+    if '--no-renders' in sys.argv:
+        sys.exit(0)
 
     # 4) presentation scene: concept pose with baked materials, separate posed link objects
     link_piece.hide_render = ring_piece.hide_render = True

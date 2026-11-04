@@ -286,6 +286,8 @@ if __name__ == '__main__':
         json.dump(res['stats'], fh, indent=1)
     stage.export_fbx(os.path.join(ROOT, 'export', NAME, f'{NAME}_Ribbon.fbx'), [rig, ribbon])
     bpy.ops.wm.save_as_mainfile(filepath=os.path.join(ROOT, 'source', f'{NAME}.blend'))
+    if '--no-renders' in sys.argv:
+        sys.exit(0)
     meshes = res['meshes'] + [ribbon]
     rdir = os.path.join(ROOT, 'renders', 'flarecrest')
     pipeline.acceptance_renders(NAME, meshes, res['glow'], rdir, samples=48)

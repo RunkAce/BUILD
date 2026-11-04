@@ -197,6 +197,8 @@ if __name__ == '__main__':
         'VFX_Gem': (0.0, 0.0, 0.13),
     })
     print(json.dumps(res['stats'], indent=1))
+    if '--no-renders' in sys.argv:
+        sys.exit(0)
     rdir = os.path.join(ROOT, 'renders', 'oathsplitter')
     pipeline.acceptance_renders(NAME, res['meshes'], res['glow'], rdir, samples=48)
     stage.set_mood('showcase')

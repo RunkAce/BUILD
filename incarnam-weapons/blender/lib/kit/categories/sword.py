@@ -12,7 +12,10 @@ def build(style, ctx):
     body, glow = [], []
     shape = core.blade_outline(L, W, edge=bl.get('edge', 'straight'), tip=bl.get('tip', 'point'),
                                holes=bl.get('holes', 'none'), notch=bl.get('notch', 'none'))
+    # porthole / coin slot (inlaid race holes) just above the root motif
+    shape, holes = core.inlaid_hole(shape, bl.get('holes', 'none'), W * 0.8 + 0.03)
     body.append(core.blade('Blade', core.place(shape, 0, 0.12), L, col, M['primary'], thickness=0.13))
+    body += core.inlay_parts('Blade', holes, col, M, 0.13, place_fn=lambda g: core.place(g, 0, 0.12))
     g = core.guard_shape(style, 0.62 * chunky, 0.26)
     body.append(core.plate('Guard', core.place(g, 0, 0.06), 0.26, col, M['secondary'], chamfer=0.04))
     # race motif: seated as an inlay at the blade root (through-slab slightly thicker than the blade)

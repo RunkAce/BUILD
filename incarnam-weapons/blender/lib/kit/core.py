@@ -12,6 +12,8 @@ RACE STYLE CONTRACT  (lib/kit/races/<race>.py must define STYLE = {...}):
                                               accent (inlays), grip (wrap), haft (shafts/handles/wood),
                                               glow (emissive accent; spec with emit=...)
   blade         dict(edge=..., tip=..., width=1.0, holes=..., notch=...)   see blade_outline()
+  blade_by_cat  optional {category: {blade key: value}} merged over blade for that category only
+  mats.glass    optional non-emissive role for inlaid porthole glass (falls back to secondary)
   guard         one of GUARDS keys                               (or a callable(width, depth) -> shape)
   pommel        one of POMMELS keys
   grip_wraps    int, 4..9
@@ -120,13 +122,16 @@ def blade_outline(length, width, edge='straight', tip='point', holes='none', not
                   seed=0):
     """Blade from z=0 (root) to z=length (tip), centred on x=0, half-width = width/2.
     edge : straight | leaf | serrated | wavy | crystal | jagged | broad
-    tip  : point | clip | split | chisel | hook
+    tip  : point | clip | split | chisel | hook | spade (rounded shovel/spoon end)
     holes: none | slot | rings | motif (caller cuts motif separately)
+           | porthole | coinslot (INLAID_HOLES: ignored here; templates cut them with inlaid_hole() so the
+             bezel / glass parts can follow the template's own taper / bend)
     notch: none | scoop | teeth
     single_edge: spine on the -X side (katana/cleaver-like)."""
     hw = width / 2
     n = 28
-    tip_len = {'point': 0.24, 'clip': 0.2, 'split': 0.22, 'chisel': 0.1, 'hook': 0.18}.get(tip, 0.22) * length
+    tip_len = {'point': 0.24, 'clip': 0.2, 'split': 0.22, 'chisel': 0.1, 'hook': 0.18,
+               'spade': 0.26}.get(tip, 0.22) * length
     body = length - tip_len
     right, left = [], []
     for i in range(n + 1):
@@ -164,6 +169,13 @@ def blade_outline(length, width, edge='straight', tip='point', holes='none', not
     elif tip == 'hook':
         tip_pts_r = [(hw * 1.05, body + tip_len * 0.7), (hw * 0.2, length)]
         tip_pts_l = []
+    elif tip == 'spade':
+        # shovel / spoon: shoulders swell a touch, round over and meet in a short blunt point
+        xl = left[-1][0]
+        tip_pts_r = geo.bezier((right[-1][0], body), (hw * 1.32, body + tip_len * 0.4),
+                               (hw * 0.95, length * 0.995), (0.0, length), 10)[1:]
+        tip_pts_l = geo.bezier((0.0, length), (xl * 0.95, length * 0.995), (xl * 1.32, body + tip_len * 0.4),
+                               (xl, body), 10)[1:-1]
     else:  # split
         tip_pts_r = [(hw * 0.55, length), (hw * 0.12, body + tip_len * 0.25), (-hw * 0.12, body + tip_len * 0.25),
                      (-hw * 0.55, length * 0.985)]
@@ -179,6 +191,82 @@ def blade_outline(length, width, edge='straight', tip='point', holes='none', not
         for k in range(3):
             shape = shape.difference(Point(cx, body * (0.25 + k * 0.18)).buffer(hw * 0.2, 12))
     return shape.buffer(0)
+
+
+INLAID_HOLES = ('porthole', 'coinslot')
+
+
+def _width_at(shape, z):
+    sl = shape.intersection(box(-50.0, z - 0.004, 50.0, z + 0.004))
+    if sl.is_empty:
+        return None
+    x0, _, x1, _ = sl.bounds
+    return (x0 + x1) / 2, (x1 - x0) / 2
+
+
+def inlaid_hole(shape, holes, z_bottom, size=1.0, bolts=True):
+    """Cut ONE seated hole into a (2D) blade shape, sized to the blade's local width, its bezel starting at
+    z_bottom (keep it just above the template's langet / root motif, i.e. near the guard).
+      porthole : big round port, a thick bolted bezel ring (accent) and a glass disc set inside (fill)
+      coinslot : a horizontal rounded coin slot with a raised lip (accent), left open (negative space)
+    Returns (shape, parts) where parts = [(suffix, shape2d, role)] with role 'rim' (thicker than the blade,
+    accent) or 'fill' (thinner than the blade, glass). Apply the template's later transforms to both.
+    Non-inlaid kinds return (shape, [])."""
+    if holes not in INLAID_HOLES:
+        return shape, []
+    w = _width_at(shape, z_bottom + 0.12)
+    if w is None:
+        return shape, []
+    hw = w[1]
+    if holes == 'porthole':
+        r = hw * 0.5 * size
+        rim_o = r * 1.32
+        z = z_bottom + rim_o + 0.01
+        w2 = _width_at(shape, z)
+        if w2 is None:
+            return shape, []
+        cx, hw2 = w2
+        r = min(r, hw2 * 0.52 * size)
+        rim_o = r * 1.32
+        c = Point(cx, z)
+        cut = c.buffer(r, 24)
+        rim = c.buffer(rim_o, 24).difference(c.buffer(r * 0.86, 24))
+        if bolts:
+            nb = 8 if r > 0.09 else 6
+            rim = unary_union([rim] + [Point(cx + rim_o * math.cos(2 * math.pi * k / nb + math.pi / nb),
+                                             z + rim_o * math.sin(2 * math.pi * k / nb + math.pi / nb))
+                                       .buffer(r * 0.17, 6) for k in range(nb)])
+        rim = rim.intersection(shape.buffer(-0.012)).buffer(0)
+        return shape.difference(cut).buffer(0), [('PortRim', rim, 'rim'), ('PortGlass', c.buffer(r * 0.93, 24), 'fill')]
+    # coinslot
+    b = max(0.028, hw * 0.15 * size)
+    a = hw * 0.52 * size
+    z = z_bottom + b + 0.06
+    w2 = _width_at(shape, z)
+    if w2 is None:
+        return shape, []
+    cx = w2[0]
+    a = min(a, w2[1] * 0.55 * size)
+    cut = LineString([(cx - a + b, z), (cx + a - b, z)]).buffer(b, 8)
+    lip = cut.buffer(max(0.03, b * 0.8), 8).difference(cut.buffer(-0.008, 8))
+    lip = lip.intersection(shape.buffer(-0.012)).buffer(0)
+    return shape.difference(cut).buffer(0), [('CoinLip', lip, 'rim')]
+
+
+def inlay_parts(name, parts, col, M, blade_t, place_fn=None):
+    """Turn inlaid_hole() parts into plates: rim (accent, proud of the blade) and fill (glass, inside the blade).
+    The glass uses the race's optional 'glass' role (falls back to secondary). place_fn maps local -> world 2D."""
+    out = []
+    for suffix, shp, role in parts:
+        if shp is None or shp.is_empty:
+            continue
+        shp = place_fn(shp) if place_fn else shp
+        if role == 'rim':
+            out.append(plate(f'{name}{suffix}', shp, blade_t + 0.05, col, M['accent'], chamfer=0.015))
+        else:
+            out.append(plate(f'{name}{suffix}', shp, blade_t * 0.6, col, M.get('glass') or M['secondary'],
+                             chamfer=0.01))
+    return out
 
 
 def blade(name, shape, length, col, mat, thickness=0.12, edge_t=0.02, bevel=None):

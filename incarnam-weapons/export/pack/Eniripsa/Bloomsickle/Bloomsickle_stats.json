@@ -1,0 +1,123 @@
+{
+ "name": "Bloomsickle",
+ "triangles": {
+  "Bloomsickle_Body": 5595,
+  "Bloomsickle_Glow": 52
+ },
+ "triangles_total": 5647,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Bloomsickle/textures/Bloomsickle_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Bloomsickle/textures/Bloomsickle_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Bloomsickle/textures/Bloomsickle_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Bloomsickle/textures/Bloomsickle_NormalMap.png"
+ },
+ "health": {
+  "Bloomsickle_Body": {
+   "non_manifold_edges": 657,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.456388,
+   "normals_outward": true
+  },
+  "Bloomsickle_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002051,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6312,
+   "quads": 2515,
+   "ngons": 2,
+   "faces": 3787,
+   "sliver_tris_lt6deg": 298,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 446,
+  "after": {
+   "Bloomsickle_Body": {
+    "triangles": 5595,
+    "quads": 2246,
+    "ngons": 0,
+    "faces": 3349,
+    "sliver_tris_lt6deg": 216,
+    "non_manifold_edges": 657,
+    "open_boundary_edges": 657,
+    "uv_coverage": 0.502
+   },
+   "Bloomsickle_Glow": {
+    "triangles": 52,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.567
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.8054
+  ],
+  "VFX_Tip": [
+   2.8987,
+   0.0,
+   1.7805
+  ],
+  "VFX_Blade": [
+   1.5847,
+   0.0,
+   2.6751
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.716,
+   -0.225,
+   -2.682
+  ],
+  "max": [
+   2.899,
+   0.165,
+   3.476
+  ],
+  "length": 6.157
+ },
+ "race": "Eniripsa",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.157,
+  "width": 3.615,
+  "depth": 0.39,
+  "triangles": 6372
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "name": "Balmcaster",
+ "triangles": {
+  "Balmcaster_Body": 2132,
+  "Balmcaster_Glow": 514
+ },
+ "triangles_total": 2646,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Balmcaster/textures/Balmcaster_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Balmcaster/textures/Balmcaster_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Balmcaster/textures/Balmcaster_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Balmcaster/textures/Balmcaster_NormalMap.png"
+ },
+ "health": {
+  "Balmcaster_Body": {
+   "non_manifold_edges": 370,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.151768,
+   "normals_outward": true
+  },
+  "Balmcaster_Glow": {
+   "non_manifold_edges": 156,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.005756,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2696,
+   "quads": 816,
+   "ngons": 2,
+   "faces": 1874,
+   "sliver_tris_lt6deg": 178,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 454,
+  "after": {
+   "Balmcaster_Body": {
+    "triangles": 2132,
+    "quads": 630,
+    "ngons": 1,
+    "faces": 1499,
+    "sliver_tris_lt6deg": 100,
+    "non_manifold_edges": 370,
+    "open_boundary_edges": 370,
+    "uv_coverage": 0.543
+   },
+   "Balmcaster_Glow": {
+    "triangles": 514,
+    "quads": 257,
+    "ngons": 0,
+    "faces": 257,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 156,
+    "open_boundary_edges": 156,
+    "uv_coverage": 0.456
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.3464,
+   0.0,
+   1.9869
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.362,
+   -0.209,
+   -0.443
+  ],
+  "max": [
+   0.68,
+   0.209,
+   1.987
+  ],
+  "length": 2.43
+ },
+ "race": "Eniripsa",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.43,
+  "width": 1.041,
+  "depth": 0.417,
+  "triangles": 3368
+ }
+}

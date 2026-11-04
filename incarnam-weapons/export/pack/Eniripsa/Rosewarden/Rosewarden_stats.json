@@ -1,0 +1,118 @@
+{
+ "name": "Rosewarden",
+ "triangles": {
+  "Rosewarden_Body": 3119,
+  "Rosewarden_Glow": 280
+ },
+ "triangles_total": 3399,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Rosewarden/textures/Rosewarden_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Rosewarden/textures/Rosewarden_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Rosewarden/textures/Rosewarden_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Rosewarden/textures/Rosewarden_NormalMap.png"
+ },
+ "health": {
+  "Rosewarden_Body": {
+   "non_manifold_edges": 527,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.856294,
+   "normals_outward": true
+  },
+  "Rosewarden_Glow": {
+   "non_manifold_edges": 62,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00601,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4116,
+   "quads": 1605,
+   "ngons": 2,
+   "faces": 2497,
+   "sliver_tris_lt6deg": 321,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 572,
+  "after": {
+   "Rosewarden_Body": {
+    "triangles": 3119,
+    "quads": 1170,
+    "ngons": 0,
+    "faces": 1949,
+    "sliver_tris_lt6deg": 238,
+    "non_manifold_edges": 527,
+    "open_boundary_edges": 527,
+    "uv_coverage": 0.656
+   },
+   "Rosewarden_Glow": {
+    "triangles": 280,
+    "quads": 78,
+    "ngons": 0,
+    "faces": 202,
+    "sliver_tris_lt6deg": 36,
+    "non_manifold_edges": 62,
+    "open_boundary_edges": 62,
+    "uv_coverage": 0.561
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.915,
+   -0.225,
+   -1.451
+  ],
+  "max": [
+   0.915,
+   0.225,
+   4.425
+  ],
+  "length": 5.876
+ },
+ "race": "Eniripsa",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.876,
+  "width": 1.829,
+  "depth": 0.45,
+  "triangles": 4444
+ }
+}

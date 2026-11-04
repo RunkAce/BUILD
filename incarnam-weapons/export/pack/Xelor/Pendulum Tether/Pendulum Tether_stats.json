@@ -1,0 +1,203 @@
+{
+ "name": "Pendulum Tether",
+ "triangles": {
+  "Pendulum Tether_Body": 3335,
+  "Pendulum Tether_Glow": 92,
+  "HeadWeight": 400,
+  "HeadBoss": 76,
+  "TopLug.001": 124,
+  "TopRing.001": 216
+ },
+ "triangles_total": 4243,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Pendulum Tether/textures/Pendulum Tether_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Pendulum Tether/textures/Pendulum Tether_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Pendulum Tether/textures/Pendulum Tether_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Pendulum Tether/textures/Pendulum Tether_NormalMap.png"
+ },
+ "health": {
+  "Pendulum Tether_Body": {
+   "non_manifold_edges": 547,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.057402,
+   "normals_outward": true
+  },
+  "Pendulum Tether_Glow": {
+   "non_manifold_edges": 26,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000948,
+   "normals_outward": true
+  },
+  "HeadWeight": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.133197,
+   "normals_outward": true
+  },
+  "HeadBoss": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00773,
+   "normals_outward": true
+  },
+  "TopLug.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001606,
+   "normals_outward": true
+  },
+  "TopRing.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00035,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3826,
+   "quads": 1726,
+   "ngons": 2,
+   "faces": 2086,
+   "sliver_tris_lt6deg": 76,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 296,
+  "after": {
+   "Pendulum Tether_Body": {
+    "triangles": 3335,
+    "quads": 1521,
+    "ngons": 0,
+    "faces": 1814,
+    "sliver_tris_lt6deg": 76,
+    "non_manifold_edges": 547,
+    "open_boundary_edges": 547,
+    "uv_coverage": 0.468
+   },
+   "Pendulum Tether_Glow": {
+    "triangles": 92,
+    "quads": 36,
+    "ngons": 0,
+    "faces": 56,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 26,
+    "open_boundary_edges": 26,
+    "uv_coverage": 0.671
+   },
+   "HeadWeight": {
+    "triangles": 400,
+    "quads": 77,
+    "ngons": 0,
+    "faces": 323,
+    "sliver_tris_lt6deg": 28,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadBoss": {
+    "triangles": 76,
+    "quads": 22,
+    "ngons": 0,
+    "faces": 54,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopLug.001": {
+    "triangles": 124,
+    "quads": 39,
+    "ngons": 0,
+    "faces": 85,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopRing.001": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2655
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.28,
+   -0.19,
+   -0.496
+  ],
+  "max": [
+   1.318,
+   0.19,
+   1.285
+  ],
+  "length": 1.781
+ },
+ "race": "Xelor",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.781,
+  "width": 1.598,
+  "depth": 0.38,
+  "triangles": 4762
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 774,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.9,
+     0.0,
+     1.087
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "gear",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 456
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "name": "Hour Hand",
+ "triangles": {
+  "Hour Hand_Body": 3458,
+  "Hour Hand_Glow": 48
+ },
+ "triangles_total": 3506,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Hour Hand/textures/Hour Hand_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Hour Hand/textures/Hour Hand_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Hour Hand/textures/Hour Hand_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Hour Hand/textures/Hour Hand_NormalMap.png"
+ },
+ "health": {
+  "Hour Hand_Body": {
+   "non_manifold_edges": 674,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.928344,
+   "normals_outward": true
+  },
+  "Hour Hand_Glow": {
+   "non_manifold_edges": 28,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002955,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4412,
+   "quads": 1841,
+   "ngons": 2,
+   "faces": 2557,
+   "sliver_tris_lt6deg": 205,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 501,
+  "after": {
+   "Hour Hand_Body": {
+    "triangles": 3458,
+    "quads": 1388,
+    "ngons": 0,
+    "faces": 2070,
+    "sliver_tris_lt6deg": 169,
+    "non_manifold_edges": 674,
+    "open_boundary_edges": 674,
+    "uv_coverage": 0.624
+   },
+   "Hour Hand_Glow": {
+    "triangles": 48,
+    "quads": 8,
+    "ngons": 0,
+    "faces": 40,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 28,
+    "open_boundary_edges": 28,
+    "uv_coverage": 0.554
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.184,
+   -0.225,
+   -1.21
+  ],
+  "max": [
+   1.184,
+   0.225,
+   4.425
+  ],
+  "length": 5.635
+ },
+ "race": "Xelor",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.635,
+  "width": 2.369,
+  "depth": 0.45,
+  "triangles": 4488
+ }
+}

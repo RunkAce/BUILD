@@ -1,0 +1,118 @@
+{
+ "name": "Fletchpike",
+ "triangles": {
+  "Fletchpike_Body": 4949,
+  "Fletchpike_Glow": 56
+ },
+ "triangles_total": 5005,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Fletchpike/textures/Fletchpike_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Fletchpike/textures/Fletchpike_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Fletchpike/textures/Fletchpike_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Fletchpike/textures/Fletchpike_NormalMap.png"
+ },
+ "health": {
+  "Fletchpike_Body": {
+   "non_manifold_edges": 513,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.175288,
+   "normals_outward": true
+  },
+  "Fletchpike_Glow": {
+   "non_manifold_edges": 6,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000428,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5440,
+   "quads": 2530,
+   "ngons": 2,
+   "faces": 2900,
+   "sliver_tris_lt6deg": 4182,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 299,
+  "after": {
+   "Fletchpike_Body": {
+    "triangles": 4949,
+    "quads": 2344,
+    "ngons": 0,
+    "faces": 2605,
+    "sliver_tris_lt6deg": 4026,
+    "non_manifold_edges": 513,
+    "open_boundary_edges": 513,
+    "uv_coverage": 0.451
+   },
+   "Fletchpike_Glow": {
+    "triangles": 56,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 36,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 6,
+    "open_boundary_edges": 6,
+    "uv_coverage": 0.733
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.8
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.8723
+  ],
+  "VFX_Socket": [
+   0.0,
+   0.0,
+   1.68
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.35
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.315,
+   -0.156,
+   -2.402
+  ],
+  "max": [
+   0.32,
+   0.134,
+   3.872
+  ],
+  "length": 6.275
+ },
+ "race": "Cra",
+ "category": "spear",
+ "r6_target_length": [
+  5.5,
+  7.5
+ ],
+ "measured": {
+  "length": 6.275,
+  "width": 0.635,
+  "depth": 0.289,
+  "triangles": 5500
+ }
+}

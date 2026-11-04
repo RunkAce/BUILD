@@ -1,0 +1,118 @@
+{
+ "name": "Powderkeg Knuckles",
+ "triangles": {
+  "Powderkeg Knuckles_Body": 1782,
+  "Powderkeg Knuckles_Glow": 151
+ },
+ "triangles_total": 1933,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Rogue/Powderkeg Knuckles/textures/Powderkeg Knuckles_ColorMap.png",
+  "RoughnessMap": "export/pack/Rogue/Powderkeg Knuckles/textures/Powderkeg Knuckles_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Rogue/Powderkeg Knuckles/textures/Powderkeg Knuckles_MetalnessMap.png",
+  "NormalMap": "export/pack/Rogue/Powderkeg Knuckles/textures/Powderkeg Knuckles_NormalMap.png"
+ },
+ "health": {
+  "Powderkeg Knuckles_Body": {
+   "non_manifold_edges": 408,
+   "loose_verts": 0,
+   "zero_area_faces": 2,
+   "signed_volume": 1.259391,
+   "normals_outward": true
+  },
+  "Powderkeg Knuckles_Glow": {
+   "non_manifold_edges": 45,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.005209,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2484,
+   "quads": 975,
+   "ngons": 2,
+   "faces": 1491,
+   "sliver_tris_lt6deg": 362,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 465,
+  "after": {
+   "Powderkeg Knuckles_Body": {
+    "triangles": 1782,
+    "quads": 707,
+    "ngons": 2,
+    "faces": 1057,
+    "sliver_tris_lt6deg": 256,
+    "non_manifold_edges": 408,
+    "open_boundary_edges": 408,
+    "uv_coverage": 0.522
+   },
+   "Powderkeg Knuckles_Glow": {
+    "triangles": 151,
+    "quads": 39,
+    "ngons": 0,
+    "faces": 112,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 45,
+    "open_boundary_edges": 45,
+    "uv_coverage": 0.591
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7538,
+   0.8428
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.775,
+   -0.834,
+   -0.369
+  ],
+  "max": [
+   1.483,
+   0.775,
+   1.247
+  ],
+  "length": 1.616
+ },
+ "race": "Rogue",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.616,
+  "width": 2.259,
+  "depth": 1.61,
+  "triangles": 2688
+ },
+ "pieces": {
+  "L": {
+   "triangles": 1782,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 151,
+   "mirror_of": "Glow"
+  }
+ }
+}

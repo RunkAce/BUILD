@@ -1,0 +1,118 @@
+{
+ "name": "Lodelight Staff",
+ "triangles": {
+  "Lodelight Staff_Body": 5055,
+  "Lodelight Staff_Glow": 36
+ },
+ "triangles_total": 5091,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Enutrof/Lodelight Staff/textures/Lodelight Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Enutrof/Lodelight Staff/textures/Lodelight Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Enutrof/Lodelight Staff/textures/Lodelight Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Enutrof/Lodelight Staff/textures/Lodelight Staff_NormalMap.png"
+ },
+ "health": {
+  "Lodelight Staff_Body": {
+   "non_manifold_edges": 665,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.003632,
+   "normals_outward": true
+  },
+  "Lodelight Staff_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.023517,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6050,
+   "quads": 2705,
+   "ngons": 2,
+   "faces": 3335,
+   "sliver_tris_lt6deg": 3424,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 639,
+  "after": {
+   "Lodelight Staff_Body": {
+    "triangles": 5055,
+    "quads": 2359,
+    "ngons": 0,
+    "faces": 2696,
+    "sliver_tris_lt6deg": 3244,
+    "non_manifold_edges": 665,
+    "open_boundary_edges": 665,
+    "uv_coverage": 0.556
+   },
+   "Lodelight Staff_Glow": {
+    "triangles": 36,
+    "quads": 12,
+    "ngons": 0,
+    "faces": 24,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.456
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   3.0703
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.2628
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.562,
+   -0.591,
+   -2.75
+  ],
+  "max": [
+   0.562,
+   0.591,
+   3.258
+  ],
+  "length": 6.008
+ },
+ "race": "Enutrof",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.008,
+  "width": 1.123,
+  "depth": 1.181,
+  "triangles": 6086
+ }
+}

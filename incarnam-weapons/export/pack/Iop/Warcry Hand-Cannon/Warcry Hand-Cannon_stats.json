@@ -1,0 +1,103 @@
+{
+ "name": "Warcry Hand-Cannon",
+ "triangles": {
+  "Warcry Hand-Cannon_Body": 1627,
+  "Warcry Hand-Cannon_Glow": 16
+ },
+ "triangles_total": 1643,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Iop/Warcry Hand-Cannon/textures/Warcry Hand-Cannon_ColorMap.png",
+  "RoughnessMap": "export/pack/Iop/Warcry Hand-Cannon/textures/Warcry Hand-Cannon_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Iop/Warcry Hand-Cannon/textures/Warcry Hand-Cannon_MetalnessMap.png",
+  "NormalMap": "export/pack/Iop/Warcry Hand-Cannon/textures/Warcry Hand-Cannon_NormalMap.png"
+ },
+ "health": {
+  "Warcry Hand-Cannon_Body": {
+   "non_manifold_edges": 299,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.150104,
+   "normals_outward": true
+  },
+  "Warcry Hand-Cannon_Glow": {
+   "non_manifold_edges": 8,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004617,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 1956,
+   "quads": 690,
+   "ngons": 2,
+   "faces": 1260,
+   "sliver_tris_lt6deg": 130,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 209,
+  "after": {
+   "Warcry Hand-Cannon_Body": {
+    "triangles": 1627,
+    "quads": 564,
+    "ngons": 2,
+    "faces": 1057,
+    "sliver_tris_lt6deg": 74,
+    "non_manifold_edges": 299,
+    "open_boundary_edges": 299,
+    "uv_coverage": 0.541
+   },
+   "Warcry Hand-Cannon_Glow": {
+    "triangles": 16,
+    "quads": 6,
+    "ngons": 0,
+    "faces": 10,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 8,
+    "open_boundary_edges": 8,
+    "uv_coverage": 0.532
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.3572,
+   0.0,
+   2.0076
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.401,
+   -0.232,
+   -0.531
+  ],
+  "max": [
+   0.761,
+   0.232,
+   2.12
+  ],
+  "length": 2.652
+ },
+ "race": "Iop",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.652,
+  "width": 1.163,
+  "depth": 0.463,
+  "triangles": 1980
+ }
+}

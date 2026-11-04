@@ -1,0 +1,123 @@
+{
+ "name": "Rustharvest",
+ "triangles": {
+  "Rustharvest_Body": 5903,
+  "Rustharvest_Glow": 59
+ },
+ "triangles_total": 5962,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Enutrof/Rustharvest/textures/Rustharvest_ColorMap.png",
+  "RoughnessMap": "export/pack/Enutrof/Rustharvest/textures/Rustharvest_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Enutrof/Rustharvest/textures/Rustharvest_MetalnessMap.png",
+  "NormalMap": "export/pack/Enutrof/Rustharvest/textures/Rustharvest_NormalMap.png"
+ },
+ "health": {
+  "Rustharvest_Body": {
+   "non_manifold_edges": 771,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.56596,
+   "normals_outward": true
+  },
+  "Rustharvest_Glow": {
+   "non_manifold_edges": 3,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001735,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6764,
+   "quads": 2796,
+   "ngons": 2,
+   "faces": 3958,
+   "sliver_tris_lt6deg": 1040,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 546,
+  "after": {
+   "Rustharvest_Body": {
+    "triangles": 5903,
+    "quads": 2490,
+    "ngons": 0,
+    "faces": 3413,
+    "sliver_tris_lt6deg": 967,
+    "non_manifold_edges": 771,
+    "open_boundary_edges": 771,
+    "uv_coverage": 0.537
+   },
+   "Rustharvest_Glow": {
+    "triangles": 59,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 39,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 3,
+    "open_boundary_edges": 3,
+    "uv_coverage": 0.547
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.9555
+  ],
+  "VFX_Tip": [
+   3.0138,
+   0.0,
+   1.8141
+  ],
+  "VFX_Blade": [
+   1.685,
+   0.0,
+   2.7671
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.013,
+   -0.225,
+   -2.57
+  ],
+  "max": [
+   3.014,
+   0.165,
+   3.756
+  ],
+  "length": 6.326
+ },
+ "race": "Enutrof",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.326,
+  "width": 4.026,
+  "depth": 0.39,
+  "triangles": 6824
+ }
+}

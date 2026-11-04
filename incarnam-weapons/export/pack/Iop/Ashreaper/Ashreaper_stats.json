@@ -1,0 +1,123 @@
+{
+ "name": "Ashreaper",
+ "triangles": {
+  "Ashreaper_Body": 5144,
+  "Ashreaper_Glow": 50
+ },
+ "triangles_total": 5194,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Iop/Ashreaper/textures/Ashreaper_ColorMap.png",
+  "RoughnessMap": "export/pack/Iop/Ashreaper/textures/Ashreaper_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Iop/Ashreaper/textures/Ashreaper_MetalnessMap.png",
+  "NormalMap": "export/pack/Iop/Ashreaper/textures/Ashreaper_NormalMap.png"
+ },
+ "health": {
+  "Ashreaper_Body": {
+   "non_manifold_edges": 502,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.460214,
+   "normals_outward": true
+  },
+  "Ashreaper_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002774,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5640,
+   "quads": 2408,
+   "ngons": 2,
+   "faces": 3222,
+   "sliver_tris_lt6deg": 276,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 321,
+  "after": {
+   "Ashreaper_Body": {
+    "triangles": 5144,
+    "quads": 2233,
+    "ngons": 0,
+    "faces": 2911,
+    "sliver_tris_lt6deg": 254,
+    "non_manifold_edges": 502,
+    "open_boundary_edges": 502,
+    "uv_coverage": 0.558
+   },
+   "Ashreaper_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.659
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.7772
+  ],
+  "VFX_Tip": [
+   2.9458,
+   0.0,
+   1.7474
+  ],
+  "VFX_Blade": [
+   1.6368,
+   0.0,
+   2.7228
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.851,
+   -0.225,
+   -2.821
+  ],
+  "max": [
+   2.946,
+   0.165,
+   3.859
+  ],
+  "length": 6.68
+ },
+ "race": "Iop",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.68,
+  "width": 3.797,
+  "depth": 0.39,
+  "triangles": 5700
+ }
+}

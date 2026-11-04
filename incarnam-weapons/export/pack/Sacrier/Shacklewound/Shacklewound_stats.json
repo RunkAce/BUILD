@@ -1,0 +1,275 @@
+{
+ "name": "Shacklewound",
+ "triangles": {
+  "Shacklewound_Body": 3262,
+  "Shacklewound_Glow": 103,
+  "HeadBlade": 372,
+  "HeadLanget": 36,
+  "HeadMotif": 308,
+  "HeadGuard": 46,
+  "HeadFerrule": 48,
+  "HeadBand": 48,
+  "TailLug": 176,
+  "TailRing": 216
+ },
+ "triangles_total": 4615,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Shacklewound/textures/Shacklewound_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Shacklewound/textures/Shacklewound_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Shacklewound/textures/Shacklewound_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Shacklewound/textures/Shacklewound_NormalMap.png"
+ },
+ "health": {
+  "Shacklewound_Body": {
+   "non_manifold_edges": 636,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.068569,
+   "normals_outward": true
+  },
+  "Shacklewound_Glow": {
+   "non_manifold_edges": 25,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000683,
+   "normals_outward": true
+  },
+  "HeadBlade": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.022192,
+   "normals_outward": true
+  },
+  "HeadLanget": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.015058,
+   "normals_outward": true
+  },
+  "HeadMotif": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00587,
+   "normals_outward": true
+  },
+  "HeadGuard": {
+   "non_manifold_edges": 14,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002391,
+   "normals_outward": true
+  },
+  "HeadFerrule": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004132,
+   "normals_outward": true
+  },
+  "HeadBand": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001173,
+   "normals_outward": true
+  },
+  "TailLug": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001578,
+   "normals_outward": true
+  },
+  "TailRing": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000287,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3816,
+   "quads": 1671,
+   "ngons": 2,
+   "faces": 2131,
+   "sliver_tris_lt6deg": 26,
+   "non_manifold_edges": 12,
+   "open_boundary_edges": 12,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 355,
+  "after": {
+   "Shacklewound_Body": {
+    "triangles": 3262,
+    "quads": 1473,
+    "ngons": 0,
+    "faces": 1789,
+    "sliver_tris_lt6deg": 20,
+    "non_manifold_edges": 636,
+    "open_boundary_edges": 636,
+    "uv_coverage": 0.517
+   },
+   "Shacklewound_Glow": {
+    "triangles": 103,
+    "quads": 36,
+    "ngons": 0,
+    "faces": 67,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 25,
+    "open_boundary_edges": 25,
+    "uv_coverage": 0.617
+   },
+   "HeadBlade": {
+    "triangles": 372,
+    "quads": 60,
+    "ngons": 0,
+    "faces": 312,
+    "sliver_tris_lt6deg": 40,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadLanget": {
+    "triangles": 36,
+    "quads": 17,
+    "ngons": 0,
+    "faces": 19,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadMotif": {
+    "triangles": 308,
+    "quads": 86,
+    "ngons": 0,
+    "faces": 222,
+    "sliver_tris_lt6deg": 20,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadGuard": {
+    "triangles": 46,
+    "quads": 18,
+    "ngons": 0,
+    "faces": 28,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 14,
+    "open_boundary_edges": 10,
+    "uv_coverage": null
+   },
+   "HeadFerrule": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadBand": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailLug": {
+    "triangles": 176,
+    "quads": 55,
+    "ngons": 0,
+    "faces": 121,
+    "sliver_tris_lt6deg": 6,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailRing": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2885
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.25,
+   -0.174,
+   -0.623
+  ],
+  "max": [
+   1.199,
+   0.174,
+   1.308
+  ],
+  "length": 1.931
+ },
+ "race": "Sacrier",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.931,
+  "width": 1.449,
+  "depth": 0.347,
+  "triangles": 5186
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 1046,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.9,
+     0.0,
+     -0.2707
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "box",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 64
+ }
+}

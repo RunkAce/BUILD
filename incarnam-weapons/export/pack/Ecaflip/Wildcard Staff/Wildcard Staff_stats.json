@@ -1,0 +1,118 @@
+{
+ "name": "Wildcard Staff",
+ "triangles": {
+  "Wildcard Staff_Body": 4472,
+  "Wildcard Staff_Glow": 200
+ },
+ "triangles_total": 4672,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/Wildcard Staff/textures/Wildcard Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/Wildcard Staff/textures/Wildcard Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/Wildcard Staff/textures/Wildcard Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/Wildcard Staff/textures/Wildcard Staff_NormalMap.png"
+ },
+ "health": {
+  "Wildcard Staff_Body": {
+   "non_manifold_edges": 620,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.302072,
+   "normals_outward": true
+  },
+  "Wildcard Staff_Glow": {
+   "non_manifold_edges": 86,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.103717,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5216,
+   "quads": 2206,
+   "ngons": 2,
+   "faces": 3000,
+   "sliver_tris_lt6deg": 494,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 604,
+  "after": {
+   "Wildcard Staff_Body": {
+    "triangles": 4472,
+    "quads": 1938,
+    "ngons": 0,
+    "faces": 2534,
+    "sliver_tris_lt6deg": 446,
+    "non_manifold_edges": 620,
+    "open_boundary_edges": 620,
+    "uv_coverage": 0.515
+   },
+   "Wildcard Staff_Glow": {
+    "triangles": 200,
+    "quads": 76,
+    "ngons": 0,
+    "faces": 124,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 86,
+    "open_boundary_edges": 86,
+    "uv_coverage": 0.37
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.532
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.129
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.597,
+   -0.166,
+   -2.85
+  ],
+  "max": [
+   0.597,
+   0.166,
+   3.129
+  ],
+  "length": 5.979
+ },
+ "race": "Ecaflip",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.979,
+  "width": 1.195,
+  "depth": 0.331,
+  "triangles": 5596
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "name": "Keepstone Hammer",
+ "triangles": {
+  "Keepstone Hammer_Body": 5652,
+  "Keepstone Hammer_Glow": 50
+ },
+ "triangles_total": 5702,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Keepstone Hammer/textures/Keepstone Hammer_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Keepstone Hammer/textures/Keepstone Hammer_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Keepstone Hammer/textures/Keepstone Hammer_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Keepstone Hammer/textures/Keepstone Hammer_NormalMap.png"
+ },
+ "health": {
+  "Keepstone Hammer_Body": {
+   "non_manifold_edges": 478,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.738655,
+   "normals_outward": true
+  },
+  "Keepstone Hammer_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00258,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6068,
+   "quads": 2725,
+   "ngons": 2,
+   "faces": 3333,
+   "sliver_tris_lt6deg": 484,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 255,
+  "after": {
+   "Keepstone Hammer_Body": {
+    "triangles": 5652,
+    "quads": 2564,
+    "ngons": 0,
+    "faces": 3088,
+    "sliver_tris_lt6deg": 412,
+    "non_manifold_edges": 478,
+    "open_boundary_edges": 478,
+    "uv_coverage": 0.617
+   },
+   "Keepstone Hammer_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.565
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.4702
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.6462
+  ],
+  "VFX_Impact": [
+   0.7056,
+   0.0,
+   2.4702
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.05
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.706,
+   -0.616,
+   -2.013
+  ],
+  "max": [
+   0.706,
+   0.616,
+   3.646
+  ],
+  "length": 5.659
+ },
+ "race": "Feca",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 5.659,
+  "width": 1.411,
+  "depth": 1.232,
+  "triangles": 6128
+ }
+}

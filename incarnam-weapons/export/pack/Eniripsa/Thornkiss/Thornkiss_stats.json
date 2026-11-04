@@ -1,0 +1,108 @@
+{
+ "name": "Thornkiss",
+ "triangles": {
+  "Thornkiss_Body": 2751,
+  "Thornkiss_Glow": 330
+ },
+ "triangles_total": 3081,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Thornkiss/textures/Thornkiss_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Thornkiss/textures/Thornkiss_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Thornkiss/textures/Thornkiss_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Thornkiss/textures/Thornkiss_NormalMap.png"
+ },
+ "health": {
+  "Thornkiss_Body": {
+   "non_manifold_edges": 327,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.162043,
+   "normals_outward": true
+  },
+  "Thornkiss_Glow": {
+   "non_manifold_edges": 68,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002918,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3866,
+   "quads": 1661,
+   "ngons": 2,
+   "faces": 2187,
+   "sliver_tris_lt6deg": 1584,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 747,
+  "after": {
+   "Thornkiss_Body": {
+    "triangles": 2751,
+    "quads": 1165,
+    "ngons": 0,
+    "faces": 1586,
+    "sliver_tris_lt6deg": 1152,
+    "non_manifold_edges": 327,
+    "open_boundary_edges": 327,
+    "uv_coverage": 0.644
+   },
+   "Thornkiss_Glow": {
+    "triangles": 330,
+    "quads": 116,
+    "ngons": 0,
+    "faces": 214,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 68,
+    "open_boundary_edges": 68,
+    "uv_coverage": 0.775
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.407,
+   -0.227,
+   -0.72
+  ],
+  "max": [
+   0.407,
+   0.227,
+   1.71
+  ],
+  "length": 2.43
+ },
+ "race": "Eniripsa",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.43,
+  "width": 0.813,
+  "depth": 0.454,
+  "triangles": 4390
+ }
+}

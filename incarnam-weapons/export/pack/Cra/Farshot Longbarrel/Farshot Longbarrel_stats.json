@@ -1,0 +1,108 @@
+{
+ "name": "Farshot Longbarrel",
+ "triangles": {
+  "Farshot Longbarrel_Body": 1598,
+  "Farshot Longbarrel_Glow": 42
+ },
+ "triangles_total": 1640,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Farshot Longbarrel/textures/Farshot Longbarrel_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Farshot Longbarrel/textures/Farshot Longbarrel_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Farshot Longbarrel/textures/Farshot Longbarrel_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Farshot Longbarrel/textures/Farshot Longbarrel_NormalMap.png"
+ },
+ "health": {
+  "Farshot Longbarrel_Body": {
+   "non_manifold_edges": 378,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.227873,
+   "normals_outward": true
+  },
+  "Farshot Longbarrel_Glow": {
+   "non_manifold_edges": 20,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002011,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2180,
+   "quads": 767,
+   "ngons": 2,
+   "faces": 1407,
+   "sliver_tris_lt6deg": 246,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 415,
+  "after": {
+   "Farshot Longbarrel_Body": {
+    "triangles": 1598,
+    "quads": 577,
+    "ngons": 0,
+    "faces": 1021,
+    "sliver_tris_lt6deg": 146,
+    "non_manifold_edges": 378,
+    "open_boundary_edges": 378,
+    "uv_coverage": 0.561
+   },
+   "Farshot Longbarrel_Glow": {
+    "triangles": 42,
+    "quads": 21,
+    "ngons": 0,
+    "faces": 21,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 20,
+    "open_boundary_edges": 20,
+    "uv_coverage": 0.763
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.05,
+   0.0,
+   2.45
+  ],
+  "GripSecondary": [
+   -0.0287,
+   0.0,
+   1.204
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.366,
+   -0.17,
+   -0.921
+  ],
+  "max": [
+   0.398,
+   0.17,
+   2.45
+  ],
+  "length": 3.371
+ },
+ "race": "Cra",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 3.371,
+  "width": 0.763,
+  "depth": 0.341,
+  "triangles": 2260
+ }
+}

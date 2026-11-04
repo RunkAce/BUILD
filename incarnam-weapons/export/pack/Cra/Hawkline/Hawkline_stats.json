@@ -1,0 +1,118 @@
+{
+ "name": "Hawkline",
+ "triangles": {
+  "Hawkline_Body": 4272,
+  "Hawkline_Glow": 48
+ },
+ "triangles_total": 4320,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Hawkline/textures/Hawkline_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Hawkline/textures/Hawkline_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Hawkline/textures/Hawkline_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Hawkline/textures/Hawkline_NormalMap.png"
+ },
+ "health": {
+  "Hawkline_Body": {
+   "non_manifold_edges": 1104,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.248878,
+   "normals_outward": true
+  },
+  "Hawkline_Glow": {
+   "non_manifold_edges": 22,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002692,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5280,
+   "quads": 2225,
+   "ngons": 2,
+   "faces": 3037,
+   "sliver_tris_lt6deg": 395,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 613,
+  "after": {
+   "Hawkline_Body": {
+    "triangles": 4272,
+    "quads": 1838,
+    "ngons": 0,
+    "faces": 2434,
+    "sliver_tris_lt6deg": 338,
+    "non_manifold_edges": 1104,
+    "open_boundary_edges": 1104,
+    "uv_coverage": 0.492
+   },
+   "Hawkline_Glow": {
+    "triangles": 48,
+    "quads": 11,
+    "ngons": 0,
+    "faces": 37,
+    "sliver_tris_lt6deg": 6,
+    "non_manifold_edges": 22,
+    "open_boundary_edges": 22,
+    "uv_coverage": 0.747
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.4675,
+   0.0,
+   3.9125
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.24
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.517,
+   -0.404,
+   -1.173
+  ],
+  "max": [
+   0.517,
+   0.404,
+   3.912
+  ],
+  "length": 5.085
+ },
+ "race": "Cra",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 5.085,
+  "width": 1.035,
+  "depth": 0.809,
+  "triangles": 5348
+ }
+}

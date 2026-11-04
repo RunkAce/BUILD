@@ -1,0 +1,113 @@
+{
+ "name": "Slapstick Maul",
+ "triangles": {
+  "Slapstick Maul_Body": 4687,
+  "Slapstick Maul_Glow": 4
+ },
+ "triangles_total": 4691,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Slapstick Maul/textures/Slapstick Maul_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Slapstick Maul/textures/Slapstick Maul_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Slapstick Maul/textures/Slapstick Maul_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Slapstick Maul/textures/Slapstick Maul_NormalMap.png"
+ },
+ "health": {
+  "Slapstick Maul_Body": {
+   "non_manifold_edges": 523,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.233368,
+   "normals_outward": true
+  },
+  "Slapstick Maul_Glow": {
+   "non_manifold_edges": 6,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00188,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5320,
+   "quads": 2382,
+   "ngons": 2,
+   "faces": 2924,
+   "sliver_tris_lt6deg": 3324,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 420,
+  "after": {
+   "Slapstick Maul_Body": {
+    "triangles": 4687,
+    "quads": 2162,
+    "ngons": 0,
+    "faces": 2525,
+    "sliver_tris_lt6deg": 3124,
+    "non_manifold_edges": 523,
+    "open_boundary_edges": 523,
+    "uv_coverage": 0.572
+   },
+   "Slapstick Maul_Glow": {
+    "triangles": 4,
+    "quads": 1,
+    "ngons": 0,
+    "faces": 3,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 6,
+    "open_boundary_edges": 6,
+    "uv_coverage": 0.912
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.1224
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.586
+  ],
+  "VFX_Impact": [
+   0.399,
+   0.0,
+   2.1224
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.262,
+   -0.256,
+   -0.875
+  ],
+  "max": [
+   0.262,
+   0.274,
+   2.587
+  ],
+  "length": 3.462
+ },
+ "race": "Masqueraider",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 3.462,
+  "width": 0.524,
+  "depth": 0.53,
+  "triangles": 5364
+ }
+}

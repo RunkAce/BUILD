@@ -1,0 +1,90 @@
+{
+ "name": "Brewguard Dao",
+ "triangles": {
+  "Brewguard Dao_Body": 3639
+ },
+ "triangles_total": 3639,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Brewguard Dao/textures/Brewguard Dao_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Brewguard Dao/textures/Brewguard Dao_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Brewguard Dao/textures/Brewguard Dao_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Brewguard Dao/textures/Brewguard Dao_NormalMap.png"
+ },
+ "health": {
+  "Brewguard Dao_Body": {
+   "non_manifold_edges": 437,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.300244,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5518,
+   "quads": 2581,
+   "ngons": 2,
+   "faces": 2911,
+   "sliver_tris_lt6deg": 118,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 977,
+  "after": {
+   "Brewguard Dao_Body": {
+    "triangles": 3639,
+    "quads": 1705,
+    "ngons": 0,
+    "faces": 1934,
+    "sliver_tris_lt6deg": 58,
+    "non_manifold_edges": 437,
+    "open_boundary_edges": 437,
+    "uv_coverage": 0.612
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.343,
+   -0.16,
+   -0.89
+  ],
+  "max": [
+   0.343,
+   0.16,
+   3.23
+  ],
+  "length": 4.12
+ },
+ "race": "Pandawa",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.12,
+  "width": 0.687,
+  "depth": 0.32,
+  "triangles": 5518
+ }
+}

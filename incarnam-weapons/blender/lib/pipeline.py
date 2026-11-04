@@ -68,6 +68,10 @@ def finish(name, col, body_parts, out_root, grip_point, attachments, glow_parts=
     if glow_parts:
         glow = paint.join(list(glow_parts), f'{name}_Glow')
         hidden_removed += optimize.remove_hidden_faces(glow, occluders=[body])
+        if len(glow.data.polygons) == 0:          # fully enclosed accent: never visible, drop it
+            bpy.data.objects.remove(glow, do_unlink=True)
+            glow = None
+    if glow is not None:
         paint.unwrap(glow)
         glow.data.materials.clear()
         gm = glow_mat or paint.painted(f'{name}_GlowMat', glow_spec, height=1.0)

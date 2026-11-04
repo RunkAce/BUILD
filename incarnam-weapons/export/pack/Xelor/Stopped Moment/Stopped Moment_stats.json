@@ -1,0 +1,118 @@
+{
+ "name": "Stopped Moment",
+ "triangles": {
+  "Stopped Moment_Body": 4867,
+  "Stopped Moment_Glow": 38
+ },
+ "triangles_total": 4905,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Stopped Moment/textures/Stopped Moment_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Stopped Moment/textures/Stopped Moment_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Stopped Moment/textures/Stopped Moment_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Stopped Moment/textures/Stopped Moment_NormalMap.png"
+ },
+ "health": {
+  "Stopped Moment_Body": {
+   "non_manifold_edges": 1259,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.261372,
+   "normals_outward": true
+  },
+  "Stopped Moment_Glow": {
+   "non_manifold_edges": 24,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000736,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6178,
+   "quads": 2366,
+   "ngons": 2,
+   "faces": 3794,
+   "sliver_tris_lt6deg": 536,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 847,
+  "after": {
+   "Stopped Moment_Body": {
+    "triangles": 4867,
+    "quads": 1895,
+    "ngons": 0,
+    "faces": 2972,
+    "sliver_tris_lt6deg": 435,
+    "non_manifold_edges": 1259,
+    "open_boundary_edges": 1259,
+    "uv_coverage": 0.516
+   },
+   "Stopped Moment_Glow": {
+    "triangles": 38,
+    "quads": 9,
+    "ngons": 0,
+    "faces": 29,
+    "sliver_tris_lt6deg": 2,
+    "non_manifold_edges": 24,
+    "open_boundary_edges": 24,
+    "uv_coverage": 0.606
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.3621,
+   0.0,
+   3.79
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.17
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.406,
+   -0.95
+  ],
+  "max": [
+   0.525,
+   0.406,
+   3.79
+  ],
+  "length": 4.74
+ },
+ "race": "Xelor",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 4.74,
+  "width": 1.05,
+  "depth": 0.811,
+  "triangles": 6254
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "name": "Mendgrip Gauntlets",
+ "triangles": {
+  "Mendgrip Gauntlets_Body": 2234,
+  "Mendgrip Gauntlets_Glow": 186
+ },
+ "triangles_total": 2420,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Mendgrip Gauntlets/textures/Mendgrip Gauntlets_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Mendgrip Gauntlets/textures/Mendgrip Gauntlets_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Mendgrip Gauntlets/textures/Mendgrip Gauntlets_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Mendgrip Gauntlets/textures/Mendgrip Gauntlets_NormalMap.png"
+ },
+ "health": {
+  "Mendgrip Gauntlets_Body": {
+   "non_manifold_edges": 576,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.184892,
+   "normals_outward": true
+  },
+  "Mendgrip Gauntlets_Glow": {
+   "non_manifold_edges": 70,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004087,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3208,
+   "quads": 1147,
+   "ngons": 2,
+   "faces": 2043,
+   "sliver_tris_lt6deg": 340,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 703,
+  "after": {
+   "Mendgrip Gauntlets_Body": {
+    "triangles": 2234,
+    "quads": 810,
+    "ngons": 2,
+    "faces": 1406,
+    "sliver_tris_lt6deg": 231,
+    "non_manifold_edges": 576,
+    "open_boundary_edges": 576,
+    "uv_coverage": 0.542
+   },
+   "Mendgrip Gauntlets_Glow": {
+    "triangles": 186,
+    "quads": 52,
+    "ngons": 0,
+    "faces": 134,
+    "sliver_tris_lt6deg": 8,
+    "non_manifold_edges": 70,
+    "open_boundary_edges": 70,
+    "uv_coverage": 0.516
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7462,
+   0.842
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.765,
+   -0.825,
+   -0.369
+  ],
+  "max": [
+   1.182,
+   0.765,
+   1.257
+  ],
+  "length": 1.625
+ },
+ "race": "Eniripsa",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.625,
+  "width": 1.947,
+  "depth": 1.59,
+  "triangles": 3504
+ },
+ "pieces": {
+  "L": {
+   "triangles": 2234,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 186,
+   "mirror_of": "Glow"
+  }
+ }
+}

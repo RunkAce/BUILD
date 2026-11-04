@@ -1,0 +1,108 @@
+{
+ "name": "Tocklet",
+ "triangles": {
+  "Tocklet_Body": 3645,
+  "Tocklet_Glow": 104
+ },
+ "triangles_total": 3749,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Tocklet/textures/Tocklet_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Tocklet/textures/Tocklet_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Tocklet/textures/Tocklet_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Tocklet/textures/Tocklet_NormalMap.png"
+ },
+ "health": {
+  "Tocklet_Body": {
+   "non_manifold_edges": 449,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.156442,
+   "normals_outward": true
+  },
+  "Tocklet_Glow": {
+   "non_manifold_edges": 28,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001461,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4506,
+   "quads": 1924,
+   "ngons": 2,
+   "faces": 2564,
+   "sliver_tris_lt6deg": 2877,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 489,
+  "after": {
+   "Tocklet_Body": {
+    "triangles": 3645,
+    "quads": 1530,
+    "ngons": 0,
+    "faces": 2115,
+    "sliver_tris_lt6deg": 2390,
+    "non_manifold_edges": 449,
+    "open_boundary_edges": 449,
+    "uv_coverage": 0.572
+   },
+   "Tocklet_Glow": {
+    "triangles": 104,
+    "quads": 36,
+    "ngons": 0,
+    "faces": 68,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 28,
+    "open_boundary_edges": 28,
+    "uv_coverage": 0.777
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.566,
+   -0.201,
+   -0.482
+  ],
+  "max": [
+   0.566,
+   0.201,
+   1.71
+  ],
+  "length": 2.192
+ },
+ "race": "Xelor",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.192,
+  "width": 1.133,
+  "depth": 0.402,
+  "triangles": 4658
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "name": "Gale Harvester",
+ "triangles": {
+  "Gale Harvester_Body": 5699,
+  "Gale Harvester_Glow": 50
+ },
+ "triangles_total": 5749,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Gale Harvester/textures/Gale Harvester_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Gale Harvester/textures/Gale Harvester_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Gale Harvester/textures/Gale Harvester_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Gale Harvester/textures/Gale Harvester_NormalMap.png"
+ },
+ "health": {
+  "Gale Harvester_Body": {
+   "non_manifold_edges": 559,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.373495,
+   "normals_outward": true
+  },
+  "Gale Harvester_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001776,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6172,
+   "quads": 2767,
+   "ngons": 2,
+   "faces": 3395,
+   "sliver_tris_lt6deg": 326,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 296,
+  "after": {
+   "Gale Harvester_Body": {
+    "triangles": 5699,
+    "quads": 2590,
+    "ngons": 0,
+    "faces": 3109,
+    "sliver_tris_lt6deg": 291,
+    "non_manifold_edges": 559,
+    "open_boundary_edges": 559,
+    "uv_coverage": 0.596
+   },
+   "Gale Harvester_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.627
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.6904
+  ],
+  "VFX_Tip": [
+   2.7299,
+   0.0,
+   1.3531
+  ],
+  "VFX_Blade": [
+   1.4961,
+   0.0,
+   2.6015
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.669,
+   -0.225,
+   -2.702
+  ],
+  "max": [
+   2.73,
+   0.165,
+   3.376
+  ],
+  "length": 6.079
+ },
+ "race": "Cra",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.079,
+  "width": 3.399,
+  "depth": 0.39,
+  "triangles": 6232
+ }
+}

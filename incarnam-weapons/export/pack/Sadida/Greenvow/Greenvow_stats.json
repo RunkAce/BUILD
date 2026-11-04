@@ -1,0 +1,90 @@
+{
+ "name": "Greenvow",
+ "triangles": {
+  "Greenvow_Body": 4788
+ },
+ "triangles_total": 4788,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sadida/Greenvow/textures/Greenvow_ColorMap.png",
+  "RoughnessMap": "export/pack/Sadida/Greenvow/textures/Greenvow_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sadida/Greenvow/textures/Greenvow_MetalnessMap.png",
+  "NormalMap": "export/pack/Sadida/Greenvow/textures/Greenvow_NormalMap.png"
+ },
+ "health": {
+  "Greenvow_Body": {
+   "non_manifold_edges": 504,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.237995,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5262,
+   "quads": 2366,
+   "ngons": 2,
+   "faces": 2870,
+   "sliver_tris_lt6deg": 200,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 248,
+  "after": {
+   "Greenvow_Body": {
+    "triangles": 4788,
+    "quads": 2166,
+    "ngons": 0,
+    "faces": 2622,
+    "sliver_tris_lt6deg": 130,
+    "non_manifold_edges": 504,
+    "open_boundary_edges": 504,
+    "uv_coverage": 0.55
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.62,
+   -0.16,
+   -0.89
+  ],
+  "max": [
+   0.62,
+   0.16,
+   3.23
+  ],
+  "length": 4.12
+ },
+ "race": "Sadida",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.12,
+  "width": 1.24,
+  "depth": 0.32,
+  "triangles": 5262
+ }
+}

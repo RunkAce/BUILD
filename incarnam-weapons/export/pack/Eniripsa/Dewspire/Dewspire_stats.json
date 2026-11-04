@@ -1,0 +1,118 @@
+{
+ "name": "Dewspire",
+ "triangles": {
+  "Dewspire_Body": 4340,
+  "Dewspire_Glow": 58
+ },
+ "triangles_total": 4398,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Dewspire/textures/Dewspire_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Dewspire/textures/Dewspire_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Dewspire/textures/Dewspire_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Dewspire/textures/Dewspire_NormalMap.png"
+ },
+ "health": {
+  "Dewspire_Body": {
+   "non_manifold_edges": 524,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.215505,
+   "normals_outward": true
+  },
+  "Dewspire_Glow": {
+   "non_manifold_edges": 4,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000395,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5060,
+   "quads": 2135,
+   "ngons": 2,
+   "faces": 2915,
+   "sliver_tris_lt6deg": 237,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 477,
+  "after": {
+   "Dewspire_Body": {
+    "triangles": 4340,
+    "quads": 1900,
+    "ngons": 0,
+    "faces": 2440,
+    "sliver_tris_lt6deg": 200,
+    "non_manifold_edges": 524,
+    "open_boundary_edges": 524,
+    "uv_coverage": 0.519
+   },
+   "Dewspire_Glow": {
+    "triangles": 58,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 38,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 4,
+    "open_boundary_edges": 4,
+    "uv_coverage": 0.6
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.8
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.78
+  ],
+  "VFX_Socket": [
+   0.0,
+   0.0,
+   1.68
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.35
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.453,
+   -0.166,
+   -2.382
+  ],
+  "max": [
+   0.453,
+   0.146,
+   3.78
+  ],
+  "length": 6.162
+ },
+ "race": "Eniripsa",
+ "category": "spear",
+ "r6_target_length": [
+  5.5,
+  7.5
+ ],
+ "measured": {
+  "length": 6.162,
+  "width": 0.907,
+  "depth": 0.312,
+  "triangles": 5120
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "name": "Fourfold Staff",
+ "triangles": {
+  "Fourfold Staff_Body": 4303,
+  "Fourfold Staff_Glow": 36
+ },
+ "triangles_total": 4339,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Fourfold Staff/textures/Fourfold Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Fourfold Staff/textures/Fourfold Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Fourfold Staff/textures/Fourfold Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Fourfold Staff/textures/Fourfold Staff_NormalMap.png"
+ },
+ "health": {
+  "Fourfold Staff_Body": {
+   "non_manifold_edges": 487,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.091338,
+   "normals_outward": true
+  },
+  "Fourfold Staff_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.100129,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4846,
+   "quads": 2158,
+   "ngons": 10,
+   "faces": 2662,
+   "sliver_tris_lt6deg": 366,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 351,
+  "after": {
+   "Fourfold Staff_Body": {
+    "triangles": 4303,
+    "quads": 1976,
+    "ngons": 8,
+    "faces": 2311,
+    "sliver_tris_lt6deg": 348,
+    "non_manifold_edges": 487,
+    "open_boundary_edges": 487,
+    "uv_coverage": 0.479
+   },
+   "Fourfold Staff_Glow": {
+    "triangles": 36,
+    "quads": 12,
+    "ngons": 0,
+    "faces": 24,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.453
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.3088
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.8548
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.632,
+   -0.336,
+   -2.85
+  ],
+  "max": [
+   0.632,
+   0.327,
+   3.093
+  ],
+  "length": 5.943
+ },
+ "race": "Huppermage",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.943,
+  "width": 1.264,
+  "depth": 0.663,
+  "triangles": 4882
+ }
+}

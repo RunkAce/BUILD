@@ -1,0 +1,108 @@
+{
+ "name": "Gatebolt Rifle",
+ "triangles": {
+  "Gatebolt Rifle_Body": 2188,
+  "Gatebolt Rifle_Glow": 560
+ },
+ "triangles_total": 2748,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eliotrope/Gatebolt Rifle/textures/Gatebolt Rifle_ColorMap.png",
+  "RoughnessMap": "export/pack/Eliotrope/Gatebolt Rifle/textures/Gatebolt Rifle_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eliotrope/Gatebolt Rifle/textures/Gatebolt Rifle_MetalnessMap.png",
+  "NormalMap": "export/pack/Eliotrope/Gatebolt Rifle/textures/Gatebolt Rifle_NormalMap.png"
+ },
+ "health": {
+  "Gatebolt Rifle_Body": {
+   "non_manifold_edges": 568,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.204646,
+   "normals_outward": true
+  },
+  "Gatebolt Rifle_Glow": {
+   "non_manifold_edges": 146,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004656,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2980,
+   "quads": 918,
+   "ngons": 2,
+   "faces": 2056,
+   "sliver_tris_lt6deg": 422,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 571,
+  "after": {
+   "Gatebolt Rifle_Body": {
+    "triangles": 2188,
+    "quads": 647,
+    "ngons": 0,
+    "faces": 1541,
+    "sliver_tris_lt6deg": 240,
+    "non_manifold_edges": 568,
+    "open_boundary_edges": 568,
+    "uv_coverage": 0.511
+   },
+   "Gatebolt Rifle_Glow": {
+    "triangles": 560,
+    "quads": 280,
+    "ngons": 0,
+    "faces": 280,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 146,
+    "open_boundary_edges": 146,
+    "uv_coverage": 0.544
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.05,
+   0.0,
+   2.45
+  ],
+  "GripSecondary": [
+   -0.0284,
+   0.0,
+   1.204
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.364,
+   -0.207,
+   -0.921
+  ],
+  "max": [
+   0.382,
+   0.207,
+   2.45
+  ],
+  "length": 3.371
+ },
+ "race": "Eliotrope",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 3.371,
+  "width": 0.746,
+  "depth": 0.415,
+  "triangles": 3652
+ }
+}

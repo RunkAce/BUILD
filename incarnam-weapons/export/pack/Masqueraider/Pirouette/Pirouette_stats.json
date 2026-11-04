@@ -1,0 +1,118 @@
+{
+ "name": "Pirouette",
+ "triangles": {
+  "Pirouette_Body": 5238,
+  "Pirouette_Glow": 148
+ },
+ "triangles_total": 5386,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Pirouette/textures/Pirouette_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Pirouette/textures/Pirouette_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Pirouette/textures/Pirouette_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Pirouette/textures/Pirouette_NormalMap.png"
+ },
+ "health": {
+  "Pirouette_Body": {
+   "non_manifold_edges": 1356,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.262018,
+   "normals_outward": true
+  },
+  "Pirouette_Glow": {
+   "non_manifold_edges": 70,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002202,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6702,
+   "quads": 2598,
+   "ngons": 2,
+   "faces": 4086,
+   "sliver_tris_lt6deg": 312,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 970,
+  "after": {
+   "Pirouette_Body": {
+    "triangles": 5238,
+    "quads": 2081,
+    "ngons": 0,
+    "faces": 3157,
+    "sliver_tris_lt6deg": 227,
+    "non_manifold_edges": 1356,
+    "open_boundary_edges": 1356,
+    "uv_coverage": 0.507
+   },
+   "Pirouette_Glow": {
+    "triangles": 148,
+    "quads": 32,
+    "ngons": 0,
+    "faces": 116,
+    "sliver_tris_lt6deg": 23,
+    "non_manifold_edges": 70,
+    "open_boundary_edges": 70,
+    "uv_coverage": 0.657
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.1422,
+   0.0,
+   3.5354
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.02
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.412,
+   -1.65
+  ],
+  "max": [
+   0.525,
+   0.41,
+   3.535
+  ],
+  "length": 5.185
+ },
+ "race": "Masqueraider",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 5.185,
+  "width": 1.05,
+  "depth": 0.822,
+  "triangles": 6926
+ }
+}

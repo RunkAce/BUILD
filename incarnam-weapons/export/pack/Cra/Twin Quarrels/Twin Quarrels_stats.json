@@ -1,0 +1,123 @@
+{
+ "name": "Twin Quarrels",
+ "triangles": {
+  "Twin Quarrels_Body": 3235,
+  "Twin Quarrels_Glow": 58
+ },
+ "triangles_total": 3293,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Twin Quarrels/textures/Twin Quarrels_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Twin Quarrels/textures/Twin Quarrels_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Twin Quarrels/textures/Twin Quarrels_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Twin Quarrels/textures/Twin Quarrels_NormalMap.png"
+ },
+ "health": {
+  "Twin Quarrels_Body": {
+   "non_manifold_edges": 583,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.17219,
+   "normals_outward": true
+  },
+  "Twin Quarrels_Glow": {
+   "non_manifold_edges": 14,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003263,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4352,
+   "quads": 1981,
+   "ngons": 2,
+   "faces": 2353,
+   "sliver_tris_lt6deg": 1690,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 591,
+  "after": {
+   "Twin Quarrels_Body": {
+    "triangles": 3235,
+    "quads": 1468,
+    "ngons": 0,
+    "faces": 1767,
+    "sliver_tris_lt6deg": 1276,
+    "non_manifold_edges": 583,
+    "open_boundary_edges": 583,
+    "uv_coverage": 0.559
+   },
+   "Twin Quarrels_Glow": {
+    "triangles": 58,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 42,
+    "sliver_tris_lt6deg": 8,
+    "non_manifold_edges": 14,
+    "open_boundary_edges": 14,
+    "uv_coverage": 0.615
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.2006,
+   0.0,
+   2.8136
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3018,
+   0.0,
+   0.6942
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.387,
+   -0.175,
+   -0.754
+  ],
+  "max": [
+   0.383,
+   0.175,
+   2.814
+  ],
+  "length": 3.568
+ },
+ "race": "Cra",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.568,
+  "width": 0.77,
+  "depth": 0.35,
+  "triangles": 4420
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3235,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 58,
+   "mirror_of": "Glow"
+  }
+ }
+}

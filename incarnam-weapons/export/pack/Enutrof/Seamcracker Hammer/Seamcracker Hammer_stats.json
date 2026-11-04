@@ -1,0 +1,118 @@
+{
+ "name": "Seamcracker Hammer",
+ "triangles": {
+  "Seamcracker Hammer_Body": 4820,
+  "Seamcracker Hammer_Glow": 106
+ },
+ "triangles_total": 4926,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Enutrof/Seamcracker Hammer/textures/Seamcracker Hammer_ColorMap.png",
+  "RoughnessMap": "export/pack/Enutrof/Seamcracker Hammer/textures/Seamcracker Hammer_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Enutrof/Seamcracker Hammer/textures/Seamcracker Hammer_MetalnessMap.png",
+  "NormalMap": "export/pack/Enutrof/Seamcracker Hammer/textures/Seamcracker Hammer_NormalMap.png"
+ },
+ "health": {
+  "Seamcracker Hammer_Body": {
+   "non_manifold_edges": 616,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.654748,
+   "normals_outward": true
+  },
+  "Seamcracker Hammer_Glow": {
+   "non_manifold_edges": 110,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.02478,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5408,
+   "quads": 2410,
+   "ngons": 2,
+   "faces": 2988,
+   "sliver_tris_lt6deg": 2815,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 391,
+  "after": {
+   "Seamcracker Hammer_Body": {
+    "triangles": 4820,
+    "quads": 2165,
+    "ngons": 0,
+    "faces": 2655,
+    "sliver_tris_lt6deg": 2585,
+    "non_manifold_edges": 616,
+    "open_boundary_edges": 616,
+    "uv_coverage": 0.58
+   },
+   "Seamcracker Hammer_Glow": {
+    "triangles": 106,
+    "quads": 50,
+    "ngons": 0,
+    "faces": 56,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 110,
+    "open_boundary_edges": 110,
+    "uv_coverage": 0.296
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.5875
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.944
+  ],
+  "VFX_Impact": [
+   0.7,
+   0.0,
+   2.5875
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.05
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.085,
+   -0.312,
+   -1.89
+  ],
+  "max": [
+   0.8,
+   0.312,
+   2.921
+  ],
+  "length": 4.811
+ },
+ "race": "Enutrof",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 4.811,
+  "width": 1.885,
+  "depth": 0.625,
+  "triangles": 5596
+ }
+}

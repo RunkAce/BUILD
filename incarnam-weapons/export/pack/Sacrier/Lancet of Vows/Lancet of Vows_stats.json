@@ -1,0 +1,108 @@
+{
+ "name": "Lancet of Vows",
+ "triangles": {
+  "Lancet of Vows_Body": 3822,
+  "Lancet of Vows_Glow": 152
+ },
+ "triangles_total": 3974,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Lancet of Vows/textures/Lancet of Vows_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Lancet of Vows/textures/Lancet of Vows_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Lancet of Vows/textures/Lancet of Vows_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Lancet of Vows/textures/Lancet of Vows_NormalMap.png"
+ },
+ "health": {
+  "Lancet of Vows_Body": {
+   "non_manifold_edges": 422,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.155776,
+   "normals_outward": true
+  },
+  "Lancet of Vows_Glow": {
+   "non_manifold_edges": 32,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001203,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4468,
+   "quads": 1995,
+   "ngons": 2,
+   "faces": 2455,
+   "sliver_tris_lt6deg": 3382,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 416,
+  "after": {
+   "Lancet of Vows_Body": {
+    "triangles": 3822,
+    "quads": 1703,
+    "ngons": 0,
+    "faces": 2119,
+    "sliver_tris_lt6deg": 3000,
+    "non_manifold_edges": 422,
+    "open_boundary_edges": 422,
+    "uv_coverage": 0.616
+   },
+   "Lancet of Vows_Glow": {
+    "triangles": 152,
+    "quads": 40,
+    "ngons": 0,
+    "faces": 112,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 32,
+    "open_boundary_edges": 32,
+    "uv_coverage": 0.664
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.439,
+   -0.24,
+   -0.692
+  ],
+  "max": [
+   0.439,
+   0.24,
+   1.705
+  ],
+  "length": 2.397
+ },
+ "race": "Sacrier",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.397,
+  "width": 0.878,
+  "depth": 0.48,
+  "triangles": 4708
+ }
+}

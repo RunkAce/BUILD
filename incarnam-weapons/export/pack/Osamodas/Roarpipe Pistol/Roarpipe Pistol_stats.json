@@ -1,0 +1,103 @@
+{
+ "name": "Roarpipe Pistol",
+ "triangles": {
+  "Roarpipe Pistol_Body": 2074,
+  "Roarpipe Pistol_Glow": 60
+ },
+ "triangles_total": 2134,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Osamodas/Roarpipe Pistol/textures/Roarpipe Pistol_ColorMap.png",
+  "RoughnessMap": "export/pack/Osamodas/Roarpipe Pistol/textures/Roarpipe Pistol_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Osamodas/Roarpipe Pistol/textures/Roarpipe Pistol_MetalnessMap.png",
+  "NormalMap": "export/pack/Osamodas/Roarpipe Pistol/textures/Roarpipe Pistol_NormalMap.png"
+ },
+ "health": {
+  "Roarpipe Pistol_Body": {
+   "non_manifold_edges": 370,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.170255,
+   "normals_outward": true
+  },
+  "Roarpipe Pistol_Glow": {
+   "non_manifold_edges": 20,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003786,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2518,
+   "quads": 930,
+   "ngons": 2,
+   "faces": 1582,
+   "sliver_tris_lt6deg": 158,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 290,
+  "after": {
+   "Roarpipe Pistol_Body": {
+    "triangles": 2074,
+    "quads": 759,
+    "ngons": 1,
+    "faces": 1312,
+    "sliver_tris_lt6deg": 96,
+    "non_manifold_edges": 370,
+    "open_boundary_edges": 370,
+    "uv_coverage": 0.541
+   },
+   "Roarpipe Pistol_Glow": {
+    "triangles": 60,
+    "quads": 30,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 20,
+    "open_boundary_edges": 20,
+    "uv_coverage": 0.762
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.352,
+   0.0,
+   1.9811
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.376,
+   -0.172,
+   -0.403
+  ],
+  "max": [
+   0.706,
+   0.172,
+   1.981
+  ],
+  "length": 2.384
+ },
+ "race": "Osamodas",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.384,
+  "width": 1.083,
+  "depth": 0.345,
+  "triangles": 2598
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "name": "Marrowcrack Club",
+ "triangles": {
+  "Marrowcrack Club_Body": 4645,
+  "Marrowcrack Club_Glow": 52
+ },
+ "triangles_total": 4697,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Marrowcrack Club/textures/Marrowcrack Club_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Marrowcrack Club/textures/Marrowcrack Club_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Marrowcrack Club/textures/Marrowcrack Club_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Marrowcrack Club/textures/Marrowcrack Club_NormalMap.png"
+ },
+ "health": {
+  "Marrowcrack Club_Body": {
+   "non_manifold_edges": 519,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.680512,
+   "normals_outward": true
+  },
+  "Marrowcrack Club_Glow": {
+   "non_manifold_edges": 12,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001645,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5226,
+   "quads": 2325,
+   "ngons": 2,
+   "faces": 2891,
+   "sliver_tris_lt6deg": 815,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 397,
+  "after": {
+   "Marrowcrack Club_Body": {
+    "triangles": 4645,
+    "quads": 2143,
+    "ngons": 0,
+    "faces": 2502,
+    "sliver_tris_lt6deg": 786,
+    "non_manifold_edges": 519,
+    "open_boundary_edges": 519,
+    "uv_coverage": 0.578
+   },
+   "Marrowcrack Club_Glow": {
+    "triangles": 52,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 12,
+    "open_boundary_edges": 12,
+    "uv_coverage": 0.574
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.5351
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.599
+  ],
+  "VFX_Impact": [
+   0.7977,
+   0.0,
+   2.5351
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.05
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.693,
+   -0.634,
+   -2.065
+  ],
+  "max": [
+   0.693,
+   0.729,
+   3.606
+  ],
+  "length": 5.67
+ },
+ "race": "Ouginak",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 5.67,
+  "width": 1.387,
+  "depth": 1.364,
+  "triangles": 5286
+ }
+}

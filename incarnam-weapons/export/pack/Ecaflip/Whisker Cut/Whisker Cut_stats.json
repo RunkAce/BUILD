@@ -1,0 +1,118 @@
+{
+ "name": "Whisker Cut",
+ "triangles": {
+  "Whisker Cut_Body": 4633,
+  "Whisker Cut_Glow": 72
+ },
+ "triangles_total": 4705,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/Whisker Cut/textures/Whisker Cut_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/Whisker Cut/textures/Whisker Cut_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/Whisker Cut/textures/Whisker Cut_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/Whisker Cut/textures/Whisker Cut_NormalMap.png"
+ },
+ "health": {
+  "Whisker Cut_Body": {
+   "non_manifold_edges": 1167,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.289742,
+   "normals_outward": true
+  },
+  "Whisker Cut_Glow": {
+   "non_manifold_edges": 22,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00123,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5772,
+   "quads": 2110,
+   "ngons": 2,
+   "faces": 3644,
+   "sliver_tris_lt6deg": 405,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 760,
+  "after": {
+   "Whisker Cut_Body": {
+    "triangles": 4633,
+    "quads": 1739,
+    "ngons": 0,
+    "faces": 2894,
+    "sliver_tris_lt6deg": 286,
+    "non_manifold_edges": 1167,
+    "open_boundary_edges": 1167,
+    "uv_coverage": 0.515
+   },
+   "Whisker Cut_Glow": {
+    "triangles": 72,
+    "quads": 14,
+    "ngons": 0,
+    "faces": 58,
+    "sliver_tris_lt6deg": 1,
+    "non_manifold_edges": 22,
+    "open_boundary_edges": 22,
+    "uv_coverage": 0.67
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.4369,
+   0.0,
+   3.7763
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.17
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.523,
+   -0.412,
+   -1.159
+  ],
+  "max": [
+   0.525,
+   0.41,
+   3.776
+  ],
+  "length": 4.935
+ },
+ "race": "Ecaflip",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 4.935,
+  "width": 1.048,
+  "depth": 0.822,
+  "triangles": 5864
+ }
+}

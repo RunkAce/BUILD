@@ -1,0 +1,118 @@
+{
+ "name": "Long Odds",
+ "triangles": {
+  "Long Odds_Body": 4480,
+  "Long Odds_Glow": 58
+ },
+ "triangles_total": 4538,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/Long Odds/textures/Long Odds_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/Long Odds/textures/Long Odds_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/Long Odds/textures/Long Odds_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/Long Odds/textures/Long Odds_NormalMap.png"
+ },
+ "health": {
+  "Long Odds_Body": {
+   "non_manifold_edges": 520,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.219993,
+   "normals_outward": true
+  },
+  "Long Odds_Glow": {
+   "non_manifold_edges": 4,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000439,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5080,
+   "quads": 2114,
+   "ngons": 2,
+   "faces": 2956,
+   "sliver_tris_lt6deg": 428,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 389,
+  "after": {
+   "Long Odds_Body": {
+    "triangles": 4480,
+    "quads": 1911,
+    "ngons": 0,
+    "faces": 2569,
+    "sliver_tris_lt6deg": 414,
+    "non_manifold_edges": 520,
+    "open_boundary_edges": 520,
+    "uv_coverage": 0.467
+   },
+   "Long Odds_Glow": {
+    "triangles": 58,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 38,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 4,
+    "open_boundary_edges": 4,
+    "uv_coverage": 0.597
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.8
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.7805
+  ],
+  "VFX_Socket": [
+   0.0,
+   0.0,
+   1.68
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.35
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.328,
+   -0.168,
+   -2.37
+  ],
+  "max": [
+   0.331,
+   0.148,
+   3.78
+  ],
+  "length": 6.15
+ },
+ "race": "Ecaflip",
+ "category": "spear",
+ "r6_target_length": [
+  5.5,
+  7.5
+ ],
+ "measured": {
+  "length": 6.15,
+  "width": 0.66,
+  "depth": 0.315,
+  "triangles": 5140
+ }
+}

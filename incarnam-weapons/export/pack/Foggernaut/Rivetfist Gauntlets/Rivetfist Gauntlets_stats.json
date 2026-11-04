@@ -1,0 +1,118 @@
+{
+ "name": "Rivetfist Gauntlets",
+ "triangles": {
+  "Rivetfist Gauntlets_Body": 2669,
+  "Rivetfist Gauntlets_Glow": 63
+ },
+ "triangles_total": 2732,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Foggernaut/Rivetfist Gauntlets/textures/Rivetfist Gauntlets_ColorMap.png",
+  "RoughnessMap": "export/pack/Foggernaut/Rivetfist Gauntlets/textures/Rivetfist Gauntlets_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Foggernaut/Rivetfist Gauntlets/textures/Rivetfist Gauntlets_MetalnessMap.png",
+  "NormalMap": "export/pack/Foggernaut/Rivetfist Gauntlets/textures/Rivetfist Gauntlets_NormalMap.png"
+ },
+ "health": {
+  "Rivetfist Gauntlets_Body": {
+   "non_manifold_edges": 711,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.338279,
+   "normals_outward": true
+  },
+  "Rivetfist Gauntlets_Glow": {
+   "non_manifold_edges": 23,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.009139,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3942,
+   "quads": 1268,
+   "ngons": 2,
+   "faces": 2656,
+   "sliver_tris_lt6deg": 636,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 873,
+  "after": {
+   "Rivetfist Gauntlets_Body": {
+    "triangles": 2669,
+    "quads": 809,
+    "ngons": 2,
+    "faces": 1842,
+    "sliver_tris_lt6deg": 336,
+    "non_manifold_edges": 711,
+    "open_boundary_edges": 711,
+    "uv_coverage": 0.533
+   },
+   "Rivetfist Gauntlets_Glow": {
+    "triangles": 63,
+    "quads": 17,
+    "ngons": 0,
+    "faces": 46,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 23,
+    "open_boundary_edges": 23,
+    "uv_coverage": 0.535
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7923,
+   0.7156
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.895,
+   -0.987,
+   -0.37
+  ],
+  "max": [
+   1.299,
+   0.895,
+   1.248
+  ],
+  "length": 1.618
+ },
+ "race": "Foggernaut",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.618,
+  "width": 2.194,
+  "depth": 1.882,
+  "triangles": 4094
+ },
+ "pieces": {
+  "L": {
+   "triangles": 2669,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 63,
+   "mirror_of": "Glow"
+  }
+ }
+}

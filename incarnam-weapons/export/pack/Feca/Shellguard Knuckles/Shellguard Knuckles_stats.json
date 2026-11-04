@@ -1,0 +1,118 @@
+{
+ "name": "Shellguard Knuckles",
+ "triangles": {
+  "Shellguard Knuckles_Body": 1642,
+  "Shellguard Knuckles_Glow": 74
+ },
+ "triangles_total": 1716,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Shellguard Knuckles/textures/Shellguard Knuckles_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Shellguard Knuckles/textures/Shellguard Knuckles_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Shellguard Knuckles/textures/Shellguard Knuckles_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Shellguard Knuckles/textures/Shellguard Knuckles_NormalMap.png"
+ },
+ "health": {
+  "Shellguard Knuckles_Body": {
+   "non_manifold_edges": 468,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.234645,
+   "normals_outward": true
+  },
+  "Shellguard Knuckles_Glow": {
+   "non_manifold_edges": 34,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.005628,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2348,
+   "quads": 910,
+   "ngons": 2,
+   "faces": 1420,
+   "sliver_tris_lt6deg": 368,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 430,
+  "after": {
+   "Shellguard Knuckles_Body": {
+    "triangles": 1642,
+    "quads": 613,
+    "ngons": 2,
+    "faces": 1011,
+    "sliver_tris_lt6deg": 200,
+    "non_manifold_edges": 468,
+    "open_boundary_edges": 468,
+    "uv_coverage": 0.52
+   },
+   "Shellguard Knuckles_Glow": {
+    "triangles": 74,
+    "quads": 25,
+    "ngons": 0,
+    "faces": 49,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 34,
+    "open_boundary_edges": 34,
+    "uv_coverage": 0.543
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7591,
+   0.8433
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.783,
+   -0.852,
+   -0.369
+  ],
+  "max": [
+   1.227,
+   0.783,
+   1.248
+  ],
+  "length": 1.616
+ },
+ "race": "Feca",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.616,
+  "width": 2.01,
+  "depth": 1.635,
+  "triangles": 2460
+ },
+ "pieces": {
+  "L": {
+   "triangles": 1642,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 74,
+   "mirror_of": "Glow"
+  }
+ }
+}

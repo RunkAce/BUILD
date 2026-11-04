@@ -1,0 +1,123 @@
+{
+ "name": "Smash and Grab",
+ "triangles": {
+  "Smash and Grab_Body": 3219,
+  "Smash and Grab_Glow": 150
+ },
+ "triangles_total": 3369,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Rogue/Smash and Grab/textures/Smash and Grab_ColorMap.png",
+  "RoughnessMap": "export/pack/Rogue/Smash and Grab/textures/Smash and Grab_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Rogue/Smash and Grab/textures/Smash and Grab_MetalnessMap.png",
+  "NormalMap": "export/pack/Rogue/Smash and Grab/textures/Smash and Grab_NormalMap.png"
+ },
+ "health": {
+  "Smash and Grab_Body": {
+   "non_manifold_edges": 561,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.250282,
+   "normals_outward": true
+  },
+  "Smash and Grab_Glow": {
+   "non_manifold_edges": 40,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": -0.00155,
+   "normals_outward": false
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4104,
+   "quads": 1753,
+   "ngons": 2,
+   "faces": 2333,
+   "sliver_tris_lt6deg": 202,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 474,
+  "after": {
+   "Smash and Grab_Body": {
+    "triangles": 3219,
+    "quads": 1341,
+    "ngons": 0,
+    "faces": 1878,
+    "sliver_tris_lt6deg": 106,
+    "non_manifold_edges": 561,
+    "open_boundary_edges": 561,
+    "uv_coverage": 0.555
+   },
+   "Smash and Grab_Glow": {
+    "triangles": 150,
+    "quads": 38,
+    "ngons": 0,
+    "faces": 112,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 40,
+    "open_boundary_edges": 40,
+    "uv_coverage": 0.548
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.1864,
+   0.0,
+   2.6962
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.2984,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.466,
+   -0.185,
+   -0.76
+  ],
+  "max": [
+   0.458,
+   0.185,
+   2.696
+  ],
+  "length": 3.456
+ },
+ "race": "Rogue",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.456,
+  "width": 0.924,
+  "depth": 0.37,
+  "triangles": 4292
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3219,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 150,
+   "mirror_of": "Glow"
+  }
+ }
+}

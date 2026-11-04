@@ -1,0 +1,118 @@
+{
+ "name": "Skyline Verdict",
+ "triangles": {
+  "Skyline Verdict_Body": 2632,
+  "Skyline Verdict_Glow": 60
+ },
+ "triangles_total": 2692,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Skyline Verdict/textures/Skyline Verdict_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Skyline Verdict/textures/Skyline Verdict_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Skyline Verdict/textures/Skyline Verdict_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Skyline Verdict/textures/Skyline Verdict_NormalMap.png"
+ },
+ "health": {
+  "Skyline Verdict_Body": {
+   "non_manifold_edges": 568,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.753336,
+   "normals_outward": true
+  },
+  "Skyline Verdict_Glow": {
+   "non_manifold_edges": 12,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.01345,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3588,
+   "quads": 1607,
+   "ngons": 2,
+   "faces": 1967,
+   "sliver_tris_lt6deg": 204,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 485,
+  "after": {
+   "Skyline Verdict_Body": {
+    "triangles": 2632,
+    "quads": 1146,
+    "ngons": 0,
+    "faces": 1486,
+    "sliver_tris_lt6deg": 160,
+    "non_manifold_edges": 568,
+    "open_boundary_edges": 568,
+    "uv_coverage": 0.606
+   },
+   "Skyline Verdict_Glow": {
+    "triangles": 60,
+    "quads": 17,
+    "ngons": 0,
+    "faces": 43,
+    "sliver_tris_lt6deg": 8,
+    "non_manifold_edges": 12,
+    "open_boundary_edges": 12,
+    "uv_coverage": 0.669
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.675
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.575
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.88,
+   -0.225,
+   -1.409
+  ],
+  "max": [
+   0.88,
+   0.225,
+   4.675
+  ],
+  "length": 6.084
+ },
+ "race": "Cra",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 6.084,
+  "width": 1.761,
+  "depth": 0.45,
+  "triangles": 3656
+ }
+}

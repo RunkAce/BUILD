@@ -1,0 +1,118 @@
+{
+ "name": "Lone Fang",
+ "triangles": {
+  "Lone Fang_Body": 5186,
+  "Lone Fang_Glow": 268
+ },
+ "triangles_total": 5454,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Lone Fang/textures/Lone Fang_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Lone Fang/textures/Lone Fang_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Lone Fang/textures/Lone Fang_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Lone Fang/textures/Lone Fang_NormalMap.png"
+ },
+ "health": {
+  "Lone Fang_Body": {
+   "non_manifold_edges": 1260,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.290094,
+   "normals_outward": true
+  },
+  "Lone Fang_Glow": {
+   "non_manifold_edges": 74,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004088,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6476,
+   "quads": 2470,
+   "ngons": 2,
+   "faces": 3988,
+   "sliver_tris_lt6deg": 370,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 865,
+  "after": {
+   "Lone Fang_Body": {
+    "triangles": 5186,
+    "quads": 2009,
+    "ngons": 0,
+    "faces": 3177,
+    "sliver_tris_lt6deg": 283,
+    "non_manifold_edges": 1260,
+    "open_boundary_edges": 1260,
+    "uv_coverage": 0.524
+   },
+   "Lone Fang_Glow": {
+    "triangles": 268,
+    "quads": 43,
+    "ngons": 0,
+    "faces": 225,
+    "sliver_tris_lt6deg": 38,
+    "non_manifold_edges": 74,
+    "open_boundary_edges": 74,
+    "uv_coverage": 0.572
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.1712,
+   0.0,
+   3.8362
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.17
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.412,
+   -1.173
+  ],
+  "max": [
+   0.525,
+   0.41,
+   3.836
+  ],
+  "length": 5.009
+ },
+ "race": "Ouginak",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 5.009,
+  "width": 1.05,
+  "depth": 0.822,
+  "triangles": 6828
+ }
+}

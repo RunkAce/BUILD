@@ -1,0 +1,118 @@
+{
+ "name": "Alpha's Jaw",
+ "triangles": {
+  "Alpha's Jaw_Body": 3198,
+  "Alpha's Jaw_Glow": 276
+ },
+ "triangles_total": 3474,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Alpha's Jaw/textures/Alpha's Jaw_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Alpha's Jaw/textures/Alpha's Jaw_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Alpha's Jaw/textures/Alpha's Jaw_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Alpha's Jaw/textures/Alpha's Jaw_NormalMap.png"
+ },
+ "health": {
+  "Alpha's Jaw_Body": {
+   "non_manifold_edges": 554,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.06502,
+   "normals_outward": true
+  },
+  "Alpha's Jaw_Glow": {
+   "non_manifold_edges": 100,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001898,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3950,
+   "quads": 1612,
+   "ngons": 2,
+   "faces": 2324,
+   "sliver_tris_lt6deg": 152,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 429,
+  "after": {
+   "Alpha's Jaw_Body": {
+    "triangles": 3198,
+    "quads": 1253,
+    "ngons": 0,
+    "faces": 1945,
+    "sliver_tris_lt6deg": 116,
+    "non_manifold_edges": 554,
+    "open_boundary_edges": 554,
+    "uv_coverage": 0.613
+   },
+   "Alpha's Jaw_Glow": {
+    "triangles": 276,
+    "quads": 34,
+    "ngons": 0,
+    "faces": 242,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 100,
+    "open_boundary_edges": 100,
+    "uv_coverage": 0.582
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.13,
+   -0.225,
+   -1.444
+  ],
+  "max": [
+   1.13,
+   0.225,
+   4.425
+  ],
+  "length": 5.869
+ },
+ "race": "Ouginak",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.869,
+  "width": 2.259,
+  "depth": 0.45,
+  "triangles": 4326
+ }
+}

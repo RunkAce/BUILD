@@ -1,0 +1,123 @@
+{
+ "name": "Smile and Sorrow",
+ "triangles": {
+  "Smile and Sorrow_Body": 3774,
+  "Smile and Sorrow_Glow": 160
+ },
+ "triangles_total": 3934,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Smile and Sorrow/textures/Smile and Sorrow_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Smile and Sorrow/textures/Smile and Sorrow_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Smile and Sorrow/textures/Smile and Sorrow_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Smile and Sorrow/textures/Smile and Sorrow_NormalMap.png"
+ },
+ "health": {
+  "Smile and Sorrow_Body": {
+   "non_manifold_edges": 574,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.210307,
+   "normals_outward": true
+  },
+  "Smile and Sorrow_Glow": {
+   "non_manifold_edges": 58,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": -0.002289,
+   "normals_outward": false
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4708,
+   "quads": 1980,
+   "ngons": 2,
+   "faces": 2710,
+   "sliver_tris_lt6deg": 152,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 537,
+  "after": {
+   "Smile and Sorrow_Body": {
+    "triangles": 3774,
+    "quads": 1573,
+    "ngons": 0,
+    "faces": 2201,
+    "sliver_tris_lt6deg": 120,
+    "non_manifold_edges": 574,
+    "open_boundary_edges": 574,
+    "uv_coverage": 0.525
+   },
+   "Smile and Sorrow_Glow": {
+    "triangles": 160,
+    "quads": 35,
+    "ngons": 0,
+    "faces": 125,
+    "sliver_tris_lt6deg": 20,
+    "non_manifold_edges": 58,
+    "open_boundary_edges": 58,
+    "uv_coverage": 0.62
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.2218,
+   0.0,
+   2.689
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3372,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.484,
+   -0.175,
+   -0.745
+  ],
+  "max": [
+   0.484,
+   0.175,
+   2.689
+  ],
+  "length": 3.434
+ },
+ "race": "Masqueraider",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.434,
+  "width": 0.968,
+  "depth": 0.35,
+  "triangles": 4924
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3774,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 160,
+   "mirror_of": "Glow"
+  }
+ }
+}

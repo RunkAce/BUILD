@@ -1,0 +1,118 @@
+{
+ "name": "Fuselight Staff",
+ "triangles": {
+  "Fuselight Staff_Body": 5341,
+  "Fuselight Staff_Glow": 96
+ },
+ "triangles_total": 5437,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Rogue/Fuselight Staff/textures/Fuselight Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Rogue/Fuselight Staff/textures/Fuselight Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Rogue/Fuselight Staff/textures/Fuselight Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Rogue/Fuselight Staff/textures/Fuselight Staff_NormalMap.png"
+ },
+ "health": {
+  "Fuselight Staff_Body": {
+   "non_manifold_edges": 577,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.28197,
+   "normals_outward": true
+  },
+  "Fuselight Staff_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.075056,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5872,
+   "quads": 2536,
+   "ngons": 2,
+   "faces": 3326,
+   "sliver_tris_lt6deg": 785,
+   "non_manifold_edges": 12,
+   "open_boundary_edges": 12,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 331,
+  "after": {
+   "Fuselight Staff_Body": {
+    "triangles": 5341,
+    "quads": 2346,
+    "ngons": 0,
+    "faces": 2995,
+    "sliver_tris_lt6deg": 763,
+    "non_manifold_edges": 577,
+    "open_boundary_edges": 577,
+    "uv_coverage": 0.458
+   },
+   "Fuselight Staff_Glow": {
+    "triangles": 96,
+    "quads": 40,
+    "ngons": 0,
+    "faces": 56,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.707
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.4145
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.6639
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.512,
+   -0.503,
+   -2.868
+  ],
+  "max": [
+   0.503,
+   0.503,
+   3.664
+  ],
+  "length": 6.532
+ },
+ "race": "Rogue",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.532,
+  "width": 1.015,
+  "depth": 1.006,
+  "triangles": 5968
+ }
+}

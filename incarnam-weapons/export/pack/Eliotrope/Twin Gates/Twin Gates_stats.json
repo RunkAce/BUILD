@@ -1,0 +1,123 @@
+{
+ "name": "Twin Gates",
+ "triangles": {
+  "Twin Gates_Body": 3438,
+  "Twin Gates_Glow": 224
+ },
+ "triangles_total": 3662,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eliotrope/Twin Gates/textures/Twin Gates_ColorMap.png",
+  "RoughnessMap": "export/pack/Eliotrope/Twin Gates/textures/Twin Gates_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eliotrope/Twin Gates/textures/Twin Gates_MetalnessMap.png",
+  "NormalMap": "export/pack/Eliotrope/Twin Gates/textures/Twin Gates_NormalMap.png"
+ },
+ "health": {
+  "Twin Gates_Body": {
+   "non_manifold_edges": 662,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.189396,
+   "normals_outward": true
+  },
+  "Twin Gates_Glow": {
+   "non_manifold_edges": 52,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000216,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4480,
+   "quads": 1627,
+   "ngons": 2,
+   "faces": 2835,
+   "sliver_tris_lt6deg": 464,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 632,
+  "after": {
+   "Twin Gates_Body": {
+    "triangles": 3438,
+    "quads": 1211,
+    "ngons": 0,
+    "faces": 2227,
+    "sliver_tris_lt6deg": 266,
+    "non_manifold_edges": 662,
+    "open_boundary_edges": 662,
+    "uv_coverage": 0.516
+   },
+   "Twin Gates_Glow": {
+    "triangles": 224,
+    "quads": 44,
+    "ngons": 0,
+    "faces": 180,
+    "sliver_tris_lt6deg": 41,
+    "non_manifold_edges": 52,
+    "open_boundary_edges": 52,
+    "uv_coverage": 0.824
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.1403,
+   0.0,
+   2.8195
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3012,
+   0.0,
+   0.6942
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.425,
+   -0.185,
+   -0.76
+  ],
+  "max": [
+   0.425,
+   0.185,
+   2.819
+  ],
+  "length": 3.579
+ },
+ "race": "Eliotrope",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.579,
+  "width": 0.85,
+  "depth": 0.37,
+  "triangles": 4752
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3438,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 224,
+   "mirror_of": "Glow"
+  }
+ }
+}

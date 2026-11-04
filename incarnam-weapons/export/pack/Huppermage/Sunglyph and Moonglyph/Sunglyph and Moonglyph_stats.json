@@ -1,0 +1,123 @@
+{
+ "name": "Sunglyph and Moonglyph",
+ "triangles": {
+  "Sunglyph and Moonglyph_Body": 3405,
+  "Sunglyph and Moonglyph_Glow": 38
+ },
+ "triangles_total": 3443,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Sunglyph and Moonglyph/textures/Sunglyph and Moonglyph_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Sunglyph and Moonglyph/textures/Sunglyph and Moonglyph_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Sunglyph and Moonglyph/textures/Sunglyph and Moonglyph_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Sunglyph and Moonglyph/textures/Sunglyph and Moonglyph_NormalMap.png"
+ },
+ "health": {
+  "Sunglyph and Moonglyph_Body": {
+   "non_manifold_edges": 547,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.215571,
+   "normals_outward": true
+  },
+  "Sunglyph and Moonglyph_Glow": {
+   "non_manifold_edges": 28,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004259,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4344,
+   "quads": 1788,
+   "ngons": 2,
+   "faces": 2538,
+   "sliver_tris_lt6deg": 144,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 531,
+  "after": {
+   "Sunglyph and Moonglyph_Body": {
+    "triangles": 3405,
+    "quads": 1385,
+    "ngons": 0,
+    "faces": 2020,
+    "sliver_tris_lt6deg": 110,
+    "non_manifold_edges": 547,
+    "open_boundary_edges": 547,
+    "uv_coverage": 0.531
+   },
+   "Sunglyph and Moonglyph_Glow": {
+    "triangles": 38,
+    "quads": 7,
+    "ngons": 0,
+    "faces": 31,
+    "sliver_tris_lt6deg": 12,
+    "non_manifold_edges": 28,
+    "open_boundary_edges": 28,
+    "uv_coverage": 0.482
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.1264,
+   0.0,
+   2.7003
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3432,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.475,
+   -0.196,
+   -0.735
+  ],
+  "max": [
+   0.475,
+   0.196,
+   2.7
+  ],
+  "length": 3.435
+ },
+ "race": "Huppermage",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.435,
+  "width": 0.95,
+  "depth": 0.393,
+  "triangles": 4408
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3405,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 38,
+   "mirror_of": "Glow"
+  }
+ }
+}

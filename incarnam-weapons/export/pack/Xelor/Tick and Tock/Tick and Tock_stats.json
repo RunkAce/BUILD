@@ -1,0 +1,123 @@
+{
+ "name": "Tick and Tock",
+ "triangles": {
+  "Tick and Tock_Body": 4055,
+  "Tick and Tock_Glow": 50
+ },
+ "triangles_total": 4105,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Tick and Tock/textures/Tick and Tock_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Tick and Tock/textures/Tick and Tock_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Tick and Tock/textures/Tick and Tock_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Tick and Tock/textures/Tick and Tock_NormalMap.png"
+ },
+ "health": {
+  "Tick and Tock_Body": {
+   "non_manifold_edges": 687,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.228787,
+   "normals_outward": true
+  },
+  "Tick and Tock_Glow": {
+   "non_manifold_edges": 28,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.005184,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5066,
+   "quads": 2091,
+   "ngons": 2,
+   "faces": 2957,
+   "sliver_tris_lt6deg": 242,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 545,
+  "after": {
+   "Tick and Tock_Body": {
+    "triangles": 4055,
+    "quads": 1630,
+    "ngons": 0,
+    "faces": 2425,
+    "sliver_tris_lt6deg": 150,
+    "non_manifold_edges": 687,
+    "open_boundary_edges": 687,
+    "uv_coverage": 0.536
+   },
+   "Tick and Tock_Glow": {
+    "triangles": 50,
+    "quads": 9,
+    "ngons": 0,
+    "faces": 41,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 28,
+    "open_boundary_edges": 28,
+    "uv_coverage": 0.545
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.1264,
+   0.0,
+   2.7003
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3434,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.566,
+   -0.175,
+   -0.548
+  ],
+  "max": [
+   0.566,
+   0.175,
+   2.7
+  ],
+  "length": 3.248
+ },
+ "race": "Xelor",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.248,
+  "width": 1.133,
+  "depth": 0.35,
+  "triangles": 5142
+ },
+ "pieces": {
+  "L": {
+   "triangles": 4055,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 50,
+   "mirror_of": "Glow"
+  }
+ }
+}

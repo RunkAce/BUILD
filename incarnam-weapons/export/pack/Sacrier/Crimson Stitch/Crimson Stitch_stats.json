@@ -1,0 +1,118 @@
+{
+ "name": "Crimson Stitch",
+ "triangles": {
+  "Crimson Stitch_Body": 5168,
+  "Crimson Stitch_Glow": 82
+ },
+ "triangles_total": 5250,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Crimson Stitch/textures/Crimson Stitch_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Crimson Stitch/textures/Crimson Stitch_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Crimson Stitch/textures/Crimson Stitch_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Crimson Stitch/textures/Crimson Stitch_NormalMap.png"
+ },
+ "health": {
+  "Crimson Stitch_Body": {
+   "non_manifold_edges": 1376,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.264724,
+   "normals_outward": true
+  },
+  "Crimson Stitch_Glow": {
+   "non_manifold_edges": 24,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001947,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6388,
+   "quads": 2402,
+   "ngons": 2,
+   "faces": 3968,
+   "sliver_tris_lt6deg": 336,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 794,
+  "after": {
+   "Crimson Stitch_Body": {
+    "triangles": 5168,
+    "quads": 1983,
+    "ngons": 0,
+    "faces": 3185,
+    "sliver_tris_lt6deg": 284,
+    "non_manifold_edges": 1376,
+    "open_boundary_edges": 1376,
+    "uv_coverage": 0.533
+   },
+   "Crimson Stitch_Glow": {
+    "triangles": 82,
+    "quads": 1,
+    "ngons": 0,
+    "faces": 81,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 24,
+    "open_boundary_edges": 24,
+    "uv_coverage": 0.643
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.2515,
+   0.0,
+   3.7991
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.17
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.412,
+   -1.159
+  ],
+  "max": [
+   0.525,
+   0.412,
+   3.799
+  ],
+  "length": 4.958
+ },
+ "race": "Sacrier",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 4.958,
+  "width": 1.05,
+  "depth": 0.823,
+  "triangles": 6492
+ }
+}

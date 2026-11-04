@@ -1,0 +1,108 @@
+{
+ "name": "Vigil Knife",
+ "triangles": {
+  "Vigil Knife_Body": 2686,
+  "Vigil Knife_Glow": 140
+ },
+ "triangles_total": 2826,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Vigil Knife/textures/Vigil Knife_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Vigil Knife/textures/Vigil Knife_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Vigil Knife/textures/Vigil Knife_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Vigil Knife/textures/Vigil Knife_NormalMap.png"
+ },
+ "health": {
+  "Vigil Knife_Body": {
+   "non_manifold_edges": 302,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.174135,
+   "normals_outward": true
+  },
+  "Vigil Knife_Glow": {
+   "non_manifold_edges": 28,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002763,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3234,
+   "quads": 1473,
+   "ngons": 2,
+   "faces": 1743,
+   "sliver_tris_lt6deg": 1587,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 352,
+  "after": {
+   "Vigil Knife_Body": {
+    "triangles": 2686,
+    "quads": 1239,
+    "ngons": 0,
+    "faces": 1447,
+    "sliver_tris_lt6deg": 1382,
+    "non_manifold_edges": 302,
+    "open_boundary_edges": 302,
+    "uv_coverage": 0.633
+   },
+   "Vigil Knife_Glow": {
+    "triangles": 140,
+    "quads": 56,
+    "ngons": 0,
+    "faces": 84,
+    "sliver_tris_lt6deg": 1,
+    "non_manifold_edges": 28,
+    "open_boundary_edges": 28,
+    "uv_coverage": 0.76
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.513,
+   -0.227,
+   -0.72
+  ],
+  "max": [
+   0.513,
+   0.227,
+   1.71
+  ],
+  "length": 2.43
+ },
+ "race": "Feca",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.43,
+  "width": 1.025,
+  "depth": 0.454,
+  "triangles": 3458
+ }
+}

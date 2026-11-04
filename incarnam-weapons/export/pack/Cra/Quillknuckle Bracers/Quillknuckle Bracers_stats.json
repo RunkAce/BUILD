@@ -1,0 +1,118 @@
+{
+ "name": "Quillknuckle Bracers",
+ "triangles": {
+  "Quillknuckle Bracers_Body": 1515,
+  "Quillknuckle Bracers_Glow": 46
+ },
+ "triangles_total": 1561,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Quillknuckle Bracers/textures/Quillknuckle Bracers_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Quillknuckle Bracers/textures/Quillknuckle Bracers_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Quillknuckle Bracers/textures/Quillknuckle Bracers_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Quillknuckle Bracers/textures/Quillknuckle Bracers_NormalMap.png"
+ },
+ "health": {
+  "Quillknuckle Bracers_Body": {
+   "non_manifold_edges": 433,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.134799,
+   "normals_outward": true
+  },
+  "Quillknuckle Bracers_Glow": {
+   "non_manifold_edges": 22,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001249,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2064,
+   "quads": 794,
+   "ngons": 2,
+   "faces": 1252,
+   "sliver_tris_lt6deg": 304,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 337,
+  "after": {
+   "Quillknuckle Bracers_Body": {
+    "triangles": 1515,
+    "quads": 570,
+    "ngons": 2,
+    "faces": 927,
+    "sliver_tris_lt6deg": 231,
+    "non_manifold_edges": 433,
+    "open_boundary_edges": 433,
+    "uv_coverage": 0.589
+   },
+   "Quillknuckle Bracers_Glow": {
+    "triangles": 46,
+    "quads": 11,
+    "ngons": 0,
+    "faces": 35,
+    "sliver_tris_lt6deg": 6,
+    "non_manifold_edges": 22,
+    "open_boundary_edges": 22,
+    "uv_coverage": 0.408
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.692,
+   0.9102
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.702,
+   -0.765,
+   -0.377
+  ],
+  "max": [
+   1.329,
+   0.702,
+   1.23
+  ],
+  "length": 1.607
+ },
+ "race": "Cra",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.607,
+  "width": 2.031,
+  "depth": 1.467,
+  "triangles": 2132
+ },
+ "pieces": {
+  "L": {
+   "triangles": 1515,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 46,
+   "mirror_of": "Glow"
+  }
+ }
+}

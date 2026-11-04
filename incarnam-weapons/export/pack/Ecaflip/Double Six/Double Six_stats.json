@@ -1,0 +1,123 @@
+{
+ "name": "Double Six",
+ "triangles": {
+  "Double Six_Body": 3262,
+  "Double Six_Glow": 24
+ },
+ "triangles_total": 3286,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/Double Six/textures/Double Six_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/Double Six/textures/Double Six_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/Double Six/textures/Double Six_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/Double Six/textures/Double Six_NormalMap.png"
+ },
+ "health": {
+  "Double Six_Body": {
+   "non_manifold_edges": 532,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.248511,
+   "normals_outward": true
+  },
+  "Double Six_Glow": {
+   "non_manifold_edges": 20,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000301,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4172,
+   "quads": 1700,
+   "ngons": 2,
+   "faces": 2454,
+   "sliver_tris_lt6deg": 208,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 540,
+  "after": {
+   "Double Six_Body": {
+    "triangles": 3262,
+    "quads": 1300,
+    "ngons": 0,
+    "faces": 1962,
+    "sliver_tris_lt6deg": 134,
+    "non_manifold_edges": 532,
+    "open_boundary_edges": 532,
+    "uv_coverage": 0.597
+   },
+   "Double Six_Glow": {
+    "triangles": 24,
+    "quads": 4,
+    "ngons": 0,
+    "faces": 20,
+    "sliver_tris_lt6deg": 1,
+    "non_manifold_edges": 20,
+    "open_boundary_edges": 20,
+    "uv_coverage": 0.288
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.1576,
+   0.0,
+   2.6984
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3434,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.458,
+   -0.196,
+   -0.735
+  ],
+  "max": [
+   0.458,
+   0.196,
+   2.698
+  ],
+  "length": 3.433
+ },
+ "race": "Ecaflip",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.433,
+  "width": 0.917,
+  "depth": 0.393,
+  "triangles": 4264
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3262,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 24,
+   "mirror_of": "Glow"
+  }
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "name": "Lifethirst Pike",
+ "triangles": {
+  "Lifethirst Pike_Body": 5334,
+  "Lifethirst Pike_Glow": 58
+ },
+ "triangles_total": 5392,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Lifethirst Pike/textures/Lifethirst Pike_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Lifethirst Pike/textures/Lifethirst Pike_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Lifethirst Pike/textures/Lifethirst Pike_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Lifethirst Pike/textures/Lifethirst Pike_NormalMap.png"
+ },
+ "health": {
+  "Lifethirst Pike_Body": {
+   "non_manifold_edges": 588,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.200882,
+   "normals_outward": true
+  },
+  "Lifethirst Pike_Glow": {
+   "non_manifold_edges": 4,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000395,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5878,
+   "quads": 2559,
+   "ngons": 2,
+   "faces": 3309,
+   "sliver_tris_lt6deg": 4202,
+   "non_manifold_edges": 14,
+   "open_boundary_edges": 10,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 333,
+  "after": {
+   "Lifethirst Pike_Body": {
+    "triangles": 5334,
+    "quads": 2356,
+    "ngons": 0,
+    "faces": 2978,
+    "sliver_tris_lt6deg": 4041,
+    "non_manifold_edges": 588,
+    "open_boundary_edges": 584,
+    "uv_coverage": 0.412
+   },
+   "Lifethirst Pike_Glow": {
+    "triangles": 58,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 38,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 4,
+    "open_boundary_edges": 4,
+    "uv_coverage": 0.6
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.8
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.7767
+  ],
+  "VFX_Socket": [
+   0.0,
+   0.0,
+   1.68
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.35
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.49,
+   -0.166,
+   -2.367
+  ],
+  "max": [
+   0.49,
+   0.146,
+   3.777
+  ],
+  "length": 6.144
+ },
+ "race": "Sacrier",
+ "category": "spear",
+ "r6_target_length": [
+  5.5,
+  7.5
+ ],
+ "measured": {
+  "length": 6.144,
+  "width": 0.98,
+  "depth": 0.312,
+  "triangles": 5938
+ }
+}

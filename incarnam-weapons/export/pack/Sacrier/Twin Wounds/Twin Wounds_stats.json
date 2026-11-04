@@ -1,0 +1,123 @@
+{
+ "name": "Twin Wounds",
+ "triangles": {
+  "Twin Wounds_Body": 3761,
+  "Twin Wounds_Glow": 88
+ },
+ "triangles_total": 3849,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Twin Wounds/textures/Twin Wounds_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Twin Wounds/textures/Twin Wounds_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Twin Wounds/textures/Twin Wounds_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Twin Wounds/textures/Twin Wounds_NormalMap.png"
+ },
+ "health": {
+  "Twin Wounds_Body": {
+   "non_manifold_edges": 609,
+   "loose_verts": 0,
+   "zero_area_faces": 1,
+   "signed_volume": 0.237972,
+   "normals_outward": true
+  },
+  "Twin Wounds_Glow": {
+   "non_manifold_edges": 20,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 8.6e-05,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4730,
+   "quads": 2060,
+   "ngons": 2,
+   "faces": 2652,
+   "sliver_tris_lt6deg": 1730,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 504,
+  "after": {
+   "Twin Wounds_Body": {
+    "triangles": 3761,
+    "quads": 1605,
+    "ngons": 0,
+    "faces": 2156,
+    "sliver_tris_lt6deg": 1348,
+    "non_manifold_edges": 609,
+    "open_boundary_edges": 609,
+    "uv_coverage": 0.594
+   },
+   "Twin Wounds_Glow": {
+    "triangles": 88,
+    "quads": 4,
+    "ngons": 0,
+    "faces": 84,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 20,
+    "open_boundary_edges": 20,
+    "uv_coverage": 0.816
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.235,
+   0.0,
+   2.6865
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3275,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.464,
+   -0.196,
+   -0.735
+  ],
+  "max": [
+   0.439,
+   0.196,
+   2.686
+  ],
+  "length": 3.421
+ },
+ "race": "Sacrier",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.421,
+  "width": 0.902,
+  "depth": 0.393,
+  "triangles": 4834
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3761,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 88,
+   "mirror_of": "Glow"
+  }
+ }
+}

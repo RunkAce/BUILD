@@ -1,0 +1,118 @@
+{
+ "name": "Runeknuckle Wraps",
+ "triangles": {
+  "Runeknuckle Wraps_Body": 1525,
+  "Runeknuckle Wraps_Glow": 44
+ },
+ "triangles_total": 1569,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Runeknuckle Wraps/textures/Runeknuckle Wraps_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Runeknuckle Wraps/textures/Runeknuckle Wraps_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Runeknuckle Wraps/textures/Runeknuckle Wraps_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Runeknuckle Wraps/textures/Runeknuckle Wraps_NormalMap.png"
+ },
+ "health": {
+  "Runeknuckle Wraps_Body": {
+   "non_manifold_edges": 357,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.233539,
+   "normals_outward": true
+  },
+  "Runeknuckle Wraps_Glow": {
+   "non_manifold_edges": 28,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003334,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2114,
+   "quads": 703,
+   "ngons": 2,
+   "faces": 1401,
+   "sliver_tris_lt6deg": 340,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 420,
+  "after": {
+   "Runeknuckle Wraps_Body": {
+    "triangles": 1525,
+    "quads": 485,
+    "ngons": 2,
+    "faces": 1030,
+    "sliver_tris_lt6deg": 266,
+    "non_manifold_edges": 357,
+    "open_boundary_edges": 357,
+    "uv_coverage": 0.601
+   },
+   "Runeknuckle Wraps_Glow": {
+    "triangles": 44,
+    "quads": 5,
+    "ngons": 0,
+    "faces": 39,
+    "sliver_tris_lt6deg": 14,
+    "non_manifold_edges": 28,
+    "open_boundary_edges": 28,
+    "uv_coverage": 0.586
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.75,
+   0.8424
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.77,
+   -0.822,
+   -0.359
+  ],
+  "max": [
+   1.403,
+   0.77,
+   1.272
+  ],
+  "length": 1.632
+ },
+ "race": "Huppermage",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.632,
+  "width": 2.173,
+  "depth": 1.592,
+  "triangles": 2226
+ },
+ "pieces": {
+  "L": {
+   "triangles": 1525,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 44,
+   "mirror_of": "Glow"
+  }
+ }
+}

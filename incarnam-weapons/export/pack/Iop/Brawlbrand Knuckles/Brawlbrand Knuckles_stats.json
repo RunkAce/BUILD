@@ -1,0 +1,118 @@
+{
+ "name": "Brawlbrand Knuckles",
+ "triangles": {
+  "Brawlbrand Knuckles_Body": 1517,
+  "Brawlbrand Knuckles_Glow": 37
+ },
+ "triangles_total": 1554,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Iop/Brawlbrand Knuckles/textures/Brawlbrand Knuckles_ColorMap.png",
+  "RoughnessMap": "export/pack/Iop/Brawlbrand Knuckles/textures/Brawlbrand Knuckles_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Iop/Brawlbrand Knuckles/textures/Brawlbrand Knuckles_MetalnessMap.png",
+  "NormalMap": "export/pack/Iop/Brawlbrand Knuckles/textures/Brawlbrand Knuckles_NormalMap.png"
+ },
+ "health": {
+  "Brawlbrand Knuckles_Body": {
+   "non_manifold_edges": 375,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.250885,
+   "normals_outward": true
+  },
+  "Brawlbrand Knuckles_Glow": {
+   "non_manifold_edges": 17,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001474,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2160,
+   "quads": 854,
+   "ngons": 2,
+   "faces": 1288,
+   "sliver_tris_lt6deg": 340,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 399,
+  "after": {
+   "Brawlbrand Knuckles_Body": {
+    "triangles": 1517,
+    "quads": 595,
+    "ngons": 2,
+    "faces": 904,
+    "sliver_tris_lt6deg": 257,
+    "non_manifold_edges": 375,
+    "open_boundary_edges": 375,
+    "uv_coverage": 0.568
+   },
+   "Brawlbrand Knuckles_Glow": {
+    "triangles": 37,
+    "quads": 2,
+    "ngons": 0,
+    "faces": 35,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 17,
+    "open_boundary_edges": 17,
+    "uv_coverage": 0.339
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7613,
+   0.8436
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.786,
+   -0.844,
+   -0.44
+  ],
+  "max": [
+   1.29,
+   0.786,
+   1.194
+  ],
+  "length": 1.634
+ },
+ "race": "Iop",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.634,
+  "width": 2.077,
+  "depth": 1.63,
+  "triangles": 2220
+ },
+ "pieces": {
+  "L": {
+   "triangles": 1517,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 37,
+   "mirror_of": "Glow"
+  }
+ }
+}

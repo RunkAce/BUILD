@@ -1,0 +1,221 @@
+{
+ "name": "Tendril Tether",
+ "triangles": {
+  "Tendril Tether_Body": 2818,
+  "Tendril Tether_Glow": 87,
+  "HeadWeight": 380,
+  "HeadRim": 502,
+  "HeadMotif": 264,
+  "TopLug.001": 284,
+  "TopRing.001": 216
+ },
+ "triangles_total": 4551,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Tendril Tether/textures/Tendril Tether_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Tendril Tether/textures/Tendril Tether_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Tendril Tether/textures/Tendril Tether_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Tendril Tether/textures/Tendril Tether_NormalMap.png"
+ },
+ "health": {
+  "Tendril Tether_Body": {
+   "non_manifold_edges": 546,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.063186,
+   "normals_outward": true
+  },
+  "Tendril Tether_Glow": {
+   "non_manifold_edges": 29,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000911,
+   "normals_outward": true
+  },
+  "HeadWeight": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.116181,
+   "normals_outward": true
+  },
+  "HeadRim": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.035481,
+   "normals_outward": true
+  },
+  "HeadMotif": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.031313,
+   "normals_outward": true
+  },
+  "TopLug.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002133,
+   "normals_outward": true
+  },
+  "TopRing.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00035,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3504,
+   "quads": 1440,
+   "ngons": 2,
+   "faces": 2050,
+   "sliver_tris_lt6deg": 22,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 443,
+  "after": {
+   "Tendril Tether_Body": {
+    "triangles": 2818,
+    "quads": 1185,
+    "ngons": 0,
+    "faces": 1633,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 546,
+    "open_boundary_edges": 546,
+    "uv_coverage": 0.516
+   },
+   "Tendril Tether_Glow": {
+    "triangles": 87,
+    "quads": 33,
+    "ngons": 0,
+    "faces": 54,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 29,
+    "open_boundary_edges": 29,
+    "uv_coverage": 0.704
+   },
+   "HeadWeight": {
+    "triangles": 380,
+    "quads": 114,
+    "ngons": 0,
+    "faces": 266,
+    "sliver_tris_lt6deg": 56,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadRim": {
+    "triangles": 502,
+    "quads": 164,
+    "ngons": 0,
+    "faces": 338,
+    "sliver_tris_lt6deg": 11,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadMotif": {
+    "triangles": 264,
+    "quads": 92,
+    "ngons": 0,
+    "faces": 172,
+    "sliver_tris_lt6deg": 58,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopLug.001": {
+    "triangles": 284,
+    "quads": 65,
+    "ngons": 0,
+    "faces": 219,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopRing.001": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2885
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.224,
+   -0.19,
+   -0.64
+  ],
+  "max": [
+   1.258,
+   0.19,
+   1.308
+  ],
+  "length": 1.948
+ },
+ "race": "Eniripsa",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.948,
+  "width": 1.482,
+  "depth": 0.38,
+  "triangles": 5270
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 1370,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.9,
+     0.0,
+     1.0418
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "ring",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 216
+ }
+}

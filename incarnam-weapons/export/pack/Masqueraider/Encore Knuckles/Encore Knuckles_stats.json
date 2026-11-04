@@ -1,0 +1,118 @@
+{
+ "name": "Encore Knuckles",
+ "triangles": {
+  "Encore Knuckles_Body": 2053,
+  "Encore Knuckles_Glow": 136
+ },
+ "triangles_total": 2189,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Encore Knuckles/textures/Encore Knuckles_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Encore Knuckles/textures/Encore Knuckles_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Encore Knuckles/textures/Encore Knuckles_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Encore Knuckles/textures/Encore Knuckles_NormalMap.png"
+ },
+ "health": {
+  "Encore Knuckles_Body": {
+   "non_manifold_edges": 449,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.194776,
+   "normals_outward": true
+  },
+  "Encore Knuckles_Glow": {
+   "non_manifold_edges": 64,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003149,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2788,
+   "quads": 983,
+   "ngons": 2,
+   "faces": 1787,
+   "sliver_tris_lt6deg": 412,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 563,
+  "after": {
+   "Encore Knuckles_Body": {
+    "triangles": 2053,
+    "quads": 716,
+    "ngons": 2,
+    "faces": 1319,
+    "sliver_tris_lt6deg": 319,
+    "non_manifold_edges": 449,
+    "open_boundary_edges": 449,
+    "uv_coverage": 0.583
+   },
+   "Encore Knuckles_Glow": {
+    "triangles": 136,
+    "quads": 33,
+    "ngons": 0,
+    "faces": 103,
+    "sliver_tris_lt6deg": 15,
+    "non_manifold_edges": 64,
+    "open_boundary_edges": 64,
+    "uv_coverage": 0.628
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7443,
+   0.7764
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.765,
+   -0.839,
+   -0.579
+  ],
+  "max": [
+   1.53,
+   0.765,
+   1.106
+  ],
+  "length": 1.685
+ },
+ "race": "Masqueraider",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.685,
+  "width": 2.294,
+  "depth": 1.604,
+  "triangles": 3072
+ },
+ "pieces": {
+  "L": {
+   "triangles": 2053,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 136,
+   "mirror_of": "Glow"
+  }
+ }
+}

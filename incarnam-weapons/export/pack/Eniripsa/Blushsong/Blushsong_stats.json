@@ -1,0 +1,118 @@
+{
+ "name": "Blushsong",
+ "triangles": {
+  "Blushsong_Body": 4008,
+  "Blushsong_Glow": 176
+ },
+ "triangles_total": 4184,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Blushsong/textures/Blushsong_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Blushsong/textures/Blushsong_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Blushsong/textures/Blushsong_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Blushsong/textures/Blushsong_NormalMap.png"
+ },
+ "health": {
+  "Blushsong_Body": {
+   "non_manifold_edges": 994,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.262869,
+   "normals_outward": true
+  },
+  "Blushsong_Glow": {
+   "non_manifold_edges": 62,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001665,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5000,
+   "quads": 1981,
+   "ngons": 2,
+   "faces": 3001,
+   "sliver_tris_lt6deg": 356,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 656,
+  "after": {
+   "Blushsong_Body": {
+    "triangles": 4008,
+    "quads": 1620,
+    "ngons": 0,
+    "faces": 2388,
+    "sliver_tris_lt6deg": 280,
+    "non_manifold_edges": 994,
+    "open_boundary_edges": 994,
+    "uv_coverage": 0.573
+   },
+   "Blushsong_Glow": {
+    "triangles": 176,
+    "quads": 59,
+    "ngons": 0,
+    "faces": 117,
+    "sliver_tris_lt6deg": 9,
+    "non_manifold_edges": 62,
+    "open_boundary_edges": 62,
+    "uv_coverage": 0.609
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.3576,
+   0.0,
+   3.7907
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.17
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.419,
+   -1.169
+  ],
+  "max": [
+   0.525,
+   0.419,
+   3.791
+  ],
+  "length": 4.96
+ },
+ "race": "Eniripsa",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 4.96,
+  "width": 1.05,
+  "depth": 0.839,
+  "triangles": 5248
+ }
+}

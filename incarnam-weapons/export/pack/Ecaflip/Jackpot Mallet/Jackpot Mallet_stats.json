@@ -1,0 +1,113 @@
+{
+ "name": "Jackpot Mallet",
+ "triangles": {
+  "Jackpot Mallet_Body": 4260,
+  "Jackpot Mallet_Glow": 42
+ },
+ "triangles_total": 4302,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/Jackpot Mallet/textures/Jackpot Mallet_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/Jackpot Mallet/textures/Jackpot Mallet_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/Jackpot Mallet/textures/Jackpot Mallet_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/Jackpot Mallet/textures/Jackpot Mallet_NormalMap.png"
+ },
+ "health": {
+  "Jackpot Mallet_Body": {
+   "non_manifold_edges": 548,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.20028,
+   "normals_outward": true
+  },
+  "Jackpot Mallet_Glow": {
+   "non_manifold_edges": 66,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003861,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4968,
+   "quads": 2130,
+   "ngons": 2,
+   "faces": 2824,
+   "sliver_tris_lt6deg": 1342,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 698,
+  "after": {
+   "Jackpot Mallet_Body": {
+    "triangles": 4260,
+    "quads": 1906,
+    "ngons": 0,
+    "faces": 2354,
+    "sliver_tris_lt6deg": 1238,
+    "non_manifold_edges": 548,
+    "open_boundary_edges": 548,
+    "uv_coverage": 0.566
+   },
+   "Jackpot Mallet_Glow": {
+    "triangles": 42,
+    "quads": 14,
+    "ngons": 0,
+    "faces": 28,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 66,
+    "open_boundary_edges": 66,
+    "uv_coverage": 0.842
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.47
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.6932
+  ],
+  "VFX_Impact": [
+   0.42,
+   0.0,
+   2.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.47,
+   -0.216,
+   -0.868
+  ],
+  "max": [
+   0.505,
+   0.202,
+   2.675
+  ],
+  "length": 3.543
+ },
+ "race": "Ecaflip",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 3.543,
+  "width": 0.975,
+  "depth": 0.417,
+  "triangles": 5304
+ }
+}

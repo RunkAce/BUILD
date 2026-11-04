@@ -1,0 +1,118 @@
+{
+ "name": "Hearthbreaker",
+ "triangles": {
+  "Hearthbreaker_Body": 4492,
+  "Hearthbreaker_Glow": 104
+ },
+ "triangles_total": 4596,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Iop/Hearthbreaker/textures/Hearthbreaker_ColorMap.png",
+  "RoughnessMap": "export/pack/Iop/Hearthbreaker/textures/Hearthbreaker_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Iop/Hearthbreaker/textures/Hearthbreaker_MetalnessMap.png",
+  "NormalMap": "export/pack/Iop/Hearthbreaker/textures/Hearthbreaker_NormalMap.png"
+ },
+ "health": {
+  "Hearthbreaker_Body": {
+   "non_manifold_edges": 528,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.542256,
+   "normals_outward": true
+  },
+  "Hearthbreaker_Glow": {
+   "non_manifold_edges": 88,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.007238,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4972,
+   "quads": 2237,
+   "ngons": 2,
+   "faces": 2725,
+   "sliver_tris_lt6deg": 838,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 318,
+  "after": {
+   "Hearthbreaker_Body": {
+    "triangles": 4492,
+    "quads": 2032,
+    "ngons": 0,
+    "faces": 2460,
+    "sliver_tris_lt6deg": 744,
+    "non_manifold_edges": 528,
+    "open_boundary_edges": 528,
+    "uv_coverage": 0.66
+   },
+   "Hearthbreaker_Glow": {
+    "triangles": 104,
+    "quads": 34,
+    "ngons": 0,
+    "faces": 70,
+    "sliver_tris_lt6deg": 6,
+    "non_manifold_edges": 88,
+    "open_boundary_edges": 88,
+    "uv_coverage": 0.317
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.5645
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.174
+  ],
+  "VFX_Impact": [
+   0.644,
+   0.0,
+   2.5645
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.05
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.943,
+   -0.292,
+   -2.141
+  ],
+  "max": [
+   0.744,
+   0.292,
+   3.174
+  ],
+  "length": 5.315
+ },
+ "race": "Iop",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 5.315,
+  "width": 1.687,
+  "depth": 0.583,
+  "triangles": 5152
+ }
+}

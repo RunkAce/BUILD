@@ -1,0 +1,90 @@
+{
+ "name": "Windthread",
+ "triangles": {
+  "Windthread_Body": 5942
+ },
+ "triangles_total": 5942,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Windthread/textures/Windthread_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Windthread/textures/Windthread_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Windthread/textures/Windthread_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Windthread/textures/Windthread_NormalMap.png"
+ },
+ "health": {
+  "Windthread_Body": {
+   "non_manifold_edges": 674,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.207356,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6884,
+   "quads": 3309,
+   "ngons": 2,
+   "faces": 3549,
+   "sliver_tris_lt6deg": 3816,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 470,
+  "after": {
+   "Windthread_Body": {
+    "triangles": 5942,
+    "quads": 2863,
+    "ngons": 0,
+    "faces": 3079,
+    "sliver_tris_lt6deg": 3342,
+    "non_manifold_edges": 674,
+    "open_boundary_edges": 674,
+    "uv_coverage": 0.564
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.593,
+   -0.16,
+   -0.95
+  ],
+  "max": [
+   0.593,
+   0.16,
+   3.23
+  ],
+  "length": 4.18
+ },
+ "race": "Cra",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.18,
+  "width": 1.186,
+  "depth": 0.32,
+  "triangles": 6884
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "name": "Tickblade",
+ "triangles": {
+  "Tickblade_Body": 6333
+ },
+ "triangles_total": 6333,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Tickblade/textures/Tickblade_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Tickblade/textures/Tickblade_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Tickblade/textures/Tickblade_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Tickblade/textures/Tickblade_NormalMap.png"
+ },
+ "health": {
+  "Tickblade_Body": {
+   "non_manifold_edges": 625,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.247731,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 7064,
+   "quads": 3179,
+   "ngons": 2,
+   "faces": 3859,
+   "sliver_tris_lt6deg": 164,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 382,
+  "after": {
+   "Tickblade_Body": {
+    "triangles": 6333,
+    "quads": 2856,
+    "ngons": 0,
+    "faces": 3477,
+    "sliver_tris_lt6deg": 130,
+    "non_manifold_edges": 625,
+    "open_boundary_edges": 625,
+    "uv_coverage": 0.619
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.734,
+   -0.16,
+   -0.72
+  ],
+  "max": [
+   0.734,
+   0.16,
+   3.23
+  ],
+  "length": 3.95
+ },
+ "race": "Xelor",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 3.95,
+  "width": 1.468,
+  "depth": 0.32,
+  "triangles": 7064
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "name": "Seedspitter",
+ "triangles": {
+  "Seedspitter_Body": 2584,
+  "Seedspitter_Glow": 42
+ },
+ "triangles_total": 2626,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sadida/Seedspitter/textures/Seedspitter_ColorMap.png",
+  "RoughnessMap": "export/pack/Sadida/Seedspitter/textures/Seedspitter_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sadida/Seedspitter/textures/Seedspitter_MetalnessMap.png",
+  "NormalMap": "export/pack/Sadida/Seedspitter/textures/Seedspitter_NormalMap.png"
+ },
+ "health": {
+  "Seedspitter_Body": {
+   "non_manifold_edges": 568,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.245598,
+   "normals_outward": true
+  },
+  "Seedspitter_Glow": {
+   "non_manifold_edges": 20,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002316,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3426,
+   "quads": 1218,
+   "ngons": 4,
+   "faces": 2198,
+   "sliver_tris_lt6deg": 356,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 554,
+  "after": {
+   "Seedspitter_Body": {
+    "triangles": 2584,
+    "quads": 908,
+    "ngons": 1,
+    "faces": 1673,
+    "sliver_tris_lt6deg": 142,
+    "non_manifold_edges": 568,
+    "open_boundary_edges": 568,
+    "uv_coverage": 0.516
+   },
+   "Seedspitter_Glow": {
+    "triangles": 42,
+    "quads": 21,
+    "ngons": 0,
+    "faces": 21,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 20,
+    "open_boundary_edges": 20,
+    "uv_coverage": 0.733
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.05,
+   0.0,
+   2.45
+  ],
+  "GripSecondary": [
+   -0.03,
+   0.0,
+   1.204
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.372,
+   -0.172,
+   -0.921
+  ],
+  "max": [
+   0.45,
+   0.172,
+   2.63
+  ],
+  "length": 3.551
+ },
+ "race": "Sadida",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 3.551,
+  "width": 0.822,
+  "depth": 0.345,
+  "triangles": 3506
+ }
+}

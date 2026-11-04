@@ -1,0 +1,118 @@
+{
+ "name": "Emberwatch Staff",
+ "triangles": {
+  "Emberwatch Staff_Body": 4673,
+  "Emberwatch Staff_Glow": 101
+ },
+ "triangles_total": 4774,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Iop/Emberwatch Staff/textures/Emberwatch Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Iop/Emberwatch Staff/textures/Emberwatch Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Iop/Emberwatch Staff/textures/Emberwatch Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Iop/Emberwatch Staff/textures/Emberwatch Staff_NormalMap.png"
+ },
+ "health": {
+  "Emberwatch Staff_Body": {
+   "non_manifold_edges": 577,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.265117,
+   "normals_outward": true
+  },
+  "Emberwatch Staff_Glow": {
+   "non_manifold_edges": 49,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.073956,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5340,
+   "quads": 2364,
+   "ngons": 2,
+   "faces": 2966,
+   "sliver_tris_lt6deg": 3508,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 458,
+  "after": {
+   "Emberwatch Staff_Body": {
+    "triangles": 4673,
+    "quads": 2118,
+    "ngons": 0,
+    "faces": 2555,
+    "sliver_tris_lt6deg": 3346,
+    "non_manifold_edges": 577,
+    "open_boundary_edges": 577,
+    "uv_coverage": 0.502
+   },
+   "Emberwatch Staff_Glow": {
+    "triangles": 101,
+    "quads": 39,
+    "ngons": 0,
+    "faces": 62,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 49,
+    "open_boundary_edges": 49,
+    "uv_coverage": 0.312
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.6148
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.2946
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.548,
+   -0.19,
+   -3.001
+  ],
+  "max": [
+   0.548,
+   0.19,
+   3.374
+  ],
+  "length": 6.374
+ },
+ "race": "Iop",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.374,
+  "width": 1.096,
+  "depth": 0.381,
+  "triangles": 5504
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "name": "Pulsereaper",
+ "triangles": {
+  "Pulsereaper_Body": 6362,
+  "Pulsereaper_Glow": 50
+ },
+ "triangles_total": 6412,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Pulsereaper/textures/Pulsereaper_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Pulsereaper/textures/Pulsereaper_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Pulsereaper/textures/Pulsereaper_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Pulsereaper/textures/Pulsereaper_NormalMap.png"
+ },
+ "health": {
+  "Pulsereaper_Body": {
+   "non_manifold_edges": 706,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.433029,
+   "normals_outward": true
+  },
+  "Pulsereaper_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001368,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 7130,
+   "quads": 2957,
+   "ngons": 2,
+   "faces": 4163,
+   "sliver_tris_lt6deg": 3132,
+   "non_manifold_edges": 14,
+   "open_boundary_edges": 10,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 531,
+  "after": {
+   "Pulsereaper_Body": {
+    "triangles": 6362,
+    "quads": 2720,
+    "ngons": 0,
+    "faces": 3642,
+    "sliver_tris_lt6deg": 2975,
+    "non_manifold_edges": 706,
+    "open_boundary_edges": 702,
+    "uv_coverage": 0.487
+   },
+   "Pulsereaper_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.55
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   3.1917
+  ],
+  "VFX_Tip": [
+   2.8477,
+   0.0,
+   1.683
+  ],
+  "VFX_Blade": [
+   1.5592,
+   0.0,
+   2.7004
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.703,
+   -0.225,
+   -2.667
+  ],
+  "max": [
+   2.848,
+   0.165,
+   3.68
+  ],
+  "length": 6.347
+ },
+ "race": "Sacrier",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.347,
+  "width": 3.551,
+  "depth": 0.39,
+  "triangles": 7190
+ }
+}

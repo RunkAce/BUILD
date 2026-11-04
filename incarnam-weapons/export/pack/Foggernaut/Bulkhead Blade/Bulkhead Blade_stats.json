@@ -1,0 +1,90 @@
+{
+ "name": "Bulkhead Blade",
+ "triangles": {
+  "Bulkhead Blade_Body": 5629
+ },
+ "triangles_total": 5629,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Foggernaut/Bulkhead Blade/textures/Bulkhead Blade_ColorMap.png",
+  "RoughnessMap": "export/pack/Foggernaut/Bulkhead Blade/textures/Bulkhead Blade_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Foggernaut/Bulkhead Blade/textures/Bulkhead Blade_MetalnessMap.png",
+  "NormalMap": "export/pack/Foggernaut/Bulkhead Blade/textures/Bulkhead Blade_NormalMap.png"
+ },
+ "health": {
+  "Bulkhead Blade_Body": {
+   "non_manifold_edges": 843,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.277227,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 7216,
+   "quads": 2861,
+   "ngons": 2,
+   "faces": 4329,
+   "sliver_tris_lt6deg": 410,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 883,
+  "after": {
+   "Bulkhead Blade_Body": {
+    "triangles": 5629,
+    "quads": 2183,
+    "ngons": 0,
+    "faces": 3446,
+    "sliver_tris_lt6deg": 284,
+    "non_manifold_edges": 843,
+    "open_boundary_edges": 843,
+    "uv_coverage": 0.618
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.833,
+   -0.16,
+   -0.72
+  ],
+  "max": [
+   0.833,
+   0.16,
+   3.23
+  ],
+  "length": 3.95
+ },
+ "race": "Foggernaut",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 3.95,
+  "width": 1.666,
+  "depth": 0.32,
+  "triangles": 7216
+ }
+}

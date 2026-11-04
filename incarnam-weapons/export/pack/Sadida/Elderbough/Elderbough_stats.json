@@ -1,0 +1,118 @@
+{
+ "name": "Elderbough",
+ "triangles": {
+  "Elderbough_Body": 2566,
+  "Elderbough_Glow": 272
+ },
+ "triangles_total": 2838,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sadida/Elderbough/textures/Elderbough_ColorMap.png",
+  "RoughnessMap": "export/pack/Sadida/Elderbough/textures/Elderbough_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sadida/Elderbough/textures/Elderbough_MetalnessMap.png",
+  "NormalMap": "export/pack/Sadida/Elderbough/textures/Elderbough_NormalMap.png"
+ },
+ "health": {
+  "Elderbough_Body": {
+   "non_manifold_edges": 560,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.903652,
+   "normals_outward": true
+  },
+  "Elderbough_Glow": {
+   "non_manifold_edges": 22,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.012807,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3576,
+   "quads": 1429,
+   "ngons": 2,
+   "faces": 2133,
+   "sliver_tris_lt6deg": 307,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 534,
+  "after": {
+   "Elderbough_Body": {
+    "triangles": 2566,
+    "quads": 957,
+    "ngons": 0,
+    "faces": 1609,
+    "sliver_tris_lt6deg": 208,
+    "non_manifold_edges": 560,
+    "open_boundary_edges": 560,
+    "uv_coverage": 0.663
+   },
+   "Elderbough_Glow": {
+    "triangles": 272,
+    "quads": 83,
+    "ngons": 0,
+    "faces": 189,
+    "sliver_tris_lt6deg": 60,
+    "non_manifold_edges": 22,
+    "open_boundary_edges": 22,
+    "uv_coverage": 0.841
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.0,
+   -0.225,
+   -1.451
+  ],
+  "max": [
+   1.0,
+   0.225,
+   4.419
+  ],
+  "length": 5.87
+ },
+ "race": "Sadida",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.87,
+  "width": 2.0,
+  "depth": 0.45,
+  "triangles": 3868
+ }
+}

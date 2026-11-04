@@ -1,0 +1,275 @@
+{
+ "name": "Tetherbolt",
+ "triangles": {
+  "Tetherbolt_Body": 3136,
+  "Tetherbolt_Glow": 108,
+  "HeadBlade": 188,
+  "HeadLanget": 36,
+  "HeadMotif": 120,
+  "HeadGuard": 140,
+  "HeadFerrule": 48,
+  "HeadBand": 48,
+  "TailLug": 160,
+  "TailRing": 216
+ },
+ "triangles_total": 4200,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Tetherbolt/textures/Tetherbolt_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Tetherbolt/textures/Tetherbolt_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Tetherbolt/textures/Tetherbolt_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Tetherbolt/textures/Tetherbolt_NormalMap.png"
+ },
+ "health": {
+  "Tetherbolt_Body": {
+   "non_manifold_edges": 622,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.057081,
+   "normals_outward": true
+  },
+  "Tetherbolt_Glow": {
+   "non_manifold_edges": 22,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000407,
+   "normals_outward": true
+  },
+  "HeadBlade": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.017833,
+   "normals_outward": true
+  },
+  "HeadLanget": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.013975,
+   "normals_outward": true
+  },
+  "HeadMotif": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002336,
+   "normals_outward": true
+  },
+  "HeadGuard": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002239,
+   "normals_outward": true
+  },
+  "HeadFerrule": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004132,
+   "normals_outward": true
+  },
+  "HeadBand": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001173,
+   "normals_outward": true
+  },
+  "TailLug": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001371,
+   "normals_outward": true
+  },
+  "TailRing": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000287,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3636,
+   "quads": 1634,
+   "ngons": 2,
+   "faces": 1988,
+   "sliver_tris_lt6deg": 22,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 283,
+  "after": {
+   "Tetherbolt_Body": {
+    "triangles": 3136,
+    "quads": 1424,
+    "ngons": 0,
+    "faces": 1712,
+    "sliver_tris_lt6deg": 18,
+    "non_manifold_edges": 622,
+    "open_boundary_edges": 622,
+    "uv_coverage": 0.523
+   },
+   "Tetherbolt_Glow": {
+    "triangles": 108,
+    "quads": 35,
+    "ngons": 0,
+    "faces": 73,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 22,
+    "open_boundary_edges": 22,
+    "uv_coverage": 0.614
+   },
+   "HeadBlade": {
+    "triangles": 188,
+    "quads": 84,
+    "ngons": 0,
+    "faces": 104,
+    "sliver_tris_lt6deg": 6,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadLanget": {
+    "triangles": 36,
+    "quads": 17,
+    "ngons": 0,
+    "faces": 19,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadMotif": {
+    "triangles": 120,
+    "quads": 35,
+    "ngons": 0,
+    "faces": 85,
+    "sliver_tris_lt6deg": 8,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadGuard": {
+    "triangles": 140,
+    "quads": 35,
+    "ngons": 0,
+    "faces": 105,
+    "sliver_tris_lt6deg": 32,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadFerrule": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadBand": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailLug": {
+    "triangles": 160,
+    "quads": 62,
+    "ngons": 0,
+    "faces": 98,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailRing": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2885
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.207,
+   -0.168,
+   -0.691
+  ],
+  "max": [
+   1.063,
+   0.168,
+   1.345
+  ],
+  "length": 2.036
+ },
+ "race": "Cra",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 2.036,
+  "width": 1.27,
+  "depth": 0.337,
+  "triangles": 4712
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 852,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.9,
+     0.0,
+     -0.2707
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "oval",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 288
+ }
+}

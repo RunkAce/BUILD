@@ -1,0 +1,123 @@
+{
+ "name": "Twin Talons",
+ "triangles": {
+  "Twin Talons_Body": 3367,
+  "Twin Talons_Glow": 76
+ },
+ "triangles_total": 3443,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Osamodas/Twin Talons/textures/Twin Talons_ColorMap.png",
+  "RoughnessMap": "export/pack/Osamodas/Twin Talons/textures/Twin Talons_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Osamodas/Twin Talons/textures/Twin Talons_MetalnessMap.png",
+  "NormalMap": "export/pack/Osamodas/Twin Talons/textures/Twin Talons_NormalMap.png"
+ },
+ "health": {
+  "Twin Talons_Body": {
+   "non_manifold_edges": 531,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.200602,
+   "normals_outward": true
+  },
+  "Twin Talons_Glow": {
+   "non_manifold_edges": 30,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": -0.000216,
+   "normals_outward": false
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4328,
+   "quads": 1887,
+   "ngons": 2,
+   "faces": 2423,
+   "sliver_tris_lt6deg": 108,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 543,
+  "after": {
+   "Twin Talons_Body": {
+    "triangles": 3367,
+    "quads": 1475,
+    "ngons": 0,
+    "faces": 1892,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 531,
+    "open_boundary_edges": 531,
+    "uv_coverage": 0.578
+   },
+   "Twin Talons_Glow": {
+    "triangles": 76,
+    "quads": 5,
+    "ngons": 0,
+    "faces": 71,
+    "sliver_tris_lt6deg": 12,
+    "non_manifold_edges": 30,
+    "open_boundary_edges": 30,
+    "uv_coverage": 0.85
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.3312,
+   0.0,
+   2.67
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3362,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.437,
+   -0.175,
+   -0.745
+  ],
+  "max": [
+   0.437,
+   0.175,
+   2.67
+  ],
+  "length": 3.415
+ },
+ "race": "Osamodas",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.415,
+  "width": 0.874,
+  "depth": 0.35,
+  "triangles": 4428
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3367,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 76,
+   "mirror_of": "Glow"
+  }
+ }
+}

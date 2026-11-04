@@ -1,0 +1,311 @@
+{
+ "name": "Leashwyrm",
+ "triangles": {
+  "Leashwyrm_Body": 2934,
+  "Leashwyrm_Glow": 110,
+  "HeadHaft": 48,
+  "HeadWrap": 652,
+  "HeadSocket": 36,
+  "HeadMotif": 220,
+  "HeadBlade": 268,
+  "HeadSpur": 120,
+  "HeadCollar": 48,
+  "HeadButt": 48,
+  "TailLug": 160,
+  "TailRing": 216
+ },
+ "triangles_total": 4860,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Osamodas/Leashwyrm/textures/Leashwyrm_ColorMap.png",
+  "RoughnessMap": "export/pack/Osamodas/Leashwyrm/textures/Leashwyrm_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Osamodas/Leashwyrm/textures/Leashwyrm_MetalnessMap.png",
+  "NormalMap": "export/pack/Osamodas/Leashwyrm/textures/Leashwyrm_NormalMap.png"
+ },
+ "health": {
+  "Leashwyrm_Body": {
+   "non_manifold_edges": 566,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.060613,
+   "normals_outward": true
+  },
+  "Leashwyrm_Glow": {
+   "non_manifold_edges": 16,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000354,
+   "normals_outward": true
+  },
+  "HeadHaft": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.009434,
+   "normals_outward": true
+  },
+  "HeadWrap": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.006642,
+   "normals_outward": true
+  },
+  "HeadSocket": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.01231,
+   "normals_outward": true
+  },
+  "HeadMotif": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002967,
+   "normals_outward": true
+  },
+  "HeadBlade": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.006042,
+   "normals_outward": true
+  },
+  "HeadSpur": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002475,
+   "normals_outward": true
+  },
+  "HeadCollar": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001716,
+   "normals_outward": true
+  },
+  "HeadButt": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001865,
+   "normals_outward": true
+  },
+  "TailLug": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001258,
+   "normals_outward": true
+  },
+  "TailRing": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000246,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3388,
+   "quads": 1504,
+   "ngons": 2,
+   "faces": 1870,
+   "sliver_tris_lt6deg": 22,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 263,
+  "after": {
+   "Leashwyrm_Body": {
+    "triangles": 2934,
+    "quads": 1322,
+    "ngons": 0,
+    "faces": 1612,
+    "sliver_tris_lt6deg": 22,
+    "non_manifold_edges": 566,
+    "open_boundary_edges": 566,
+    "uv_coverage": 0.545
+   },
+   "Leashwyrm_Glow": {
+    "triangles": 110,
+    "quads": 35,
+    "ngons": 0,
+    "faces": 75,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 16,
+    "open_boundary_edges": 16,
+    "uv_coverage": 0.643
+   },
+   "HeadHaft": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadWrap": {
+    "triangles": 652,
+    "quads": 320,
+    "ngons": 2,
+    "faces": 322,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadSocket": {
+    "triangles": 36,
+    "quads": 17,
+    "ngons": 0,
+    "faces": 19,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadMotif": {
+    "triangles": 220,
+    "quads": 61,
+    "ngons": 0,
+    "faces": 159,
+    "sliver_tris_lt6deg": 18,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadBlade": {
+    "triangles": 268,
+    "quads": 51,
+    "ngons": 0,
+    "faces": 217,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadSpur": {
+    "triangles": 120,
+    "quads": 39,
+    "ngons": 0,
+    "faces": 81,
+    "sliver_tris_lt6deg": 2,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadCollar": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadButt": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailLug": {
+    "triangles": 160,
+    "quads": 64,
+    "ngons": 0,
+    "faces": 96,
+    "sliver_tris_lt6deg": 2,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailRing": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2885
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.201,
+   -0.182,
+   -0.63
+  ],
+  "max": [
+   1.271,
+   0.182,
+   1.308
+  ],
+  "length": 1.938
+ },
+ "race": "Osamodas",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.938,
+  "width": 1.473,
+  "depth": 0.364,
+  "triangles": 5324
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 1598,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.62,
+     0.0,
+     -0.1388
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "ring",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 216
+ }
+}

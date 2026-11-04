@@ -1,0 +1,108 @@
+{
+ "name": "Stage Whisper",
+ "triangles": {
+  "Stage Whisper_Body": 3777,
+  "Stage Whisper_Glow": 290
+ },
+ "triangles_total": 4067,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Stage Whisper/textures/Stage Whisper_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Stage Whisper/textures/Stage Whisper_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Stage Whisper/textures/Stage Whisper_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Stage Whisper/textures/Stage Whisper_NormalMap.png"
+ },
+ "health": {
+  "Stage Whisper_Body": {
+   "non_manifold_edges": 401,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.156456,
+   "normals_outward": true
+  },
+  "Stage Whisper_Glow": {
+   "non_manifold_edges": 66,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001621,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4356,
+   "quads": 1892,
+   "ngons": 2,
+   "faces": 2446,
+   "sliver_tris_lt6deg": 2892,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 426,
+  "after": {
+   "Stage Whisper_Body": {
+    "triangles": 3777,
+    "quads": 1631,
+    "ngons": 0,
+    "faces": 2146,
+    "sliver_tris_lt6deg": 2576,
+    "non_manifold_edges": 401,
+    "open_boundary_edges": 401,
+    "uv_coverage": 0.554
+   },
+   "Stage Whisper_Glow": {
+    "triangles": 290,
+    "quads": 98,
+    "ngons": 0,
+    "faces": 192,
+    "sliver_tris_lt6deg": 22,
+    "non_manifold_edges": 66,
+    "open_boundary_edges": 66,
+    "uv_coverage": 0.653
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.484,
+   -0.201,
+   -0.703
+  ],
+  "max": [
+   0.484,
+   0.201,
+   1.705
+  ],
+  "length": 2.408
+ },
+ "race": "Masqueraider",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.408,
+  "width": 0.968,
+  "depth": 0.402,
+  "triangles": 4804
+ }
+}

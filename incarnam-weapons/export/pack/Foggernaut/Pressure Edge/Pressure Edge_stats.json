@@ -1,0 +1,118 @@
+{
+ "name": "Pressure Edge",
+ "triangles": {
+  "Pressure Edge_Body": 4517,
+  "Pressure Edge_Glow": 12
+ },
+ "triangles_total": 4529,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Foggernaut/Pressure Edge/textures/Pressure Edge_ColorMap.png",
+  "RoughnessMap": "export/pack/Foggernaut/Pressure Edge/textures/Pressure Edge_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Foggernaut/Pressure Edge/textures/Pressure Edge_MetalnessMap.png",
+  "NormalMap": "export/pack/Foggernaut/Pressure Edge/textures/Pressure Edge_NormalMap.png"
+ },
+ "health": {
+  "Pressure Edge_Body": {
+   "non_manifold_edges": 1193,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.33244,
+   "normals_outward": true
+  },
+  "Pressure Edge_Glow": {
+   "non_manifold_edges": 14,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003028,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6106,
+   "quads": 2293,
+   "ngons": 2,
+   "faces": 3795,
+   "sliver_tris_lt6deg": 500,
+   "non_manifold_edges": 18,
+   "open_boundary_edges": 18,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 1088,
+  "after": {
+   "Pressure Edge_Body": {
+    "triangles": 4517,
+    "quads": 1746,
+    "ngons": 0,
+    "faces": 2771,
+    "sliver_tris_lt6deg": 315,
+    "non_manifold_edges": 1193,
+    "open_boundary_edges": 1193,
+    "uv_coverage": 0.529
+   },
+   "Pressure Edge_Glow": {
+    "triangles": 12,
+    "quads": 6,
+    "ngons": 0,
+    "faces": 6,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 14,
+    "open_boundary_edges": 14,
+    "uv_coverage": 0.693
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.3429,
+   0.0,
+   3.6721
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.11
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.403,
+   -0.95
+  ],
+  "max": [
+   0.525,
+   0.403,
+   3.672
+  ],
+  "length": 4.622
+ },
+ "race": "Foggernaut",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 4.622,
+  "width": 1.05,
+  "depth": 0.806,
+  "triangles": 6218
+ }
+}

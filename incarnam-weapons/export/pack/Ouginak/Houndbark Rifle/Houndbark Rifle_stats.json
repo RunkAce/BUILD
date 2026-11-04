@@ -1,0 +1,108 @@
+{
+ "name": "Houndbark Rifle",
+ "triangles": {
+  "Houndbark Rifle_Body": 2603,
+  "Houndbark Rifle_Glow": 42
+ },
+ "triangles_total": 2645,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Houndbark Rifle/textures/Houndbark Rifle_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Houndbark Rifle/textures/Houndbark Rifle_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Houndbark Rifle/textures/Houndbark Rifle_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Houndbark Rifle/textures/Houndbark Rifle_NormalMap.png"
+ },
+ "health": {
+  "Houndbark Rifle_Body": {
+   "non_manifold_edges": 555,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.251084,
+   "normals_outward": true
+  },
+  "Houndbark Rifle_Glow": {
+   "non_manifold_edges": 20,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002471,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3362,
+   "quads": 1006,
+   "ngons": 2,
+   "faces": 2350,
+   "sliver_tris_lt6deg": 384,
+   "non_manifold_edges": 14,
+   "open_boundary_edges": 10,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 508,
+  "after": {
+   "Houndbark Rifle_Body": {
+    "triangles": 2603,
+    "quads": 729,
+    "ngons": 1,
+    "faces": 1871,
+    "sliver_tris_lt6deg": 158,
+    "non_manifold_edges": 555,
+    "open_boundary_edges": 555,
+    "uv_coverage": 0.544
+   },
+   "Houndbark Rifle_Glow": {
+    "triangles": 42,
+    "quads": 21,
+    "ngons": 0,
+    "faces": 21,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 20,
+    "open_boundary_edges": 20,
+    "uv_coverage": 0.727
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.05,
+   0.0,
+   2.45
+  ],
+  "GripSecondary": [
+   -0.0329,
+   0.0,
+   1.204
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.386,
+   -0.177,
+   -0.921
+  ],
+  "max": [
+   0.455,
+   0.177,
+   2.63
+  ],
+  "length": 3.551
+ },
+ "race": "Ouginak",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 3.551,
+  "width": 0.841,
+  "depth": 0.354,
+  "triangles": 3442
+ }
+}

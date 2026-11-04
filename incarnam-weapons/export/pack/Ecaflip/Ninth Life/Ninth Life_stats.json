@@ -1,0 +1,123 @@
+{
+ "name": "Ninth Life",
+ "triangles": {
+  "Ninth Life_Body": 5452,
+  "Ninth Life_Glow": 50
+ },
+ "triangles_total": 5502,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/Ninth Life/textures/Ninth Life_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/Ninth Life/textures/Ninth Life_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/Ninth Life/textures/Ninth Life_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/Ninth Life/textures/Ninth Life_NormalMap.png"
+ },
+ "health": {
+  "Ninth Life_Body": {
+   "non_manifold_edges": 522,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.461143,
+   "normals_outward": true
+  },
+  "Ninth Life_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002098,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5940,
+   "quads": 2442,
+   "ngons": 2,
+   "faces": 3488,
+   "sliver_tris_lt6deg": 259,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 318,
+  "after": {
+   "Ninth Life_Body": {
+    "triangles": 5452,
+    "quads": 2272,
+    "ngons": 0,
+    "faces": 3180,
+    "sliver_tris_lt6deg": 237,
+    "non_manifold_edges": 522,
+    "open_boundary_edges": 522,
+    "uv_coverage": 0.564
+   },
+   "Ninth Life_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.591
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.7631
+  ],
+  "VFX_Tip": [
+   2.7816,
+   0.0,
+   1.6128
+  ],
+  "VFX_Blade": [
+   1.5333,
+   0.0,
+   2.7259
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.684,
+   -0.225,
+   -2.67
+  ],
+  "max": [
+   2.782,
+   0.165,
+   3.563
+  ],
+  "length": 6.233
+ },
+ "race": "Ecaflip",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.233,
+  "width": 3.466,
+  "depth": 0.39,
+  "triangles": 6000
+ }
+}

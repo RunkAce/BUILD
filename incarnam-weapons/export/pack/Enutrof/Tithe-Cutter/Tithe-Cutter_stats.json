@@ -1,0 +1,90 @@
+{
+ "name": "Tithe-Cutter",
+ "triangles": {
+  "Tithe-Cutter_Body": 3999
+ },
+ "triangles_total": 3999,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Enutrof/Tithe-Cutter/textures/Tithe-Cutter_ColorMap.png",
+  "RoughnessMap": "export/pack/Enutrof/Tithe-Cutter/textures/Tithe-Cutter_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Enutrof/Tithe-Cutter/textures/Tithe-Cutter_MetalnessMap.png",
+  "NormalMap": "export/pack/Enutrof/Tithe-Cutter/textures/Tithe-Cutter_NormalMap.png"
+ },
+ "health": {
+  "Tithe-Cutter_Body": {
+   "non_manifold_edges": 505,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.357805,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6954,
+   "quads": 3198,
+   "ngons": 2,
+   "faces": 3730,
+   "sliver_tris_lt6deg": 175,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 1544,
+  "after": {
+   "Tithe-Cutter_Body": {
+    "triangles": 3999,
+    "quads": 1813,
+    "ngons": 0,
+    "faces": 2186,
+    "sliver_tris_lt6deg": 149,
+    "non_manifold_edges": 505,
+    "open_boundary_edges": 505,
+    "uv_coverage": 0.717
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.426,
+   -0.16,
+   -0.72
+  ],
+  "max": [
+   0.426,
+   0.16,
+   3.23
+  ],
+  "length": 3.95
+ },
+ "race": "Enutrof",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 3.95,
+  "width": 0.853,
+  "depth": 0.32,
+  "triangles": 6954
+ }
+}

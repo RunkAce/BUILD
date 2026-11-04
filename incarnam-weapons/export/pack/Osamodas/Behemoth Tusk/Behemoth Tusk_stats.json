@@ -1,0 +1,118 @@
+{
+ "name": "Behemoth Tusk",
+ "triangles": {
+  "Behemoth Tusk_Body": 3281,
+  "Behemoth Tusk_Glow": 82
+ },
+ "triangles_total": 3363,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Osamodas/Behemoth Tusk/textures/Behemoth Tusk_ColorMap.png",
+  "RoughnessMap": "export/pack/Osamodas/Behemoth Tusk/textures/Behemoth Tusk_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Osamodas/Behemoth Tusk/textures/Behemoth Tusk_MetalnessMap.png",
+  "NormalMap": "export/pack/Osamodas/Behemoth Tusk/textures/Behemoth Tusk_NormalMap.png"
+ },
+ "health": {
+  "Behemoth Tusk_Body": {
+   "non_manifold_edges": 569,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.829737,
+   "normals_outward": true
+  },
+  "Behemoth Tusk_Glow": {
+   "non_manifold_edges": 40,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000752,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4152,
+   "quads": 1804,
+   "ngons": 2,
+   "faces": 2334,
+   "sliver_tris_lt6deg": 195,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 464,
+  "after": {
+   "Behemoth Tusk_Body": {
+    "triangles": 3281,
+    "quads": 1392,
+    "ngons": 0,
+    "faces": 1889,
+    "sliver_tris_lt6deg": 149,
+    "non_manifold_edges": 569,
+    "open_boundary_edges": 569,
+    "uv_coverage": 0.653
+   },
+   "Behemoth Tusk_Glow": {
+    "triangles": 82,
+    "quads": 2,
+    "ngons": 0,
+    "faces": 80,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 40,
+    "open_boundary_edges": 40,
+    "uv_coverage": 0.426
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.977,
+   -0.225,
+   -1.434
+  ],
+  "max": [
+   0.977,
+   0.225,
+   4.398
+  ],
+  "length": 5.831
+ },
+ "race": "Osamodas",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.831,
+  "width": 1.954,
+  "depth": 0.45,
+  "triangles": 4272
+ }
+}

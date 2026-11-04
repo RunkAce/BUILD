@@ -1,0 +1,90 @@
+{
+ "name": "Petalvow",
+ "triangles": {
+  "Petalvow_Body": 4901
+ },
+ "triangles_total": 4901,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Petalvow/textures/Petalvow_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Petalvow/textures/Petalvow_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Petalvow/textures/Petalvow_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Petalvow/textures/Petalvow_NormalMap.png"
+ },
+ "health": {
+  "Petalvow_Body": {
+   "non_manifold_edges": 583,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.24487,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5706,
+   "quads": 2544,
+   "ngons": 2,
+   "faces": 3136,
+   "sliver_tris_lt6deg": 165,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 406,
+  "after": {
+   "Petalvow_Body": {
+    "triangles": 4901,
+    "quads": 2171,
+    "ngons": 0,
+    "faces": 2730,
+    "sliver_tris_lt6deg": 79,
+    "non_manifold_edges": 583,
+    "open_boundary_edges": 583,
+    "uv_coverage": 0.584
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.567,
+   -0.16,
+   -0.89
+  ],
+  "max": [
+   0.567,
+   0.16,
+   3.23
+  ],
+  "length": 4.12
+ },
+ "race": "Eniripsa",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.12,
+  "width": 1.134,
+  "depth": 0.32,
+  "triangles": 5706
+ }
+}

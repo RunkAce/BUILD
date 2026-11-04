@@ -1,0 +1,90 @@
+{
+ "name": "Threshold",
+ "triangles": {
+  "Threshold_Body": 5197
+ },
+ "triangles_total": 5197,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eliotrope/Threshold/textures/Threshold_ColorMap.png",
+  "RoughnessMap": "export/pack/Eliotrope/Threshold/textures/Threshold_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eliotrope/Threshold/textures/Threshold_MetalnessMap.png",
+  "NormalMap": "export/pack/Eliotrope/Threshold/textures/Threshold_NormalMap.png"
+ },
+ "health": {
+  "Threshold_Body": {
+   "non_manifold_edges": 551,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.209051,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5894,
+   "quads": 2476,
+   "ngons": 2,
+   "faces": 3392,
+   "sliver_tris_lt6deg": 338,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 350,
+  "after": {
+   "Threshold_Body": {
+    "triangles": 5197,
+    "quads": 2155,
+    "ngons": 0,
+    "faces": 3042,
+    "sliver_tris_lt6deg": 276,
+    "non_manifold_edges": 551,
+    "open_boundary_edges": 551,
+    "uv_coverage": 0.569
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.658,
+   -0.16,
+   -0.89
+  ],
+  "max": [
+   0.658,
+   0.16,
+   3.23
+  ],
+  "length": 4.12
+ },
+ "race": "Eliotrope",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.12,
+  "width": 1.317,
+  "depth": 0.32,
+  "triangles": 5894
+ }
+}

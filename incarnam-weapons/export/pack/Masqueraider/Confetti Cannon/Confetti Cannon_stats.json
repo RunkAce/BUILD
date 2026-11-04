@@ -1,0 +1,103 @@
+{
+ "name": "Confetti Cannon",
+ "triangles": {
+  "Confetti Cannon_Body": 2304,
+  "Confetti Cannon_Glow": 28
+ },
+ "triangles_total": 2332,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Confetti Cannon/textures/Confetti Cannon_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Confetti Cannon/textures/Confetti Cannon_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Confetti Cannon/textures/Confetti Cannon_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Confetti Cannon/textures/Confetti Cannon_NormalMap.png"
+ },
+ "health": {
+  "Confetti Cannon_Body": {
+   "non_manifold_edges": 392,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.160707,
+   "normals_outward": true
+  },
+  "Confetti Cannon_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002242,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2916,
+   "quads": 1130,
+   "ngons": 4,
+   "faces": 1766,
+   "sliver_tris_lt6deg": 186,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 344,
+  "after": {
+   "Confetti Cannon_Body": {
+    "triangles": 2304,
+    "quads": 869,
+    "ngons": 3,
+    "faces": 1422,
+    "sliver_tris_lt6deg": 126,
+    "non_manifold_edges": 392,
+    "open_boundary_edges": 392,
+    "uv_coverage": 0.528
+   },
+   "Confetti Cannon_Glow": {
+    "triangles": 28,
+    "quads": 6,
+    "ngons": 0,
+    "faces": 22,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.652
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.352,
+   0.0,
+   2.0076
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.359,
+   -0.244,
+   -0.445
+  ],
+  "max": [
+   0.701,
+   0.244,
+   2.03
+  ],
+  "length": 2.475
+ },
+ "race": "Masqueraider",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.475,
+  "width": 1.06,
+  "depth": 0.487,
+  "triangles": 2944
+ }
+}

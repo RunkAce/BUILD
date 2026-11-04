@@ -1,0 +1,118 @@
+{
+ "name": "Glyphkeeper Staff",
+ "triangles": {
+  "Glyphkeeper Staff_Body": 4376,
+  "Glyphkeeper Staff_Glow": 132
+ },
+ "triangles_total": 4508,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Glyphkeeper Staff/textures/Glyphkeeper Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Glyphkeeper Staff/textures/Glyphkeeper Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Glyphkeeper Staff/textures/Glyphkeeper Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Glyphkeeper Staff/textures/Glyphkeeper Staff_NormalMap.png"
+ },
+ "health": {
+  "Glyphkeeper Staff_Body": {
+   "non_manifold_edges": 560,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.262102,
+   "normals_outward": true
+  },
+  "Glyphkeeper Staff_Glow": {
+   "non_manifold_edges": 12,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.385634,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5010,
+   "quads": 2274,
+   "ngons": 8,
+   "faces": 2714,
+   "sliver_tris_lt6deg": 1168,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 421,
+  "after": {
+   "Glyphkeeper Staff_Body": {
+    "triangles": 4376,
+    "quads": 2065,
+    "ngons": 3,
+    "faces": 2305,
+    "sliver_tris_lt6deg": 1117,
+    "non_manifold_edges": 560,
+    "open_boundary_edges": 560,
+    "uv_coverage": 0.595
+   },
+   "Glyphkeeper Staff_Glow": {
+    "triangles": 132,
+    "quads": 60,
+    "ngons": 0,
+    "faces": 72,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 12,
+    "open_boundary_edges": 12,
+    "uv_coverage": 0.553
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.3519
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.9634
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.681,
+   -0.411,
+   -2.873
+  ],
+  "max": [
+   0.681,
+   0.499,
+   2.896
+  ],
+  "length": 5.769
+ },
+ "race": "Feca",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.769,
+  "width": 1.363,
+  "depth": 0.91,
+  "triangles": 5154
+ }
+}

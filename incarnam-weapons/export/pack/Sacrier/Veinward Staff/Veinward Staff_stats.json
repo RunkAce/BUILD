@@ -1,0 +1,118 @@
+{
+ "name": "Veinward Staff",
+ "triangles": {
+  "Veinward Staff_Body": 5459,
+  "Veinward Staff_Glow": 134
+ },
+ "triangles_total": 5593,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Veinward Staff/textures/Veinward Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Veinward Staff/textures/Veinward Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Veinward Staff/textures/Veinward Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Veinward Staff/textures/Veinward Staff_NormalMap.png"
+ },
+ "health": {
+  "Veinward Staff_Body": {
+   "non_manifold_edges": 649,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.199952,
+   "normals_outward": true
+  },
+  "Veinward Staff_Glow": {
+   "non_manifold_edges": 14,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.234716,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6238,
+   "quads": 2789,
+   "ngons": 10,
+   "faces": 3423,
+   "sliver_tris_lt6deg": 4134,
+   "non_manifold_edges": 14,
+   "open_boundary_edges": 10,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 539,
+  "after": {
+   "Veinward Staff_Body": {
+    "triangles": 5459,
+    "quads": 2557,
+    "ngons": 4,
+    "faces": 2894,
+    "sliver_tris_lt6deg": 3948,
+    "non_manifold_edges": 649,
+    "open_boundary_edges": 645,
+    "uv_coverage": 0.477
+   },
+   "Veinward Staff_Glow": {
+    "triangles": 134,
+    "quads": 60,
+    "ngons": 0,
+    "faces": 74,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 14,
+    "open_boundary_edges": 14,
+    "uv_coverage": 0.582
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.2909
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.8096
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.584,
+   -0.349,
+   -2.847
+  ],
+  "max": [
+   0.584,
+   0.349,
+   2.797
+  ],
+  "length": 5.644
+ },
+ "race": "Sacrier",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.644,
+  "width": 1.167,
+  "depth": 0.698,
+  "triangles": 6382
+ }
+}

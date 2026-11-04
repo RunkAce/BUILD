@@ -1,0 +1,118 @@
+{
+ "name": "Duelflare",
+ "triangles": {
+  "Duelflare_Body": 4149,
+  "Duelflare_Glow": 48
+ },
+ "triangles_total": 4197,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Iop/Duelflare/textures/Duelflare_ColorMap.png",
+  "RoughnessMap": "export/pack/Iop/Duelflare/textures/Duelflare_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Iop/Duelflare/textures/Duelflare_MetalnessMap.png",
+  "NormalMap": "export/pack/Iop/Duelflare/textures/Duelflare_NormalMap.png"
+ },
+ "health": {
+  "Duelflare_Body": {
+   "non_manifold_edges": 1063,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.27419,
+   "normals_outward": true
+  },
+  "Duelflare_Glow": {
+   "non_manifold_edges": 14,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002859,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5218,
+   "quads": 2097,
+   "ngons": 2,
+   "faces": 3103,
+   "sliver_tris_lt6deg": 299,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 663,
+  "after": {
+   "Duelflare_Body": {
+    "triangles": 4149,
+    "quads": 1703,
+    "ngons": 0,
+    "faces": 2446,
+    "sliver_tris_lt6deg": 216,
+    "non_manifold_edges": 1063,
+    "open_boundary_edges": 1063,
+    "uv_coverage": 0.556
+   },
+   "Duelflare_Glow": {
+    "triangles": 48,
+    "quads": 4,
+    "ngons": 0,
+    "faces": 44,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 14,
+    "open_boundary_edges": 14,
+    "uv_coverage": 0.5
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.3621,
+   0.0,
+   3.79
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.17
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.412,
+   -1.22
+  ],
+  "max": [
+   0.525,
+   0.41,
+   3.79
+  ],
+  "length": 5.01
+ },
+ "race": "Iop",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 5.01,
+  "width": 1.05,
+  "depth": 0.822,
+  "triangles": 5278
+ }
+}

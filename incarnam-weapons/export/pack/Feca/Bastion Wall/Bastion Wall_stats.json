@@ -1,0 +1,118 @@
+{
+ "name": "Bastion Wall",
+ "triangles": {
+  "Bastion Wall_Body": 2337,
+  "Bastion Wall_Glow": 116
+ },
+ "triangles_total": 2453,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Bastion Wall/textures/Bastion Wall_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Bastion Wall/textures/Bastion Wall_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Bastion Wall/textures/Bastion Wall_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Bastion Wall/textures/Bastion Wall_NormalMap.png"
+ },
+ "health": {
+  "Bastion Wall_Body": {
+   "non_manifold_edges": 471,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.141339,
+   "normals_outward": true
+  },
+  "Bastion Wall_Glow": {
+   "non_manifold_edges": 44,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003888,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3512,
+   "quads": 1548,
+   "ngons": 2,
+   "faces": 1950,
+   "sliver_tris_lt6deg": 262,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 620,
+  "after": {
+   "Bastion Wall_Body": {
+    "triangles": 2337,
+    "quads": 985,
+    "ngons": 0,
+    "faces": 1352,
+    "sliver_tris_lt6deg": 226,
+    "non_manifold_edges": 471,
+    "open_boundary_edges": 471,
+    "uv_coverage": 0.716
+   },
+   "Bastion Wall_Glow": {
+    "triangles": 116,
+    "quads": 32,
+    "ngons": 0,
+    "faces": 84,
+    "sliver_tris_lt6deg": 1,
+    "non_manifold_edges": 44,
+    "open_boundary_edges": 44,
+    "uv_coverage": 0.499
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.165,
+   -0.225,
+   -1.451
+  ],
+  "max": [
+   1.165,
+   0.225,
+   4.425
+  ],
+  "length": 5.876
+ },
+ "race": "Feca",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.876,
+  "width": 2.33,
+  "depth": 0.45,
+  "triangles": 3672
+ }
+}

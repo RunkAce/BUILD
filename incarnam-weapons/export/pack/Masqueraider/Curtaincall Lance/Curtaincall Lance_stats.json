@@ -1,0 +1,118 @@
+{
+ "name": "Curtaincall Lance",
+ "triangles": {
+  "Curtaincall Lance_Body": 4889,
+  "Curtaincall Lance_Glow": 58
+ },
+ "triangles_total": 4947,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Curtaincall Lance/textures/Curtaincall Lance_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Curtaincall Lance/textures/Curtaincall Lance_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Curtaincall Lance/textures/Curtaincall Lance_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Curtaincall Lance/textures/Curtaincall Lance_NormalMap.png"
+ },
+ "health": {
+  "Curtaincall Lance_Body": {
+   "non_manifold_edges": 553,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.210387,
+   "normals_outward": true
+  },
+  "Curtaincall Lance_Glow": {
+   "non_manifold_edges": 4,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000395,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5452,
+   "quads": 2435,
+   "ngons": 2,
+   "faces": 3007,
+   "sliver_tris_lt6deg": 2977,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 355,
+  "after": {
+   "Curtaincall Lance_Body": {
+    "triangles": 4889,
+    "quads": 2235,
+    "ngons": 0,
+    "faces": 2654,
+    "sliver_tris_lt6deg": 2847,
+    "non_manifold_edges": 553,
+    "open_boundary_edges": 553,
+    "uv_coverage": 0.452
+   },
+   "Curtaincall Lance_Glow": {
+    "triangles": 58,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 38,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 4,
+    "open_boundary_edges": 4,
+    "uv_coverage": 0.6
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.8
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.7772
+  ],
+  "VFX_Socket": [
+   0.0,
+   0.0,
+   1.68
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.35
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.38,
+   -0.166,
+   -2.373
+  ],
+  "max": [
+   0.385,
+   0.146,
+   3.777
+  ],
+  "length": 6.15
+ },
+ "race": "Masqueraider",
+ "category": "spear",
+ "r6_target_length": [
+  5.5,
+  7.5
+ ],
+ "measured": {
+  "length": 6.15,
+  "width": 0.765,
+  "depth": 0.312,
+  "triangles": 5512
+ }
+}

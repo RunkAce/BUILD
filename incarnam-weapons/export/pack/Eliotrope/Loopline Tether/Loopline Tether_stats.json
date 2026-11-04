@@ -1,0 +1,221 @@
+{
+ "name": "Loopline Tether",
+ "triangles": {
+  "Loopline Tether_Body": 2729,
+  "Loopline Tether_Glow": 110,
+  "HeadWeight": 380,
+  "HeadRim": 500,
+  "HeadMotif": 508,
+  "TopLug.001": 284,
+  "TopRing.001": 216
+ },
+ "triangles_total": 4727,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eliotrope/Loopline Tether/textures/Loopline Tether_ColorMap.png",
+  "RoughnessMap": "export/pack/Eliotrope/Loopline Tether/textures/Loopline Tether_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eliotrope/Loopline Tether/textures/Loopline Tether_MetalnessMap.png",
+  "NormalMap": "export/pack/Eliotrope/Loopline Tether/textures/Loopline Tether_NormalMap.png"
+ },
+ "health": {
+  "Loopline Tether_Body": {
+   "non_manifold_edges": 537,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.05338,
+   "normals_outward": true
+  },
+  "Loopline Tether_Glow": {
+   "non_manifold_edges": 16,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000354,
+   "normals_outward": true
+  },
+  "HeadWeight": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.114845,
+   "normals_outward": true
+  },
+  "HeadRim": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.035289,
+   "normals_outward": true
+  },
+  "HeadMotif": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.039231,
+   "normals_outward": true
+  },
+  "TopLug.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002133,
+   "normals_outward": true
+  },
+  "TopRing.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00035,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3236,
+   "quads": 1429,
+   "ngons": 2,
+   "faces": 1793,
+   "sliver_tris_lt6deg": 24,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 293,
+  "after": {
+   "Loopline Tether_Body": {
+    "triangles": 2729,
+    "quads": 1224,
+    "ngons": 0,
+    "faces": 1505,
+    "sliver_tris_lt6deg": 10,
+    "non_manifold_edges": 537,
+    "open_boundary_edges": 537,
+    "uv_coverage": 0.562
+   },
+   "Loopline Tether_Glow": {
+    "triangles": 110,
+    "quads": 35,
+    "ngons": 0,
+    "faces": 75,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 16,
+    "open_boundary_edges": 16,
+    "uv_coverage": 0.643
+   },
+   "HeadWeight": {
+    "triangles": 380,
+    "quads": 114,
+    "ngons": 0,
+    "faces": 266,
+    "sliver_tris_lt6deg": 62,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadRim": {
+    "triangles": 500,
+    "quads": 164,
+    "ngons": 0,
+    "faces": 336,
+    "sliver_tris_lt6deg": 10,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadMotif": {
+    "triangles": 508,
+    "quads": 175,
+    "ngons": 0,
+    "faces": 333,
+    "sliver_tris_lt6deg": 60,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopLug.001": {
+    "triangles": 284,
+    "quads": 65,
+    "ngons": 0,
+    "faces": 219,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopRing.001": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2885
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.202,
+   -0.19,
+   -0.64
+  ],
+  "max": [
+   1.256,
+   0.19,
+   1.308
+  ],
+  "length": 1.948
+ },
+ "race": "Eliotrope",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.948,
+  "width": 1.459,
+  "depth": 0.38,
+  "triangles": 5244
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 1542,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.9,
+     0.0,
+     1.0401
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "ring",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 216
+ }
+}

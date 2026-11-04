@@ -1,0 +1,118 @@
+{
+ "name": "Nightneedle",
+ "triangles": {
+  "Nightneedle_Body": 4858,
+  "Nightneedle_Glow": 56
+ },
+ "triangles_total": 4914,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sram/Nightneedle/textures/Nightneedle_ColorMap.png",
+  "RoughnessMap": "export/pack/Sram/Nightneedle/textures/Nightneedle_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sram/Nightneedle/textures/Nightneedle_MetalnessMap.png",
+  "NormalMap": "export/pack/Sram/Nightneedle/textures/Nightneedle_NormalMap.png"
+ },
+ "health": {
+  "Nightneedle_Body": {
+   "non_manifold_edges": 494,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.168927,
+   "normals_outward": true
+  },
+  "Nightneedle_Glow": {
+   "non_manifold_edges": 6,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000419,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5336,
+   "quads": 2231,
+   "ngons": 2,
+   "faces": 3095,
+   "sliver_tris_lt6deg": 2656,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 301,
+  "after": {
+   "Nightneedle_Body": {
+    "triangles": 4858,
+    "quads": 2060,
+    "ngons": 0,
+    "faces": 2798,
+    "sliver_tris_lt6deg": 2533,
+    "non_manifold_edges": 494,
+    "open_boundary_edges": 494,
+    "uv_coverage": 0.409
+   },
+   "Nightneedle_Glow": {
+    "triangles": 56,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 36,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 6,
+    "open_boundary_edges": 6,
+    "uv_coverage": 0.609
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.8
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.7751
+  ],
+  "VFX_Socket": [
+   0.0,
+   0.0,
+   1.68
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.35
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.461,
+   -0.164,
+   -2.369
+  ],
+  "max": [
+   0.461,
+   0.144,
+   3.775
+  ],
+  "length": 6.144
+ },
+ "race": "Sram",
+ "category": "spear",
+ "r6_target_length": [
+  5.5,
+  7.5
+ ],
+ "measured": {
+  "length": 6.144,
+  "width": 0.922,
+  "depth": 0.308,
+  "triangles": 5396
+ }
+}

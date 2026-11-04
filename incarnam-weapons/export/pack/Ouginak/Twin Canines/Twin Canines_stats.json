@@ -1,0 +1,123 @@
+{
+ "name": "Twin Canines",
+ "triangles": {
+  "Twin Canines_Body": 3557,
+  "Twin Canines_Glow": 160
+ },
+ "triangles_total": 3717,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Twin Canines/textures/Twin Canines_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Twin Canines/textures/Twin Canines_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Twin Canines/textures/Twin Canines_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Twin Canines/textures/Twin Canines_NormalMap.png"
+ },
+ "health": {
+  "Twin Canines_Body": {
+   "non_manifold_edges": 585,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.249965,
+   "normals_outward": true
+  },
+  "Twin Canines_Glow": {
+   "non_manifold_edges": 60,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001026,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4634,
+   "quads": 2051,
+   "ngons": 2,
+   "faces": 2565,
+   "sliver_tris_lt6deg": 56,
+   "non_manifold_edges": 14,
+   "open_boundary_edges": 10,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 693,
+  "after": {
+   "Twin Canines_Body": {
+    "triangles": 3557,
+    "quads": 1561,
+    "ngons": 0,
+    "faces": 1996,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 585,
+    "open_boundary_edges": 581,
+    "uv_coverage": 0.579
+   },
+   "Twin Canines_Glow": {
+    "triangles": 160,
+    "quads": 12,
+    "ngons": 0,
+    "faces": 148,
+    "sliver_tris_lt6deg": 8,
+    "non_manifold_edges": 60,
+    "open_boundary_edges": 60,
+    "uv_coverage": 0.305
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.2125,
+   0.0,
+   2.6901
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3697,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.506,
+   -0.175,
+   -0.754
+  ],
+  "max": [
+   0.497,
+   0.175,
+   2.69
+  ],
+  "length": 3.444
+ },
+ "race": "Ouginak",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.444,
+  "width": 1.003,
+  "depth": 0.35,
+  "triangles": 4982
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3557,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 160,
+   "mirror_of": "Glow"
+  }
+ }
+}

@@ -1,0 +1,221 @@
+{
+ "name": "Swaying Gourd",
+ "triangles": {
+  "Swaying Gourd_Body": 2753,
+  "Swaying Gourd_Glow": 90,
+  "HeadWeight": 380,
+  "HeadRim": 500,
+  "HeadMotif": 328,
+  "TopLug.001": 284,
+  "TopRing.001": 216
+ },
+ "triangles_total": 4551,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Swaying Gourd/textures/Swaying Gourd_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Swaying Gourd/textures/Swaying Gourd_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Swaying Gourd/textures/Swaying Gourd_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Swaying Gourd/textures/Swaying Gourd_NormalMap.png"
+ },
+ "health": {
+  "Swaying Gourd_Body": {
+   "non_manifold_edges": 567,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.073233,
+   "normals_outward": true
+  },
+  "Swaying Gourd_Glow": {
+   "non_manifold_edges": 26,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000887,
+   "normals_outward": true
+  },
+  "HeadWeight": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.119929,
+   "normals_outward": true
+  },
+  "HeadRim": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.036056,
+   "normals_outward": true
+  },
+  "HeadMotif": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.026224,
+   "normals_outward": true
+  },
+  "TopLug.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002133,
+   "normals_outward": true
+  },
+  "TopRing.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00035,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3528,
+   "quads": 1520,
+   "ngons": 2,
+   "faces": 1994,
+   "sliver_tris_lt6deg": 82,
+   "non_manifold_edges": 12,
+   "open_boundary_edges": 12,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 470,
+  "after": {
+   "Swaying Gourd_Body": {
+    "triangles": 2753,
+    "quads": 1204,
+    "ngons": 0,
+    "faces": 1549,
+    "sliver_tris_lt6deg": 24,
+    "non_manifold_edges": 567,
+    "open_boundary_edges": 567,
+    "uv_coverage": 0.609
+   },
+   "Swaying Gourd_Glow": {
+    "triangles": 90,
+    "quads": 35,
+    "ngons": 0,
+    "faces": 55,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 26,
+    "open_boundary_edges": 26,
+    "uv_coverage": 0.66
+   },
+   "HeadWeight": {
+    "triangles": 380,
+    "quads": 122,
+    "ngons": 0,
+    "faces": 258,
+    "sliver_tris_lt6deg": 57,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadRim": {
+    "triangles": 500,
+    "quads": 164,
+    "ngons": 0,
+    "faces": 336,
+    "sliver_tris_lt6deg": 10,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadMotif": {
+    "triangles": 328,
+    "quads": 117,
+    "ngons": 0,
+    "faces": 211,
+    "sliver_tris_lt6deg": 72,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopLug.001": {
+    "triangles": 284,
+    "quads": 65,
+    "ngons": 0,
+    "faces": 219,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopRing.001": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2885
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.189,
+   -0.199,
+   -0.64
+  ],
+  "max": [
+   1.264,
+   0.199,
+   1.308
+  ],
+  "length": 1.948
+ },
+ "race": "Pandawa",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.948,
+  "width": 1.453,
+  "depth": 0.398,
+  "triangles": 5356
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 1414,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.9,
+     0.0,
+     1.0473
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "bamboo",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 112
+ }
+}

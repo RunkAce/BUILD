@@ -1,0 +1,118 @@
+{
+ "name": "Ossuary",
+ "triangles": {
+  "Ossuary_Body": 3214,
+  "Ossuary_Glow": 68
+ },
+ "triangles_total": 3282,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sram/Ossuary/textures/Ossuary_ColorMap.png",
+  "RoughnessMap": "export/pack/Sram/Ossuary/textures/Ossuary_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sram/Ossuary/textures/Ossuary_MetalnessMap.png",
+  "NormalMap": "export/pack/Sram/Ossuary/textures/Ossuary_NormalMap.png"
+ },
+ "health": {
+  "Ossuary_Body": {
+   "non_manifold_edges": 586,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.596151,
+   "normals_outward": true
+  },
+  "Ossuary_Glow": {
+   "non_manifold_edges": 28,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001348,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3904,
+   "quads": 1618,
+   "ngons": 2,
+   "faces": 2272,
+   "sliver_tris_lt6deg": 180,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 374,
+  "after": {
+   "Ossuary_Body": {
+    "triangles": 3214,
+    "quads": 1302,
+    "ngons": 0,
+    "faces": 1912,
+    "sliver_tris_lt6deg": 154,
+    "non_manifold_edges": 586,
+    "open_boundary_edges": 586,
+    "uv_coverage": 0.631
+   },
+   "Ossuary_Glow": {
+    "triangles": 68,
+    "quads": 6,
+    "ngons": 0,
+    "faces": 62,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 28,
+    "open_boundary_edges": 28,
+    "uv_coverage": 0.548
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.9,
+   -0.225,
+   -1.434
+  ],
+  "max": [
+   0.9,
+   0.225,
+   4.414
+  ],
+  "length": 5.848
+ },
+ "race": "Sram",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.848,
+  "width": 1.8,
+  "depth": 0.45,
+  "triangles": 4000
+ }
+}

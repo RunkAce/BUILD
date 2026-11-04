@@ -1,0 +1,118 @@
+{
+ "name": "Kegsplitter",
+ "triangles": {
+  "Kegsplitter_Body": 3265,
+  "Kegsplitter_Glow": 172
+ },
+ "triangles_total": 3437,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Rogue/Kegsplitter/textures/Kegsplitter_ColorMap.png",
+  "RoughnessMap": "export/pack/Rogue/Kegsplitter/textures/Kegsplitter_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Rogue/Kegsplitter/textures/Kegsplitter_MetalnessMap.png",
+  "NormalMap": "export/pack/Rogue/Kegsplitter/textures/Kegsplitter_NormalMap.png"
+ },
+ "health": {
+  "Kegsplitter_Body": {
+   "non_manifold_edges": 549,
+   "loose_verts": 0,
+   "zero_area_faces": 1,
+   "signed_volume": 0.912276,
+   "normals_outward": true
+  },
+  "Kegsplitter_Glow": {
+   "non_manifold_edges": 58,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001267,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3876,
+   "quads": 1600,
+   "ngons": 2,
+   "faces": 2262,
+   "sliver_tris_lt6deg": 276,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 339,
+  "after": {
+   "Kegsplitter_Body": {
+    "triangles": 3265,
+    "quads": 1314,
+    "ngons": 0,
+    "faces": 1951,
+    "sliver_tris_lt6deg": 220,
+    "non_manifold_edges": 549,
+    "open_boundary_edges": 549,
+    "uv_coverage": 0.669
+   },
+   "Kegsplitter_Glow": {
+    "triangles": 172,
+    "quads": 40,
+    "ngons": 0,
+    "faces": 132,
+    "sliver_tris_lt6deg": 12,
+    "non_manifold_edges": 58,
+    "open_boundary_edges": 58,
+    "uv_coverage": 0.461
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.039,
+   -0.225,
+   -1.451
+  ],
+  "max": [
+   1.007,
+   0.225,
+   4.426
+  ],
+  "length": 5.877
+ },
+ "race": "Rogue",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.877,
+  "width": 2.046,
+  "depth": 0.45,
+  "triangles": 4104
+ }
+}

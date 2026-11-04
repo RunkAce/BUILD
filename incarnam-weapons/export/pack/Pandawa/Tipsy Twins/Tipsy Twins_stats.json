@@ -1,0 +1,123 @@
+{
+ "name": "Tipsy Twins",
+ "triangles": {
+  "Tipsy Twins_Body": 2592,
+  "Tipsy Twins_Glow": 114
+ },
+ "triangles_total": 2706,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Tipsy Twins/textures/Tipsy Twins_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Tipsy Twins/textures/Tipsy Twins_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Tipsy Twins/textures/Tipsy Twins_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Tipsy Twins/textures/Tipsy Twins_NormalMap.png"
+ },
+ "health": {
+  "Tipsy Twins_Body": {
+   "non_manifold_edges": 478,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.234005,
+   "normals_outward": true
+  },
+  "Tipsy Twins_Glow": {
+   "non_manifold_edges": 66,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": -0.000744,
+   "normals_outward": false
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3632,
+   "quads": 1601,
+   "ngons": 2,
+   "faces": 2013,
+   "sliver_tris_lt6deg": 128,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 578,
+  "after": {
+   "Tipsy Twins_Body": {
+    "triangles": 2592,
+    "quads": 1127,
+    "ngons": 0,
+    "faces": 1465,
+    "sliver_tris_lt6deg": 60,
+    "non_manifold_edges": 478,
+    "open_boundary_edges": 478,
+    "uv_coverage": 0.598
+   },
+   "Tipsy Twins_Glow": {
+    "triangles": 114,
+    "quads": 24,
+    "ngons": 0,
+    "faces": 90,
+    "sliver_tris_lt6deg": 24,
+    "non_manifold_edges": 66,
+    "open_boundary_edges": 66,
+    "uv_coverage": 0.521
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.1362,
+   0.0,
+   2.701
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.316,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.401,
+   -0.185,
+   -0.76
+  ],
+  "max": [
+   0.31,
+   0.185,
+   2.701
+  ],
+  "length": 3.461
+ },
+ "race": "Pandawa",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.461,
+  "width": 0.711,
+  "depth": 0.37,
+  "triangles": 3806
+ },
+ "pieces": {
+  "L": {
+   "triangles": 2592,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 114,
+   "mirror_of": "Glow"
+  }
+ }
+}

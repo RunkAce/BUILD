@@ -1,0 +1,118 @@
+{
+ "name": "Grand Finale",
+ "triangles": {
+  "Grand Finale_Body": 3654,
+  "Grand Finale_Glow": 210
+ },
+ "triangles_total": 3864,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Grand Finale/textures/Grand Finale_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Grand Finale/textures/Grand Finale_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Grand Finale/textures/Grand Finale_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Grand Finale/textures/Grand Finale_NormalMap.png"
+ },
+ "health": {
+  "Grand Finale_Body": {
+   "non_manifold_edges": 592,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.988152,
+   "normals_outward": true
+  },
+  "Grand Finale_Glow": {
+   "non_manifold_edges": 86,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00328,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4448,
+   "quads": 1787,
+   "ngons": 2,
+   "faces": 2647,
+   "sliver_tris_lt6deg": 258,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 455,
+  "after": {
+   "Grand Finale_Body": {
+    "triangles": 3654,
+    "quads": 1419,
+    "ngons": 0,
+    "faces": 2235,
+    "sliver_tris_lt6deg": 224,
+    "non_manifold_edges": 592,
+    "open_boundary_edges": 592,
+    "uv_coverage": 0.644
+   },
+   "Grand Finale_Glow": {
+    "triangles": 210,
+    "quads": 48,
+    "ngons": 0,
+    "faces": 162,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 86,
+    "open_boundary_edges": 86,
+    "uv_coverage": 0.583
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.083,
+   -0.225,
+   -1.434
+  ],
+  "max": [
+   1.083,
+   0.225,
+   4.417
+  ],
+  "length": 5.851
+ },
+ "race": "Masqueraider",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.851,
+  "width": 2.167,
+  "depth": 0.45,
+  "triangles": 4744
+ }
+}

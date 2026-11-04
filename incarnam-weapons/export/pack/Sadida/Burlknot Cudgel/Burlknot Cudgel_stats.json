@@ -1,0 +1,113 @@
+{
+ "name": "Burlknot Cudgel",
+ "triangles": {
+  "Burlknot Cudgel_Body": 3955,
+  "Burlknot Cudgel_Glow": 59
+ },
+ "triangles_total": 4014,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sadida/Burlknot Cudgel/textures/Burlknot Cudgel_ColorMap.png",
+  "RoughnessMap": "export/pack/Sadida/Burlknot Cudgel/textures/Burlknot Cudgel_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sadida/Burlknot Cudgel/textures/Burlknot Cudgel_MetalnessMap.png",
+  "NormalMap": "export/pack/Sadida/Burlknot Cudgel/textures/Burlknot Cudgel_NormalMap.png"
+ },
+ "health": {
+  "Burlknot Cudgel_Body": {
+   "non_manifold_edges": 505,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.257231,
+   "normals_outward": true
+  },
+  "Burlknot Cudgel_Glow": {
+   "non_manifold_edges": 3,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000288,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4596,
+   "quads": 2005,
+   "ngons": 4,
+   "faces": 2573,
+   "sliver_tris_lt6deg": 58,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 408,
+  "after": {
+   "Burlknot Cudgel_Body": {
+    "triangles": 3955,
+    "quads": 1789,
+    "ngons": 0,
+    "faces": 2166,
+    "sliver_tris_lt6deg": 55,
+    "non_manifold_edges": 505,
+    "open_boundary_edges": 505,
+    "uv_coverage": 0.576
+   },
+   "Burlknot Cudgel_Glow": {
+    "triangles": 59,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 39,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 3,
+    "open_boundary_edges": 3,
+    "uv_coverage": 0.609
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.162
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.77
+  ],
+  "VFX_Impact": [
+   0.42,
+   0.0,
+   2.162
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.366,
+   -0.345,
+   -0.885
+  ],
+  "max": [
+   0.366,
+   0.384,
+   2.76
+  ],
+  "length": 3.645
+ },
+ "race": "Sadida",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 3.645,
+  "width": 0.731,
+  "depth": 0.73,
+  "triangles": 4656
+ }
+}

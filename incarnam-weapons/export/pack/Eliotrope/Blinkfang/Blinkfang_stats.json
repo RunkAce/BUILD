@@ -1,0 +1,108 @@
+{
+ "name": "Blinkfang",
+ "triangles": {
+  "Blinkfang_Body": 2972,
+  "Blinkfang_Glow": 356
+ },
+ "triangles_total": 3328,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eliotrope/Blinkfang/textures/Blinkfang_ColorMap.png",
+  "RoughnessMap": "export/pack/Eliotrope/Blinkfang/textures/Blinkfang_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eliotrope/Blinkfang/textures/Blinkfang_MetalnessMap.png",
+  "NormalMap": "export/pack/Eliotrope/Blinkfang/textures/Blinkfang_NormalMap.png"
+ },
+ "health": {
+  "Blinkfang_Body": {
+   "non_manifold_edges": 410,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.143071,
+   "normals_outward": true
+  },
+  "Blinkfang_Glow": {
+   "non_manifold_edges": 72,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00138,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3824,
+   "quads": 1598,
+   "ngons": 2,
+   "faces": 2208,
+   "sliver_tris_lt6deg": 1660,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 610,
+  "after": {
+   "Blinkfang_Body": {
+    "triangles": 2972,
+    "quads": 1200,
+    "ngons": 0,
+    "faces": 1772,
+    "sliver_tris_lt6deg": 1324,
+    "non_manifold_edges": 410,
+    "open_boundary_edges": 410,
+    "uv_coverage": 0.549
+   },
+   "Blinkfang_Glow": {
+    "triangles": 356,
+    "quads": 110,
+    "ngons": 0,
+    "faces": 246,
+    "sliver_tris_lt6deg": 28,
+    "non_manifold_edges": 72,
+    "open_boundary_edges": 72,
+    "uv_coverage": 0.695
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.83
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.425,
+   -0.205,
+   -0.675
+  ],
+  "max": [
+   0.425,
+   0.205,
+   1.83
+  ],
+  "length": 2.505
+ },
+ "race": "Eliotrope",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.505,
+  "width": 0.85,
+  "depth": 0.41,
+  "triangles": 4392
+ }
+}

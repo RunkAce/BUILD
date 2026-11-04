@@ -1,0 +1,123 @@
+{
+ "name": "Paddyreaper",
+ "triangles": {
+  "Paddyreaper_Body": 5343,
+  "Paddyreaper_Glow": 50
+ },
+ "triangles_total": 5393,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Paddyreaper/textures/Paddyreaper_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Paddyreaper/textures/Paddyreaper_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Paddyreaper/textures/Paddyreaper_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Paddyreaper/textures/Paddyreaper_NormalMap.png"
+ },
+ "health": {
+  "Paddyreaper_Body": {
+   "non_manifold_edges": 659,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.58632,
+   "normals_outward": true
+  },
+  "Paddyreaper_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002538,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6046,
+   "quads": 2554,
+   "ngons": 2,
+   "faces": 3482,
+   "sliver_tris_lt6deg": 307,
+   "non_manifold_edges": 18,
+   "open_boundary_edges": 18,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 484,
+  "after": {
+   "Paddyreaper_Body": {
+    "triangles": 5343,
+    "quads": 2335,
+    "ngons": 0,
+    "faces": 3008,
+    "sliver_tris_lt6deg": 251,
+    "non_manifold_edges": 659,
+    "open_boundary_edges": 659,
+    "uv_coverage": 0.592
+   },
+   "Paddyreaper_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.558
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.8224
+  ],
+  "VFX_Tip": [
+   2.8431,
+   0.0,
+   1.69
+  ],
+  "VFX_Blade": [
+   1.5783,
+   0.0,
+   2.7427
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.758,
+   -0.225,
+   -2.692
+  ],
+  "max": [
+   2.843,
+   0.165,
+   3.717
+  ],
+  "length": 6.409
+ },
+ "race": "Pandawa",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.409,
+  "width": 3.601,
+  "depth": 0.39,
+  "triangles": 6106
+ }
+}

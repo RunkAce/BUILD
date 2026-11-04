@@ -1,0 +1,113 @@
+{
+ "name": "Knucklebone Cudgel",
+ "triangles": {
+  "Knucklebone Cudgel_Body": 4270,
+  "Knucklebone Cudgel_Glow": 5
+ },
+ "triangles_total": 4275,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sram/Knucklebone Cudgel/textures/Knucklebone Cudgel_ColorMap.png",
+  "RoughnessMap": "export/pack/Sram/Knucklebone Cudgel/textures/Knucklebone Cudgel_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sram/Knucklebone Cudgel/textures/Knucklebone Cudgel_MetalnessMap.png",
+  "NormalMap": "export/pack/Sram/Knucklebone Cudgel/textures/Knucklebone Cudgel_NormalMap.png"
+ },
+ "health": {
+  "Knucklebone Cudgel_Body": {
+   "non_manifold_edges": 474,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.198118,
+   "normals_outward": true
+  },
+  "Knucklebone Cudgel_Glow": {
+   "non_manifold_edges": 7,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000986,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4838,
+   "quads": 2194,
+   "ngons": 2,
+   "faces": 2630,
+   "sliver_tris_lt6deg": 3280,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 419,
+  "after": {
+   "Knucklebone Cudgel_Body": {
+    "triangles": 4270,
+    "quads": 2002,
+    "ngons": 0,
+    "faces": 2268,
+    "sliver_tris_lt6deg": 3090,
+    "non_manifold_edges": 474,
+    "open_boundary_edges": 474,
+    "uv_coverage": 0.607
+   },
+   "Knucklebone Cudgel_Glow": {
+    "triangles": 5,
+    "quads": 2,
+    "ngons": 0,
+    "faces": 3,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 7,
+    "open_boundary_edges": 7,
+    "uv_coverage": 0.684
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.0828
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.63
+  ],
+  "VFX_Impact": [
+   0.378,
+   0.0,
+   2.0828
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.329,
+   -0.312,
+   -0.875
+  ],
+  "max": [
+   0.329,
+   0.346,
+   2.618
+  ],
+  "length": 3.493
+ },
+ "race": "Sram",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 3.493,
+  "width": 0.658,
+  "depth": 0.658,
+  "triangles": 4930
+ }
+}

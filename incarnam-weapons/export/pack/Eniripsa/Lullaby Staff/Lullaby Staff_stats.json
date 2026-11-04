@@ -1,0 +1,118 @@
+{
+ "name": "Lullaby Staff",
+ "triangles": {
+  "Lullaby Staff_Body": 4510,
+  "Lullaby Staff_Glow": 128
+ },
+ "triangles_total": 4638,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Lullaby Staff/textures/Lullaby Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Lullaby Staff/textures/Lullaby Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Lullaby Staff/textures/Lullaby Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Lullaby Staff/textures/Lullaby Staff_NormalMap.png"
+ },
+ "health": {
+  "Lullaby Staff_Body": {
+   "non_manifold_edges": 638,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.217101,
+   "normals_outward": true
+  },
+  "Lullaby Staff_Glow": {
+   "non_manifold_edges": 16,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.260686,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5426,
+   "quads": 2252,
+   "ngons": 8,
+   "faces": 3152,
+   "sliver_tris_lt6deg": 103,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 662,
+  "after": {
+   "Lullaby Staff_Body": {
+    "triangles": 4510,
+    "quads": 2000,
+    "ngons": 3,
+    "faces": 2504,
+    "sliver_tris_lt6deg": 68,
+    "non_manifold_edges": 638,
+    "open_boundary_edges": 638,
+    "uv_coverage": 0.552
+   },
+   "Lullaby Staff_Glow": {
+    "triangles": 128,
+    "quads": 58,
+    "ngons": 0,
+    "faces": 70,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 16,
+    "open_boundary_edges": 16,
+    "uv_coverage": 0.614
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.2909
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.8096
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.535,
+   -0.349,
+   -2.862
+  ],
+  "max": [
+   0.533,
+   0.423,
+   2.752
+  ],
+  "length": 5.614
+ },
+ "race": "Eniripsa",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.614,
+  "width": 1.068,
+  "depth": 0.772,
+  "triangles": 5570
+ }
+}

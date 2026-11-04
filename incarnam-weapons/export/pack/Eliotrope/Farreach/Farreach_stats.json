@@ -1,0 +1,118 @@
+{
+ "name": "Farreach",
+ "triangles": {
+  "Farreach_Body": 4237,
+  "Farreach_Glow": 56
+ },
+ "triangles_total": 4293,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eliotrope/Farreach/textures/Farreach_ColorMap.png",
+  "RoughnessMap": "export/pack/Eliotrope/Farreach/textures/Farreach_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eliotrope/Farreach/textures/Farreach_MetalnessMap.png",
+  "NormalMap": "export/pack/Eliotrope/Farreach/textures/Farreach_NormalMap.png"
+ },
+ "health": {
+  "Farreach_Body": {
+   "non_manifold_edges": 493,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.142931,
+   "normals_outward": true
+  },
+  "Farreach_Glow": {
+   "non_manifold_edges": 6,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000409,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4756,
+   "quads": 2023,
+   "ngons": 2,
+   "faces": 2723,
+   "sliver_tris_lt6deg": 157,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 329,
+  "after": {
+   "Farreach_Body": {
+    "triangles": 4237,
+    "quads": 1839,
+    "ngons": 0,
+    "faces": 2398,
+    "sliver_tris_lt6deg": 153,
+    "non_manifold_edges": 493,
+    "open_boundary_edges": 493,
+    "uv_coverage": 0.425
+   },
+   "Farreach_Glow": {
+    "triangles": 56,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 36,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 6,
+    "open_boundary_edges": 6,
+    "uv_coverage": 0.592
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.8
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.873
+  ],
+  "VFX_Socket": [
+   0.0,
+   0.0,
+   1.68
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.35
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.262,
+   -0.155,
+   -2.361
+  ],
+  "max": [
+   0.262,
+   0.133,
+   3.873
+  ],
+  "length": 6.234
+ },
+ "race": "Eliotrope",
+ "category": "spear",
+ "r6_target_length": [
+  5.5,
+  7.5
+ ],
+ "measured": {
+  "length": 6.234,
+  "width": 0.525,
+  "depth": 0.288,
+  "triangles": 4816
+ }
+}

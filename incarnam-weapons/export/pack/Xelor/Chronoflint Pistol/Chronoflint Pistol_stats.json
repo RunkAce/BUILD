@@ -1,0 +1,103 @@
+{
+ "name": "Chronoflint Pistol",
+ "triangles": {
+  "Chronoflint Pistol_Body": 2949,
+  "Chronoflint Pistol_Glow": 96
+ },
+ "triangles_total": 3045,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Chronoflint Pistol/textures/Chronoflint Pistol_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Chronoflint Pistol/textures/Chronoflint Pistol_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Chronoflint Pistol/textures/Chronoflint Pistol_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Chronoflint Pistol/textures/Chronoflint Pistol_NormalMap.png"
+ },
+ "health": {
+  "Chronoflint Pistol_Body": {
+   "non_manifold_edges": 623,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.182384,
+   "normals_outward": true
+  },
+  "Chronoflint Pistol_Glow": {
+   "non_manifold_edges": 16,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001032,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3942,
+   "quads": 1189,
+   "ngons": 2,
+   "faces": 2747,
+   "sliver_tris_lt6deg": 602,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 721,
+  "after": {
+   "Chronoflint Pistol_Body": {
+    "triangles": 2949,
+    "quads": 904,
+    "ngons": 1,
+    "faces": 2042,
+    "sliver_tris_lt6deg": 404,
+    "non_manifold_edges": 623,
+    "open_boundary_edges": 623,
+    "uv_coverage": 0.424
+   },
+   "Chronoflint Pistol_Glow": {
+    "triangles": 96,
+    "quads": 48,
+    "ngons": 0,
+    "faces": 48,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 16,
+    "open_boundary_edges": 16,
+    "uv_coverage": 0.493
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.352,
+   0.0,
+   1.9811
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.353,
+   -0.195,
+   -0.353
+  ],
+  "max": [
+   0.682,
+   0.195,
+   1.981
+  ],
+  "length": 2.335
+ },
+ "race": "Xelor",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.335,
+  "width": 1.035,
+  "depth": 0.39,
+  "triangles": 4054
+ }
+}

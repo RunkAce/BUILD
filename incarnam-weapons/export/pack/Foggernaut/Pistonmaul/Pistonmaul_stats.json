@@ -1,0 +1,118 @@
+{
+ "name": "Pistonmaul",
+ "triangles": {
+  "Pistonmaul_Body": 5267,
+  "Pistonmaul_Glow": 7
+ },
+ "triangles_total": 5274,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Foggernaut/Pistonmaul/textures/Pistonmaul_ColorMap.png",
+  "RoughnessMap": "export/pack/Foggernaut/Pistonmaul/textures/Pistonmaul_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Foggernaut/Pistonmaul/textures/Pistonmaul_MetalnessMap.png",
+  "NormalMap": "export/pack/Foggernaut/Pistonmaul/textures/Pistonmaul_NormalMap.png"
+ },
+ "health": {
+  "Pistonmaul_Body": {
+   "non_manifold_edges": 683,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.558176,
+   "normals_outward": true
+  },
+  "Pistonmaul_Glow": {
+   "non_manifold_edges": 9,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.011682,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6310,
+   "quads": 2619,
+   "ngons": 2,
+   "faces": 3681,
+   "sliver_tris_lt6deg": 292,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 915,
+  "after": {
+   "Pistonmaul_Body": {
+    "triangles": 5267,
+    "quads": 2275,
+    "ngons": 0,
+    "faces": 2992,
+    "sliver_tris_lt6deg": 233,
+    "non_manifold_edges": 683,
+    "open_boundary_edges": 683,
+    "uv_coverage": 0.541
+   },
+   "Pistonmaul_Glow": {
+    "triangles": 7,
+    "quads": 1,
+    "ngons": 0,
+    "faces": 6,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 9,
+    "open_boundary_edges": 9,
+    "uv_coverage": 0.68
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.5806
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.9285
+  ],
+  "VFX_Impact": [
+   0.6832,
+   0.0,
+   2.5806
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.05
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.733,
+   -0.322,
+   -1.884
+  ],
+  "max": [
+   0.768,
+   0.29,
+   2.881
+  ],
+  "length": 4.765
+ },
+ "race": "Foggernaut",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 4.765,
+  "width": 1.501,
+  "depth": 0.613,
+  "triangles": 6674
+ }
+}

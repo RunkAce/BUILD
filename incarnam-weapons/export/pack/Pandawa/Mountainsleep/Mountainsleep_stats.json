@@ -1,0 +1,118 @@
+{
+ "name": "Mountainsleep",
+ "triangles": {
+  "Mountainsleep_Body": 1965,
+  "Mountainsleep_Glow": 260
+ },
+ "triangles_total": 2225,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Mountainsleep/textures/Mountainsleep_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Mountainsleep/textures/Mountainsleep_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Mountainsleep/textures/Mountainsleep_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Mountainsleep/textures/Mountainsleep_NormalMap.png"
+ },
+ "health": {
+  "Mountainsleep_Body": {
+   "non_manifold_edges": 501,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.948482,
+   "normals_outward": true
+  },
+  "Mountainsleep_Glow": {
+   "non_manifold_edges": 80,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002378,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3264,
+   "quads": 1488,
+   "ngons": 2,
+   "faces": 1762,
+   "sliver_tris_lt6deg": 162,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 759,
+  "after": {
+   "Mountainsleep_Body": {
+    "triangles": 1965,
+    "quads": 870,
+    "ngons": 0,
+    "faces": 1095,
+    "sliver_tris_lt6deg": 88,
+    "non_manifold_edges": 501,
+    "open_boundary_edges": 501,
+    "uv_coverage": 0.653
+   },
+   "Mountainsleep_Glow": {
+    "triangles": 260,
+    "quads": 94,
+    "ngons": 0,
+    "faces": 166,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 80,
+    "open_boundary_edges": 80,
+    "uv_coverage": 0.69
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.554,
+   -0.233,
+   -1.451
+  ],
+  "max": [
+   0.626,
+   0.233,
+   4.425
+  ],
+  "length": 5.876
+ },
+ "race": "Pandawa",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.876,
+  "width": 1.18,
+  "depth": 0.466,
+  "triangles": 3636
+ }
+}

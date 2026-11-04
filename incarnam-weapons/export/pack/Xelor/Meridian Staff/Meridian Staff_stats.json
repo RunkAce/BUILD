@@ -1,0 +1,118 @@
+{
+ "name": "Meridian Staff",
+ "triangles": {
+  "Meridian Staff_Body": 5617,
+  "Meridian Staff_Glow": 170
+ },
+ "triangles_total": 5787,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Meridian Staff/textures/Meridian Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Meridian Staff/textures/Meridian Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Meridian Staff/textures/Meridian Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Meridian Staff/textures/Meridian Staff_NormalMap.png"
+ },
+ "health": {
+  "Meridian Staff_Body": {
+   "non_manifold_edges": 711,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.252705,
+   "normals_outward": true
+  },
+  "Meridian Staff_Glow": {
+   "non_manifold_edges": 82,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.111535,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6456,
+   "quads": 2825,
+   "ngons": 2,
+   "faces": 3621,
+   "sliver_tris_lt6deg": 3317,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 558,
+  "after": {
+   "Meridian Staff_Body": {
+    "triangles": 5617,
+    "quads": 2491,
+    "ngons": 0,
+    "faces": 3126,
+    "sliver_tris_lt6deg": 3151,
+    "non_manifold_edges": 711,
+    "open_boundary_edges": 711,
+    "uv_coverage": 0.432
+   },
+   "Meridian Staff_Glow": {
+    "triangles": 170,
+    "quads": 75,
+    "ngons": 0,
+    "faces": 95,
+    "sliver_tris_lt6deg": 7,
+    "non_manifold_edges": 82,
+    "open_boundary_edges": 82,
+    "uv_coverage": 0.596
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.532
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.1273
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.595,
+   -0.237,
+   -2.738
+  ],
+  "max": [
+   0.595,
+   0.237,
+   3.127
+  ],
+  "length": 5.865
+ },
+ "race": "Xelor",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.865,
+  "width": 1.191,
+  "depth": 0.474,
+  "triangles": 6708
+ }
+}

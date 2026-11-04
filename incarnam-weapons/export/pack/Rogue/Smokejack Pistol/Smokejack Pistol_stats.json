@@ -1,0 +1,103 @@
+{
+ "name": "Smokejack Pistol",
+ "triangles": {
+  "Smokejack Pistol_Body": 1902,
+  "Smokejack Pistol_Glow": 66
+ },
+ "triangles_total": 1968,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Rogue/Smokejack Pistol/textures/Smokejack Pistol_ColorMap.png",
+  "RoughnessMap": "export/pack/Rogue/Smokejack Pistol/textures/Smokejack Pistol_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Rogue/Smokejack Pistol/textures/Smokejack Pistol_MetalnessMap.png",
+  "NormalMap": "export/pack/Rogue/Smokejack Pistol/textures/Smokejack Pistol_NormalMap.png"
+ },
+ "health": {
+  "Smokejack Pistol_Body": {
+   "non_manifold_edges": 434,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.157924,
+   "normals_outward": true
+  },
+  "Smokejack Pistol_Glow": {
+   "non_manifold_edges": 8,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000694,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2514,
+   "quads": 998,
+   "ngons": 4,
+   "faces": 1506,
+   "sliver_tris_lt6deg": 200,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 348,
+  "after": {
+   "Smokejack Pistol_Body": {
+    "triangles": 1902,
+    "quads": 731,
+    "ngons": 4,
+    "faces": 1161,
+    "sliver_tris_lt6deg": 102,
+    "non_manifold_edges": 434,
+    "open_boundary_edges": 434,
+    "uv_coverage": 0.539
+   },
+   "Smokejack Pistol_Glow": {
+    "triangles": 66,
+    "quads": 27,
+    "ngons": 0,
+    "faces": 39,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 8,
+    "open_boundary_edges": 8,
+    "uv_coverage": 0.556
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.3533,
+   0.0,
+   1.9811
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.4,
+   -0.174,
+   -0.422
+  ],
+  "max": [
+   0.745,
+   0.174,
+   1.981
+  ],
+  "length": 2.403
+ },
+ "race": "Rogue",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.403,
+  "width": 1.145,
+  "depth": 0.348,
+  "triangles": 2586
+ }
+}

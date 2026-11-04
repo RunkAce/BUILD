@@ -1,0 +1,118 @@
+{
+ "name": "Boilerwake Staff",
+ "triangles": {
+  "Boilerwake Staff_Body": 5292,
+  "Boilerwake Staff_Glow": 215
+ },
+ "triangles_total": 5507,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Foggernaut/Boilerwake Staff/textures/Boilerwake Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Foggernaut/Boilerwake Staff/textures/Boilerwake Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Foggernaut/Boilerwake Staff/textures/Boilerwake Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Foggernaut/Boilerwake Staff/textures/Boilerwake Staff_NormalMap.png"
+ },
+ "health": {
+  "Boilerwake Staff_Body": {
+   "non_manifold_edges": 798,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.307411,
+   "normals_outward": true
+  },
+  "Boilerwake Staff_Glow": {
+   "non_manifold_edges": 79,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.141985,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6280,
+   "quads": 2649,
+   "ngons": 2,
+   "faces": 3621,
+   "sliver_tris_lt6deg": 297,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 644,
+  "after": {
+   "Boilerwake Staff_Body": {
+    "triangles": 5292,
+    "quads": 2224,
+    "ngons": 0,
+    "faces": 3068,
+    "sliver_tris_lt6deg": 247,
+    "non_manifold_edges": 798,
+    "open_boundary_edges": 798,
+    "uv_coverage": 0.452
+   },
+   "Boilerwake Staff_Glow": {
+    "triangles": 215,
+    "quads": 102,
+    "ngons": 0,
+    "faces": 113,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 79,
+    "open_boundary_edges": 79,
+    "uv_coverage": 0.458
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.6534
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.3666
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.687,
+   -0.257,
+   -2.744
+  ],
+  "max": [
+   0.685,
+   0.257,
+   3.368
+  ],
+  "length": 6.112
+ },
+ "race": "Foggernaut",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.112,
+  "width": 1.372,
+  "depth": 0.515,
+  "triangles": 6628
+ }
+}

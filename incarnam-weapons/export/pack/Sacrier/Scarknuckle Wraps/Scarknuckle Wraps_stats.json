@@ -1,0 +1,118 @@
+{
+ "name": "Scarknuckle Wraps",
+ "triangles": {
+  "Scarknuckle Wraps_Body": 2009,
+  "Scarknuckle Wraps_Glow": 77
+ },
+ "triangles_total": 2086,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Scarknuckle Wraps/textures/Scarknuckle Wraps_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Scarknuckle Wraps/textures/Scarknuckle Wraps_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Scarknuckle Wraps/textures/Scarknuckle Wraps_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Scarknuckle Wraps/textures/Scarknuckle Wraps_NormalMap.png"
+ },
+ "health": {
+  "Scarknuckle Wraps_Body": {
+   "non_manifold_edges": 448,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.249833,
+   "normals_outward": true
+  },
+  "Scarknuckle Wraps_Glow": {
+   "non_manifold_edges": 33,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001984,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2828,
+   "quads": 945,
+   "ngons": 2,
+   "faces": 1865,
+   "sliver_tris_lt6deg": 414,
+   "non_manifold_edges": 10,
+   "open_boundary_edges": 8,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 546,
+  "after": {
+   "Scarknuckle Wraps_Body": {
+    "triangles": 2009,
+    "quads": 641,
+    "ngons": 2,
+    "faces": 1350,
+    "sliver_tris_lt6deg": 327,
+    "non_manifold_edges": 448,
+    "open_boundary_edges": 447,
+    "uv_coverage": 0.559
+   },
+   "Scarknuckle Wraps_Glow": {
+    "triangles": 77,
+    "quads": 12,
+    "ngons": 0,
+    "faces": 65,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 33,
+    "open_boundary_edges": 33,
+    "uv_coverage": 0.75
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7462,
+   0.842
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.765,
+   -0.814,
+   -0.359
+  ],
+  "max": [
+   1.349,
+   0.765,
+   1.276
+  ],
+  "length": 1.636
+ },
+ "race": "Sacrier",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.636,
+  "width": 2.113,
+  "depth": 1.578,
+  "triangles": 2948
+ },
+ "pieces": {
+  "L": {
+   "triangles": 2009,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 77,
+   "mirror_of": "Glow"
+  }
+ }
+}

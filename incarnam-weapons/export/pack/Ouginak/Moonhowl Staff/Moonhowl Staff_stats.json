@@ -1,0 +1,118 @@
+{
+ "name": "Moonhowl Staff",
+ "triangles": {
+  "Moonhowl Staff_Body": 5523,
+  "Moonhowl Staff_Glow": 48
+ },
+ "triangles_total": 5571,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Moonhowl Staff/textures/Moonhowl Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Moonhowl Staff/textures/Moonhowl Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Moonhowl Staff/textures/Moonhowl Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Moonhowl Staff/textures/Moonhowl Staff_NormalMap.png"
+ },
+ "health": {
+  "Moonhowl Staff_Body": {
+   "non_manifold_edges": 707,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.255395,
+   "normals_outward": true
+  },
+  "Moonhowl Staff_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003367,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6402,
+   "quads": 2594,
+   "ngons": 2,
+   "faces": 3798,
+   "sliver_tris_lt6deg": 3548,
+   "non_manifold_edges": 14,
+   "open_boundary_edges": 10,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 635,
+  "after": {
+   "Moonhowl Staff_Body": {
+    "triangles": 5523,
+    "quads": 2360,
+    "ngons": 0,
+    "faces": 3163,
+    "sliver_tris_lt6deg": 3340,
+    "non_manifold_edges": 707,
+    "open_boundary_edges": 703,
+    "uv_coverage": 0.489
+   },
+   "Moonhowl Staff_Glow": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.456
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.5198
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.0658
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.719,
+   -0.173,
+   -2.925
+  ],
+  "max": [
+   0.719,
+   0.173,
+   3.066
+  ],
+  "length": 5.99
+ },
+ "race": "Ouginak",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.99,
+  "width": 1.438,
+  "depth": 0.346,
+  "triangles": 6450
+ }
+}

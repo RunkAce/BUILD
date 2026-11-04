@@ -1,0 +1,103 @@
+{
+ "name": "Heartdrum Pistol",
+ "triangles": {
+  "Heartdrum Pistol_Body": 1866,
+  "Heartdrum Pistol_Glow": 16
+ },
+ "triangles_total": 1882,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Heartdrum Pistol/textures/Heartdrum Pistol_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Heartdrum Pistol/textures/Heartdrum Pistol_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Heartdrum Pistol/textures/Heartdrum Pistol_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Heartdrum Pistol/textures/Heartdrum Pistol_NormalMap.png"
+ },
+ "health": {
+  "Heartdrum Pistol_Body": {
+   "non_manifold_edges": 338,
+   "loose_verts": 0,
+   "zero_area_faces": 2,
+   "signed_volume": 0.143988,
+   "normals_outward": true
+  },
+  "Heartdrum Pistol_Glow": {
+   "non_manifold_edges": 8,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00428,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2264,
+   "quads": 707,
+   "ngons": 2,
+   "faces": 1551,
+   "sliver_tris_lt6deg": 208,
+   "non_manifold_edges": 12,
+   "open_boundary_edges": 12,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 243,
+  "after": {
+   "Heartdrum Pistol_Body": {
+    "triangles": 1866,
+    "quads": 546,
+    "ngons": 2,
+    "faces": 1314,
+    "sliver_tris_lt6deg": 120,
+    "non_manifold_edges": 338,
+    "open_boundary_edges": 338,
+    "uv_coverage": 0.54
+   },
+   "Heartdrum Pistol_Glow": {
+    "triangles": 16,
+    "quads": 6,
+    "ngons": 0,
+    "faces": 10,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 8,
+    "open_boundary_edges": 8,
+    "uv_coverage": 0.512
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.3507,
+   0.0,
+   1.9811
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.388,
+   -0.171,
+   -0.42
+  ],
+  "max": [
+   0.749,
+   0.171,
+   2.161
+  ],
+  "length": 2.581
+ },
+ "race": "Sacrier",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.581,
+  "width": 1.138,
+  "depth": 0.342,
+  "triangles": 2288
+ }
+}

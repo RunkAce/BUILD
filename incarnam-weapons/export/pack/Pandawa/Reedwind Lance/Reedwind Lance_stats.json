@@ -1,0 +1,118 @@
+{
+ "name": "Reedwind Lance",
+ "triangles": {
+  "Reedwind Lance_Body": 4421,
+  "Reedwind Lance_Glow": 58
+ },
+ "triangles_total": 4479,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Reedwind Lance/textures/Reedwind Lance_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Reedwind Lance/textures/Reedwind Lance_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Reedwind Lance/textures/Reedwind Lance_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Reedwind Lance/textures/Reedwind Lance_NormalMap.png"
+ },
+ "health": {
+  "Reedwind Lance_Body": {
+   "non_manifold_edges": 609,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.225299,
+   "normals_outward": true
+  },
+  "Reedwind Lance_Glow": {
+   "non_manifold_edges": 4,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000534,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4998,
+   "quads": 2181,
+   "ngons": 2,
+   "faces": 2807,
+   "sliver_tris_lt6deg": 1067,
+   "non_manifold_edges": 12,
+   "open_boundary_edges": 12,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 384,
+  "after": {
+   "Reedwind Lance_Body": {
+    "triangles": 4421,
+    "quads": 1996,
+    "ngons": 0,
+    "faces": 2425,
+    "sliver_tris_lt6deg": 1036,
+    "non_manifold_edges": 609,
+    "open_boundary_edges": 609,
+    "uv_coverage": 0.418
+   },
+   "Reedwind Lance_Glow": {
+    "triangles": 58,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 38,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 4,
+    "open_boundary_edges": 4,
+    "uv_coverage": 0.569
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.8
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.7806
+  ],
+  "VFX_Socket": [
+   0.0,
+   0.0,
+   1.68
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.35
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.262,
+   -0.171,
+   -2.392
+  ],
+  "max": [
+   0.409,
+   0.152,
+   3.781
+  ],
+  "length": 6.172
+ },
+ "race": "Pandawa",
+ "category": "spear",
+ "r6_target_length": [
+  5.5,
+  7.5
+ ],
+ "measured": {
+  "length": 6.172,
+  "width": 0.671,
+  "depth": 0.323,
+  "triangles": 5058
+ }
+}

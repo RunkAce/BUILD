@@ -1,0 +1,123 @@
+{
+ "name": "Piston Pair",
+ "triangles": {
+  "Piston Pair_Body": 3342,
+  "Piston Pair_Glow": 90
+ },
+ "triangles_total": 3432,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Foggernaut/Piston Pair/textures/Piston Pair_ColorMap.png",
+  "RoughnessMap": "export/pack/Foggernaut/Piston Pair/textures/Piston Pair_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Foggernaut/Piston Pair/textures/Piston Pair_MetalnessMap.png",
+  "NormalMap": "export/pack/Foggernaut/Piston Pair/textures/Piston Pair_NormalMap.png"
+ },
+ "health": {
+  "Piston Pair_Body": {
+   "non_manifold_edges": 658,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.265154,
+   "normals_outward": true
+  },
+  "Piston Pair_Glow": {
+   "non_manifold_edges": 26,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004821,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4546,
+   "quads": 1745,
+   "ngons": 2,
+   "faces": 2783,
+   "sliver_tris_lt6deg": 477,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 674,
+  "after": {
+   "Piston Pair_Body": {
+    "triangles": 3342,
+    "quads": 1222,
+    "ngons": 0,
+    "faces": 2120,
+    "sliver_tris_lt6deg": 280,
+    "non_manifold_edges": 658,
+    "open_boundary_edges": 658,
+    "uv_coverage": 0.536
+   },
+   "Piston Pair_Glow": {
+    "triangles": 90,
+    "quads": 31,
+    "ngons": 0,
+    "faces": 59,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 26,
+    "open_boundary_edges": 26,
+    "uv_coverage": 0.572
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0931,
+   0.0,
+   2.6033
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.4027,
+   0.0,
+   0.6436
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.599,
+   -0.175,
+   -0.548
+  ],
+  "max": [
+   0.599,
+   0.175,
+   2.603
+  ],
+  "length": 3.151
+ },
+ "race": "Foggernaut",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.151,
+  "width": 1.197,
+  "depth": 0.35,
+  "triangles": 4658
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3342,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 90,
+   "mirror_of": "Glow"
+  }
+ }
+}

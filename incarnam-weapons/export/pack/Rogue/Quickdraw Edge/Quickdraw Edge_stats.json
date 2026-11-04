@@ -1,0 +1,118 @@
+{
+ "name": "Quickdraw Edge",
+ "triangles": {
+  "Quickdraw Edge_Body": 4763,
+  "Quickdraw Edge_Glow": 134
+ },
+ "triangles_total": 4897,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Rogue/Quickdraw Edge/textures/Quickdraw Edge_ColorMap.png",
+  "RoughnessMap": "export/pack/Rogue/Quickdraw Edge/textures/Quickdraw Edge_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Rogue/Quickdraw Edge/textures/Quickdraw Edge_MetalnessMap.png",
+  "NormalMap": "export/pack/Rogue/Quickdraw Edge/textures/Quickdraw Edge_NormalMap.png"
+ },
+ "health": {
+  "Quickdraw Edge_Body": {
+   "non_manifold_edges": 1297,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.266084,
+   "normals_outward": true
+  },
+  "Quickdraw Edge_Glow": {
+   "non_manifold_edges": 52,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002789,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6140,
+   "quads": 2403,
+   "ngons": 2,
+   "faces": 3719,
+   "sliver_tris_lt6deg": 333,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 909,
+  "after": {
+   "Quickdraw Edge_Body": {
+    "triangles": 4763,
+    "quads": 1926,
+    "ngons": 0,
+    "faces": 2837,
+    "sliver_tris_lt6deg": 261,
+    "non_manifold_edges": 1297,
+    "open_boundary_edges": 1297,
+    "uv_coverage": 0.527
+   },
+   "Quickdraw Edge_Glow": {
+    "triangles": 134,
+    "quads": 30,
+    "ngons": 0,
+    "faces": 104,
+    "sliver_tris_lt6deg": 6,
+    "non_manifold_edges": 52,
+    "open_boundary_edges": 52,
+    "uv_coverage": 0.775
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.4264,
+   0.0,
+   3.4741
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.02
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.412,
+   -1.65
+  ],
+  "max": [
+   0.525,
+   0.412,
+   3.474
+  ],
+  "length": 5.124
+ },
+ "race": "Rogue",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 5.124,
+  "width": 1.05,
+  "depth": 0.823,
+  "triangles": 6328
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "name": "Final Act",
+ "triangles": {
+  "Final Act_Body": 5819,
+  "Final Act_Glow": 50
+ },
+ "triangles_total": 5869,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Final Act/textures/Final Act_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Final Act/textures/Final Act_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Final Act/textures/Final Act_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Final Act/textures/Final Act_NormalMap.png"
+ },
+ "health": {
+  "Final Act_Body": {
+   "non_manifold_edges": 599,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.451621,
+   "normals_outward": true
+  },
+  "Final Act_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001893,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6398,
+   "quads": 2756,
+   "ngons": 2,
+   "faces": 3632,
+   "sliver_tris_lt6deg": 378,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 376,
+  "after": {
+   "Final Act_Body": {
+    "triangles": 5819,
+    "quads": 2553,
+    "ngons": 0,
+    "faces": 3266,
+    "sliver_tris_lt6deg": 358,
+    "non_manifold_edges": 599,
+    "open_boundary_edges": 599,
+    "uv_coverage": 0.509
+   },
+   "Final Act_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.61
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.7361
+  ],
+  "VFX_Tip": [
+   2.5815,
+   0.0,
+   1.4235
+  ],
+  "VFX_Blade": [
+   1.4261,
+   0.0,
+   2.6238
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.678,
+   -0.225,
+   -2.673
+  ],
+  "max": [
+   2.581,
+   0.165,
+   3.492
+  ],
+  "length": 6.165
+ },
+ "race": "Masqueraider",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.165,
+  "width": 3.26,
+  "depth": 0.39,
+  "triangles": 6458
+ }
+}

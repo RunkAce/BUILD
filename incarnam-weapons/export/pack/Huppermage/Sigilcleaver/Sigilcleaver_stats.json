@@ -1,0 +1,118 @@
+{
+ "name": "Sigilcleaver",
+ "triangles": {
+  "Sigilcleaver_Body": 2825,
+  "Sigilcleaver_Glow": 76
+ },
+ "triangles_total": 2901,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Sigilcleaver/textures/Sigilcleaver_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Sigilcleaver/textures/Sigilcleaver_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Sigilcleaver/textures/Sigilcleaver_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Sigilcleaver/textures/Sigilcleaver_NormalMap.png"
+ },
+ "health": {
+  "Sigilcleaver_Body": {
+   "non_manifold_edges": 507,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.730997,
+   "normals_outward": true
+  },
+  "Sigilcleaver_Glow": {
+   "non_manifold_edges": 36,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002207,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3730,
+   "quads": 1482,
+   "ngons": 2,
+   "faces": 2234,
+   "sliver_tris_lt6deg": 140,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 508,
+  "after": {
+   "Sigilcleaver_Body": {
+    "triangles": 2825,
+    "quads": 1081,
+    "ngons": 0,
+    "faces": 1744,
+    "sliver_tris_lt6deg": 116,
+    "non_manifold_edges": 507,
+    "open_boundary_edges": 507,
+    "uv_coverage": 0.566
+   },
+   "Sigilcleaver_Glow": {
+    "triangles": 76,
+    "quads": 6,
+    "ngons": 0,
+    "faces": 70,
+    "sliver_tris_lt6deg": 28,
+    "non_manifold_edges": 36,
+    "open_boundary_edges": 36,
+    "uv_coverage": 0.496
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.08,
+   -0.225,
+   -1.423
+  ],
+  "max": [
+   1.08,
+   0.225,
+   4.425
+  ],
+  "length": 5.848
+ },
+ "race": "Huppermage",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.848,
+  "width": 2.16,
+  "depth": 0.45,
+  "triangles": 3842
+ }
+}

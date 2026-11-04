@@ -1,0 +1,123 @@
+{
+ "name": "Equinox Reaper",
+ "triangles": {
+  "Equinox Reaper_Body": 4735,
+  "Equinox Reaper_Glow": 30
+ },
+ "triangles_total": 4765,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Equinox Reaper/textures/Equinox Reaper_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Equinox Reaper/textures/Equinox Reaper_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Equinox Reaper/textures/Equinox Reaper_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Equinox Reaper/textures/Equinox Reaper_NormalMap.png"
+ },
+ "health": {
+  "Equinox Reaper_Body": {
+   "non_manifold_edges": 471,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.407387,
+   "normals_outward": true
+  },
+  "Equinox Reaper_Glow": {
+   "non_manifold_edges": 6,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001855,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5162,
+   "quads": 2154,
+   "ngons": 2,
+   "faces": 2998,
+   "sliver_tris_lt6deg": 254,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 267,
+  "after": {
+   "Equinox Reaper_Body": {
+    "triangles": 4735,
+    "quads": 1998,
+    "ngons": 0,
+    "faces": 2737,
+    "sliver_tris_lt6deg": 230,
+    "non_manifold_edges": 471,
+    "open_boundary_edges": 471,
+    "uv_coverage": 0.53
+   },
+   "Equinox Reaper_Glow": {
+    "triangles": 30,
+    "quads": 12,
+    "ngons": 0,
+    "faces": 18,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 6,
+    "open_boundary_edges": 6,
+    "uv_coverage": 0.393
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.7607
+  ],
+  "VFX_Tip": [
+   2.9109,
+   0.0,
+   1.8212
+  ],
+  "VFX_Blade": [
+   1.5979,
+   0.0,
+   2.7366
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.756,
+   -0.225,
+   -2.67
+  ],
+  "max": [
+   2.911,
+   0.165,
+   3.544
+  ],
+  "length": 6.214
+ },
+ "race": "Huppermage",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.214,
+  "width": 3.667,
+  "depth": 0.39,
+  "triangles": 5198
+ }
+}

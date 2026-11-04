@@ -1,0 +1,123 @@
+{
+ "name": "Tidewall Crescent",
+ "triangles": {
+  "Tidewall Crescent_Body": 5322,
+  "Tidewall Crescent_Glow": 50
+ },
+ "triangles_total": 5372,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Tidewall Crescent/textures/Tidewall Crescent_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Tidewall Crescent/textures/Tidewall Crescent_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Tidewall Crescent/textures/Tidewall Crescent_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Tidewall Crescent/textures/Tidewall Crescent_NormalMap.png"
+ },
+ "health": {
+  "Tidewall Crescent_Body": {
+   "non_manifold_edges": 630,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.493574,
+   "normals_outward": true
+  },
+  "Tidewall Crescent_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003184,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5938,
+   "quads": 2590,
+   "ngons": 2,
+   "faces": 3338,
+   "sliver_tris_lt6deg": 224,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 373,
+  "after": {
+   "Tidewall Crescent_Body": {
+    "triangles": 5322,
+    "quads": 2347,
+    "ngons": 0,
+    "faces": 2975,
+    "sliver_tris_lt6deg": 204,
+    "non_manifold_edges": 630,
+    "open_boundary_edges": 630,
+    "uv_coverage": 0.57
+   },
+   "Tidewall Crescent_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.718
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.8393
+  ],
+  "VFX_Tip": [
+   2.9391,
+   0.0,
+   1.7102
+  ],
+  "VFX_Blade": [
+   1.6291,
+   0.0,
+   2.6566
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.856,
+   -0.225,
+   -2.693
+  ],
+  "max": [
+   2.939,
+   0.165,
+   3.557
+  ],
+  "length": 6.25
+ },
+ "race": "Feca",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.25,
+  "width": 3.795,
+  "depth": 0.39,
+  "triangles": 5998
+ }
+}

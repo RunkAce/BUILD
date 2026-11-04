@@ -1,0 +1,113 @@
+{
+ "name": "Herdbreaker Maul",
+ "triangles": {
+  "Herdbreaker Maul_Body": 4661,
+  "Herdbreaker Maul_Glow": 98
+ },
+ "triangles_total": 4759,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Osamodas/Herdbreaker Maul/textures/Herdbreaker Maul_ColorMap.png",
+  "RoughnessMap": "export/pack/Osamodas/Herdbreaker Maul/textures/Herdbreaker Maul_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Osamodas/Herdbreaker Maul/textures/Herdbreaker Maul_MetalnessMap.png",
+  "NormalMap": "export/pack/Osamodas/Herdbreaker Maul/textures/Herdbreaker Maul_NormalMap.png"
+ },
+ "health": {
+  "Herdbreaker Maul_Body": {
+   "non_manifold_edges": 639,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.245499,
+   "normals_outward": true
+  },
+  "Herdbreaker Maul_Glow": {
+   "non_manifold_edges": 106,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.018898,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5332,
+   "quads": 2298,
+   "ngons": 2,
+   "faces": 3020,
+   "sliver_tris_lt6deg": 1336,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 563,
+  "after": {
+   "Herdbreaker Maul_Body": {
+    "triangles": 4661,
+    "quads": 2031,
+    "ngons": 0,
+    "faces": 2630,
+    "sliver_tris_lt6deg": 1232,
+    "non_manifold_edges": 639,
+    "open_boundary_edges": 639,
+    "uv_coverage": 0.482
+   },
+   "Herdbreaker Maul_Glow": {
+    "triangles": 98,
+    "quads": 48,
+    "ngons": 0,
+    "faces": 50,
+    "sliver_tris_lt6deg": 8,
+    "non_manifold_edges": 106,
+    "open_boundary_edges": 106,
+    "uv_coverage": 0.803
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.45
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.8616
+  ],
+  "VFX_Impact": [
+   0.5729,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.658,
+   -0.2,
+   -0.875
+  ],
+  "max": [
+   0.658,
+   0.2,
+   2.992
+  ],
+  "length": 3.867
+ },
+ "race": "Osamodas",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 3.867,
+  "width": 1.316,
+  "depth": 0.4,
+  "triangles": 5712
+ }
+}

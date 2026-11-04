@@ -1,0 +1,108 @@
+{
+ "name": "Talonquill",
+ "triangles": {
+  "Talonquill_Body": 3131,
+  "Talonquill_Glow": 144
+ },
+ "triangles_total": 3275,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Osamodas/Talonquill/textures/Talonquill_ColorMap.png",
+  "RoughnessMap": "export/pack/Osamodas/Talonquill/textures/Talonquill_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Osamodas/Talonquill/textures/Talonquill_MetalnessMap.png",
+  "NormalMap": "export/pack/Osamodas/Talonquill/textures/Talonquill_NormalMap.png"
+ },
+ "health": {
+  "Talonquill_Body": {
+   "non_manifold_edges": 355,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.13428,
+   "normals_outward": true
+  },
+  "Talonquill_Glow": {
+   "non_manifold_edges": 36,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000729,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3880,
+   "quads": 1741,
+   "ngons": 2,
+   "faces": 2121,
+   "sliver_tris_lt6deg": 1548,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 459,
+  "after": {
+   "Talonquill_Body": {
+    "triangles": 3131,
+    "quads": 1397,
+    "ngons": 0,
+    "faces": 1734,
+    "sliver_tris_lt6deg": 1286,
+    "non_manifold_edges": 355,
+    "open_boundary_edges": 355,
+    "uv_coverage": 0.629
+   },
+   "Talonquill_Glow": {
+    "triangles": 144,
+    "quads": 36,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 14,
+    "non_manifold_edges": 36,
+    "open_boundary_edges": 36,
+    "uv_coverage": 0.791
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.437,
+   -0.201,
+   -0.703
+  ],
+  "max": [
+   0.437,
+   0.201,
+   1.686
+  ],
+  "length": 2.389
+ },
+ "race": "Osamodas",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.389,
+  "width": 0.874,
+  "depth": 0.402,
+  "triangles": 4096
+ }
+}

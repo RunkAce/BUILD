@@ -1,0 +1,90 @@
+{
+ "name": "Runebrand",
+ "triangles": {
+  "Runebrand_Body": 5467
+ },
+ "triangles_total": 5467,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Runebrand/textures/Runebrand_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Runebrand/textures/Runebrand_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Runebrand/textures/Runebrand_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Runebrand/textures/Runebrand_NormalMap.png"
+ },
+ "health": {
+  "Runebrand_Body": {
+   "non_manifold_edges": 535,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.210256,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6008,
+   "quads": 2704,
+   "ngons": 2,
+   "faces": 3278,
+   "sliver_tris_lt6deg": 150,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 271,
+  "after": {
+   "Runebrand_Body": {
+    "triangles": 5467,
+    "quads": 2460,
+    "ngons": 0,
+    "faces": 3007,
+    "sliver_tris_lt6deg": 120,
+    "non_manifold_edges": 535,
+    "open_boundary_edges": 535,
+    "uv_coverage": 0.535
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.67,
+   -0.16,
+   -0.87
+  ],
+  "max": [
+   0.67,
+   0.16,
+   3.23
+  ],
+  "length": 4.1
+ },
+ "race": "Huppermage",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.1,
+  "width": 1.339,
+  "depth": 0.32,
+  "triangles": 6008
+ }
+}

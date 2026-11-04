@@ -1,0 +1,118 @@
+{
+ "name": "Motherlode",
+ "triangles": {
+  "Motherlode_Body": 2798,
+  "Motherlode_Glow": 144
+ },
+ "triangles_total": 2942,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Enutrof/Motherlode/textures/Motherlode_ColorMap.png",
+  "RoughnessMap": "export/pack/Enutrof/Motherlode/textures/Motherlode_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Enutrof/Motherlode/textures/Motherlode_MetalnessMap.png",
+  "NormalMap": "export/pack/Enutrof/Motherlode/textures/Motherlode_NormalMap.png"
+ },
+ "health": {
+  "Motherlode_Body": {
+   "non_manifold_edges": 940,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.044652,
+   "normals_outward": true
+  },
+  "Motherlode_Glow": {
+   "non_manifold_edges": 38,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003625,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5000,
+   "quads": 2081,
+   "ngons": 2,
+   "faces": 2905,
+   "sliver_tris_lt6deg": 333,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 1237,
+  "after": {
+   "Motherlode_Body": {
+    "triangles": 2798,
+    "quads": 1098,
+    "ngons": 0,
+    "faces": 1700,
+    "sliver_tris_lt6deg": 224,
+    "non_manifold_edges": 940,
+    "open_boundary_edges": 940,
+    "uv_coverage": 0.558
+   },
+   "Motherlode_Glow": {
+    "triangles": 144,
+    "quads": 60,
+    "ngons": 0,
+    "faces": 84,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 38,
+    "open_boundary_edges": 38,
+    "uv_coverage": 0.759
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.275
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.375
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.688,
+   -0.207,
+   -1.214
+  ],
+  "max": [
+   0.688,
+   0.207,
+   4.275
+  ],
+  "length": 5.489
+ },
+ "race": "Enutrof",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.489,
+  "width": 1.375,
+  "depth": 0.413,
+  "triangles": 5192
+ }
+}

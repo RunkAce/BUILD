@@ -1,0 +1,118 @@
+{
+ "name": "Mauler Grips",
+ "triangles": {
+  "Mauler Grips_Body": 2212,
+  "Mauler Grips_Glow": 162
+ },
+ "triangles_total": 2374,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Mauler Grips/textures/Mauler Grips_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Mauler Grips/textures/Mauler Grips_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Mauler Grips/textures/Mauler Grips_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Mauler Grips/textures/Mauler Grips_NormalMap.png"
+ },
+ "health": {
+  "Mauler Grips_Body": {
+   "non_manifold_edges": 534,
+   "loose_verts": 0,
+   "zero_area_faces": 1,
+   "signed_volume": 1.322579,
+   "normals_outward": true
+  },
+  "Mauler Grips_Glow": {
+   "non_manifold_edges": 54,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003177,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3242,
+   "quads": 1112,
+   "ngons": 2,
+   "faces": 2112,
+   "sliver_tris_lt6deg": 396,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 806,
+  "after": {
+   "Mauler Grips_Body": {
+    "triangles": 2212,
+    "quads": 729,
+    "ngons": 2,
+    "faces": 1465,
+    "sliver_tris_lt6deg": 310,
+    "non_manifold_edges": 534,
+    "open_boundary_edges": 534,
+    "uv_coverage": 0.571
+   },
+   "Mauler Grips_Glow": {
+    "triangles": 162,
+    "quads": 27,
+    "ngons": 0,
+    "faces": 135,
+    "sliver_tris_lt6deg": 24,
+    "non_manifold_edges": 54,
+    "open_boundary_edges": 54,
+    "uv_coverage": 0.733
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7996,
+   0.696
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.889,
+   -0.996,
+   -0.579
+  ],
+  "max": [
+   1.377,
+   0.889,
+   1.075
+  ],
+  "length": 1.654
+ },
+ "race": "Ouginak",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.654,
+  "width": 2.265,
+  "depth": 1.885,
+  "triangles": 3618
+ },
+ "pieces": {
+  "L": {
+   "triangles": 2212,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 162,
+   "mirror_of": "Glow"
+  }
+ }
+}

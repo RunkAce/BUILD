@@ -1,0 +1,108 @@
+{
+ "name": "Dewclaw",
+ "triangles": {
+  "Dewclaw_Body": 3578,
+  "Dewclaw_Glow": 406
+ },
+ "triangles_total": 3984,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Dewclaw/textures/Dewclaw_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Dewclaw/textures/Dewclaw_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Dewclaw/textures/Dewclaw_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Dewclaw/textures/Dewclaw_NormalMap.png"
+ },
+ "health": {
+  "Dewclaw_Body": {
+   "non_manifold_edges": 390,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.161569,
+   "normals_outward": true
+  },
+  "Dewclaw_Glow": {
+   "non_manifold_edges": 86,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000355,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4258,
+   "quads": 1834,
+   "ngons": 2,
+   "faces": 2406,
+   "sliver_tris_lt6deg": 2794,
+   "non_manifold_edges": 14,
+   "open_boundary_edges": 10,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 577,
+  "after": {
+   "Dewclaw_Body": {
+    "triangles": 3578,
+    "quads": 1547,
+    "ngons": 0,
+    "faces": 2031,
+    "sliver_tris_lt6deg": 2461,
+    "non_manifold_edges": 390,
+    "open_boundary_edges": 386,
+    "uv_coverage": 0.646
+   },
+   "Dewclaw_Glow": {
+    "triangles": 406,
+    "quads": 118,
+    "ngons": 0,
+    "faces": 288,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 86,
+    "open_boundary_edges": 86,
+    "uv_coverage": 0.74
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.497,
+   -0.15,
+   -0.713
+  ],
+  "max": [
+   0.497,
+   0.15,
+   1.706
+  ],
+  "length": 2.419
+ },
+ "race": "Ouginak",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.419,
+  "width": 0.994,
+  "depth": 0.3,
+  "triangles": 4898
+ }
+}

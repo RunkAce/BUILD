@@ -1,0 +1,90 @@
+{
+ "name": "Bravura",
+ "triangles": {
+  "Bravura_Body": 6566
+ },
+ "triangles_total": 6566,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Bravura/textures/Bravura_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Bravura/textures/Bravura_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Bravura/textures/Bravura_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Bravura/textures/Bravura_NormalMap.png"
+ },
+ "health": {
+  "Bravura_Body": {
+   "non_manifold_edges": 674,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.233078,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 7168,
+   "quads": 3243,
+   "ngons": 2,
+   "faces": 3899,
+   "sliver_tris_lt6deg": 248,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 303,
+  "after": {
+   "Bravura_Body": {
+    "triangles": 6566,
+    "quads": 2970,
+    "ngons": 0,
+    "faces": 3596,
+    "sliver_tris_lt6deg": 176,
+    "non_manifold_edges": 674,
+    "open_boundary_edges": 674,
+    "uv_coverage": 0.601
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.663,
+   -0.16,
+   -0.878
+  ],
+  "max": [
+   0.663,
+   0.16,
+   3.23
+  ],
+  "length": 4.108
+ },
+ "race": "Masqueraider",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.108,
+  "width": 1.326,
+  "depth": 0.32,
+  "triangles": 7168
+ }
+}

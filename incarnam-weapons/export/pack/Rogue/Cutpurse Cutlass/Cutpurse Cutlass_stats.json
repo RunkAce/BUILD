@@ -1,0 +1,90 @@
+{
+ "name": "Cutpurse Cutlass",
+ "triangles": {
+  "Cutpurse Cutlass_Body": 5542
+ },
+ "triangles_total": 5542,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Rogue/Cutpurse Cutlass/textures/Cutpurse Cutlass_ColorMap.png",
+  "RoughnessMap": "export/pack/Rogue/Cutpurse Cutlass/textures/Cutpurse Cutlass_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Rogue/Cutpurse Cutlass/textures/Cutpurse Cutlass_MetalnessMap.png",
+  "NormalMap": "export/pack/Rogue/Cutpurse Cutlass/textures/Cutpurse Cutlass_NormalMap.png"
+ },
+ "health": {
+  "Cutpurse Cutlass_Body": {
+   "non_manifold_edges": 534,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.267598,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6108,
+   "quads": 2778,
+   "ngons": 2,
+   "faces": 3304,
+   "sliver_tris_lt6deg": 202,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 290,
+  "after": {
+   "Cutpurse Cutlass_Body": {
+    "triangles": 5542,
+    "quads": 2528,
+    "ngons": 0,
+    "faces": 3014,
+    "sliver_tris_lt6deg": 172,
+    "non_manifold_edges": 534,
+    "open_boundary_edges": 534,
+    "uv_coverage": 0.634
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.644,
+   -0.16,
+   -0.89
+  ],
+  "max": [
+   0.624,
+   0.16,
+   3.23
+  ],
+  "length": 4.12
+ },
+ "race": "Rogue",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.12,
+  "width": 1.268,
+  "depth": 0.32,
+  "triangles": 6108
+ }
+}

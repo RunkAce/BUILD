@@ -1,0 +1,113 @@
+{
+ "name": "Codex Hammer",
+ "triangles": {
+  "Codex Hammer_Body": 4062,
+  "Codex Hammer_Glow": 55
+ },
+ "triangles_total": 4117,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Codex Hammer/textures/Codex Hammer_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Codex Hammer/textures/Codex Hammer_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Codex Hammer/textures/Codex Hammer_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Codex Hammer/textures/Codex Hammer_NormalMap.png"
+ },
+ "health": {
+  "Codex Hammer_Body": {
+   "non_manifold_edges": 556,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.230707,
+   "normals_outward": true
+  },
+  "Codex Hammer_Glow": {
+   "non_manifold_edges": 7,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001355,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4666,
+   "quads": 1907,
+   "ngons": 2,
+   "faces": 2745,
+   "sliver_tris_lt6deg": 1384,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 358,
+  "after": {
+   "Codex Hammer_Body": {
+    "triangles": 4062,
+    "quads": 1670,
+    "ngons": 0,
+    "faces": 2392,
+    "sliver_tris_lt6deg": 1274,
+    "non_manifold_edges": 556,
+    "open_boundary_edges": 556,
+    "uv_coverage": 0.459
+   },
+   "Codex Hammer_Glow": {
+    "triangles": 55,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 35,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 7,
+    "open_boundary_edges": 7,
+    "uv_coverage": 0.638
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.45
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.0341
+  ],
+  "VFX_Impact": [
+   0.4986,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.459,
+   -0.25,
+   -0.868
+  ],
+  "max": [
+   0.459,
+   0.2,
+   3.034
+  ],
+  "length": 3.902
+ },
+ "race": "Huppermage",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 3.902,
+  "width": 0.917,
+  "depth": 0.45,
+  "triangles": 4726
+ }
+}

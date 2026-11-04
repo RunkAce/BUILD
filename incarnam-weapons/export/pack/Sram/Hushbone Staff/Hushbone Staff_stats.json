@@ -1,0 +1,118 @@
+{
+ "name": "Hushbone Staff",
+ "triangles": {
+  "Hushbone Staff_Body": 4745,
+  "Hushbone Staff_Glow": 102
+ },
+ "triangles_total": 4847,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sram/Hushbone Staff/textures/Hushbone Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Sram/Hushbone Staff/textures/Hushbone Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sram/Hushbone Staff/textures/Hushbone Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Sram/Hushbone Staff/textures/Hushbone Staff_NormalMap.png"
+ },
+ "health": {
+  "Hushbone Staff_Body": {
+   "non_manifold_edges": 571,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.149904,
+   "normals_outward": true
+  },
+  "Hushbone Staff_Glow": {
+   "non_manifold_edges": 26,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.036527,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5308,
+   "quads": 2356,
+   "ngons": 2,
+   "faces": 2942,
+   "sliver_tris_lt6deg": 2720,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 377,
+  "after": {
+   "Hushbone Staff_Body": {
+    "triangles": 4745,
+    "quads": 2166,
+    "ngons": 0,
+    "faces": 2579,
+    "sliver_tris_lt6deg": 2593,
+    "non_manifold_edges": 571,
+    "open_boundary_edges": 571,
+    "uv_coverage": 0.46
+   },
+   "Hushbone Staff_Glow": {
+    "triangles": 102,
+    "quads": 43,
+    "ngons": 0,
+    "faces": 59,
+    "sliver_tris_lt6deg": 24,
+    "non_manifold_edges": 26,
+    "open_boundary_edges": 26,
+    "uv_coverage": 0.224
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.4768
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.0186
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.578,
+   -0.15,
+   -2.849
+  ],
+  "max": [
+   0.578,
+   0.149,
+   3.031
+  ],
+  "length": 5.881
+ },
+ "race": "Sram",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.881,
+  "width": 1.156,
+  "depth": 0.299,
+  "triangles": 5424
+ }
+}

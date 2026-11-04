@@ -1,0 +1,90 @@
+{
+ "name": "Bloodpact",
+ "triangles": {
+  "Bloodpact_Body": 6596
+ },
+ "triangles_total": 6596,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Bloodpact/textures/Bloodpact_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Bloodpact/textures/Bloodpact_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Bloodpact/textures/Bloodpact_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Bloodpact/textures/Bloodpact_NormalMap.png"
+ },
+ "health": {
+  "Bloodpact_Body": {
+   "non_manifold_edges": 650,
+   "loose_verts": 0,
+   "zero_area_faces": 1,
+   "signed_volume": 0.217915,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 7204,
+   "quads": 3332,
+   "ngons": 2,
+   "faces": 3846,
+   "sliver_tris_lt6deg": 3812,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 304,
+  "after": {
+   "Bloodpact_Body": {
+    "triangles": 6596,
+    "quads": 3054,
+    "ngons": 0,
+    "faces": 3542,
+    "sliver_tris_lt6deg": 3542,
+    "non_manifold_edges": 650,
+    "open_boundary_edges": 650,
+    "uv_coverage": 0.61
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.618,
+   -0.16,
+   -0.87
+  ],
+  "max": [
+   0.618,
+   0.16,
+   3.23
+  ],
+  "length": 4.1
+ },
+ "race": "Sacrier",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.1,
+  "width": 1.237,
+  "depth": 0.32,
+  "triangles": 7204
+ }
+}

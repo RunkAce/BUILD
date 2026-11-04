@@ -1,0 +1,118 @@
+{
+ "name": "Gourdsage Staff",
+ "triangles": {
+  "Gourdsage Staff_Body": 4977,
+  "Gourdsage Staff_Glow": 133
+ },
+ "triangles_total": 5110,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Gourdsage Staff/textures/Gourdsage Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Gourdsage Staff/textures/Gourdsage Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Gourdsage Staff/textures/Gourdsage Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Gourdsage Staff/textures/Gourdsage Staff_NormalMap.png"
+ },
+ "health": {
+  "Gourdsage Staff_Body": {
+   "non_manifold_edges": 763,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.308844,
+   "normals_outward": true
+  },
+  "Gourdsage Staff_Glow": {
+   "non_manifold_edges": 13,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.361017,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5898,
+   "quads": 2572,
+   "ngons": 10,
+   "faces": 3300,
+   "sliver_tris_lt6deg": 1046,
+   "non_manifold_edges": 18,
+   "open_boundary_edges": 18,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 607,
+  "after": {
+   "Gourdsage Staff_Body": {
+    "triangles": 4977,
+    "quads": 2265,
+    "ngons": 4,
+    "faces": 2704,
+    "sliver_tris_lt6deg": 999,
+    "non_manifold_edges": 763,
+    "open_boundary_edges": 763,
+    "uv_coverage": 0.492
+   },
+   "Gourdsage Staff_Glow": {
+    "triangles": 133,
+    "quads": 60,
+    "ngons": 0,
+    "faces": 73,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 13,
+    "open_boundary_edges": 13,
+    "uv_coverage": 0.557
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.3447
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.9453
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.404,
+   -0.404,
+   -2.872
+  ],
+  "max": [
+   0.404,
+   0.404,
+   3.21
+  ],
+  "length": 6.082
+ },
+ "race": "Pandawa",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.082,
+  "width": 0.808,
+  "depth": 0.808,
+  "triangles": 6042
+ }
+}

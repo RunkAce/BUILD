@@ -1,0 +1,100 @@
+{
+ "name": "Barrelhead Club",
+ "triangles": {
+  "Barrelhead Club_Body": 4967
+ },
+ "triangles_total": 4967,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Barrelhead Club/textures/Barrelhead Club_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Barrelhead Club/textures/Barrelhead Club_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Barrelhead Club/textures/Barrelhead Club_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Barrelhead Club/textures/Barrelhead Club_NormalMap.png"
+ },
+ "health": {
+  "Barrelhead Club_Body": {
+   "non_manifold_edges": 635,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.846162,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5840,
+   "quads": 2539,
+   "ngons": 2,
+   "faces": 3291,
+   "sliver_tris_lt6deg": 192,
+   "non_manifold_edges": 12,
+   "open_boundary_edges": 12,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 735,
+  "after": {
+   "Barrelhead Club_Body": {
+    "triangles": 4967,
+    "quads": 2256,
+    "ngons": 0,
+    "faces": 2711,
+    "sliver_tris_lt6deg": 136,
+    "non_manifold_edges": 635,
+    "open_boundary_edges": 635,
+    "uv_coverage": 0.567
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.2654
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.6303
+  ],
+  "VFX_Impact": [
+   0.7497,
+   0.0,
+   2.2654
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.05
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.71,
+   -0.605,
+   -2.012
+  ],
+  "max": [
+   0.71,
+   0.575,
+   3.63
+  ],
+  "length": 5.642
+ },
+ "race": "Pandawa",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 5.642,
+  "width": 1.419,
+  "depth": 1.18,
+  "triangles": 6096
+ }
+}

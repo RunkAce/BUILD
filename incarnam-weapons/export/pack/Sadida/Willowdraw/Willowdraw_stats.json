@@ -1,0 +1,118 @@
+{
+ "name": "Willowdraw",
+ "triangles": {
+  "Willowdraw_Body": 3839,
+  "Willowdraw_Glow": 164
+ },
+ "triangles_total": 4003,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sadida/Willowdraw/textures/Willowdraw_ColorMap.png",
+  "RoughnessMap": "export/pack/Sadida/Willowdraw/textures/Willowdraw_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sadida/Willowdraw/textures/Willowdraw_MetalnessMap.png",
+  "NormalMap": "export/pack/Sadida/Willowdraw/textures/Willowdraw_NormalMap.png"
+ },
+ "health": {
+  "Willowdraw_Body": {
+   "non_manifold_edges": 1007,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.264545,
+   "normals_outward": true
+  },
+  "Willowdraw_Glow": {
+   "non_manifold_edges": 64,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001888,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4926,
+   "quads": 1974,
+   "ngons": 2,
+   "faces": 2934,
+   "sliver_tris_lt6deg": 335,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 735,
+  "after": {
+   "Willowdraw_Body": {
+    "triangles": 3839,
+    "quads": 1592,
+    "ngons": 0,
+    "faces": 2247,
+    "sliver_tris_lt6deg": 249,
+    "non_manifold_edges": 1007,
+    "open_boundary_edges": 1007,
+    "uv_coverage": 0.557
+   },
+   "Willowdraw_Glow": {
+    "triangles": 164,
+    "quads": 54,
+    "ngons": 0,
+    "faces": 110,
+    "sliver_tris_lt6deg": 8,
+    "non_manifold_edges": 64,
+    "open_boundary_edges": 64,
+    "uv_coverage": 0.461
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.548,
+   0.0,
+   3.7515
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.17
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.419,
+   -1.169
+  ],
+  "max": [
+   0.548,
+   0.419,
+   3.751
+  ],
+  "length": 4.92
+ },
+ "race": "Sadida",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 4.92,
+  "width": 1.073,
+  "depth": 0.839,
+  "triangles": 5168
+ }
+}

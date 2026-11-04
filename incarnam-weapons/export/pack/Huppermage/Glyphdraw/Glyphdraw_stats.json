@@ -1,0 +1,118 @@
+{
+ "name": "Glyphdraw",
+ "triangles": {
+  "Glyphdraw_Body": 3839,
+  "Glyphdraw_Glow": 64
+ },
+ "triangles_total": 3903,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Glyphdraw/textures/Glyphdraw_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Glyphdraw/textures/Glyphdraw_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Glyphdraw/textures/Glyphdraw_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Glyphdraw/textures/Glyphdraw_NormalMap.png"
+ },
+ "health": {
+  "Glyphdraw_Body": {
+   "non_manifold_edges": 875,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.262984,
+   "normals_outward": true
+  },
+  "Glyphdraw_Glow": {
+   "non_manifold_edges": 38,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003388,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4612,
+   "quads": 1892,
+   "ngons": 2,
+   "faces": 2702,
+   "sliver_tris_lt6deg": 427,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 515,
+  "after": {
+   "Glyphdraw_Body": {
+    "triangles": 3839,
+    "quads": 1622,
+    "ngons": 0,
+    "faces": 2217,
+    "sliver_tris_lt6deg": 355,
+    "non_manifold_edges": 875,
+    "open_boundary_edges": 875,
+    "uv_coverage": 0.516
+   },
+   "Glyphdraw_Glow": {
+    "triangles": 64,
+    "quads": 6,
+    "ngons": 0,
+    "faces": 58,
+    "sliver_tris_lt6deg": 18,
+    "non_manifold_edges": 38,
+    "open_boundary_edges": 38,
+    "uv_coverage": 0.598
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.3585,
+   0.0,
+   3.7906
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.17
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.441,
+   -1.159
+  ],
+  "max": [
+   0.525,
+   0.441,
+   3.791
+  ],
+  "length": 4.95
+ },
+ "race": "Huppermage",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 4.95,
+  "width": 1.05,
+  "depth": 0.882,
+  "triangles": 4724
+ }
+}

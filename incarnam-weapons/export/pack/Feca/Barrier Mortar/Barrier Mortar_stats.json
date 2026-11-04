@@ -1,0 +1,103 @@
+{
+ "name": "Barrier Mortar",
+ "triangles": {
+  "Barrier Mortar_Body": 1964,
+  "Barrier Mortar_Glow": 570
+ },
+ "triangles_total": 2534,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Barrier Mortar/textures/Barrier Mortar_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Barrier Mortar/textures/Barrier Mortar_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Barrier Mortar/textures/Barrier Mortar_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Barrier Mortar/textures/Barrier Mortar_NormalMap.png"
+ },
+ "health": {
+  "Barrier Mortar_Body": {
+   "non_manifold_edges": 364,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.16121,
+   "normals_outward": true
+  },
+  "Barrier Mortar_Glow": {
+   "non_manifold_edges": 126,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004822,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2432,
+   "quads": 790,
+   "ngons": 2,
+   "faces": 1636,
+   "sliver_tris_lt6deg": 182,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 353,
+  "after": {
+   "Barrier Mortar_Body": {
+    "triangles": 1964,
+    "quads": 627,
+    "ngons": 1,
+    "faces": 1334,
+    "sliver_tris_lt6deg": 136,
+    "non_manifold_edges": 364,
+    "open_boundary_edges": 364,
+    "uv_coverage": 0.484
+   },
+   "Barrier Mortar_Glow": {
+    "triangles": 570,
+    "quads": 285,
+    "ngons": 0,
+    "faces": 285,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 126,
+    "open_boundary_edges": 126,
+    "uv_coverage": 0.497
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.3508,
+   0.0,
+   1.9869
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.366,
+   -0.213,
+   -0.449
+  ],
+  "max": [
+   0.689,
+   0.213,
+   1.987
+  ],
+  "length": 2.436
+ },
+ "race": "Feca",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.436,
+  "width": 1.055,
+  "depth": 0.426,
+  "triangles": 3104
+ }
+}

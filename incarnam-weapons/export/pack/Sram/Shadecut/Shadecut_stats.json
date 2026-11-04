@@ -1,0 +1,90 @@
+{
+ "name": "Shadecut",
+ "triangles": {
+  "Shadecut_Body": 6108
+ },
+ "triangles_total": 6108,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sram/Shadecut/textures/Shadecut_ColorMap.png",
+  "RoughnessMap": "export/pack/Sram/Shadecut/textures/Shadecut_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sram/Shadecut/textures/Shadecut_MetalnessMap.png",
+  "NormalMap": "export/pack/Sram/Shadecut/textures/Shadecut_NormalMap.png"
+ },
+ "health": {
+  "Shadecut_Body": {
+   "non_manifold_edges": 598,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.167074,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6640,
+   "quads": 3173,
+   "ngons": 2,
+   "faces": 3441,
+   "sliver_tris_lt6deg": 62,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 267,
+  "after": {
+   "Shadecut_Body": {
+    "triangles": 6108,
+    "quads": 2934,
+    "ngons": 0,
+    "faces": 3174,
+    "sliver_tris_lt6deg": 44,
+    "non_manifold_edges": 598,
+    "open_boundary_edges": 598,
+    "uv_coverage": 0.58
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.558,
+   -0.16,
+   -0.878
+  ],
+  "max": [
+   0.558,
+   0.16,
+   3.23
+  ],
+  "length": 4.108
+ },
+ "race": "Sram",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.108,
+  "width": 1.116,
+  "depth": 0.32,
+  "triangles": 6640
+ }
+}

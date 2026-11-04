@@ -1,0 +1,108 @@
+{
+ "name": "Sleeve Ace",
+ "triangles": {
+  "Sleeve Ace_Body": 2952,
+  "Sleeve Ace_Glow": 116
+ },
+ "triangles_total": 3068,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/Sleeve Ace/textures/Sleeve Ace_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/Sleeve Ace/textures/Sleeve Ace_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/Sleeve Ace/textures/Sleeve Ace_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/Sleeve Ace/textures/Sleeve Ace_NormalMap.png"
+ },
+ "health": {
+  "Sleeve Ace_Body": {
+   "non_manifold_edges": 408,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.193961,
+   "normals_outward": true
+  },
+  "Sleeve Ace_Glow": {
+   "non_manifold_edges": 24,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001967,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3694,
+   "quads": 1547,
+   "ngons": 2,
+   "faces": 2129,
+   "sliver_tris_lt6deg": 1605,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 469,
+  "after": {
+   "Sleeve Ace_Body": {
+    "triangles": 2952,
+    "quads": 1236,
+    "ngons": 0,
+    "faces": 1716,
+    "sliver_tris_lt6deg": 1345,
+    "non_manifold_edges": 408,
+    "open_boundary_edges": 408,
+    "uv_coverage": 0.621
+   },
+   "Sleeve Ace_Glow": {
+    "triangles": 116,
+    "quads": 36,
+    "ngons": 0,
+    "faces": 80,
+    "sliver_tris_lt6deg": 2,
+    "non_manifold_edges": 24,
+    "open_boundary_edges": 24,
+    "uv_coverage": 0.765
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.458,
+   -0.24,
+   -0.692
+  ],
+  "max": [
+   0.458,
+   0.24,
+   1.71
+  ],
+  "length": 2.402
+ },
+ "race": "Ecaflip",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.402,
+  "width": 0.917,
+  "depth": 0.48,
+  "triangles": 3878
+ }
+}

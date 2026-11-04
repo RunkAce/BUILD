@@ -1,0 +1,118 @@
+{
+ "name": "Martyr's Cleave",
+ "triangles": {
+  "Martyr's Cleave_Body": 3180,
+  "Martyr's Cleave_Glow": 88
+ },
+ "triangles_total": 3268,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sacrier/Martyr's Cleave/textures/Martyr's Cleave_ColorMap.png",
+  "RoughnessMap": "export/pack/Sacrier/Martyr's Cleave/textures/Martyr's Cleave_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sacrier/Martyr's Cleave/textures/Martyr's Cleave_MetalnessMap.png",
+  "NormalMap": "export/pack/Sacrier/Martyr's Cleave/textures/Martyr's Cleave_NormalMap.png"
+ },
+ "health": {
+  "Martyr's Cleave_Body": {
+   "non_manifold_edges": 614,
+   "loose_verts": 0,
+   "zero_area_faces": 1,
+   "signed_volume": 0.799406,
+   "normals_outward": true
+  },
+  "Martyr's Cleave_Glow": {
+   "non_manifold_edges": 32,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001415,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3892,
+   "quads": 1590,
+   "ngons": 2,
+   "faces": 2288,
+   "sliver_tris_lt6deg": 202,
+   "non_manifold_edges": 10,
+   "open_boundary_edges": 8,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 379,
+  "after": {
+   "Martyr's Cleave_Body": {
+    "triangles": 3180,
+    "quads": 1255,
+    "ngons": 0,
+    "faces": 1925,
+    "sliver_tris_lt6deg": 162,
+    "non_manifold_edges": 614,
+    "open_boundary_edges": 612,
+    "uv_coverage": 0.608
+   },
+   "Martyr's Cleave_Glow": {
+    "triangles": 88,
+    "quads": 8,
+    "ngons": 0,
+    "faces": 80,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 32,
+    "open_boundary_edges": 32,
+    "uv_coverage": 0.569
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.998,
+   -0.225,
+   -1.423
+  ],
+  "max": [
+   0.998,
+   0.225,
+   4.425
+  ],
+  "length": 5.848
+ },
+ "race": "Sacrier",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.848,
+  "width": 1.995,
+  "depth": 0.45,
+  "triangles": 4012
+ }
+}

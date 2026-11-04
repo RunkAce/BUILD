@@ -1,0 +1,118 @@
+{
+ "name": "Facechanger Marotte",
+ "triangles": {
+  "Facechanger Marotte_Body": 5169,
+  "Facechanger Marotte_Glow": 44
+ },
+ "triangles_total": 5213,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Masqueraider/Facechanger Marotte/textures/Facechanger Marotte_ColorMap.png",
+  "RoughnessMap": "export/pack/Masqueraider/Facechanger Marotte/textures/Facechanger Marotte_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Masqueraider/Facechanger Marotte/textures/Facechanger Marotte_MetalnessMap.png",
+  "NormalMap": "export/pack/Masqueraider/Facechanger Marotte/textures/Facechanger Marotte_NormalMap.png"
+ },
+ "health": {
+  "Facechanger Marotte_Body": {
+   "non_manifold_edges": 609,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.201198,
+   "normals_outward": true
+  },
+  "Facechanger Marotte_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.047763,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5732,
+   "quads": 2479,
+   "ngons": 2,
+   "faces": 3243,
+   "sliver_tris_lt6deg": 3028,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 341,
+  "after": {
+   "Facechanger Marotte_Body": {
+    "triangles": 5169,
+    "quads": 2267,
+    "ngons": 0,
+    "faces": 2902,
+    "sliver_tris_lt6deg": 2906,
+    "non_manifold_edges": 609,
+    "open_boundary_edges": 609,
+    "uv_coverage": 0.422
+   },
+   "Facechanger Marotte_Glow": {
+    "triangles": 44,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 24,
+    "sliver_tris_lt6deg": 28,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.592
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.5044
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.0738
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.538,
+   -0.163,
+   -2.853
+  ],
+  "max": [
+   0.538,
+   0.157,
+   3.092
+  ],
+  "length": 5.945
+ },
+ "race": "Masqueraider",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.945,
+  "width": 1.075,
+  "depth": 0.32,
+  "triangles": 5776
+ }
+}

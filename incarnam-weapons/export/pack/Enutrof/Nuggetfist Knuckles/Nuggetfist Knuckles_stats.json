@@ -1,0 +1,118 @@
+{
+ "name": "Nuggetfist Knuckles",
+ "triangles": {
+  "Nuggetfist Knuckles_Body": 1655,
+  "Nuggetfist Knuckles_Glow": 36
+ },
+ "triangles_total": 1691,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Enutrof/Nuggetfist Knuckles/textures/Nuggetfist Knuckles_ColorMap.png",
+  "RoughnessMap": "export/pack/Enutrof/Nuggetfist Knuckles/textures/Nuggetfist Knuckles_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Enutrof/Nuggetfist Knuckles/textures/Nuggetfist Knuckles_MetalnessMap.png",
+  "NormalMap": "export/pack/Enutrof/Nuggetfist Knuckles/textures/Nuggetfist Knuckles_NormalMap.png"
+ },
+ "health": {
+  "Nuggetfist Knuckles_Body": {
+   "non_manifold_edges": 545,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.374887,
+   "normals_outward": true
+  },
+  "Nuggetfist Knuckles_Glow": {
+   "non_manifold_edges": 12,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.006362,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2700,
+   "quads": 1045,
+   "ngons": 2,
+   "faces": 1637,
+   "sliver_tris_lt6deg": 410,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 627,
+  "after": {
+   "Nuggetfist Knuckles_Body": {
+    "triangles": 1655,
+    "quads": 592,
+    "ngons": 2,
+    "faces": 1045,
+    "sliver_tris_lt6deg": 216,
+    "non_manifold_edges": 545,
+    "open_boundary_edges": 545,
+    "uv_coverage": 0.589
+   },
+   "Nuggetfist Knuckles_Glow": {
+    "triangles": 36,
+    "quads": 13,
+    "ngons": 0,
+    "faces": 23,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 12,
+    "open_boundary_edges": 12,
+    "uv_coverage": 0.718
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.7949,
+   0.7157
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.9,
+   -0.985,
+   -0.37
+  ],
+  "max": [
+   1.299,
+   0.9,
+   1.248
+  ],
+  "length": 1.618
+ },
+ "race": "Enutrof",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.618,
+  "width": 2.199,
+  "depth": 1.885,
+  "triangles": 2796
+ },
+ "pieces": {
+  "L": {
+   "triangles": 1655,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 36,
+   "mirror_of": "Glow"
+  }
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "name": "Steamlung Cannon",
+ "triangles": {
+  "Steamlung Cannon_Body": 2531,
+  "Steamlung Cannon_Glow": 54
+ },
+ "triangles_total": 2585,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Foggernaut/Steamlung Cannon/textures/Steamlung Cannon_ColorMap.png",
+  "RoughnessMap": "export/pack/Foggernaut/Steamlung Cannon/textures/Steamlung Cannon_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Foggernaut/Steamlung Cannon/textures/Steamlung Cannon_MetalnessMap.png",
+  "NormalMap": "export/pack/Foggernaut/Steamlung Cannon/textures/Steamlung Cannon_NormalMap.png"
+ },
+ "health": {
+  "Steamlung Cannon_Body": {
+   "non_manifold_edges": 685,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.258053,
+   "normals_outward": true
+  },
+  "Steamlung Cannon_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001409,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3636,
+   "quads": 1337,
+   "ngons": 4,
+   "faces": 2287,
+   "sliver_tris_lt6deg": 460,
+   "non_manifold_edges": 20,
+   "open_boundary_edges": 16,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 689,
+  "after": {
+   "Steamlung Cannon_Body": {
+    "triangles": 2531,
+    "quads": 927,
+    "ngons": 0,
+    "faces": 1604,
+    "sliver_tris_lt6deg": 184,
+    "non_manifold_edges": 685,
+    "open_boundary_edges": 685,
+    "uv_coverage": 0.543
+   },
+   "Steamlung Cannon_Glow": {
+    "triangles": 54,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 34,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.626
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.05,
+   0.0,
+   2.45
+  ],
+  "GripSecondary": [
+   -0.0335,
+   0.0,
+   1.204
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.389,
+   -0.217,
+   -0.921
+  ],
+  "max": [
+   0.386,
+   0.217,
+   2.45
+  ],
+  "length": 3.371
+ },
+ "race": "Foggernaut",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 3.371,
+  "width": 0.776,
+  "depth": 0.434,
+  "triangles": 3696
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "name": "Gnawmoon",
+ "triangles": {
+  "Gnawmoon_Body": 5715,
+  "Gnawmoon_Glow": 50
+ },
+ "triangles_total": 5765,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Gnawmoon/textures/Gnawmoon_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Gnawmoon/textures/Gnawmoon_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Gnawmoon/textures/Gnawmoon_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Gnawmoon/textures/Gnawmoon_NormalMap.png"
+ },
+ "health": {
+  "Gnawmoon_Body": {
+   "non_manifold_edges": 669,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.596996,
+   "normals_outward": true
+  },
+  "Gnawmoon_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00211,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6710,
+   "quads": 2648,
+   "ngons": 2,
+   "faces": 4052,
+   "sliver_tris_lt6deg": 298,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 698,
+  "after": {
+   "Gnawmoon_Body": {
+    "triangles": 5715,
+    "quads": 2351,
+    "ngons": 0,
+    "faces": 3364,
+    "sliver_tris_lt6deg": 234,
+    "non_manifold_edges": 669,
+    "open_boundary_edges": 669,
+    "uv_coverage": 0.517
+   },
+   "Gnawmoon_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.626
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   3.3451
+  ],
+  "VFX_Tip": [
+   2.664,
+   0.0,
+   1.4917
+  ],
+  "VFX_Blade": [
+   1.5001,
+   0.0,
+   2.7659
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.873,
+   -0.225,
+   -2.745
+  ],
+  "max": [
+   2.664,
+   0.165,
+   3.94
+  ],
+  "length": 6.684
+ },
+ "race": "Ouginak",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.684,
+  "width": 3.537,
+  "depth": 0.39,
+  "triangles": 6770
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "name": "Clawcaller Grips",
+ "triangles": {
+  "Clawcaller Grips_Body": 2036,
+  "Clawcaller Grips_Glow": 64
+ },
+ "triangles_total": 2100,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Osamodas/Clawcaller Grips/textures/Clawcaller Grips_ColorMap.png",
+  "RoughnessMap": "export/pack/Osamodas/Clawcaller Grips/textures/Clawcaller Grips_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Osamodas/Clawcaller Grips/textures/Clawcaller Grips_MetalnessMap.png",
+  "NormalMap": "export/pack/Osamodas/Clawcaller Grips/textures/Clawcaller Grips_NormalMap.png"
+ },
+ "health": {
+  "Clawcaller Grips_Body": {
+   "non_manifold_edges": 446,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.202797,
+   "normals_outward": true
+  },
+  "Clawcaller Grips_Glow": {
+   "non_manifold_edges": 40,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001363,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2840,
+   "quads": 1018,
+   "ngons": 2,
+   "faces": 1804,
+   "sliver_tris_lt6deg": 393,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 538,
+  "after": {
+   "Clawcaller Grips_Body": {
+    "triangles": 2036,
+    "quads": 717,
+    "ngons": 2,
+    "faces": 1301,
+    "sliver_tris_lt6deg": 296,
+    "non_manifold_edges": 446,
+    "open_boundary_edges": 446,
+    "uv_coverage": 0.617
+   },
+   "Clawcaller Grips_Glow": {
+    "triangles": 64,
+    "quads": 0,
+    "ngons": 0,
+    "faces": 64,
+    "sliver_tris_lt6deg": 14,
+    "non_manifold_edges": 40,
+    "open_boundary_edges": 40,
+    "uv_coverage": 0.574
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.748,
+   0.7768
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.77,
+   -0.837,
+   -0.579
+  ],
+  "max": [
+   1.421,
+   0.77,
+   1.106
+  ],
+  "length": 1.685
+ },
+ "race": "Osamodas",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.685,
+  "width": 2.191,
+  "depth": 1.607,
+  "triangles": 2960
+ },
+ "pieces": {
+  "L": {
+   "triangles": 2036,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 64,
+   "mirror_of": "Glow"
+  }
+ }
+}

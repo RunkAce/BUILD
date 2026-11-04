@@ -1,0 +1,118 @@
+{
+ "name": "Longsight Bowstaff",
+ "triangles": {
+  "Longsight Bowstaff_Body": 5786,
+  "Longsight Bowstaff_Glow": 68
+ },
+ "triangles_total": 5854,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Cra/Longsight Bowstaff/textures/Longsight Bowstaff_ColorMap.png",
+  "RoughnessMap": "export/pack/Cra/Longsight Bowstaff/textures/Longsight Bowstaff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Cra/Longsight Bowstaff/textures/Longsight Bowstaff_MetalnessMap.png",
+  "NormalMap": "export/pack/Cra/Longsight Bowstaff/textures/Longsight Bowstaff_NormalMap.png"
+ },
+ "health": {
+  "Longsight Bowstaff_Body": {
+   "non_manifold_edges": 638,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.140751,
+   "normals_outward": true
+  },
+  "Longsight Bowstaff_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002814,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6312,
+   "quads": 2828,
+   "ngons": 2,
+   "faces": 3474,
+   "sliver_tris_lt6deg": 4170,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 322,
+  "after": {
+   "Longsight Bowstaff_Body": {
+    "triangles": 5786,
+    "quads": 2634,
+    "ngons": 0,
+    "faces": 3152,
+    "sliver_tris_lt6deg": 4010,
+    "non_manifold_edges": 638,
+    "open_boundary_edges": 638,
+    "uv_coverage": 0.414
+   },
+   "Longsight Bowstaff_Glow": {
+    "triangles": 68,
+    "quads": 26,
+    "ngons": 0,
+    "faces": 42,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.27
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.451
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   2.8638
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.65,
+   -0.156,
+   -2.882
+  ],
+  "max": [
+   0.65,
+   0.156,
+   2.864
+  ],
+  "length": 5.746
+ },
+ "race": "Cra",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.746,
+  "width": 1.301,
+  "depth": 0.312,
+  "triangles": 6380
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "name": "Double Down",
+ "triangles": {
+  "Double Down_Body": 2024,
+  "Double Down_Glow": 508
+ },
+ "triangles_total": 2532,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/Double Down/textures/Double Down_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/Double Down/textures/Double Down_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/Double Down/textures/Double Down_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/Double Down/textures/Double Down_NormalMap.png"
+ },
+ "health": {
+  "Double Down_Body": {
+   "non_manifold_edges": 422,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.138553,
+   "normals_outward": true
+  },
+  "Double Down_Glow": {
+   "non_manifold_edges": 172,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.005725,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2538,
+   "quads": 839,
+   "ngons": 2,
+   "faces": 1693,
+   "sliver_tris_lt6deg": 181,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 412,
+  "after": {
+   "Double Down_Body": {
+    "triangles": 2024,
+    "quads": 658,
+    "ngons": 1,
+    "faces": 1363,
+    "sliver_tris_lt6deg": 97,
+    "non_manifold_edges": 422,
+    "open_boundary_edges": 422,
+    "uv_coverage": 0.519
+   },
+   "Double Down_Glow": {
+    "triangles": 508,
+    "quads": 254,
+    "ngons": 0,
+    "faces": 254,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 172,
+    "open_boundary_edges": 172,
+    "uv_coverage": 0.445
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.3533,
+   0.0,
+   2.0076
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.379,
+   -0.22,
+   -0.454
+  ],
+  "max": [
+   0.703,
+   0.22,
+   2.018
+  ],
+  "length": 2.472
+ },
+ "race": "Ecaflip",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.472,
+  "width": 1.082,
+  "depth": 0.44,
+  "triangles": 3210
+ }
+}

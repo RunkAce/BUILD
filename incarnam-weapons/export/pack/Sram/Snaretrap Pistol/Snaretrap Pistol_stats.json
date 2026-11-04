@@ -1,0 +1,103 @@
+{
+ "name": "Snaretrap Pistol",
+ "triangles": {
+  "Snaretrap Pistol_Body": 2114,
+  "Snaretrap Pistol_Glow": 16
+ },
+ "triangles_total": 2130,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sram/Snaretrap Pistol/textures/Snaretrap Pistol_ColorMap.png",
+  "RoughnessMap": "export/pack/Sram/Snaretrap Pistol/textures/Snaretrap Pistol_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sram/Snaretrap Pistol/textures/Snaretrap Pistol_MetalnessMap.png",
+  "NormalMap": "export/pack/Sram/Snaretrap Pistol/textures/Snaretrap Pistol_NormalMap.png"
+ },
+ "health": {
+  "Snaretrap Pistol_Body": {
+   "non_manifold_edges": 324,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.147795,
+   "normals_outward": true
+  },
+  "Snaretrap Pistol_Glow": {
+   "non_manifold_edges": 8,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004206,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 2512,
+   "quads": 788,
+   "ngons": 2,
+   "faces": 1718,
+   "sliver_tris_lt6deg": 158,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 244,
+  "after": {
+   "Snaretrap Pistol_Body": {
+    "triangles": 2114,
+    "quads": 628,
+    "ngons": 2,
+    "faces": 1480,
+    "sliver_tris_lt6deg": 112,
+    "non_manifold_edges": 324,
+    "open_boundary_edges": 324,
+    "uv_coverage": 0.536
+   },
+   "Snaretrap Pistol_Glow": {
+    "triangles": 16,
+    "quads": 6,
+    "ngons": 0,
+    "faces": 10,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 8,
+    "open_boundary_edges": 8,
+    "uv_coverage": 0.507
+   }
+  }
+ },
+ "attachments": {
+  "VFX_Muzzle": [
+   0.3494,
+   0.0,
+   1.9811
+  ],
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.374,
+   -0.17,
+   -0.419
+  ],
+  "max": [
+   0.747,
+   0.17,
+   2.161
+  ],
+  "length": 2.58
+ },
+ "race": "Sram",
+ "category": "gun",
+ "r6_target_length": [
+  2.2,
+  3.6
+ ],
+ "measured": {
+  "length": 2.58,
+  "width": 1.121,
+  "depth": 0.34,
+  "triangles": 2536
+ }
+}

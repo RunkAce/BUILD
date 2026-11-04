@@ -1,0 +1,123 @@
+{
+ "name": "Twin Remedies",
+ "triangles": {
+  "Twin Remedies_Body": 3252,
+  "Twin Remedies_Glow": 200
+ },
+ "triangles_total": 3452,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Eniripsa/Twin Remedies/textures/Twin Remedies_ColorMap.png",
+  "RoughnessMap": "export/pack/Eniripsa/Twin Remedies/textures/Twin Remedies_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Eniripsa/Twin Remedies/textures/Twin Remedies_MetalnessMap.png",
+  "NormalMap": "export/pack/Eniripsa/Twin Remedies/textures/Twin Remedies_NormalMap.png"
+ },
+ "health": {
+  "Twin Remedies_Body": {
+   "non_manifold_edges": 556,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.19925,
+   "normals_outward": true
+  },
+  "Twin Remedies_Glow": {
+   "non_manifold_edges": 54,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": -0.001588,
+   "normals_outward": false
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4290,
+   "quads": 1668,
+   "ngons": 2,
+   "faces": 2604,
+   "sliver_tris_lt6deg": 231,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 601,
+  "after": {
+   "Twin Remedies_Body": {
+    "triangles": 3252,
+    "quads": 1225,
+    "ngons": 0,
+    "faces": 2027,
+    "sliver_tris_lt6deg": 100,
+    "non_manifold_edges": 556,
+    "open_boundary_edges": 556,
+    "uv_coverage": 0.583
+   },
+   "Twin Remedies_Glow": {
+    "triangles": 200,
+    "quads": 62,
+    "ngons": 0,
+    "faces": 138,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 54,
+    "open_boundary_edges": 54,
+    "uv_coverage": 0.759
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.1264,
+   0.0,
+   2.7003
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.395
+  ],
+  "VFX_Catcher": [
+   -0.3311,
+   0.0,
+   0.6638
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.416,
+   -0.185,
+   -0.76
+  ],
+  "max": [
+   0.407,
+   0.185,
+   2.7
+  ],
+  "length": 3.46
+ },
+ "race": "Eniripsa",
+ "category": "dual_blades",
+ "r6_target_length": [
+  2.6,
+  3.6
+ ],
+ "measured": {
+  "length": 3.46,
+  "width": 0.823,
+  "depth": 0.37,
+  "triangles": 4538
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3252,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 200,
+   "mirror_of": "Glow"
+  }
+ }
+}

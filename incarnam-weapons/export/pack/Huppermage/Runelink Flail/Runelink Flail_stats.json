@@ -1,0 +1,275 @@
+{
+ "name": "Runelink Flail",
+ "triangles": {
+  "Runelink Flail_Body": 2614,
+  "Runelink Flail_Glow": 96,
+  "HeadBlade": 500,
+  "HeadLanget": 44,
+  "HeadMotif": 172,
+  "HeadGuard": 104,
+  "HeadFerrule": 48,
+  "HeadBand": 48,
+  "TailLug": 116,
+  "TailRing": 216
+ },
+ "triangles_total": 3958,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Huppermage/Runelink Flail/textures/Runelink Flail_ColorMap.png",
+  "RoughnessMap": "export/pack/Huppermage/Runelink Flail/textures/Runelink Flail_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Huppermage/Runelink Flail/textures/Runelink Flail_MetalnessMap.png",
+  "NormalMap": "export/pack/Huppermage/Runelink Flail/textures/Runelink Flail_NormalMap.png"
+ },
+ "health": {
+  "Runelink Flail_Body": {
+   "non_manifold_edges": 514,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.064321,
+   "normals_outward": true
+  },
+  "Runelink Flail_Glow": {
+   "non_manifold_edges": 32,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000661,
+   "normals_outward": true
+  },
+  "HeadBlade": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.013501,
+   "normals_outward": true
+  },
+  "HeadLanget": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.019694,
+   "normals_outward": true
+  },
+  "HeadMotif": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004171,
+   "normals_outward": true
+  },
+  "HeadGuard": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004898,
+   "normals_outward": true
+  },
+  "HeadFerrule": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004132,
+   "normals_outward": true
+  },
+  "HeadBand": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001173,
+   "normals_outward": true
+  },
+  "TailLug": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001208,
+   "normals_outward": true
+  },
+  "TailRing": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000287,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3058,
+   "quads": 1365,
+   "ngons": 2,
+   "faces": 1679,
+   "sliver_tris_lt6deg": 40,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 260,
+  "after": {
+   "Runelink Flail_Body": {
+    "triangles": 2614,
+    "quads": 1177,
+    "ngons": 0,
+    "faces": 1437,
+    "sliver_tris_lt6deg": 40,
+    "non_manifold_edges": 514,
+    "open_boundary_edges": 514,
+    "uv_coverage": 0.513
+   },
+   "Runelink Flail_Glow": {
+    "triangles": 96,
+    "quads": 34,
+    "ngons": 0,
+    "faces": 62,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 32,
+    "open_boundary_edges": 32,
+    "uv_coverage": 0.642
+   },
+   "HeadBlade": {
+    "triangles": 500,
+    "quads": 102,
+    "ngons": 0,
+    "faces": 398,
+    "sliver_tris_lt6deg": 58,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadLanget": {
+    "triangles": 44,
+    "quads": 22,
+    "ngons": 0,
+    "faces": 22,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadMotif": {
+    "triangles": 172,
+    "quads": 36,
+    "ngons": 0,
+    "faces": 136,
+    "sliver_tris_lt6deg": 6,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadGuard": {
+    "triangles": 104,
+    "quads": 22,
+    "ngons": 0,
+    "faces": 82,
+    "sliver_tris_lt6deg": 8,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadFerrule": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadBand": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailLug": {
+    "triangles": 116,
+    "quads": 33,
+    "ngons": 0,
+    "faces": 83,
+    "sliver_tris_lt6deg": 6,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailRing": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2802
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.28,
+   -0.182,
+   -0.623
+  ],
+  "max": [
+   1.095,
+   0.182,
+   1.3
+  ],
+  "length": 1.923
+ },
+ "race": "Huppermage",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.923,
+  "width": 1.375,
+  "depth": 0.364,
+  "triangles": 4426
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 1042,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.9,
+     0.0,
+     -0.2707
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "oval",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 288
+ }
+}

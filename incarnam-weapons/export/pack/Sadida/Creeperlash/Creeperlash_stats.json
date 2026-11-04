@@ -1,0 +1,311 @@
+{
+ "name": "Creeperlash",
+ "triangles": {
+  "Creeperlash_Body": 2909,
+  "Creeperlash_Glow": 88,
+  "HeadHaft": 48,
+  "HeadWrap": 652,
+  "HeadSocket": 92,
+  "HeadMotif": 228,
+  "HeadBlade": 316,
+  "HeadSpur": 20,
+  "HeadCollar": 48,
+  "HeadButt": 48,
+  "TailLug": 176,
+  "TailRing": 216
+ },
+ "triangles_total": 4841,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sadida/Creeperlash/textures/Creeperlash_ColorMap.png",
+  "RoughnessMap": "export/pack/Sadida/Creeperlash/textures/Creeperlash_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sadida/Creeperlash/textures/Creeperlash_MetalnessMap.png",
+  "NormalMap": "export/pack/Sadida/Creeperlash/textures/Creeperlash_NormalMap.png"
+ },
+ "health": {
+  "Creeperlash_Body": {
+   "non_manifold_edges": 529,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.060772,
+   "normals_outward": true
+  },
+  "Creeperlash_Glow": {
+   "non_manifold_edges": 32,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000362,
+   "normals_outward": true
+  },
+  "HeadHaft": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.009434,
+   "normals_outward": true
+  },
+  "HeadWrap": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.006642,
+   "normals_outward": true
+  },
+  "HeadSocket": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.014044,
+   "normals_outward": true
+  },
+  "HeadMotif": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001629,
+   "normals_outward": true
+  },
+  "HeadBlade": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.007972,
+   "normals_outward": true
+  },
+  "HeadSpur": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001255,
+   "normals_outward": true
+  },
+  "HeadCollar": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001716,
+   "normals_outward": true
+  },
+  "HeadButt": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001865,
+   "normals_outward": true
+  },
+  "TailLug": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001386,
+   "normals_outward": true
+  },
+  "TailRing": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000246,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3512,
+   "quads": 1440,
+   "ngons": 2,
+   "faces": 2058,
+   "sliver_tris_lt6deg": 38,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 375,
+  "after": {
+   "Creeperlash_Body": {
+    "triangles": 2909,
+    "quads": 1204,
+    "ngons": 0,
+    "faces": 1705,
+    "sliver_tris_lt6deg": 38,
+    "non_manifold_edges": 529,
+    "open_boundary_edges": 529,
+    "uv_coverage": 0.525
+   },
+   "Creeperlash_Glow": {
+    "triangles": 88,
+    "quads": 30,
+    "ngons": 0,
+    "faces": 58,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 32,
+    "open_boundary_edges": 32,
+    "uv_coverage": 0.68
+   },
+   "HeadHaft": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadWrap": {
+    "triangles": 652,
+    "quads": 320,
+    "ngons": 2,
+    "faces": 322,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadSocket": {
+    "triangles": 92,
+    "quads": 30,
+    "ngons": 0,
+    "faces": 62,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadMotif": {
+    "triangles": 228,
+    "quads": 74,
+    "ngons": 0,
+    "faces": 154,
+    "sliver_tris_lt6deg": 60,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadBlade": {
+    "triangles": 316,
+    "quads": 47,
+    "ngons": 0,
+    "faces": 269,
+    "sliver_tris_lt6deg": 60,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadSpur": {
+    "triangles": 20,
+    "quads": 3,
+    "ngons": 0,
+    "faces": 17,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadCollar": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadButt": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailLug": {
+    "triangles": 176,
+    "quads": 55,
+    "ngons": 0,
+    "faces": 121,
+    "sliver_tris_lt6deg": 16,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TailRing": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2504
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.28,
+   -0.179,
+   -0.64
+  ],
+  "max": [
+   1.321,
+   0.179,
+   1.27
+  ],
+  "length": 1.91
+ },
+ "race": "Sadida",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.91,
+  "width": 1.601,
+  "depth": 0.358,
+  "triangles": 5476
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 1616,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.62,
+     0.0,
+     -0.1388
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "oval",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 288
+ }
+}

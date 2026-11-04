@@ -1,0 +1,118 @@
+{
+ "name": "Keelbreaker",
+ "triangles": {
+  "Keelbreaker_Body": 4034,
+  "Keelbreaker_Glow": 124
+ },
+ "triangles_total": 4158,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Foggernaut/Keelbreaker/textures/Keelbreaker_ColorMap.png",
+  "RoughnessMap": "export/pack/Foggernaut/Keelbreaker/textures/Keelbreaker_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Foggernaut/Keelbreaker/textures/Keelbreaker_MetalnessMap.png",
+  "NormalMap": "export/pack/Foggernaut/Keelbreaker/textures/Keelbreaker_NormalMap.png"
+ },
+ "health": {
+  "Keelbreaker_Body": {
+   "non_manifold_edges": 992,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.012152,
+   "normals_outward": true
+  },
+  "Keelbreaker_Glow": {
+   "non_manifold_edges": 40,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.010004,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5608,
+   "quads": 2013,
+   "ngons": 2,
+   "faces": 3581,
+   "sliver_tris_lt6deg": 586,
+   "non_manifold_edges": 6,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 884,
+  "after": {
+   "Keelbreaker_Body": {
+    "triangles": 4034,
+    "quads": 1319,
+    "ngons": 0,
+    "faces": 2715,
+    "sliver_tris_lt6deg": 367,
+    "non_manifold_edges": 992,
+    "open_boundary_edges": 992,
+    "uv_coverage": 0.63
+   },
+   "Keelbreaker_Glow": {
+    "triangles": 124,
+    "quads": 32,
+    "ngons": 0,
+    "faces": 92,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 40,
+    "open_boundary_edges": 40,
+    "uv_coverage": 0.707
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.275
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.375
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.346,
+   -0.225,
+   -1.21
+  ],
+  "max": [
+   1.346,
+   0.225,
+   4.275
+  ],
+  "length": 5.485
+ },
+ "race": "Foggernaut",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.485,
+  "width": 2.692,
+  "depth": 0.45,
+  "triangles": 5768
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "name": "Cork Tooth",
+ "triangles": {
+  "Cork Tooth_Body": 2000,
+  "Cork Tooth_Glow": 248
+ },
+ "triangles_total": 2248,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Cork Tooth/textures/Cork Tooth_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Cork Tooth/textures/Cork Tooth_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Cork Tooth/textures/Cork Tooth_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Cork Tooth/textures/Cork Tooth_NormalMap.png"
+ },
+ "health": {
+  "Cork Tooth_Body": {
+   "non_manifold_edges": 276,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.148117,
+   "normals_outward": true
+  },
+  "Cork Tooth_Glow": {
+   "non_manifold_edges": 76,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001683,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3044,
+   "quads": 1390,
+   "ngons": 2,
+   "faces": 1636,
+   "sliver_tris_lt6deg": 1592,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 610,
+  "after": {
+   "Cork Tooth_Body": {
+    "triangles": 2000,
+    "quads": 886,
+    "ngons": 0,
+    "faces": 1114,
+    "sliver_tris_lt6deg": 992,
+    "non_manifold_edges": 276,
+    "open_boundary_edges": 276,
+    "uv_coverage": 0.676
+   },
+   "Cork Tooth_Glow": {
+    "triangles": 248,
+    "quads": 90,
+    "ngons": 0,
+    "faces": 158,
+    "sliver_tris_lt6deg": 56,
+    "non_manifold_edges": 76,
+    "open_boundary_edges": 76,
+    "uv_coverage": 0.675
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.266,
+   -0.227,
+   -0.72
+  ],
+  "max": [
+   0.266,
+   0.227,
+   1.71
+  ],
+  "length": 2.43
+ },
+ "race": "Pandawa",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.43,
+  "width": 0.532,
+  "depth": 0.454,
+  "triangles": 3400
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "name": "Scentseeker",
+ "triangles": {
+  "Scentseeker_Body": 6504
+ },
+ "triangles_total": 6504,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ouginak/Scentseeker/textures/Scentseeker_ColorMap.png",
+  "RoughnessMap": "export/pack/Ouginak/Scentseeker/textures/Scentseeker_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ouginak/Scentseeker/textures/Scentseeker_MetalnessMap.png",
+  "NormalMap": "export/pack/Ouginak/Scentseeker/textures/Scentseeker_NormalMap.png"
+ },
+ "health": {
+  "Scentseeker_Body": {
+   "non_manifold_edges": 664,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.297737,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 7112,
+   "quads": 3139,
+   "ngons": 2,
+   "faces": 3947,
+   "sliver_tris_lt6deg": 138,
+   "non_manifold_edges": 10,
+   "open_boundary_edges": 8,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 303,
+  "after": {
+   "Scentseeker_Body": {
+    "triangles": 6504,
+    "quads": 2860,
+    "ngons": 0,
+    "faces": 3644,
+    "sliver_tris_lt6deg": 54,
+    "non_manifold_edges": 664,
+    "open_boundary_edges": 662,
+    "uv_coverage": 0.65
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.7,
+   -0.16,
+   -0.95
+  ],
+  "max": [
+   0.7,
+   0.16,
+   3.23
+  ],
+  "length": 4.18
+ },
+ "race": "Ouginak",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.18,
+  "width": 1.401,
+  "depth": 0.32,
+  "triangles": 7112
+ }
+}

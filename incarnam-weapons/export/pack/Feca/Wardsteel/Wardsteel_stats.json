@@ -1,0 +1,90 @@
+{
+ "name": "Wardsteel",
+ "triangles": {
+  "Wardsteel_Body": 5076
+ },
+ "triangles_total": 5076,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Wardsteel/textures/Wardsteel_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Wardsteel/textures/Wardsteel_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Wardsteel/textures/Wardsteel_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Wardsteel/textures/Wardsteel_NormalMap.png"
+ },
+ "health": {
+  "Wardsteel_Body": {
+   "non_manifold_edges": 518,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.291083,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5566,
+   "quads": 2663,
+   "ngons": 2,
+   "faces": 2877,
+   "sliver_tris_lt6deg": 126,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 243,
+  "after": {
+   "Wardsteel_Body": {
+    "triangles": 5076,
+    "quads": 2442,
+    "ngons": 0,
+    "faces": 2634,
+    "sliver_tris_lt6deg": 92,
+    "non_manifold_edges": 518,
+    "open_boundary_edges": 518,
+    "uv_coverage": 0.624
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.23
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.32
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.722,
+   -0.16,
+   -0.89
+  ],
+  "max": [
+   0.722,
+   0.16,
+   3.23
+  ],
+  "length": 4.12
+ },
+ "race": "Feca",
+ "category": "sword",
+ "r6_target_length": [
+  3.4,
+  4.6
+ ],
+ "measured": {
+  "length": 4.12,
+  "width": 1.444,
+  "depth": 0.32,
+  "triangles": 5566
+ }
+}

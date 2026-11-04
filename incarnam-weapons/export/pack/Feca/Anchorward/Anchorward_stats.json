@@ -1,0 +1,203 @@
+{
+ "name": "Anchorward",
+ "triangles": {
+  "Anchorward_Body": 2802,
+  "Anchorward_Glow": 110,
+  "HeadWeight": 68,
+  "HeadBoss": 152,
+  "TopLug.001": 284,
+  "TopRing.001": 216
+ },
+ "triangles_total": 3632,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Feca/Anchorward/textures/Anchorward_ColorMap.png",
+  "RoughnessMap": "export/pack/Feca/Anchorward/textures/Anchorward_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Feca/Anchorward/textures/Anchorward_MetalnessMap.png",
+  "NormalMap": "export/pack/Feca/Anchorward/textures/Anchorward_NormalMap.png"
+ },
+ "health": {
+  "Anchorward_Body": {
+   "non_manifold_edges": 488,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.074854,
+   "normals_outward": true
+  },
+  "Anchorward_Glow": {
+   "non_manifold_edges": 16,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000354,
+   "normals_outward": true
+  },
+  "HeadWeight": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.099283,
+   "normals_outward": true
+  },
+  "HeadBoss": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.010336,
+   "normals_outward": true
+  },
+  "TopLug.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002133,
+   "normals_outward": true
+  },
+  "TopRing.001": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00035,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3268,
+   "quads": 1462,
+   "ngons": 2,
+   "faces": 1792,
+   "sliver_tris_lt6deg": 4,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 257,
+  "after": {
+   "Anchorward_Body": {
+    "triangles": 2802,
+    "quads": 1262,
+    "ngons": 0,
+    "faces": 1540,
+    "sliver_tris_lt6deg": 4,
+    "non_manifold_edges": 488,
+    "open_boundary_edges": 488,
+    "uv_coverage": 0.526
+   },
+   "Anchorward_Glow": {
+    "triangles": 110,
+    "quads": 35,
+    "ngons": 0,
+    "faces": 75,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 16,
+    "open_boundary_edges": 16,
+    "uv_coverage": 0.643
+   },
+   "HeadWeight": {
+    "triangles": 68,
+    "quads": 32,
+    "ngons": 0,
+    "faces": 36,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "HeadBoss": {
+    "triangles": 152,
+    "quads": 51,
+    "ngons": 0,
+    "faces": 101,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopLug.001": {
+    "triangles": 284,
+    "quads": 65,
+    "ngons": 0,
+    "faces": 219,
+    "sliver_tris_lt6deg": 30,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   },
+   "TopRing.001": {
+    "triangles": 216,
+    "quads": 108,
+    "ngons": 0,
+    "faces": 108,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": null
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ChainEnd": [
+   0.0,
+   0.0,
+   1.2885
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.47
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.305,
+   -0.19,
+   -0.64
+  ],
+  "max": [
+   1.216,
+   0.19,
+   1.308
+  ],
+  "length": 1.948
+ },
+ "race": "Feca",
+ "category": "chain",
+ "r6_target_length": [
+  1.6,
+  3.2
+ ],
+ "measured": {
+  "length": 1.948,
+  "width": 1.521,
+  "depth": 0.381,
+  "triangles": 4108
+ },
+ "pieces": {
+  "Head": {
+   "triangles": 660,
+   "maps": [
+    "ColorMap",
+    "MetalnessMap",
+    "NormalMap",
+    "RoughnessMap"
+   ],
+   "attachments": {
+    "ChainEnd": [
+     0.9,
+     0.0,
+     1.048
+    ]
+   }
+  }
+ },
+ "chain": {
+  "link_kind": "box",
+  "pitch": 0.21000000000000002,
+  "link_triangles": 64
+ }
+}

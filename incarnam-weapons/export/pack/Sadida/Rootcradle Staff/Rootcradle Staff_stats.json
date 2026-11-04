@@ -1,0 +1,118 @@
+{
+ "name": "Rootcradle Staff",
+ "triangles": {
+  "Rootcradle Staff_Body": 5416,
+  "Rootcradle Staff_Glow": 58
+ },
+ "triangles_total": 5474,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sadida/Rootcradle Staff/textures/Rootcradle Staff_ColorMap.png",
+  "RoughnessMap": "export/pack/Sadida/Rootcradle Staff/textures/Rootcradle Staff_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sadida/Rootcradle Staff/textures/Rootcradle Staff_MetalnessMap.png",
+  "NormalMap": "export/pack/Sadida/Rootcradle Staff/textures/Rootcradle Staff_NormalMap.png"
+ },
+ "health": {
+  "Rootcradle Staff_Body": {
+   "non_manifold_edges": 752,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.196658,
+   "normals_outward": true
+  },
+  "Rootcradle Staff_Glow": {
+   "non_manifold_edges": 6,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001867,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6290,
+   "quads": 2733,
+   "ngons": 6,
+   "faces": 3539,
+   "sliver_tris_lt6deg": 288,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 526,
+  "after": {
+   "Rootcradle Staff_Body": {
+    "triangles": 5416,
+    "quads": 2401,
+    "ngons": 0,
+    "faces": 3015,
+    "sliver_tris_lt6deg": 270,
+    "non_manifold_edges": 752,
+    "open_boundary_edges": 752,
+    "uv_coverage": 0.427
+   },
+   "Rootcradle Staff_Glow": {
+    "triangles": 58,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 38,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 6,
+    "open_boundary_edges": 6,
+    "uv_coverage": 0.576
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.76
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.532
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.118
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.83
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.477,
+   -0.166,
+   -2.865
+  ],
+  "max": [
+   0.477,
+   0.166,
+   3.127
+  ],
+  "length": 5.992
+ },
+ "race": "Sadida",
+ "category": "staff",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 5.992,
+  "width": 0.953,
+  "depth": 0.331,
+  "triangles": 6350
+ }
+}

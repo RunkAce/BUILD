@@ -1,0 +1,113 @@
+{
+ "name": "Kegknocker Mace",
+ "triangles": {
+  "Kegknocker Mace_Body": 4240,
+  "Kegknocker Mace_Glow": 36
+ },
+ "triangles_total": 4276,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Rogue/Kegknocker Mace/textures/Kegknocker Mace_ColorMap.png",
+  "RoughnessMap": "export/pack/Rogue/Kegknocker Mace/textures/Kegknocker Mace_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Rogue/Kegknocker Mace/textures/Kegknocker Mace_MetalnessMap.png",
+  "NormalMap": "export/pack/Rogue/Kegknocker Mace/textures/Kegknocker Mace_NormalMap.png"
+ },
+ "health": {
+  "Kegknocker Mace_Body": {
+   "non_manifold_edges": 596,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.284915,
+   "normals_outward": true
+  },
+  "Kegknocker Mace_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000244,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5040,
+   "quads": 2162,
+   "ngons": 4,
+   "faces": 2860,
+   "sliver_tris_lt6deg": 1610,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 555,
+  "after": {
+   "Kegknocker Mace_Body": {
+    "triangles": 4240,
+    "quads": 1935,
+    "ngons": 0,
+    "faces": 2305,
+    "sliver_tris_lt6deg": 1486,
+    "non_manifold_edges": 596,
+    "open_boundary_edges": 596,
+    "uv_coverage": 0.596
+   },
+   "Kegknocker Mace_Glow": {
+    "triangles": 36,
+    "quads": 12,
+    "ngons": 0,
+    "faces": 24,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.492
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   2.3185
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   3.077
+  ],
+  "VFX_Impact": [
+   0.4515,
+   0.0,
+   2.3185
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.4,
+   -0.421,
+   -0.885
+  ],
+  "max": [
+   0.4,
+   0.421,
+   3.068
+  ],
+  "length": 3.953
+ },
+ "race": "Rogue",
+ "category": "blunt",
+ "r6_target_length": [
+  3.4,
+  6.0
+ ],
+ "measured": {
+  "length": 3.953,
+  "width": 0.801,
+  "depth": 0.842,
+  "triangles": 5076
+ }
+}

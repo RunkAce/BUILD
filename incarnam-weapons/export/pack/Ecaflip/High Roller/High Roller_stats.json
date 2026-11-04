@@ -1,0 +1,118 @@
+{
+ "name": "High Roller",
+ "triangles": {
+  "High Roller_Body": 3515,
+  "High Roller_Glow": 68
+ },
+ "triangles_total": 3583,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Ecaflip/High Roller/textures/High Roller_ColorMap.png",
+  "RoughnessMap": "export/pack/Ecaflip/High Roller/textures/High Roller_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Ecaflip/High Roller/textures/High Roller_MetalnessMap.png",
+  "NormalMap": "export/pack/Ecaflip/High Roller/textures/High Roller_NormalMap.png"
+ },
+ "health": {
+  "High Roller_Body": {
+   "non_manifold_edges": 849,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.901116,
+   "normals_outward": true
+  },
+  "High Roller_Glow": {
+   "non_manifold_edges": 24,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00236,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4698,
+   "quads": 1771,
+   "ngons": 2,
+   "faces": 2913,
+   "sliver_tris_lt6deg": 287,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 650,
+  "after": {
+   "High Roller_Body": {
+    "triangles": 3515,
+    "quads": 1240,
+    "ngons": 0,
+    "faces": 2275,
+    "sliver_tris_lt6deg": 253,
+    "non_manifold_edges": 849,
+    "open_boundary_edges": 849,
+    "uv_coverage": 0.663
+   },
+   "High Roller_Glow": {
+    "triangles": 68,
+    "quads": 12,
+    "ngons": 0,
+    "faces": 56,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 24,
+    "open_boundary_edges": 24,
+    "uv_coverage": 0.499
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.635
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   4.425
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.375
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.45
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.003,
+   -0.225,
+   -1.423
+  ],
+  "max": [
+   1.003,
+   0.225,
+   4.425
+  ],
+  "length": 5.848
+ },
+ "race": "Ecaflip",
+ "category": "greatsword",
+ "r6_target_length": [
+  5.0,
+  6.5
+ ],
+ "measured": {
+  "length": 5.848,
+  "width": 2.006,
+  "depth": 0.45,
+  "triangles": 4790
+ }
+}

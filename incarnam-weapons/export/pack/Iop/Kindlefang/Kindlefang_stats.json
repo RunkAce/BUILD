@@ -1,0 +1,108 @@
+{
+ "name": "Kindlefang",
+ "triangles": {
+  "Kindlefang_Body": 3280,
+  "Kindlefang_Glow": 76
+ },
+ "triangles_total": 3356,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Iop/Kindlefang/textures/Kindlefang_ColorMap.png",
+  "RoughnessMap": "export/pack/Iop/Kindlefang/textures/Kindlefang_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Iop/Kindlefang/textures/Kindlefang_MetalnessMap.png",
+  "NormalMap": "export/pack/Iop/Kindlefang/textures/Kindlefang_NormalMap.png"
+ },
+ "health": {
+  "Kindlefang_Body": {
+   "non_manifold_edges": 392,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.132305,
+   "normals_outward": true
+  },
+  "Kindlefang_Glow": {
+   "non_manifold_edges": 16,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000849,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 3888,
+   "quads": 1726,
+   "ngons": 2,
+   "faces": 2144,
+   "sliver_tris_lt6deg": 2881,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 362,
+  "after": {
+   "Kindlefang_Body": {
+    "triangles": 3280,
+    "quads": 1456,
+    "ngons": 0,
+    "faces": 1824,
+    "sliver_tris_lt6deg": 2500,
+    "non_manifold_edges": 392,
+    "open_boundary_edges": 392,
+    "uv_coverage": 0.616
+   },
+   "Kindlefang_Glow": {
+    "triangles": 76,
+    "quads": 18,
+    "ngons": 0,
+    "faces": 58,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 16,
+    "open_boundary_edges": 16,
+    "uv_coverage": 0.663
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   1.71
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.31
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.506,
+   -0.15,
+   -0.828
+  ],
+  "max": [
+   0.506,
+   0.15,
+   1.71
+  ],
+  "length": 2.538
+ },
+ "race": "Iop",
+ "category": "dagger",
+ "r6_target_length": [
+  1.8,
+  2.6
+ ],
+ "measured": {
+  "length": 2.538,
+  "width": 1.012,
+  "depth": 0.3,
+  "triangles": 4008
+ }
+}

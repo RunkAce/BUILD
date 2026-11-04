@@ -1,0 +1,118 @@
+{
+ "name": "Teahouse Calm",
+ "triangles": {
+  "Teahouse Calm_Body": 4146,
+  "Teahouse Calm_Glow": 128
+ },
+ "triangles_total": 4274,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Pandawa/Teahouse Calm/textures/Teahouse Calm_ColorMap.png",
+  "RoughnessMap": "export/pack/Pandawa/Teahouse Calm/textures/Teahouse Calm_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Pandawa/Teahouse Calm/textures/Teahouse Calm_MetalnessMap.png",
+  "NormalMap": "export/pack/Pandawa/Teahouse Calm/textures/Teahouse Calm_NormalMap.png"
+ },
+ "health": {
+  "Teahouse Calm_Body": {
+   "non_manifold_edges": 1056,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.289233,
+   "normals_outward": true
+  },
+  "Teahouse Calm_Glow": {
+   "non_manifold_edges": 68,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.002717,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 5218,
+   "quads": 2108,
+   "ngons": 2,
+   "faces": 3092,
+   "sliver_tris_lt6deg": 438,
+   "non_manifold_edges": 8,
+   "open_boundary_edges": 6,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 693,
+  "after": {
+   "Teahouse Calm_Body": {
+    "triangles": 4146,
+    "quads": 1722,
+    "ngons": 0,
+    "faces": 2424,
+    "sliver_tris_lt6deg": 361,
+    "non_manifold_edges": 1056,
+    "open_boundary_edges": 1054,
+    "uv_coverage": 0.54
+   },
+   "Teahouse Calm_Glow": {
+    "triangles": 128,
+    "quads": 30,
+    "ngons": 0,
+    "faces": 98,
+    "sliver_tris_lt6deg": 32,
+    "non_manifold_edges": 68,
+    "open_boundary_edges": 68,
+    "uv_coverage": 0.746
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.56
+  ],
+  "VFX_Tip": [
+   0.3648,
+   0.0,
+   3.4864
+  ],
+  "VFX_Guard": [
+   0.0,
+   0.0,
+   0.36
+  ],
+  "VFX_Mid": [
+   0.0,
+   0.0,
+   2.02
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.525,
+   -0.412,
+   -1.565
+  ],
+  "max": [
+   0.525,
+   0.41,
+   3.486
+  ],
+  "length": 5.051
+ },
+ "race": "Pandawa",
+ "category": "katana",
+ "r6_target_length": [
+  4.2,
+  5.2
+ ],
+ "measured": {
+  "length": 5.051,
+  "width": 1.05,
+  "depth": 0.822,
+  "triangles": 5396
+ }
+}

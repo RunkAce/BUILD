@@ -1,0 +1,118 @@
+{
+ "name": "Clockwork Knuckles",
+ "triangles": {
+  "Clockwork Knuckles_Body": 3164,
+  "Clockwork Knuckles_Glow": 52
+ },
+ "triangles_total": 3216,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Xelor/Clockwork Knuckles/textures/Clockwork Knuckles_ColorMap.png",
+  "RoughnessMap": "export/pack/Xelor/Clockwork Knuckles/textures/Clockwork Knuckles_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Xelor/Clockwork Knuckles/textures/Clockwork Knuckles_MetalnessMap.png",
+  "NormalMap": "export/pack/Xelor/Clockwork Knuckles/textures/Clockwork Knuckles_NormalMap.png"
+ },
+ "health": {
+  "Clockwork Knuckles_Body": {
+   "non_manifold_edges": 738,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 1.192715,
+   "normals_outward": true
+  },
+  "Clockwork Knuckles_Glow": {
+   "non_manifold_edges": 26,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.00298,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4334,
+   "quads": 1551,
+   "ngons": 2,
+   "faces": 2773,
+   "sliver_tris_lt6deg": 506,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 744,
+  "after": {
+   "Clockwork Knuckles_Body": {
+    "triangles": 3164,
+    "quads": 1108,
+    "ngons": 2,
+    "faces": 2046,
+    "sliver_tris_lt6deg": 406,
+    "non_manifold_edges": 738,
+    "open_boundary_edges": 738,
+    "uv_coverage": 0.467
+   },
+   "Clockwork Knuckles_Glow": {
+    "triangles": 52,
+    "quads": 15,
+    "ngons": 0,
+    "faces": 37,
+    "sliver_tris_lt6deg": 10,
+    "non_manifold_edges": 26,
+    "open_boundary_edges": 26,
+    "uv_coverage": 0.723
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "VFX_Knuckle": [
+   0.0,
+   -0.46,
+   -0.32
+  ],
+  "VFX_Cuff": [
+   0.0,
+   -0.75,
+   0.8424
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.77,
+   -0.837,
+   -0.276
+  ],
+  "max": [
+   1.252,
+   0.77,
+   1.301
+  ],
+  "length": 1.576
+ },
+ "race": "Xelor",
+ "category": "fists",
+ "r6_target_length": [
+  1.0,
+  1.7
+ ],
+ "measured": {
+  "length": 1.576,
+  "width": 2.022,
+  "depth": 1.607,
+  "triangles": 4410
+ },
+ "pieces": {
+  "L": {
+   "triangles": 3164,
+   "mirror_of": "Body"
+  },
+  "L_Glow": {
+   "triangles": 52,
+   "mirror_of": "Glow"
+  }
+ }
+}

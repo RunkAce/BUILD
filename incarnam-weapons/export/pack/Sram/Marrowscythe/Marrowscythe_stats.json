@@ -1,0 +1,123 @@
+{
+ "name": "Marrowscythe",
+ "triangles": {
+  "Marrowscythe_Body": 5629,
+  "Marrowscythe_Glow": 50
+ },
+ "triangles_total": 5679,
+ "texture_size": 512,
+ "maps": {
+  "ColorMap": "export/pack/Sram/Marrowscythe/textures/Marrowscythe_ColorMap.png",
+  "RoughnessMap": "export/pack/Sram/Marrowscythe/textures/Marrowscythe_RoughnessMap.png",
+  "MetalnessMap": "export/pack/Sram/Marrowscythe/textures/Marrowscythe_MetalnessMap.png",
+  "NormalMap": "export/pack/Sram/Marrowscythe/textures/Marrowscythe_NormalMap.png"
+ },
+ "health": {
+  "Marrowscythe_Body": {
+   "non_manifold_edges": 629,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.352502,
+   "normals_outward": true
+  },
+  "Marrowscythe_Glow": {
+   "non_manifold_edges": 10,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.001228,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6352,
+   "quads": 2573,
+   "ngons": 2,
+   "faces": 3769,
+   "sliver_tris_lt6deg": 220,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 519,
+  "after": {
+   "Marrowscythe_Body": {
+    "triangles": 5629,
+    "quads": 2369,
+    "ngons": 0,
+    "faces": 3260,
+    "sliver_tris_lt6deg": 184,
+    "non_manifold_edges": 629,
+    "open_boundary_edges": 629,
+    "uv_coverage": 0.463
+   },
+   "Marrowscythe_Glow": {
+    "triangles": 50,
+    "quads": 20,
+    "ngons": 0,
+    "faces": 30,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 10,
+    "open_boundary_edges": 10,
+    "uv_coverage": 0.56
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -1.15
+  ],
+  "VFX_Head": [
+   0.0,
+   0.0,
+   3.1339
+  ],
+  "VFX_Tip": [
+   2.4021,
+   0.0,
+   1.4353
+  ],
+  "VFX_Blade": [
+   1.3293,
+   0.0,
+   2.6845
+  ],
+  "VFX_Butt": [
+   0.0,
+   0.0,
+   -2.65
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.666,
+   -0.225,
+   -2.669
+  ],
+  "max": [
+   2.402,
+   0.165,
+   3.599
+  ],
+  "length": 6.269
+ },
+ "race": "Sram",
+ "category": "scythe",
+ "r6_target_length": [
+  5.0,
+  6.8
+ ],
+ "measured": {
+  "length": 6.269,
+  "width": 3.068,
+  "depth": 0.39,
+  "triangles": 6412
+ }
+}

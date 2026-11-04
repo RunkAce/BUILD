@@ -1,0 +1,128 @@
+{
+ "name": "Sunbound",
+ "triangles": {
+  "Sunbound_Body": 5385,
+  "Sunbound_Glow": 48
+ },
+ "triangles_total": 5433,
+ "texture_size": 2048,
+ "maps": {
+  "ColorMap": "export/Sunbound/textures/Sunbound_ColorMap.png",
+  "RoughnessMap": "export/Sunbound/textures/Sunbound_RoughnessMap.png",
+  "MetalnessMap": "export/Sunbound/textures/Sunbound_MetalnessMap.png",
+  "NormalMap": "export/Sunbound/textures/Sunbound_NormalMap.png"
+ },
+ "health": {
+  "Sunbound_Body": {
+   "non_manifold_edges": 843,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.826905,
+   "normals_outward": true
+  },
+  "Sunbound_Glow": {
+   "non_manifold_edges": 16,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.0049,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 6802,
+   "quads": 2930,
+   "ngons": 10,
+   "faces": 3818,
+   "sliver_tris_lt6deg": 286,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 791,
+  "after": {
+   "Sunbound_Body": {
+    "triangles": 5385,
+    "quads": 2322,
+    "ngons": 8,
+    "faces": 3035,
+    "sliver_tris_lt6deg": 235,
+    "non_manifold_edges": 843,
+    "open_boundary_edges": 843,
+    "uv_coverage": 0.653
+   },
+   "Sunbound_Glow": {
+    "triangles": 48,
+    "quads": 16,
+    "ngons": 0,
+    "faces": 32,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 16,
+    "open_boundary_edges": 16,
+    "uv_coverage": 0.542
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.48
+  ],
+  "ClothRoot": [
+   0.0,
+   0.0,
+   -1.21
+  ],
+  "VFX_Disk": [
+   0.0,
+   0.0,
+   0.42
+  ],
+  "VFX_SpineTip": [
+   0.0,
+   0.0,
+   1.77
+  ],
+  "VFX_Tip": [
+   0.07,
+   0.0,
+   4.1
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.94,
+   -0.25,
+   -1.246
+  ],
+  "max": [
+   0.94,
+   0.25,
+   4.1
+  ],
+  "length": 5.346
+ },
+ "streamer": {
+  "triangles": 116,
+  "bones": [
+   "Cloth1",
+   "Cloth2",
+   "Cloth3",
+   "Cloth4",
+   "Cloth5"
+  ],
+  "texture_size": 512,
+  "maps": {
+   "ColorMap": "export/Sunbound/textures/Sunbound_Streamer_ColorMap.png",
+   "RoughnessMap": "export/Sunbound/textures/Sunbound_Streamer_RoughnessMap.png",
+   "MetalnessMap": "export/Sunbound/textures/Sunbound_Streamer_MetalnessMap.png",
+   "NormalMap": "export/Sunbound/textures/Sunbound_Streamer_NormalMap.png"
+  }
+ }
+}

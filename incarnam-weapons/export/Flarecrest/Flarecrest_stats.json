@@ -1,0 +1,142 @@
+{
+ "name": "Flarecrest",
+ "triangles": {
+  "Flarecrest_Body": 7363,
+  "Flarecrest_Glow": 36
+ },
+ "triangles_total": 7399,
+ "texture_size": 2048,
+ "maps": {
+  "ColorMap": "export/Flarecrest/textures/Flarecrest_ColorMap.png",
+  "RoughnessMap": "export/Flarecrest/textures/Flarecrest_RoughnessMap.png",
+  "MetalnessMap": "export/Flarecrest/textures/Flarecrest_MetalnessMap.png",
+  "NormalMap": "export/Flarecrest/textures/Flarecrest_NormalMap.png"
+ },
+ "health": {
+  "Flarecrest_Body": {
+   "non_manifold_edges": 677,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.242673,
+   "normals_outward": true
+  },
+  "Flarecrest_Glow": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.003476,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 7812,
+   "quads": 3675,
+   "ngons": 2,
+   "faces": 4111,
+   "sliver_tris_lt6deg": 123,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 230,
+  "after": {
+   "Flarecrest_Body": {
+    "triangles": 7363,
+    "quads": 3482,
+    "ngons": 0,
+    "faces": 3881,
+    "sliver_tris_lt6deg": 123,
+    "non_manifold_edges": 677,
+    "open_boundary_edges": 677,
+    "uv_coverage": 0.386
+   },
+   "Flarecrest_Glow": {
+    "triangles": 36,
+    "quads": 12,
+    "ngons": 0,
+    "faces": 24,
+    "sliver_tris_lt6deg": 0,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.583
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.7
+  ],
+  "RibbonRoot": [
+   0.0,
+   0.0,
+   3.25
+  ],
+  "VFX_Tip": [
+   0.0,
+   0.0,
+   5.9975
+  ],
+  "VFX_Flame": [
+   0.0,
+   0.0,
+   4.6925
+  ],
+  "VFX_Gem": [
+   0.0,
+   0.0,
+   3.48
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -0.58,
+   -0.18,
+   -2.2
+  ],
+  "max": [
+   0.58,
+   0.18,
+   5.998
+  ],
+  "length": 8.198
+ },
+ "ribbon": {
+  "triangles": 884,
+  "bones": [
+   "RibbonRoot",
+   "Ribbon1",
+   "Ribbon2",
+   "Ribbon3",
+   "Ribbon4",
+   "Ribbon5",
+   "Ribbon6",
+   "Ribbon7",
+   "Ribbon8"
+  ],
+  "texture_size": 512,
+  "topology": {
+   "triangles": 884,
+   "quads": 442,
+   "ngons": 0,
+   "faces": 442,
+   "sliver_tris_lt6deg": 10,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": 2.0
+  },
+  "maps": {
+   "ColorMap": "export/Flarecrest/textures/Flarecrest_Ribbon_ColorMap.png",
+   "RoughnessMap": "export/Flarecrest/textures/Flarecrest_Ribbon_RoughnessMap.png",
+   "MetalnessMap": "export/Flarecrest/textures/Flarecrest_Ribbon_MetalnessMap.png",
+   "NormalMap": "export/Flarecrest/textures/Flarecrest_Ribbon_NormalMap.png"
+  }
+ }
+}

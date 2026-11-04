@@ -1,0 +1,57 @@
+[
+ {
+  "rig": "Sunbound streamer",
+  "fbx": "export/Sunbound/Sunbound_Streamer.fbx",
+  "bones": 6,
+  "bone_names": [
+   "ClothRoot",
+   "Cloth1",
+   "Cloth2",
+   "Cloth3",
+   "Cloth4",
+   "Cloth5"
+  ],
+  "roots": [
+   "ClothRoot"
+  ],
+  "vertices": 60,
+  "has_armature_modifier": true,
+  "unweighted_vertices": 0,
+  "over_4_influences": 0,
+  "unnormalised": 0,
+  "groups_without_bone": [],
+  "pinned_vertices": 4,
+  "pinned_max_move": 0.0,
+  "tail_max_move": 0.231,
+  "ok": true
+ },
+ {
+  "rig": "Flarecrest ribbon",
+  "fbx": "export/Flarecrest/Flarecrest_Ribbon.fbx",
+  "bones": 9,
+  "bone_names": [
+   "RibbonRoot",
+   "Ribbon1",
+   "Ribbon2",
+   "Ribbon3",
+   "Ribbon4",
+   "Ribbon5",
+   "Ribbon6",
+   "Ribbon7",
+   "Ribbon8"
+  ],
+  "roots": [
+   "RibbonRoot"
+  ],
+  "vertices": 444,
+  "has_armature_modifier": true,
+  "unweighted_vertices": 0,
+  "over_4_influences": 0,
+  "unnormalised": 0,
+  "groups_without_bone": [],
+  "pinned_vertices": 284,
+  "pinned_max_move": 0.0,
+  "tail_max_move": 0.35,
+  "ok": true
+ }
+]

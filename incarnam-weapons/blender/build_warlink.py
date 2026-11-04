@@ -255,6 +255,9 @@ if __name__ == '__main__':
     grip_pt = (0.0, 0.0, GRIP_TOP - 0.18)
     pipeline.shift(left_parts, (0, 0, -grip_pt[2]))
     body = paint.join(left_parts, f'{NAME}_CleaverL')
+    import optimize  # noqa: E402
+    topo_before = optimize.topology_report(body)
+    hidden_removed = optimize.remove_hidden_faces(body)
     paint.unwrap(body)
     maps = paint.bake_maps(body, tex_dir, f'{NAME}_Cleaver', size=1024, samples=12)
     body.data.materials.clear()
@@ -326,7 +329,8 @@ if __name__ == '__main__':
         'texture_size': {'cleavers_shared': 1024, 'chain': 512},
         'maps': {k: os.path.relpath(v, ROOT) for k, v in list(maps.items()) + [('Chain_' + k, v) for k, v in kit_maps.items()]},
         'health': {o.name: geo.mesh_health(o) for o in (body, right_body, link_piece, ring_piece)},
-        'topology': {o.name: optimize.topology_report(o) for o in (body, right_body, link_piece, ring_piece)},
+        'topology': {'before_optimise': topo_before, 'hidden_faces_removed': hidden_removed,
+                     'after': {o.name: optimize.topology_report(o) for o in (body, right_body, link_piece, ring_piece)}},
         'chain': {'system': 'runtime: roblox/src/WarlinkChain.luau clones ChainLink/ChainEndLink LinkCount times',
                   'pitch_studs': round(PITCH, 4), 'link_outer': [LINK_W, LINK_LEN, LINK_WIRE],
                   'concept_length_render_pieces': len(order), 'concept_length_studs': round(len(order) * PITCH, 3),

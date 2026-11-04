@@ -116,4 +116,45 @@ node incarnam-weapons/roblox/tests/compile_all.mjs
 
 ## Completion report
 
-_Filled in from the measured stats after the production run (see below)._
+All numbers are measured from the exported files (`export/<Weapon>/<Weapon>_stats.json`). **Nothing has been imported into Roblox or tested in Studio yet.** Scale, orientation, grip feel, effects and performance in your game still need one Studio check (step 1 above).
+
+| | Oathsplitter | Sunbound | Warlink | Flarecrest |
+|---|---|---|---|---|
+| Length (studs) | 5.9 | 5.35 | 2.66 per cleaver | 8.2 |
+| Triangles, main mesh | 6,752 | 5,385 | 4,312 per cleaver | 7,363 |
+| Triangles, glow mesh | 208 | 48 | n/a | 36 |
+| Triangles, cloth or chain | n/a | streamer 116 | link 64, end link 64 | ribbon 884 |
+| Buried faces removed | 450 (from 7,600 tris) | 791 (from 6,802 tris) | 146 per cleaver (from 4,604 tris) | 230 (from 7,812 tris) |
+| Texture set | 2K × 4 maps | 2K × 4 + streamer 512 × 4 | cleavers 1K × 4, shared by both · chain 512 × 4 | 2K × 4 + ribbon 512 × 4 |
+| UV coverage | 58% | 65% | 65% | 39% |
+| Rig | none | ClothRoot + Cloth1–5 ✅ | none (runtime chain) | RibbonRoot + Ribbon1–8 ✅ |
+
+✅ means it passed `validate_rigs.py` on the re-imported FBX:
+- every vertex is weighted, with at most 4 influences, normalised;
+- there is a single root bone;
+- the pinned root area moves 0.0 studs when the tail is bent, while the tail moves 0.23 studs on Sunbound and 0.35 studs on Flarecrest.
+
+**Per weapon:**
+- **Oathsplitter.**
+  - Geometry: the slot is a real opening with inner bevels from both sides, with twin points, a bridge, a crescent guard, a gold frame and the gem.
+  - Effects: the amber heat in the slot is a separate `Oathsplitter_Glow` mesh.
+  - Renders: it's the only weapon with renders (acceptance views, showcase and turntable), because you asked to skip them for the others.
+- **Sunbound.**
+  - Geometry: a solid blade with an empty fuller groove, an inset red spine, a sun disk in three layers (rim, star, 8-sided gem), and swallowtail guard arms.
+  - Streamer: rigged and driven at runtime by `ClothSway`.
+- **Warlink.**
+  - Geometry: mirrored cleavers that share one texture set, box-frame links in your reference style, and squared eyelets.
+  - Chain: built at runtime, with its length a single setting (`LinkCount`). The solver passes 634 checks in real Luau.
+  - Equip: the R6 left-hand weld plus a stow weld for when it's unequipped.
+- **Flarecrest.**
+  - Geometry: the longer leaf blade with the flame-shaped opening, crescent wings and the gold socket.
+  - Ribbon: the spiral wrap is pinned to `RibbonRoot`, and only the tail moves.
+
+**Known remaining issues:**
+- **Roblox import is unverified.** Scale (0.28 m per stud), orientation, and whether the FBX empties come in as Attachments all need one Studio import to confirm.
+- **Chain length is a placeholder.** It defaults to 32 links (an R6 estimate) until you run `MeasureHandSpan` with your animations.
+- **Oathsplitter's grip is 1.1 studs.** R6 hands are 1 stud wide each, so a two-handed animation will overlap the arm blocks. Easy to lengthen if your animations need it.
+- **Flarecrest is 8.2 studs** (about 1.6× an R6). That's from the longer blade you asked for. Its UVs are only 39% used because the long shaft islands pack inefficiently; it still bakes cleanly at 2K, but a tighter pack would give more texture detail.
+- **Leftover sliver triangles** (2–4% of each mesh) are in the narrow flat bevel strips. They're planar, so they don't affect shading. A few 8-sided n-gons remain on the pommel and lathe caps; Roblox triangulates them on import.
+- **Glow meshes have no emissive map.** Roblox SurfaceAppearance doesn't take one, so set the `_Glow` parts to Neon or drive them from your VFX.
+- **The Roblox scripts are compile-checked and reviewed, but not run in Roblox.** The solver math is tested in real Luau; the parts that need the engine (welds, BulkMoveTo, bones) have only had an independent adversarial review, with 21 findings fixed.

@@ -1,0 +1,116 @@
+{
+ "name": "Oathsplitter",
+ "triangles": {
+  "Oathsplitter_Body": 6752,
+  "Oathsplitter_Glow": 208
+ },
+ "triangles_total": 6960,
+ "texture_size": 2048,
+ "maps": {
+  "ColorMap": "export/Oathsplitter/textures/Oathsplitter_ColorMap.png",
+  "RoughnessMap": "export/Oathsplitter/textures/Oathsplitter_RoughnessMap.png",
+  "MetalnessMap": "export/Oathsplitter/textures/Oathsplitter_MetalnessMap.png",
+  "NormalMap": "export/Oathsplitter/textures/Oathsplitter_NormalMap.png"
+ },
+ "health": {
+  "Oathsplitter_Body": {
+   "non_manifold_edges": 742,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.667122,
+   "normals_outward": true
+  },
+  "Oathsplitter_Glow": {
+   "non_manifold_edges": 8,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.004937,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 7600,
+   "quads": 3433,
+   "ngons": 2,
+   "faces": 4141,
+   "sliver_tris_lt6deg": 174,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 450,
+  "after": {
+   "Oathsplitter_Body": {
+    "triangles": 6752,
+    "quads": 3053,
+    "ngons": 0,
+    "faces": 3699,
+    "sliver_tris_lt6deg": 168,
+    "non_manifold_edges": 742,
+    "open_boundary_edges": 742,
+    "uv_coverage": 0.576
+   },
+   "Oathsplitter_Glow": {
+    "triangles": 208,
+    "quads": 90,
+    "ngons": 0,
+    "faces": 118,
+    "sliver_tris_lt6deg": 24,
+    "non_manifold_edges": 8,
+    "open_boundary_edges": 8,
+    "uv_coverage": 0.684
+   }
+  }
+ },
+ "attachments": {
+  "Grip": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "GripSecondary": [
+   0.0,
+   0.0,
+   -0.66
+  ],
+  "VFX_SlotBase": [
+   0.0,
+   0.0,
+   0.98
+  ],
+  "VFX_Bridge": [
+   0.0,
+   0.0,
+   3.16
+  ],
+  "VFX_TipL": [
+   -0.2425,
+   0.0,
+   4.4
+  ],
+  "VFX_TipR": [
+   0.2425,
+   0.0,
+   4.16
+  ],
+  "VFX_Gem": [
+   0.0,
+   0.0,
+   0.37
+  ]
+ },
+ "bounds_studs": {
+  "min": [
+   -1.04,
+   -0.25,
+   -1.5
+  ],
+  "max": [
+   1.04,
+   0.25,
+   4.4
+  ],
+  "length": 5.9
+ }
+}

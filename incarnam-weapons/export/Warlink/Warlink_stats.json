@@ -1,0 +1,135 @@
+{
+ "name": "Warlink",
+ "triangles": {
+  "Warlink_CleaverL": 4312,
+  "Warlink_CleaverR": 4312,
+  "Warlink_ChainLink": 64,
+  "Warlink_ChainEndLink": 64
+ },
+ "triangles_example_r6_chain_32_links": 10672,
+ "texture_size": {
+  "cleavers_shared": 1024,
+  "chain": 512
+ },
+ "maps": {
+  "ColorMap": "export/Warlink/textures/Warlink_Cleaver_ColorMap.png",
+  "RoughnessMap": "export/Warlink/textures/Warlink_Cleaver_RoughnessMap.png",
+  "MetalnessMap": "export/Warlink/textures/Warlink_Cleaver_MetalnessMap.png",
+  "NormalMap": "export/Warlink/textures/Warlink_Cleaver_NormalMap.png",
+  "Chain_ColorMap": "export/Warlink/textures/Warlink_Chain_ColorMap.png",
+  "Chain_RoughnessMap": "export/Warlink/textures/Warlink_Chain_RoughnessMap.png",
+  "Chain_MetalnessMap": "export/Warlink/textures/Warlink_Chain_MetalnessMap.png",
+  "Chain_NormalMap": "export/Warlink/textures/Warlink_Chain_NormalMap.png"
+ },
+ "health": {
+  "Warlink_CleaverL": {
+   "non_manifold_edges": 466,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.163765,
+   "normals_outward": true
+  },
+  "Warlink_CleaverR": {
+   "non_manifold_edges": 466,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.163765,
+   "normals_outward": true
+  },
+  "Warlink_ChainLink": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000503,
+   "normals_outward": true
+  },
+  "Warlink_ChainEndLink": {
+   "non_manifold_edges": 0,
+   "loose_verts": 0,
+   "zero_area_faces": 0,
+   "signed_volume": 0.000667,
+   "normals_outward": true
+  }
+ },
+ "topology": {
+  "before_optimise": {
+   "triangles": 4604,
+   "quads": 2159,
+   "ngons": 2,
+   "faces": 2419,
+   "sliver_tris_lt6deg": 116,
+   "non_manifold_edges": 0,
+   "open_boundary_edges": 0,
+   "uv_coverage": null
+  },
+  "hidden_faces_removed": 146,
+  "after": {
+   "Warlink_CleaverL": {
+    "triangles": 4312,
+    "quads": 2039,
+    "ngons": 0,
+    "faces": 2273,
+    "sliver_tris_lt6deg": 106,
+    "non_manifold_edges": 466,
+    "open_boundary_edges": 466,
+    "uv_coverage": 0.631
+   },
+   "Warlink_CleaverR": {
+    "triangles": 4312,
+    "quads": 2039,
+    "ngons": 0,
+    "faces": 2273,
+    "sliver_tris_lt6deg": 106,
+    "non_manifold_edges": 466,
+    "open_boundary_edges": 466,
+    "uv_coverage": 0.631
+   },
+   "Warlink_ChainLink": {
+    "triangles": 64,
+    "quads": 24,
+    "ngons": 0,
+    "faces": 40,
+    "sliver_tris_lt6deg": 40,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.249
+   },
+   "Warlink_ChainEndLink": {
+    "triangles": 64,
+    "quads": 24,
+    "ngons": 0,
+    "faces": 40,
+    "sliver_tris_lt6deg": 32,
+    "non_manifold_edges": 0,
+    "open_boundary_edges": 0,
+    "uv_coverage": 0.287
+   }
+  }
+ },
+ "chain": {
+  "system": "runtime: roblox/src/WarlinkChain.luau clones ChainLink/ChainEndLink LinkCount times",
+  "pitch_studs": 0.21,
+  "link_outer": [
+   0.1,
+   0.27,
+   0.03
+  ],
+  "concept_length_render_pieces": 9,
+  "concept_length_studs": 1.89,
+  "r6_note": "set Tool attribute LinkCount from tools/MeasureHandSpan (R6 estimate ~30-35)"
+ },
+ "attachments": {
+  "cleaver": {
+   "Grip": [
+    0,
+    0,
+    0
+   ],
+   "ChainEnd": [
+    0.0,
+    0.0,
+    -0.975
+   ]
+  }
+ }
+}

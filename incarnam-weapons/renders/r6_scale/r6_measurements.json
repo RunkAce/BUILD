@@ -1,0 +1,20 @@
+{
+ "Oathsplitter": {
+  "length_studs": 5.9,
+  "width_studs": 2.08
+ },
+ "Sunbound": {
+  "length_studs": 5.35,
+  "width_studs": 1.88
+ },
+ "Warlink_cleaver": {
+  "length_studs": 2.66,
+  "width_studs": 1.02
+ },
+ "R6": {
+  "grip_gap_hands_hanging": 3.0,
+  "warlink_eyelet_gap_this_pose": 3.0,
+  "oathsplitter_grip_diameter": 0.17,
+  "r6_hand_width": 1.0
+ }
+}

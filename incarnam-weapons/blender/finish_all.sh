@@ -6,7 +6,8 @@ export EGL_PLATFORM=surfaceless
 PY=/opt/blender-venv/bin/python
 for w in "$@"; do
   echo "=== $w $(date +%H:%M:%S)"
-  $PY "build_$w.py" ${EXTRA_ARGS:-} 2>&1 | grep -vE "^Fra:|EGL Error|Saved:|^\s*Time:|Remaining|DeprecationWarning|use_nodes" | tail -40
+  f="build_$w.py"; [ -f "$f" ] || f="pack/build_$w.py"
+  $PY "$f" ${EXTRA_ARGS:-} 2>&1 | grep -vE "^Fra:|EGL Error|Saved:|^\s*Time:|Remaining|DeprecationWarning|use_nodes" | tail -40
   echo "=== $w done rc=${PIPESTATUS[0]} $(date +%H:%M:%S)"
 done
 echo "=== rig validation"

@@ -239,13 +239,14 @@ def lathe(name, profile, segments=8, col=None, material=None, rot_offset=None, s
     return obj
 
 
-def wrapped_grip(name, z0, z1, radius, wraps=7, band_w=None, segments=16, col=None, material=None, flatten=1.0,
+def wrapped_grip(name, z0, z1, radius, wraps=7, band_w=None, segments=10, col=None, material=None, flatten=1.0,
                  style='round'):
     """Grip core plus helical overlapping wrap bands (real relief, not painted)."""
     length = z1 - z0
     band_w = band_w or length / wraps * 1.05
     bm = bmesh.new()
-    rings = int(wraps * (24 if style == 'strap' else 10))
+    # game budget: ~8 rows per wrap is enough for the strap silhouette; leather grain lives in the normal map
+    rings = max(8, int(wraps * 8))
     # Each wrap band: a ring whose centre line slants; build as a twisted tube surface offset from core.
     verts_rows = []
     for r in range(rings + 1):
@@ -392,9 +393,17 @@ def mesh_health(obj):
     zero = [f for f in bm.faces if f.calc_area() < 1e-9]
     # inverted check: signed volume should be positive for outward normals
     vol = bm.calc_volume(signed=True)
+    if any(e.is_boundary for e in bm.edges):
+        # open shell (hidden faces removed): volume sign is meaningless -> area-weighted vote of face normals
+        # against the direction from the mesh centre
+        c = sum((v.co for v in bm.verts), Vector()) / max(len(bm.verts), 1)
+        score = sum(f.normal.dot((f.calc_center_median() - c)) * f.calc_area() for f in bm.faces)
+        outward = score > 0
+    else:
+        outward = vol > 0
     bm.free()
     return {'non_manifold_edges': len(nonman), 'loose_verts': len(loose), 'zero_area_faces': len(zero),
-            'signed_volume': round(vol, 6), 'normals_outward': vol > 0}
+            'signed_volume': round(vol, 6), 'normals_outward': outward}
 
 
 def finalize_weights(obj, fallback_group, limit=4):

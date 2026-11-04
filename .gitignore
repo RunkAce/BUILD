@@ -5,3 +5,4 @@ __pycache__/
 *.blend1
 incarnam-weapons/renders/pack/
 incarnam-weapons/blender/logs/
+incarnam-weapons/blender/logs_*.txt

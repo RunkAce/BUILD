@@ -85,6 +85,12 @@ def remove_hidden_faces(obj, occluders=(), rays=26, eps=1e-4, max_dist=1e4):
     bmesh.ops.delete(bm, geom=hidden, context='FACES')
     loose = [v for v in bm.verts if not v.link_faces]
     bmesh.ops.delete(bm, geom=loose, context='VERTS')
+    # drop degenerate (zero-area) faces left by merged parts
+    bmesh.ops.dissolve_degenerate(bm, dist=1e-5, edges=bm.edges)
+    zero = [f for f in bm.faces if f.calc_area() < 1e-9]
+    if zero:
+        bmesh.ops.delete(bm, geom=zero, context='FACES')
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     bm.to_mesh(obj.data)
     bm.free()
     obj.data.update()

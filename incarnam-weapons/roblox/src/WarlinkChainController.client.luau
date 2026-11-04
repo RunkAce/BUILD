@@ -42,8 +42,12 @@ local function refresh(tool: Tool)
 		stop(tool)
 		return
 	end
-	if active[tool] then
-		return
+	local existing = active[tool]
+	if existing then
+		if existing.Model then
+			return
+		end
+		active[tool] = nil -- chain destroyed itself (attachment removed): allow a rebuild
 	end
 	local a = eyelet(tool:FindFirstChild("CleaverL"))
 	local b = eyelet(tool:FindFirstChild("Handle"))
@@ -71,8 +75,8 @@ local function track(tool: Instance)
 			stop(tool)
 		end
 	end)
-	tool.ChildAdded:Connect(function()
-		refresh(tool)
+	tool.DescendantAdded:Connect(function()
+		refresh(tool) -- parts or ChainEnd attachments streaming in late
 	end)
 	tool.Destroying:Connect(function()
 		stop(tool)

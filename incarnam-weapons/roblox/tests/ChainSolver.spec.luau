@@ -115,22 +115,59 @@ do
 	check("swing: links hold length while slack (<7.5%)", worstSlack < 0.075, string.format("worst %.3f", worstSlack))
 end
 
--- 5) Coil: pays out with the gap, conserves link count, parks the rest
+-- 5) Coil: pays out with the gap, conserves link count, parks the rest on the arm
 do
 	local s = ChainSolver.new({ LinkCount = 30, Pitch = PITCH, Mode = "Coil", RestSlack = 1.25, MinPaidOut = 4 })
-	local coil = { Origin = Vector3.new(-1.5, 2.2, 0), Axis = Vector3.new(0, 1, 0), Radius = 0.62 }
-	local a = Vector3.new(-1.5, 2, 0)
-	local pts = s:Step(a, Vector3.new(-1.0, 2, 0), DT, nil, coil) -- hands close together
+	local eyelet = Vector3.new(-1.5, 1.9, 0.9) -- R6: ~1 stud behind the hand, outside the arm block
+	local function coilFor(up, right)
+		return { Start = eyelet, Origin = Vector3.new(-1.5, 1.9, 0), Axis = up, U = right }
+	end
+	local coil = coilFor(Vector3.new(0, 1, 0), Vector3.new(1, 0, 0))
+	local function stepCoil(bPos)
+		local slots, exit = s:CoilSlots(coil)
+		return s:Step(exit, bPos, DT, nil, (bPos - eyelet).Magnitude), slots, exit
+	end
+	local pts, slots, exit = stepCoil(Vector3.new(-0.9, 1.9, -0.3))
 	local closeOut = s.PaidOut
 	check("coil: min paid out respected", closeOut >= 4, tostring(closeOut))
 	check("coil: short when hands close", closeOut < 30, tostring(closeOut))
-	check("coil: slots = parked links", #s:CoilSlots(coil) == 30 - closeOut)
+	slots, exit = s:CoilSlots(coil)
+	check("coil: slots = parked links", #slots == 30 - s.PaidOut, string.format("%d vs %d", #slots, 30 - s.PaidOut))
 	check("coil: points match paid out", #pts == closeOut + 1)
-	local last = closeOut
+	-- consecutive coil joints exactly one pitch apart (links edge to edge, no floating gaps)
+	local worst = 0
+	local chained = true
+	for k, sl in slots do
+		worst = math.max(worst, math.abs((sl.To - sl.From).Magnitude - PITCH) / PITCH)
+		if k > 1 and (sl.From - slots[k - 1].To).Magnitude > 1e-6 then
+			chained = false
+		end
+	end
+	check("coil: links one pitch apart", worst < 0.01, string.format("worst %.4f", worst))
+	check("coil: links joined end to end", chained)
+	check("coil: first link hangs off the eyelet", (slots[1].From - eyelet).Magnitude < 1e-6)
+	check("coil: exit is the last joint", (exit - slots[#slots].To).Magnitude < 1e-6)
+	-- never inside the 1x1 R6 arm: square-distance from the axis >= half width
+	local inside = 0
+	for _, sl in slots do
+		local rel = sl.Center - Vector3.new(-1.5, 1.9, 0)
+		-- link centre must be >= link half-width (0.05) from the arm's 1x1 square cross-section
+		local dx = math.max(math.abs(rel.X) - 0.5, 0)
+		local dz = math.max(math.abs(rel.Z) - 0.5, 0)
+		if math.sqrt(dx * dx + dz * dz) < 0.05 - 1e-6 and rel.Y > 0.0 then
+			inside += 1
+		end
+	end
+	check("coil: no link inside the R6 arm", inside == 0, tostring(inside))
+	-- basis follows the arm: rotating the arm's RightVector rotates the coil
+	local rot = s:CoilSlots(coilFor(Vector3.new(0, 1, 0), Vector3.new(0, 0, 1)))
+	check("coil: basis follows arm axes", #rot == #slots)
+	-- pay out monotonically as the hands separate, all links accounted
+	local last = s.PaidOut
 	local monotonic = true
 	for f = 1, 120 do
-		local gap = 0.5 + f / 120 * 5.5
-		s:Step(a, a + Vector3.new(gap, 0, 0), DT, nil, coil)
+		local gap = 1.4 + f / 120 * 5.0 -- starts wider than the first frame's gap
+		stepCoil(eyelet + Vector3.new(gap, 0, -0.3))
 		if s.PaidOut < last then
 			monotonic = false
 		end
@@ -138,21 +175,20 @@ do
 	end
 	check("coil: pays out monotonically as hands separate", monotonic)
 	check("coil: fully paid out when wide", s.PaidOut == 30, tostring(s.PaidOut))
-	check("coil: all links accounted", s.PaidOut + #s:CoilSlots(coil) == 30)
-	-- reel back in with hysteresis (one link per step at most)
+	local sl2 = s:CoilSlots(coil)
+	check("coil: all links accounted", s.PaidOut + #sl2 == 30)
+	-- reel back in gradually; links keep identity (old B-side joints keep their positions)
 	local before = s.PaidOut
-	s:Step(a, a + Vector3.new(0.6, 0, 0), DT, nil, coil)
+	local beforePts = table.clone(s.Points)
+	local slotsNow, exitNow = s:CoilSlots(coil)
+	s:Step(exitNow, beforePts[#beforePts], DT, nil, 0.6)
+	local afterPts = s.Points
 	check("coil: reels in gradually", before - s.PaidOut <= 1, string.format("%d -> %d", before, s.PaidOut))
-	local slots = s:CoilSlots(coil)
-	local onRadius = true
-	for _, sl in slots do
-		local rel = sl.Center - coil.Origin
-		local radial = (rel - coil.Axis * rel:Dot(coil.Axis)).Magnitude
-		if math.abs(radial - 0.62) > 1e-6 then
-			onRadius = false
-		end
+	if s.PaidOut == before - 1 then
+		-- joint before[k] must now sit at index k-1 (shift at the A end)
+		local moved = (afterPts[#afterPts - 1] - beforePts[#beforePts - 1]).Magnitude
+		check("coil: reel-in keeps link identity", moved < 0.2, string.format("%.3f", moved))
 	end
-	check("coil: slots wrap at the coil radius", onRadius)
 end
 
 -- 6) SuggestLinkCount

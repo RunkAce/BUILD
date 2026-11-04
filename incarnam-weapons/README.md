@@ -60,11 +60,11 @@ The chain is **one link mesh repeated at runtime**, not a fixed-length model. It
 
 1. Put `ChainSolver`, `WarlinkChain` and `ClothSway` (from `roblox/src`) as ModuleScripts in `ReplicatedStorage.WarlinkModules`.
 2. Import `Warlink_ChainLink.fbx` and `Warlink_ChainEndLink.fbx`. Give them the chain maps (`Warlink_Chain_*.png`) and put them in `ReplicatedStorage.WarlinkAssets` named `ChainLink` and `ChainEndLink`.
-3. Build the Tool: `Handle` (the right cleaver, `Warlink_CleaverR`) and `CleaverL`, each with an Attachment named `ChainEnd` at the eyelet. Tag the Tool `Warlink`. Put `WarlinkTool.server.luau` inside it as a Script. It welds `CleaverL` to the R6 `Left Arm`, because R6 has no left grip. If your animations already drive the weapons with their own Motor6Ds, skip that script; the chain only needs the two `ChainEnd` attachments.
+3. Build the Tool: `Handle` (the right cleaver, `Warlink_CleaverR`) and `CleaverL`, each with an Attachment named `ChainEnd` at the eyelet. Place `CleaverL` next to the Handle in the pose it should keep when holstered. Tag the Tool `Warlink`. Put `WarlinkTool.server.luau` inside it as a Script. On equip it welds `CleaverL` to the R6 `Left Arm`, because R6 has no left grip. When unequipped or dropped, a stow weld keeps `CleaverL` with the Handle, so it never falls out of the world. If your animations already drive the weapons with their own Motor6Ds, skip that script; the chain only needs the two `ChainEnd` attachments.
 4. Put `WarlinkChainController.client.luau` in `StarterPlayerScripts`. It shows the chain for every player holding a Warlink and removes it on unequip, respawn or tool removal.
 5. **Size the chain to your animations.** Put `roblox/tools/MeasureHandSpan.client.luau` in `StarterPlayerScripts`, paste your animation IDs at the top, and press Play. It plays each animation, records the widest eyelet-to-eyelet distance, and prints a `LinkCount`. Set that as a number attribute `LinkCount` on the Tool, then delete the script.
 6. Optional Tool attributes:
-   - `ChainMode`: `"Coil"` (the default) winds spare links around the left forearm and pays them out as the hands separate. `"Hang"` lets the whole chain sag, kept above the floor by a raycast.
+   - `ChainMode`: `"Coil"` (the default) runs eyelet A → coil → free span → eyelet B. The spare links wind up the left forearm, following the square R6 arm at a fixed clearance and one link pitch apart, and pay out as the hands separate. `"Hang"` lets the whole chain sag, kept above the floor by a raycast.
    - `Pitch`: default 0.21, which matches the exported link.
 
 How it behaves:
@@ -75,15 +75,18 @@ How it behaves:
 
 ### Cloth (Sunbound streamer, Flarecrest ribbon)
 
-Import `Sunbound_Streamer.fbx` and `Flarecrest_Ribbon.fbx` as skinned MeshParts (bones included). Weld each one to its weapon at `ClothRoot` or `RibbonRoot`. Then, from a LocalScript:
+1. Import `Sunbound_Streamer.fbx` and `Flarecrest_Ribbon.fbx` as **skinned** MeshParts, with bones included. Weld each one to its weapon at `ClothRoot` or `RibbonRoot`. Both rigs pass `blender/validate_rigs.py` on the re-imported FBX:
+   - every vertex is weighted, with at most 4 influences, normalised;
+   - there is one root bone;
+   - the pinned area doesn't move when the tail is bent.
+2. Put `ClothSwayController.client.luau` in `StarterPlayerScripts`. Tag the weapon Tool `ClothSway` and give it two string attributes:
+   - **Sunbound:** `ClothPart` = the streamer part's name, `ClothBones` = `Cloth1,Cloth2,Cloth3,Cloth4,Cloth5`
+   - **Flarecrest:** `ClothPart` = the ribbon part's name, `ClothBones` = `Ribbon1,Ribbon2,Ribbon3,Ribbon4,Ribbon5,Ribbon6,Ribbon7,Ribbon8`
 
-```lua
-local ClothSway = require(ReplicatedStorage.WarlinkModules.ClothSway)
-ClothSway.new(streamerMeshPart, { "Cloth1", "Cloth2", "Cloth3", "Cloth4", "Cloth5" })   -- ClothRoot stays fixed
-ClothSway.new(ribbonMeshPart, { "Ribbon1", "Ribbon2", "Ribbon3", "Ribbon4", "Ribbon5", "Ribbon6", "Ribbon7", "Ribbon8" })
-```
-
-The root stays locked, and sway and lag increase toward the tip. When the weapon moves, the cloth trails behind on springs and then settles.
+How it moves:
+- The root bones (`ClothRoot` and `RibbonRoot`) are never driven, so the attachment point stays pinned. On Flarecrest the whole spiral wrap is pinned and only the free tail moves.
+- Sway and lag increase toward the tip, and the cloth trails behind the weapon's motion on springs, then settles. `IdleAmplitude` and `MaxLean` are totals at the tip, spread along the chain.
+- Don't key these cloth bones in animations as well. The script sets `Bone.Transform` every frame.
 
 ## Rebuilding / changing the weapons
 

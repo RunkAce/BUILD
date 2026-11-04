@@ -30,7 +30,7 @@ export type Config = {
 	Pitch: number?, -- default 0.21 (matches the exported link: 0.27 long, 0.03 bars)
 	Mode: ("Hang" | "Coil")?,
 	CoilArm: BasePart?, -- R6 "Left Arm" for Coil mode
-	CoilRadius: number?, -- default 0.62 (R6 arm half-width 0.5 + link half-width)
+	CoilArmHalfWidth: number?, -- default 0.5 (R6 1x2x1 arm)
 	LinkTemplate: BasePart?,
 	EndTemplate: BasePart?,
 	LinkRotation: CFrame?, -- extra rotation applied to every link (importer orientation fix)
@@ -110,8 +110,6 @@ function WarlinkChain.new(attachA: Attachment, attachB: Attachment, config: Conf
 		p.Parent = model
 		parts[i] = p
 	end
-	model.Parent = config.Parent or getVisualFolder()
-
 	local params = RaycastParams.new()
 	params.FilterType = Enum.RaycastFilterType.Exclude
 	local ignore = table.clone(config.Ignore or {})
@@ -132,9 +130,17 @@ function WarlinkChain.new(attachA: Attachment, attachB: Attachment, config: Conf
 		_lodTimer = 0,
 		_conn = nil :: RBXScriptConnection?,
 		_extra = config.LinkRotation or CFrame.identity,
-		_side = WORLD_X,
 		_warned = false,
+		_age = 0,
+		_hidden = false,
+		_lastA = nil :: Vector3?,
+		_folder = config.Parent or getVisualFolder(),
 	}, WarlinkChain)
+
+	-- place every link once BEFORE the model becomes visible (no flash at the template's position)
+	model.Parent = nil
+	self:Update(1 / 60, true)
+	model.Parent = self._folder
 
 	self._conn = RunService.RenderStepped:Connect(function(dt)
 		self:Update(dt)
@@ -142,22 +148,33 @@ function WarlinkChain.new(attachA: Attachment, attachB: Attachment, config: Conf
 	return self
 end
 
-function WarlinkChain.Update(self: any, dt: number)
+function WarlinkChain.Update(self: any, dt: number, force: boolean?)
 	local A: Attachment, B: Attachment = self.A, self.B
 	if not (A.Parent and B.Parent) then
 		self:Destroy()
 		return
 	end
 	local cfg: Config = self.Config
+	local solver = self.Solver
 	local a, b = A.WorldPosition, B.WorldPosition
+	self._age += dt
 
-	-- distance LOD
+	-- distance culling / LOD (skipped for the forced first placement)
 	local cam = workspace.CurrentCamera
-	if cam then
+	if cam and not force then
 		local dist = (cam.CFrame.Position - a).Magnitude
 		if dist > (cfg.MaxDistance or 250) then
+			if not self._hidden then
+				self._hidden = true
+				self.Model.Parent = nil -- hide instead of freezing in place
+			end
 			return
-		elseif dist > (cfg.FarDistance or 80) then
+		elseif self._hidden then
+			self._hidden = false
+			self.Model.Parent = self._folder
+			solver:Reset() -- re-seed from the current eyelets: no whip across the old gap
+		end
+		if dist > (cfg.FarDistance or 80) then
 			self._lodTimer += dt
 			if self._lodTimer < (cfg.FarUpdateInterval or 1 / 15) then
 				return
@@ -167,61 +184,68 @@ function WarlinkChain.Update(self: any, dt: number)
 		self._lodTimer = 0
 	end
 
+	-- teleport / respawn snap: if the eyelet jumped further than the chain is long, re-seed
+	local chainLen = solver:Length()
+	if self._lastA and (a - self._lastA).Magnitude > chainLen then
+		solver:Reset()
+	end
+	self._lastA = a
+
 	-- floor under the chain (throttled raycast from the eyelet midpoint)
 	self._floorTimer -= dt
-	if self._floorTimer <= 0 then
+	if self._floorTimer <= 0 or force then
 		self._floorTimer = cfg.FloorCheckInterval or 0.1
 		local mid = (a + b) * 0.5
-		local hit = workspace:Raycast(mid, Vector3.new(0, -(self.Solver:Length() + 2), 0), self._params)
+		local hit = workspace:Raycast(mid, Vector3.new(0, -(chainLen + 2), 0), self._params)
 		self._floorY = if hit then hit.Position.Y else nil
 	end
 
-	local coil = nil
-	if (cfg.Mode or "Hang") == "Coil" and cfg.CoilArm then
+	-- topology: eyelet A -> coil wound up the left forearm -> free span -> eyelet B
+	local slots, spanStart = {}, a
+	if (cfg.Mode or "Hang") == "Coil" and cfg.CoilArm and cfg.CoilArm.Parent then
 		local arm = cfg.CoilArm
 		local up = arm.CFrame.UpVector
-		coil = {
-			Origin = arm.Position - up * 0.55,
+		local coil = {
+			Start = a,
+			Origin = arm.Position + up * up:Dot(a - arm.Position),
 			Axis = up,
-			Radius = cfg.CoilRadius or 0.62,
+			U = arm.CFrame.RightVector,
+			HalfWidth = (cfg.CoilArmHalfWidth or 0.5),
 		}
+		slots, spanStart = solver:CoilSlots(coil)
 	end
+	local gap = (b - a).Magnitude
+	local pts = solver:Step(spanStart, b, dt, self._floorY, gap)
 
-	local pts = self.Solver:Step(a, b, dt, self._floorY, coil)
-	local stats = self.Solver.Stats
-	if stats.Overextended and not self._warned then
+	local stats = solver.Stats
+	-- ignore the first half second (weld replication on equip) and absurd gaps (teleports)
+	if stats.Overextended and not self._warned and self._age > 0.5 and gap < chainLen * 3 then
 		self._warned = true
 		warn(string.format("[WarlinkChain] eyelets %.2f studs apart > chain %.2f: raise LinkCount to %d",
-			stats.Gap, stats.ChainLength, ChainSolver.SuggestLinkCount(stats.MaxObservedGap, self.Solver.Config.Pitch)))
+			gap, chainLen, ChainSolver.SuggestLinkCount(gap, solver.Config.Pitch)))
 	end
 
 	local parts: { BasePart } = self.Parts
 	local cfs: { CFrame } = self.CFrames
 	local extra: CFrame = self._extra
 	local n = #parts
-	local paid = self.Solver.PaidOut
-	-- parked (coiled) links first, wrapping up the forearm; paid-out links follow the solver points
-	local slots = if coil then self.Solver:CoilSlots(coil) else {}
-	local side = self._side
 	local idx = 0
-	for k = #slots, 1, -1 do
+	local side = A.WorldCFrame.RightVector -- re-seeded every frame from the eyelet: no accumulated roll
+	-- parked links lie flat on the forearm, wound from the eyelet outward
+	for _, sl in slots do
 		idx += 1
-		local s = slots[k]
 		local cf
-		cf, side = linkCFrame(s.Center - s.Tangent * 0.5 * self.Solver.Config.Pitch,
-			s.Center + s.Tangent * 0.5 * self.Solver.Config.Pitch, idx % 2 == 0, side, extra)
+		cf, side = linkCFrame(sl.From, sl.To, idx % 2 == 0, sl.Tangent:Cross(sl.Radial), extra)
 		cfs[idx] = cf
 	end
-	side = self._side
-	for i = 1, paid do
+	for i = 1, solver.PaidOut do
 		idx += 1
 		local cf
 		cf, side = linkCFrame(pts[i], pts[i + 1], idx % 2 == 0, side, extra)
 		cfs[idx] = cf
 	end
-	self._side = side
 	for i = idx + 1, n do
-		cfs[i] = cfs[idx]
+		cfs[i] = cfs[math.max(idx, 1)]
 	end
 	workspace:BulkMoveTo(parts, cfs, Enum.BulkMoveMode.FireCFrameChanged)
 end

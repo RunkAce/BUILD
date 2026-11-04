@@ -125,7 +125,7 @@ def helix_ribbon(col, mat, bones=8):
     root.head = (0, 0, WRAP_TOP)
     root.tail = (0, 0, WRAP_BOT)
     names = ['RibbonRoot']
-    tail_pts = centre[samples_wrap - 10:]
+    tail_pts = centre[samples_wrap:]                     # chain starts exactly where the ribbon leaves the shaft
     step = max(1, len(tail_pts) // bones)
     prev = root
     chain_pts = tail_pts[::step][:bones + 1]
@@ -139,7 +139,6 @@ def helix_ribbon(col, mat, bones=8):
     bpy.ops.object.mode_set(mode='OBJECT')
     for nm in names:
         obj.vertex_groups.new(name=nm)
-    wrap_end_t = samples_wrap / total
     for v in obj.data.vertices:
         # nearest centreline index
         best, bi = 1e9, 0
@@ -147,11 +146,10 @@ def helix_ribbon(col, mat, bones=8):
             d = (Vector(v.co) - c).length_squared
             if d < best:
                 best, bi = d, i
-        tp = tparam[bi]
-        if tp <= wrap_end_t - 0.06:
+        if bi <= samples_wrap:                           # the whole wrap is pinned to the fixed root bone
             obj.vertex_groups['RibbonRoot'].add([v.index], 1.0, 'REPLACE')
             continue
-        f = (bi - (samples_wrap - 10)) / step
+        f = (bi - samples_wrap) / step
         k = max(0, min(len(names) - 2, int(f)))
         frac = max(0.0, min(1.0, f - k))
         obj.vertex_groups[names[k + 1]].add([v.index], 1 - frac, 'REPLACE')

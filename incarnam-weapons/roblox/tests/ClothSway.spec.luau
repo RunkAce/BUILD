@@ -21,5 +21,14 @@ for _ = 1, 400 do
 	if x ~= x or math.abs(x) > 10 then finite = false end
 end
 check("spring: stable at dt=1/20", finite and math.abs(x - 1) < 1e-2, tostring(x))
+-- increments sum to 1 for any chain length (tip total = configured total, no compounding)
+for _, n in { 1, 5, 8 } do
+	local sum = 0
+	for _, d in ClothSway.Increments(n) do
+		check("increments positive n=" .. n, d > 0)
+		sum += d
+	end
+	check("increments sum to 1, n=" .. n, math.abs(sum - 1) < 1e-9, tostring(sum))
+end
 print(string.format("ClothSway: %d passed, %d failed", passed, failed))
 return failed

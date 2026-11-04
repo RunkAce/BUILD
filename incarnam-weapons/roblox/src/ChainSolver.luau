@@ -14,8 +14,9 @@
 	    LinkCount is too low for that animation (size it with tools/MeasureHandSpan).
 	  * Mode "Hang": the whole chain is always between the eyelets; gravity sag, clamped above FloorY.
 	  * Mode "Coil": only the links needed to span the gap (plus RestSlack) are "paid out"; the rest are
-	    parked on a helix around the A-side forearm (coil frame supplied by the caller) and unwind as the
-	    hands separate. The total link count never changes, so length stays coherent.
+	    parked in a coil wound up the A-side forearm from eyelet A (CoilSlots). The caller then simulates the
+	    free span from the coil's exit joint to eyelet B. Topology: eyelet A -> coil -> free span -> eyelet B.
+	    The total link count never changes, so length stays coherent.
 ]]
 
 export type Config = {
@@ -33,12 +34,16 @@ export type Config = {
 }
 
 export type CoilFrame = {
-	Origin: Vector3, -- point on the forearm axis where the coil starts (near the eyelet)
+	Start: Vector3, -- where the coil begins: eyelet A (first parked link hangs off it)
+	Origin: Vector3, -- point on the forearm axis at the eyelet's height
 	Axis: Vector3, -- unit vector along the forearm, pointing up the arm (away from the hand)
-	Radius: number, -- coil radius (R6 arm half-width + link width), e.g. 0.62
-	Turn: number?, -- radians of coil per parked link, default 1.05
-	Rise: number?, -- studs along Axis per parked link, default 0.06
+	U: Vector3?, -- arm face axis (R6: arm.CFrame.RightVector); keeps the coil basis attached to the arm
+	HalfWidth: number?, -- arm half-width, R6 = 0.5 (1x2x1 arm)
+	Clearance: number?, -- arm face -> link centre line, default 0.08 (link half-width 0.05 + 0.03 air)
+	RisePerTurn: number?, -- studs climbed along Axis per full turn, default 0.115 (~one link width)
 }
+
+export type CoilSlot = { Center: Vector3, Tangent: Vector3, Radial: Vector3, From: Vector3, To: Vector3 }
 
 export type Stats = {
 	Gap: number,
@@ -133,17 +138,18 @@ end
 
 --[[
 	Step the simulation.
-	a, b      : eyelet world positions this frame
+	a, b      : free-span endpoints this frame (Hang: the eyelets; Coil: coil exit joint and eyelet B)
 	dt        : seconds since last step (clamped internally)
 	floorY    : optional ground height under the chain (nil = no floor)
-	coil      : CoilFrame for the A side (Coil mode only)
+	payoutGap : Coil mode: eyelet A -> eyelet B distance used to decide how many links are paid out
 	returns   : array of joint points for the PAID-OUT links (length PaidOut+1, from a to b)
 ]]
-function ChainSolver.Step(self: Solver, a: Vector3, b: Vector3, dt: number, floorY: number?, coil: CoilFrame?): { Vector3 }
+function ChainSolver.Step(self: Solver, a: Vector3, b: Vector3, dt: number, floorY: number?, payoutGap: number?): { Vector3 }
 	local c = self.Config
 	local pitch = c.Pitch
 	local gap = (b - a).Magnitude
-	local target = self:_targetPaidOut(gap)
+	-- Coil: decide pay-out from the real eyelet-to-eyelet gap, not the coil-exit gap (which moves as links pay out)
+	local target = self:_targetPaidOut(payoutGap or gap)
 
 	-- hysteresis: pay out immediately, reel in only when clearly slack (prevents flicker)
 	if not self._initialised then
@@ -156,20 +162,23 @@ function ChainSolver.Step(self: Solver, a: Vector3, b: Vector3, dt: number, floo
 	local n = self.PaidOut
 
 	if not self._initialised or #self.Points ~= n + 1 then
-		local old = self.Points
+		local old, oldPrev = self.Points, self.Prev
 		local fresh = seed(a, b, n, pitch)
+		local freshPrev = table.clone(fresh)
 		if self._initialised and #old > 0 then
-			-- keep continuity: reuse old interior shape where it exists (shifted toward the B end)
+			-- links enter/leave at the A end (the coil side) in both directions: old joint i -> new joint i+shift.
+			-- Keeps every link's identity (and its render parity) and carries momentum over.
 			local shift = (n + 1) - #old
 			for i = 1, #old do
-				local j = i + math.max(shift, 0)
+				local j = i + shift
 				if j >= 2 and j <= n then
 					fresh[j] = old[i]
+					freshPrev[j] = oldPrev[i] or old[i]
 				end
 			end
 		end
 		self.Points = fresh
-		self.Prev = table.clone(fresh)
+		self.Prev = freshPrev
 		self._initialised = true
 	end
 
@@ -253,29 +262,127 @@ function ChainSolver.Step(self: Solver, a: Vector3, b: Vector3, dt: number, floo
 end
 
 --[[
-	Coil slots for the links NOT paid out (Coil mode). Returns array of {Center, Tangent} pairs, one per
-	parked link, wrapping a helix around the forearm starting at coil.Origin and rising along coil.Axis.
+	Coil for the links NOT paid out (Coil mode). The parked links hang from eyelet A to the arm, then wind up
+	the forearm along the exact offset outline of the square R6 arm (straight faces + rounded corners), with
+	consecutive joints exactly one Pitch apart so links sit edge to edge.
+	Returns slots in order from the eyelet outward, and the exit joint where the free span begins.
 ]]
-function ChainSolver.CoilSlots(self: Solver, coil: CoilFrame): { { Center: Vector3, Tangent: Vector3 } }
+function ChainSolver.CoilSlots(self: Solver, coil: CoilFrame): ({ CoilSlot }, Vector3)
 	local parked = self.Config.LinkCount - self.PaidOut
-	local out = table.create(parked)
+	local out: { CoilSlot } = table.create(math.max(parked, 0))
 	if parked <= 0 then
-		return out
+		return out, coil.Start
 	end
+	local pitch = self.Config.Pitch
 	local axis = coil.Axis.Unit
-	local ref = if math.abs(axis.Y) < 0.9 then Vector3.new(0, 1, 0) else Vector3.new(1, 0, 0)
-	local u = axis:Cross(ref).Unit
-	local v = axis:Cross(u).Unit
-	local turn = coil.Turn or 1.05
-	local rise = coil.Rise or 0.06
-	for k = 1, parked do
-		local ang = k * turn
-		local radial = u * math.cos(ang) + v * math.sin(ang)
-		local center = coil.Origin + axis * (rise * k) + radial * coil.Radius
-		local tangent = (u * -math.sin(ang) + v * math.cos(ang)) * coil.Radius * turn + axis * rise
-		out[k] = { Center = center, Tangent = tangent.Unit }
+	local u: Vector3
+	if coil.U then
+		u = (coil.U - axis * coil.U:Dot(axis)).Unit
+	else
+		local ref = if math.abs(axis.Y) < 0.9 then Vector3.new(0, 1, 0) else Vector3.new(1, 0, 0)
+		u = axis:Cross(ref).Unit
 	end
-	return out
+	local v = axis:Cross(u)
+	local hw = coil.HalfWidth or 0.5
+	local d = coil.Clearance or 0.08 -- arm face -> link centre line (link half-width 0.05 + 0.03 air)
+	local risePerArc = (coil.RisePerTurn or 0.115) / (8 * hw + 2 * math.pi * d)
+	-- exact offset outline of the square arm: four straight faces at distance hw+d, quarter-circle corners
+	-- of radius d around the arm corners; parameterised by arc length so the coil never clips a corner
+	local side = 2 * hw
+	local arcLen = 0.5 * math.pi * d
+	local perimeter = 4 * (side + arcLen)
+	local function outline(sArc: number): (number, number)
+		local q = sArc % perimeter
+		local seg = side + arcLen
+		local k = math.floor(q / seg) -- which face (0..3), rotating +90 deg each
+		local r = q - k * seg
+		local x, y
+		if r < side then -- straight face along +y at x = hw + d
+			x, y = hw + d, -hw + r
+		else -- corner arc around (hw, hw)
+			local t = (r - side) / d
+			x, y = hw + d * math.cos(t), hw + d * math.sin(t)
+		end
+		for _ = 1, k do
+			x, y = -y, x
+		end
+		return x, y
+	end
+	-- start the outline on the side of the arm facing the eyelet
+	local rel = coil.Start - coil.Origin
+	local ru, rv = rel:Dot(u), rel:Dot(v)
+	local s0, best = 0, -math.huge
+	for i = 0, 255 do
+		local sa = perimeter * i / 256
+		local x, y = outline(sa)
+		local score = (x * ru + y * rv) / math.sqrt(x * x + y * y)
+		if score > best then
+			best, s0 = score, sa
+		end
+	end
+	local function pathPoint(sArc: number): Vector3
+		local x, y = outline(sArc)
+		return coil.Origin + axis * (risePerArc * (sArc - s0)) + u * x + v * y
+	end
+	local joints = table.create(parked + 1)
+	joints[1] = coil.Start
+	-- hang straight links from the eyelet to the arm surface if the eyelet sits away from it
+	local first = pathPoint(s0)
+	while #joints < parked + 1 and (first - joints[#joints]).Magnitude > pitch do
+		table.insert(joints, joints[#joints] + (first - joints[#joints]).Unit * pitch)
+	end
+	local sArc = s0
+	local step = 0.01
+	local guard = 0
+	while #joints < parked + 1 and guard < 200000 do
+		guard += 1
+		local prevS = sArc
+		sArc += step
+		local last = joints[#joints]
+		if (pathPoint(sArc) - last).Magnitude >= pitch then
+			-- bisect to the exact arc position where the chord equals one pitch (links edge to edge)
+			local lo, hi = prevS, sArc
+			for _ = 1, 24 do
+				local mid = (lo + hi) * 0.5
+				if (pathPoint(mid) - last).Magnitude >= pitch then
+					hi = mid
+				else
+					lo = mid
+				end
+			end
+			sArc = hi
+			table.insert(joints, pathPoint(hi))
+		end
+	end
+	local minClear = 0.05 + 0.01 -- link half-width + air
+	for k = 1, parked do
+		local j0, j1 = joints[k], joints[k + 1] or joints[k]
+		local c = (j0 + j1) * 0.5
+		-- a straight link spanning an arm corner would cut into the face: stand it off the corner
+		local lc = c - coil.Origin
+		local lx, ly = lc:Dot(u), lc:Dot(v)
+		local qx = math.clamp(lx, -hw, hw)
+		local qy = math.clamp(ly, -hw, hw)
+		local dx, dy = lx - qx, ly - qy
+		local dist = math.sqrt(dx * dx + dy * dy)
+		if dist < minClear and dist > 1e-6 and lc:Dot(axis) > -0.05 then
+			local push = minClear - dist
+			c += (u * (dx / dist) + v * (dy / dist)) * push
+		end
+		local t = j1 - j0
+		local tang = if t.Magnitude > 1e-6 then t.Unit else axis
+		local radial = c - coil.Origin
+		radial = radial - axis * radial:Dot(axis)
+		out[k] = { Center = c, Tangent = tang, Radial = if radial.Magnitude > 1e-6 then radial.Unit else u, From = j0, To = j1 }
+	end
+	return out, joints[#joints]
+end
+
+-- Forget the shape (call after teleports or when a culled chain comes back): next Step re-seeds.
+function ChainSolver.Reset(self: Solver)
+	self._initialised = false
+	self.Points = {}
+	self.Prev = {}
 end
 
 -- Suggest a LinkCount for a measured maximum eyelet gap (studs) and pitch, with a safety margin.

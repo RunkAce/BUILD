@@ -1,0 +1,444 @@
+{
+  "project": "PIXELGATE",
+  "design_pillar": "COD-like custom loadouts; portals are a separate always-available traversal tool",
+  "baseline_version": "factory_v1",
+  "base_weapon_count": 21,
+  "roster_locked_to_user_list": true,
+  "shotguns_included": false,
+  "note": "Two optional shotguns were brainstormed previously; they were NOT among the 21 named guns and are not included in this production baseline.",
+  "references": [
+    {
+      "path": "REFERENCES/01_Iceblade_Sword_StyleReference.png",
+      "description": "Ice-blue sword — controlled emissive surfaces, crisp silhouette, deliberate ornamental hierarchy.",
+      "rights": "user-provided reference only; do not reproduce third-party branding/designs"
+    },
+    {
+      "path": "REFERENCES/02_Crimson_Bow_StyleReference.png",
+      "description": "Crimson and gold bow — elegant curves and premium, high-contrast shape design; inspiration ONLY.",
+      "rights": "user-provided reference only; do not reproduce third-party branding/designs"
+    },
+    {
+      "path": "REFERENCES/03_Green_Scythe_StyleReference.png",
+      "description": "Green scythe — layered materials, distinct big-to-small forms, well-defined focal point.",
+      "rights": "user-provided reference only; do not reproduce third-party branding/designs"
+    },
+    {
+      "path": "REFERENCES/04_Silver_Blue_Revolver_StyleReference.png",
+      "description": "Silver-blue stylized revolver — hard-surface form language, machined layering and clarity of silhouettes.",
+      "rights": "user-provided reference only; do not reproduce third-party branding/designs"
+    },
+    {
+      "path": "REFERENCES/05_Purple_Scythe_StyleReference.png",
+      "description": "Purple segmented scythe — clean polygonal facets and restrained lighting accents; skins-only inspiration.",
+      "rights": "user-provided reference only; do not reproduce third-party branding/designs"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "AR_01",
+      "name": "AK-47",
+      "category": "Assault Rifles",
+      "slot": "Primary",
+      "kind": "Automatic rifle",
+      "profile": "Hard-hitting, unmistakable classic rifle; angular stamped-metal receiver, substantial handguard and strongly curved detachable box magazine.",
+      "materials": "Dark gunmetal, charcoal steel, restrained walnut or matte polymer furniture.",
+      "move": [
+        "Trigger",
+        "ChargingHandle",
+        "Bolt_Visible",
+        "Magazine",
+        "FireSelector_Visual",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detachable curved box magazine: hand removes and inserts the magazine; receiver action is visually acknowledged as part of the empty-reload montage.",
+      "distinct": "Preserve the AK silhouette and its rugged balance; exaggerate edges and material breaks rather than adding ornamental blades.",
+      "portal": "Midrange anchor; recoil and visual shake must remain readable while exiting a portal."
+    },
+    {
+      "id": "AR_02",
+      "name": "M4A1",
+      "category": "Assault Rifles",
+      "slot": "Primary",
+      "kind": "Automatic rifle",
+      "profile": "Clean, modular, balanced carbine; neutral benchmark for visual quality and all core gun animation systems.",
+      "materials": "Black anodized metal, graphite polymer, subtle brushed edges; no expensive or fantastical base skin.",
+      "move": [
+        "Trigger",
+        "Bolt_Visible",
+        "ChargingHandle",
+        "Magazine",
+        "DustCover_Optional",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detachable straight box magazine; distinct tactical and empty reload takes; model supports an independent movable receiver control.",
+      "distinct": "Make this the FIRST reference-quality production gun; use it to prove ADS, reload, inspection, clips and polish before copying the pipeline.",
+      "portal": "Default introductory primary for fast aiming and reliable portal-to-portal engagements."
+    },
+    {
+      "id": "AR_03",
+      "name": "SCAR",
+      "category": "Assault Rifles",
+      "slot": "Primary",
+      "kind": "Automatic rifle",
+      "profile": "Thick, sturdy premium rifle, squared receiver, visible upper rail, distinctive stock and magazines.",
+      "materials": "Factory dark earth and graphite polymer with satin gunmetal.",
+      "move": [
+        "Trigger",
+        "ChargingHandle",
+        "Bolt_Visible",
+        "Magazine",
+        "Stock_Optional",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detached box magazine; reserve a separate charging control on the rig for reload and inspection animation.",
+      "distinct": "Chunkier receiver and high-contrast slab shapes distinguish it from the M4.",
+      "portal": "Steady ranged rifle with heavier movement feel, without excessive viewmodel obstruction."
+    },
+    {
+      "id": "AR_04",
+      "name": "VSS",
+      "category": "Assault Rifles",
+      "slot": "Primary",
+      "kind": "Suppressed precision rifle",
+      "profile": "Compact stock and receiver paired with the long, visually dominant integral suppressor. In this launch roster it remains in the assault-rifle UI class as supplied, but plays as a precision/suppressed hybrid.",
+      "materials": "Muted metal, aged dark wood or polymer, almost no flashy color.",
+      "move": [
+        "Trigger",
+        "Bolt_Visible",
+        "Magazine",
+        "SafetyControl_Visual",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Small detachable box magazine with restrained tactical/empty reload motions.",
+      "distinct": "Integrated suppressed front profile—not a generic rifle plus an add-on suppressor.",
+      "portal": "Stealth-inspired low-signature gun VFX and readable short firing impulse."
+    },
+    {
+      "id": "AR_05",
+      "name": "FAL",
+      "category": "Assault Rifles",
+      "slot": "Primary",
+      "kind": "Precision-leaning battle rifle",
+      "profile": "Long, solid and authoritative rifle proportions, full-length receiver and heavier visual weight.",
+      "materials": "Blackened steel with muted wood or polymer stock and handguard.",
+      "move": [
+        "Trigger",
+        "ChargingHandle",
+        "Bolt_Visible",
+        "Magazine",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detachable box magazine and confident, weightier reload animations.",
+      "distinct": "Differentiate from AK and SCAR with long top line and classic battle-rifle proportions.",
+      "portal": "High-reward controlled fire, not the fastest run-and-gun choice."
+    },
+    {
+      "id": "SMG_01",
+      "name": "P90",
+      "category": "Submachine Guns",
+      "slot": "Primary",
+      "kind": "Compact automatic SMG",
+      "profile": "Iconic low-profile bullpup silhouette; prominent HORIZONTAL TOP-MOUNTED magazine and compact ergonomic body.",
+      "materials": "Matte charcoal polymer, dark gray stamped metallic details.",
+      "move": [
+        "Trigger",
+        "TopMagazine",
+        "Bolt_Visible_IfExposed",
+        "CaseEjection_DownwardVFX"
+      ],
+      "reload": "The detachable magazine moves from the TOP; use a top-slot reload animation, never a grip/bottom-mag generic animation.",
+      "distinct": "Top magazine is a mandatory modeling and animation differentiator; do not pretend it has an MP5-type magazine.",
+      "portal": "Excellent fast repositioning with compact first-person footprint."
+    },
+    {
+      "id": "SMG_02",
+      "name": "Vector",
+      "category": "Submachine Guns",
+      "slot": "Primary",
+      "kind": "High-rate compact SMG",
+      "profile": "Sharp modern lower receiver, forward-biased angular styling, magazine in the pistol-grip region.",
+      "materials": "Black anodized aluminum and grippy charcoal polymer.",
+      "move": [
+        "Trigger",
+        "Bolt_Visible",
+        "Magazine",
+        "ChargingControl_Visible",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detachable grip-region stick magazine, snappy and compact visual sequence.",
+      "distinct": "Pronounced angular silhouette rather than a generic rectangular SMG.",
+      "portal": "Close-range specialist: manageable first-person shake at high virtual fire cadence."
+    },
+    {
+      "id": "SMG_03",
+      "name": "UMP45",
+      "category": "Submachine Guns",
+      "slot": "Primary",
+      "kind": "Control-oriented SMG",
+      "profile": "Squared polymer receiver, thicker straight magazine and practical utilitarian geometry.",
+      "materials": "Charcoal/black polymer with subtle steel highlights.",
+      "move": [
+        "Trigger",
+        "ChargingHandle",
+        "Bolt_Visible",
+        "Magazine",
+        "Stock_Optional",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Large detachable stick magazine with distinct empty and partial reload takes.",
+      "distinct": "Angular chunky control feel versus the smoother MP5.",
+      "portal": "Well-rounded for close- and short-midrange engagements."
+    },
+    {
+      "id": "SMG_04",
+      "name": "MP5",
+      "category": "Submachine Guns",
+      "slot": "Primary",
+      "kind": "Classic precision SMG",
+      "profile": "Compact classic rounded/pressed-metal upper, tubular handguard and narrow stick magazine.",
+      "materials": "Black blued steel, matte textured handguard.",
+      "move": [
+        "Trigger",
+        "ChargingHandle",
+        "Bolt_Visible",
+        "Magazine",
+        "Stock_Optional",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detachable stick magazine; dedicated visible charging-handle animation can be used for the empty-reload visual beat.",
+      "distinct": "Keep familiar classic receiver and slim silhouette, unlike UMP45.",
+      "portal": "Easy-to-read control for entry-level fast portal fights."
+    },
+    {
+      "id": "SMG_05",
+      "name": "Thompson",
+      "category": "Submachine Guns",
+      "slot": "Primary",
+      "kind": "Vintage automatic SMG",
+      "profile": "Distinctive early-era rounded receiver and substantial wood furniture. Launch default uses a stick magazine; drum is a future variant, not required.",
+      "materials": "Warm walnut and dark blued steel, brushed wear only at edges.",
+      "move": [
+        "Trigger",
+        "Bolt_Visible",
+        "Magazine",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detachable straight stick magazine in the base model; no forced drum-mag reload.",
+      "distinct": "Preserve the recognizable historic silhouette, stylized rather than museum photoreal.",
+      "portal": "A characterful gun for players who prefer older designs."
+    },
+    {
+      "id": "PREC_01",
+      "name": "M700",
+      "category": "Sniper & Marksman Rifles",
+      "slot": "Primary",
+      "kind": "Bolt-action sniper rifle",
+      "profile": "Long, slim barrel and stock, restrained scope and heavy purposeful bolt-action silhouette. Use a fictionalized detachable-box-magazine game configuration for consistent weapon systems.",
+      "materials": "Satin black steel, subdued olive or charcoal synthetic stock.",
+      "move": [
+        "Trigger",
+        "BoltHandle",
+        "Bolt",
+        "Magazine",
+        "SpentCase_VFX"
+      ],
+      "reload": "Box-magazine reload where configured; after each virtual shot a manual bolt-cycle animation plays. Do not loop automatic self-loading.",
+      "distinct": "Long-stroke bolt animation is the unique visual signature.",
+      "portal": "High-skill precision aiming and clear scope transitions."
+    },
+    {
+      "id": "PREC_02",
+      "name": "Kar98k",
+      "category": "Sniper & Marksman Rifles",
+      "slot": "Primary",
+      "kind": "Bolt-action historical rifle",
+      "profile": "Slim classic wood-stock military rifle with a clearly visible bolt and internal ammunition feed.",
+      "materials": "Warm polished/aged wood and slightly muted blued metal.",
+      "move": [
+        "Trigger",
+        "BoltHandle",
+        "Bolt",
+        "InternalAmmoVisual_Optional",
+        "SpentCase_VFX"
+      ],
+      "reload": "INTERNAL magazine; use visually authentic individual-round / clip-style animation rather than attaching a modern removable box magazine.",
+      "distinct": "Avoid giving this rifle a detachable modern mag in the default factory model.",
+      "portal": "High-punishment, deliberate aim and reload timing as a gameplay trade-off."
+    },
+    {
+      "id": "PREC_03",
+      "name": "M82",
+      "category": "Sniper & Marksman Rifles",
+      "slot": "Primary",
+      "kind": "Heavy semi-automatic precision rifle",
+      "profile": "Extremely long, substantial receiver, oversized muzzle area and detached large box magazine; dramatic weight without massive ornament.",
+      "materials": "Dark industrial steel and muted tactical composite.",
+      "move": [
+        "Trigger",
+        "Bolt_Visible",
+        "Magazine",
+        "CaseEjection_VFX",
+        "RecoilSlideVisual_Optional"
+      ],
+      "reload": "Detachable box-magazine reload; self-loading animation after each virtual shot—NOT a bolt-action sequence.",
+      "distinct": "Heavy semi-auto precision rifle. Make it dramatic through scale and recoil response, not implausible moving fins.",
+      "portal": "High handling cost and long sight recovery; keep it balanced for custom loadouts."
+    },
+    {
+      "id": "PREC_04",
+      "name": "Bow",
+      "category": "Sniper & Marksman Rifles",
+      "slot": "Primary",
+      "kind": "Projectile bow",
+      "profile": "Purpose-built premium stylized modern recurve or hybrid bow; taut string, riser, limbs, arrow rest. Factory model is functional and restrained, NOT a copy of the supplied ornate bow reference.",
+      "materials": "Deep graphite limbs, brushed metal riser, muted leather grip and a tiny neutral accent.",
+      "move": [
+        "BowString",
+        "BowLimbs_SubtleDeformOrPose",
+        "Arrow_Equipped",
+        "Arrow_ProjectileVFX"
+      ],
+      "reload": "No magazine. Nock an arrow, draw string, hold, release; respawn/nock next virtual arrow. Visible ammo is arrow count/quiver rather than clips.",
+      "distinct": "Use unique silhouette and animation grammar; no fake brass ejection or gun magazine.",
+      "portal": "Projectile traversal through portals must be clear and fair, with no hitscan-only assumptions."
+    },
+    {
+      "id": "PREC_05",
+      "name": "SVD",
+      "category": "Sniper & Marksman Rifles",
+      "slot": "Primary",
+      "kind": "Semi-automatic designated marksman rifle",
+      "profile": "Long marksman rifle, distinctive thin stock/rear form and separate magazine, optic base appropriate to default profile.",
+      "materials": "Dark steel plus wood/tan polymer depending on the factory subvariant.",
+      "move": [
+        "Trigger",
+        "Bolt_Visible",
+        "Magazine",
+        "ChargingHandle_Visible",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detachable box magazine and semi-automatic cycling—NOT a manual bolt action after each shot.",
+      "distinct": "More nimble DMR identity than the massive M82.",
+      "portal": "Repeatable precision follow-ups rather than pure one-shot fantasy."
+    },
+    {
+      "id": "LMG_01",
+      "name": "RPK",
+      "category": "Light Machine Guns",
+      "slot": "Primary",
+      "kind": "Magazine-fed support rifle",
+      "profile": "Heavy AK-family support gun with long barrel, beefy furniture and elongated curved magazine; optional bipod is VISUAL only.",
+      "materials": "Industrial dark steel and muted wood/polymer.",
+      "move": [
+        "Trigger",
+        "Bolt_Visible",
+        "Magazine",
+        "Bipod_OptionalCosmetic",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Long curved detachable magazine, not a belt-fed sequence.",
+      "distinct": "Rifle-derived support weapon and sturdier shape distinguish it from PKM.",
+      "portal": "Suppressive loadout with handling and weight trade-offs."
+    },
+    {
+      "id": "LMG_02",
+      "name": "Minigun",
+      "category": "Light Machine Guns",
+      "slot": "Primary",
+      "kind": "Heavy rotary-barrel weapon (loadout)",
+      "profile": "Visually bold fictional game-ready six-barrel rotary gun and large visible ammo module, robust handles and spinning barrel shroud.",
+      "materials": "Black industrial metal, tungsten-like silver accents, matte polymer.",
+      "move": [
+        "RotatingBarrelAssembly",
+        "SpinUp_State",
+        "SpinDown_State",
+        "AmmoDrumOrModule",
+        "Trigger",
+        "HeatShimmer_VFX"
+      ],
+      "reload": "Swap the large detachable ammo module/drum in a choreographed game animation; NO normal rifle magazine or reciprocating handgun slide.",
+      "distinct": "VERY heavy loadout weapon with spin-up and spin-down; not an arena pickup unless designers change the game later.",
+      "portal": "Cannot invalidate custom loadout balance: movement, start-up, visibility and portal interactions need strong constraints."
+    },
+    {
+      "id": "LMG_03",
+      "name": "PKM",
+      "category": "Light Machine Guns",
+      "slot": "Primary",
+      "kind": "Belt-fed general-purpose machine gun",
+      "profile": "Long chunky support rifle with receiver cover, feed-belt silhouette, removable ammo box and optional folded bipod.",
+      "materials": "Satin dark steel and dark wood or durable polymer.",
+      "move": [
+        "Trigger",
+        "BeltSegment_ShortAnimated",
+        "FeedCover",
+        "AmmoBox",
+        "Bolt_VisualIfVisible",
+        "Bipod_OptionalCosmetic",
+        "CaseEjection_VFX"
+      ],
+      "reload": "BELT-FED: animate the feed cover and ammo box/belt visual elements. Do not substitute an assault-rifle magazine reload.",
+      "distinct": "Belt and cover distinguish this model mechanically and graphically.",
+      "portal": "Sustained cover fire; dedicated weight and ADS handling."
+    },
+    {
+      "id": "SIDE_01",
+      "name": "Desert Eagle (Deagle)",
+      "category": "Pistols / Sidearms",
+      "slot": "Secondary",
+      "kind": "Heavy self-loading pistol",
+      "profile": "Large angular semi-auto pistol with broad slide, squared barrel/muzzle region and substantial grip.",
+      "materials": "Brushed graphite/gunmetal factory finish with restrained machined edges.",
+      "move": [
+        "Trigger",
+        "Slide",
+        "Hammer_VisibleIfModeled",
+        "Magazine",
+        "CaseEjection_VFX"
+      ],
+      "reload": "Detachable grip magazine and visible slide movement; use distinct slide-lock empty state.",
+      "distinct": "Heavy pistol silhouette, distinctly NOT a revolver.",
+      "portal": "Slow, high-impact back-up sidearm for precise taps."
+    },
+    {
+      "id": "SIDE_02",
+      "name": "Glock",
+      "category": "Pistols / Sidearms",
+      "slot": "Secondary",
+      "kind": "Polymer semi-automatic pistol",
+      "profile": "Simple rectangular slide and polymer frame. Exact same factory geometry supports a later Akimbo option.",
+      "materials": "Flat black polymer grip and dark nitride-like steel slide.",
+      "move": [
+        "Trigger",
+        "Slide",
+        "Magazine",
+        "CaseEjection_VFX",
+        "Akimbo_LeftRig_Optional",
+        "Akimbo_RightRig_Optional"
+      ],
+      "reload": "Detachable grip magazine and slide-locked empty state. For AKIMBO, make separate left/right viewmodel rigs, mirrored poses and coordinated reloads; do not merely duplicate the same transforms.",
+      "distinct": "Intentionally minimal and professional, good baseline for pistol animations.",
+      "portal": "Fast-swap secondary; akimbo trades ADS precision for rapid close-range capability."
+    },
+    {
+      "id": "SIDE_03",
+      "name": "Magnum",
+      "category": "Pistols / Sidearms",
+      "slot": "Secondary",
+      "kind": "Large-frame revolver",
+      "profile": "Robust classic six-shot-style revolver silhouette, long-ish barrel, exposed hammer silhouette and prominent cylinder.",
+      "materials": "Dark brushed alloy, neutral textured grip and crisp rim highlights.",
+      "move": [
+        "Trigger",
+        "Hammer",
+        "Cylinder_Rotation",
+        "Cylinder_SwingOut",
+        "IndividualRoundsVisual_Optional",
+        "SpentCasingVisual_Optional"
+      ],
+      "reload": "Revolver cylinder opens/closes and individual ammo/speed-loader visuals animate; NO removable pistol magazine and NO reciprocating auto-pistol slide.",
+      "distinct": "This is a revolver in the factory spec, separate from Deagle.",
+      "portal": "Measured precision sidearm, pronounced kick and slower refilling."
+    }
+  ]
+}

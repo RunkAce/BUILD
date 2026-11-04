@@ -4,6 +4,7 @@ All 2D outlines are lists of (x, z) points in the weapon's front plane
 (x = across the blade, z = along the weapon). Thickness is along Y.
 """
 import math
+import os
 
 import bmesh
 import bpy
@@ -37,7 +38,10 @@ def shade_by_angle(obj, angle_deg=35):
     bm.from_mesh(me)
     for e in bm.edges:
         e.smooth = True
-        if len(e.link_faces) == 2 and e.calc_face_angle(0) > math.radians(angle_deg):
+        n = len(e.link_faces)
+        # hard if the crease exceeds the angle, and ALWAYS hard on boundary / non-manifold edges
+        # (left by merged parts or hidden-face removal) - otherwise normals wrap round corners onto flat faces
+        if n != 2 or e.calc_face_angle(0) > math.radians(angle_deg):
             e.smooth = False
     for f in bm.faces:
         f.smooth = True
@@ -247,6 +251,8 @@ def wrapped_grip(name, z0, z1, radius, wraps=7, band_w=None, segments=10, col=No
     bm = bmesh.new()
     # game budget: ~8 rows per wrap is enough for the strap silhouette; leather grain lives in the normal map
     rings = max(8, int(wraps * 8))
+    if os.environ.get('LEGACY_GRIP'):          # reproduce the grip used by the delivered packs (audits only)
+        rings, segments = int(wraps * (24 if style == 'strap' else 10)), 16
     # Each wrap band: a ring whose centre line slants; build as a twisted tube surface offset from core.
     verts_rows = []
     for r in range(rings + 1):

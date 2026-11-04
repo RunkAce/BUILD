@@ -1,0 +1,100 @@
+{
+ "id": "AR_02",
+ "name": "M4A1",
+ "viewmodel_triangles": 6365,
+ "world_triangles": 2864,
+ "hidden_faces_removed": 475,
+ "texture": "1024 PBR + MaskMap",
+ "bones": [
+  "Root",
+  "Trigger",
+  "Magazine",
+  "ChargingHandle",
+  "BoltCarrier",
+  "DustCover",
+  "Selector"
+ ],
+ "animations": [
+  "Idle",
+  "Fire",
+  "DryFire",
+  "Reload_Tactical",
+  "Reload_Empty",
+  "Inspect"
+ ],
+ "events_seconds": {
+  "Fire": {
+   "Muzzle": 0.0,
+   "Eject": 0.05
+  },
+  "Reload_Tactical": {
+   "MagOut": 0.3,
+   "MagIn": 1.65,
+   "AmmoCommit": 1.7,
+   "End": 2.0
+  },
+  "Reload_Empty": {
+   "MagOut": 0.3,
+   "MagIn": 1.65,
+   "BoltRelease": 2.2,
+   "AmmoCommit": 2.25,
+   "End": 2.6
+  },
+  "Inspect": {
+   "End": 3.0
+  }
+ },
+ "attachments": {
+  "GripRight": [
+   0.0,
+   -0.0,
+   0.0
+  ],
+  "RightHandIK": [
+   0.0,
+   -0.0,
+   0.0
+  ],
+  "LeftHandIK": [
+   0.0,
+   -0.95,
+   0.2
+  ],
+  "GripLeft": [
+   0.0,
+   -0.95,
+   0.2
+  ],
+  "Muzzle": [
+   0.0,
+   -1.95,
+   0.325
+  ],
+  "ADS": [
+   0.0,
+   -0.08,
+   0.53
+  ],
+  "Ejection": [
+   0.075,
+   -0.26,
+   0.325
+  ],
+  "MagazineSeat": [
+   0.0,
+   -0.31,
+   0.14
+  ]
+ },
+ "topology": {
+  "triangles": 6365,
+  "quads": 2144,
+  "ngons": 0,
+  "faces": 4221,
+  "sliver_tris_lt6deg": 1456,
+  "non_manifold_edges": 549,
+  "open_boundary_edges": 545,
+  "uv_coverage": 0.375
+ },
+ "length_studs": 2.984
+}

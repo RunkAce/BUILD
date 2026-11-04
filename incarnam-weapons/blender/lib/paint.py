@@ -49,7 +49,8 @@ def _n(nt, kind, loc, **inputs):
     return node
 
 
-def painted(name, spec, height=1.0, bevel_radius=0.012, ao_dist=0.12, streak=1.0, seed=0.0, paint_light=1.0):
+def painted(name, spec, height=1.0, bevel_radius=0.012, ao_dist=0.12, streak=1.0, seed=0.0, paint_light=1.0,
+            flat_light=False):
     """Create the procedural paint material. height = weapon length (for the gradient)."""
     spec = dict(PALETTE[spec]) if isinstance(spec, str) else dict(spec)
     m = bpy.data.materials.new(name)
@@ -133,7 +134,8 @@ def painted(name, spec, height=1.0, bevel_radius=0.012, ao_dist=0.12, streak=1.0
     # painted key light, fixed in OBJECT space (hand-painted look that survives any game lighting).
     # |n.y| makes front and rear faces read identically; left/top bevels catch light, right/bottom fall to shadow.
     nsep = nt.nodes.new('ShaderNodeSeparateXYZ'); nsep.location = (-1200, -700)
-    L.new(tc.outputs['Normal'], nsep.inputs[0])
+    # flat_light: hard-surface - read the TRUE face normal, so long flat triangles bake evenly
+    L.new(geom.outputs['True Normal'] if flat_light else tc.outputs['Normal'], nsep.inputs[0])
     ny = nt.nodes.new('ShaderNodeMath'); ny.operation = 'ABSOLUTE'; ny.location = (-1050, -700)
     L.new(nsep.outputs['Y'], ny.inputs[0])
     ncomb = nt.nodes.new('ShaderNodeCombineXYZ'); ncomb.location = (-900, -700)

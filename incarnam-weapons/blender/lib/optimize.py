@@ -67,7 +67,13 @@ def remove_hidden_faces(obj, occluders=(), rays=26, eps=1e-4, max_dist=1e4):
         t, b, nn = _frame(n)
         cen = mw @ f.calc_center_median()
         verts = [mw @ v.co for v in f.verts]
-        samples = [cen] + [cen.lerp(v, 0.7) for v in verts[:4]]
+        # a face is hidden only if EVERY part of it is covered: sample right up to each corner and along each edge
+        # (5 interior samples missed long triangles that are only partly under a raised plate -> visible holes)
+        samples = [cen]
+        for i, v in enumerate(verts):
+            w = verts[(i + 1) % len(verts)]
+            samples += [cen.lerp(v, 0.97), cen.lerp((v + w) / 2, 0.97), cen.lerp(v.lerp(w, 0.25), 0.97),
+                        cen.lerp(v.lerp(w, 0.75), 0.97), cen.lerp(v, 0.5)]
         visible = False
         for s in samples:
             origin = s + nn * eps
@@ -85,12 +91,11 @@ def remove_hidden_faces(obj, occluders=(), rays=26, eps=1e-4, max_dist=1e4):
     bmesh.ops.delete(bm, geom=hidden, context='FACES')
     loose = [v for v in bm.verts if not v.link_faces]
     bmesh.ops.delete(bm, geom=loose, context='VERTS')
-    # drop degenerate (zero-area) faces left by merged parts
-    bmesh.ops.dissolve_degenerate(bm, dist=1e-5, edges=bm.edges)
+    # drop zero-area faces left by merged parts (plain delete: dissolve_degenerate rebuilt faces with flipped winding)
     zero = [f for f in bm.faces if f.calc_area() < 1e-9]
     if zero:
         bmesh.ops.delete(bm, geom=zero, context='FACES')
-    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    # NOTE: no recalc_face_normals here - it is unreliable on open shells and flips faces
     bm.to_mesh(obj.data)
     bm.free()
     obj.data.update()

@@ -56,6 +56,7 @@ def finish(name, col, body_parts, out_root, grip_point, attachments, glow_parts=
     body = paint.join(list(body_parts), f'{name}_Body')
     topo_before = optimize.topology_report(body)
     hidden_removed = optimize.remove_hidden_faces(body, occluders=list(glow_parts) + list(extra_meshes))
+    geo.shade_by_angle(body, 30)        # hard edges recomputed before baking (was after: baked lighting could bleed)
     paint.unwrap(body)
     exp = export_dir or os.path.join(out_root, 'export', name)
     maps_dir = os.path.join(exp, 'textures')

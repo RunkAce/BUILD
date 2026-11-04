@@ -1,0 +1,1999 @@
+{
+ "concepts": [
+  {
+   "concept": "oathsplitter",
+   "qc": {
+    "verdict": "pass_with_fixes",
+    "overall": "Oathsplitter is a strong, buildable concept. The long slot is genuinely open (background shows through it), the bridge below the fork and the twin tines are present, the blade faces are quiet, and the vermilion crescent guard with its amber gem and gold root frame is the clear focal point. It reads instantly even when downsampled to 96 px. Nothing breaks an invariant. The fixes are a mirrored guard (the horns don't match), a stronger bridge flush with the rail faces, a cleaner guard-to-ferrule stack on the pommel side, and material painting that reads less like marble or cracked stone. The palette also needs pulling back toward the brief's less saturated ivory, gold and charcoal under neutral light. The front and back are fully hidden, so the modeler has to settle thickness, the rear face and how the parts join using the resolutions below.",
+    "invariants": [
+     {
+      "requirement": "\"a two-handed greatsword with a long, actual opening inside the blade and two substantial points at the tip\" (sec 4)",
+      "met": "yes",
+      "evidence": "Slot runs from the blade root at about 45% of total length to a bridge at about 80%, so it is roughly 33% of total length and about 9:1 length to width. Two tines continue past the bridge to separate points at about (1470,20) and (1485,135)."
+     },
+     {
+      "requirement": "\"Its silhouette should be immediately recognizable from the split form\" / \"easiest member of the set to identify in silhouette\"",
+      "met": "yes",
+      "evidence": "At 96x64 px and in a thresholded silhouette, the slot, the fork notch and both tips stay readable, as do the crescent horns. Sunbound (solid blade) and Warlink (two cleavers plus a chain) are clearly different shapes."
+     },
+     {
+      "requirement": "\"The opening is empty three-dimensional space, visible from front and back, with inner faces and bevels... Do not fake the opening with a black polygon\"",
+      "met": "partial",
+      "evidence": "Pixels in the slot (e.g. (906,437) #2B272B) match the background (#252225), so it is a real opening, not black paint. The upper rail's inner wall shows as a shaded band (#60412F at (885,405)) along the whole slot, which reads as depth. The back view and the lower rail's inner wall can't be seen from this angle."
+     },
+     {
+      "requirement": "\"Keep thick structural rails on both sides\"",
+      "met": "yes",
+      "evidence": "Measured across the blade, the lower rail is about 81-90 px wide and the upper rail about 88-113 px. The slot is only about 60 px, so each rail is wider than the opening. Side and bevel planes show on the rail edges (e.g. #8B7467 at (963,525))."
+     },
+     {
+      "requirement": "\"a substantial bridge below the fork, so the opening and split tip remain coherent parts of one forceful blade\"",
+      "met": "partial",
+      "evidence": "A bridge is present at about (1150-1230, 210-300) and joins the rails. It is short along the blade (about 65 px, less than one rail width) and looks recessed: its face sits below the rail faces, with chamfered sides. That makes it read more like a strut than a solid block."
+     },
+     {
+      "requirement": "\"Use broad warm ivory/steel blade faces\"",
+      "met": "partial",
+      "evidence": "The faces are broad and quiet with no runes or gems. The ivory is a saturated peach-tan (median #E9C8A8) rather than #E5DDC7. The cool pearl-steel note appears only in the tip shading (#89828A, #A08B80)."
+     },
+     {
+      "requirement": "\"vermilion crescent-like guard with a clear center connection and a small number of large, swept points\"",
+      "met": "yes",
+      "evidence": "Two large crescent horns (tips at about (520,360) and (880,745)) and two small rear spurs, with a gem-and-bezel boss at the center (about (582,620)). The guard's red median is #9D312A, with lit faces at #D94D41."
+     },
+     {
+      "requirement": "\"The guard must have believable depth and a readable overlap with the blade base\"",
+      "met": "partial",
+      "evidence": "Chamfers on the horns suggest thickness, and the gem bezel overlaps the seam. But the blade root mostly butts against the red body along a diagonal line, and the pommel side of the guard is a lumpy stack of red blocks around (420-500, 520-700). It's not clear whether the guard wraps the blade or the blade sits on top."
+     },
+     {
+      "requirement": "\"Add restrained aged-gold inlay or a simple directional motif where it supports the existing forms\"",
+      "met": "yes",
+      "evidence": "A cusped gold frame around the slot root points up the blade, and there are crescent inlays on each horn, a gem bezel, spacer rings and pommel ridges. The amount is restrained, but the gold is more saturated and brassy (median #B67B3F) than #9D7950."
+     },
+     {
+      "requirement": "\"Provide a charcoal wrapped, genuinely usable two-handed grip\"",
+      "met": "yes",
+      "evidence": "The wrap is about 22% of total length, roughly 7 grip diameters (a 52 px diameter over about 368 px), which fits two hands. The crossing leather bands read as grippable. The color is a warm brown-black (median #231D1A) rather than cool charcoal #24282D."
+     },
+     {
+      "requirement": "\"Separate the hand area from the guard and pointed pommel. The handle should not read as a second blade.\"",
+      "met": "yes",
+      "evidence": "A red ferrule with a gold spacer ring sits at each end of the wrap (around (465,690) and (170,910)). The pommel is a faceted red-and-gold point. The handle is round and dark, nothing like the blade."
+     },
+     {
+      "requirement": "\"Start with a blade occupying roughly two thirds of total weapon length\"",
+      "met": "yes",
+      "evidence": "From the guard's front edge to the tips is about 60% of the pommel-to-tip length (about 62% including the blade root under the guard). That's slightly under two thirds but within the stated guide."
+     },
+     {
+      "requirement": "\"Place low amber heat along selected inner edges or a narrow channel near the opening. In idle, preserve clear dark space through the slot.\"",
+      "met": "partial",
+      "evidence": "Amber (#F58D28, hot #FFAB47) appears only at the U-shaped end of the slot near the root, about (640-670, 560-600), and in the gem. The slot stays dark and clear, but there is no defined channel along the inner edges for the equip ignition to travel along."
+     },
+     {
+      "requirement": "\"The energy... must not fill the entire opening with an opaque wall\"",
+      "met": "yes",
+      "evidence": "No glow across the slot. The bloom is small and local at the root."
+     },
+     {
+      "requirement": "Sec 3: \"Leave meaningful quiet surfaces. Concentrate detail at guards, connection points...\"",
+      "met": "yes",
+      "evidence": "Detail is concentrated at the guard, the blade root frame and the pommel. The rails carry only a few silhouette scallops and steps."
+     },
+     {
+      "requirement": "Sec 3: \"Ivory metal should still read as forged material... Avoid indiscriminate noisy grunge\"",
+      "met": "partial",
+      "evidence": "The bevel transitions are clean and the tips are crisply faceted, but cloudy mottling over the faces (e.g. (900-1100, 300-450)) reads as marble or bone more than forged metal."
+     },
+     {
+      "requirement": "Sec 3: \"Red elements are substantial structural pieces, enamel, or forged housings with visible thickness\"",
+      "met": "partial",
+      "evidence": "Chamfers show thickness, but painted fissure lines on the guard (around (500,470), (650,690) and (700,780)) read as cracked stone or rock."
+     },
+     {
+      "requirement": "Sec 3: \"Reserve the brightest highlights for important edges and focal materials\"",
+      "met": "partial",
+      "evidence": "The amber gem is the most saturated point, as intended. But the largest bright area is a broad glare on the lower rail's face mid-blade (#FBE0BF at (944,496)), while the coplanar upper rail at the same point is #CAAE94."
+     },
+     {
+      "requirement": "Sec 7: front, rear, side surfaces with intentional thickness; credible joints",
+      "met": "partial",
+      "evidence": "There is a single three-quarter view only. Thickness is hinted by the rail side planes, the inner wall and the tip facets. The rear face, side profile, guard thickness and blade-to-guard joint are not shown (see ambiguities)."
+     },
+     {
+      "requirement": "Family and house-style continuity (concept briefs \"Shared family\"; closest continuation of the original Iop blade)",
+      "met": "yes",
+      "evidence": "It keeps the original's ivory blade, red guard, long slot, twin points and forward-curving horns, but makes them heavier, as the brief asks. Ivory, red, gold rings and a dark wrap match Sunbound and Warlink, and the lighting is consistently from the top."
+     },
+     {
+      "requirement": "No third-party watermark or logo copied from references",
+      "met": "yes",
+      "evidence": "No marks or logos anywhere in the image."
+     }
+    ],
+    "issues": [
+     {
+      "severity": "medium",
+      "where": "Crescent guard horns: upper horn tip about (520,360), lower horn tip about (880,745)",
+      "problem": "The guard is not mirrored about the blade centerline. The upper horn reaches about 275 px out from the centerline and barely sweeps forward (its tip is at about 40% of total length). The lower horn reaches about 250 px but sweeps about 125 px further toward the tip (about 47.5%). A modeler would have to guess which one is correct.",
+      "fix": "Build the guard symmetric. Use the lower horn's forward sweep for both: each tip ends at about 47% of length and about 0.155 x total length out from the centerline, so the full span is about 0.31 x total length. Mirror the gold crescent inlays the same way."
+     },
+     {
+      "severity": "medium",
+      "where": "Bridge below the fork, about (1150-1230, 210-300)",
+      "problem": "The bridge is shorter along the blade than one rail is wide (about 65 px against about 85-90 px), and it appears sunk below the rail faces with chamfered flanks. At a distance or lower LOD it reads as a thin strut, which weakens the 'one forceful blade' requirement.",
+      "fix": "Make the bridge flush with the rail faces, at 85-100% of rail thickness, and at least one rail width long along the blade. Fillet it into the fork crotch above and the slot end below with radii of about 0.4 x rail width. Keep a single chamfer ring that continues the rail bevels."
+     },
+     {
+      "severity": "medium",
+      "where": "Pommel side of the guard, around the ferrule and neck block, about (420-500, 520-700)",
+      "problem": "The red ferrule, a red neck block, the guard body and two small rear spurs overlap as lumpy chunks with dark gaps between them. It's unclear how many parts there are and how the grip ferrule seats into the guard.",
+      "fix": "Define four clean parts. (1) Guard body: a crescent plate with a raised central boss. (2) Red neck collar, about 1.5 x grip diameter, about 0.02 x total length. (3) Gold spacer ring. (4) Red ferrule. Give the guard body exactly two small mirrored rear spurs and a smooth convex back contour."
+     },
+     {
+      "severity": "medium",
+      "where": "Grip wrap, about (200-460, 690-910), against the background",
+      "problem": "The wrap's value almost matches the background (median #231D1A against #252225). In the 96 px icon only the faint highlights on the wrap bands keep the handle visible. Its hue is also warm brown rather than the cool charcoal swatch, and slightly darker and browner than the Sunbound (#2C272B) and Warlink (#30272A) grips.",
+      "fix": "Set the wrap albedo to about #2E2F33 (cool charcoal), with band-edge highlights at about #57534F and gaps at about #17181B, and lower roughness slightly on the band crowns. Use the same wrap material on all three weapons. For inventory icons, add a rim light or use a mid-value backplate."
+     },
+     {
+      "severity": "medium",
+      "where": "Blade faces, especially mid-blade on both rails, (850-1150, 280-500)",
+      "problem": "Cloudy marble-like mottling across the broad faces makes the ivory read as stone or bone rather than forged metal. It works against sec 3's forged material and its warning against indiscriminate noisy grunge.",
+      "fix": "Paint broad directional gradients: lighter toward the outer edges, darker toward the slot's inner edges, a subtle warm-to-cool shift toward the tips (to #C9CDD0), crisp bright bevel lines, and a few edge nicks near the tips and the bridge. Use a low-amplitude hammered normal rather than cloud noise."
+     },
+     {
+      "severity": "medium",
+      "where": "Red guard body and horns: fissure lines near (500,470), (650,690) and (700,780)",
+      "problem": "The crack lines make the vermilion read as cracked rock or lava. The brief calls for enamel or forged housings.",
+      "fix": "Remove the through-cracks. Use enamel-style edge chipping on the horn tips and boss corners, slight value variation on the plates, and a darker deep-red (#702D27) in the recesses. Keep any wear at the edges."
+     },
+     {
+      "severity": "low",
+      "where": "Overall palette, sampled",
+      "problem": "The colors drift from the swatches. The ivory median #E9C8A8 is peachier and more saturated than #E5DDC7. The gold median #B67B3F is brassier than aged gold #9D7950. The amber core #F58D28 is more orange than #F5AB46. The red is fine (median #9D312A, light #D94D41, shadow #862A22). Part of the drift is the warm studio lighting.",
+      "fix": "Author the base color under neutral light: blade face about #E3D8C3, inner slot walls about #B9A58C, tip steel blending to #C9CDD0, gold #9D7950 with highlights about #C4A26E, amber emissive #F5AB46 with an orange falloff. Check against a grey backdrop."
+     },
+     {
+      "severity": "low",
+      "where": "Rail outer contours and tines, about (885,285) and the tips at (1470,20) and (1485,135)",
+      "problem": "There are small left/right asymmetries. The upper rail has an extra shoulder step at about 64% of length with no counterpart on the lower rail, and it measures 88-113 px wide against 81-90 px for the lower rail. The upper tine is wider (about 58 px against 35 px at 95% of length) and about 50 px longer, while the lower tine hooks inward more. The outer scallops at about 76-78% of length are roughly mirrored.",
+      "fix": "Mirror both rails about the slot centerline. Keep the paired outer scallops just before the bridge. Either add the shoulder step to the lower rail or remove it from the upper one (adding it is recommended for rhythm). Make the tines equal length with the same slight inward hook."
+     },
+     {
+      "severity": "low",
+      "where": "Upper vs lower rail faces at the same point along the blade, (862,370) vs (944,496)",
+      "problem": "The lighting is inconsistent: the lower rail carries a strong glare (#FBE0BF) while the coplanar upper rail is much darker (#CAAE94). This suggests the rails are tilted differently and puts the largest highlight mid-blade instead of at the focal area.",
+      "fix": "Model the rail faces as coplanar flats and let the bevels carry the highlights. Don't bake that glare into the base color. Let the guard connection and inner edges hold the strongest accents."
+     },
+     {
+      "severity": "low",
+      "where": "Amber heat at the slot root, about (640-670, 560-600)",
+      "problem": "The energy exists only as a glow at the U-shaped end plus the gem. There is no defined inner-edge channel for the brief's equip ignition to travel along toward the twin points.",
+      "fix": "Add a narrow recessed channel (about 8-10% of rail width) on both inner slot bevels, running from the root to the bridge, with a separate emissive mask. Idle: only the root third glows, at low intensity. Equip: a pulse travels up the channel to the bridge and fades toward the tips. The slot interior stays dark."
+     },
+     {
+      "severity": "low",
+      "where": "Gem bezel at the guard center, about (582,620)",
+      "problem": "The diamond bezel straddles the seam where the red guard meets the gold blade-root frame, overlapping the frame's lower corner. Its attachment is ambiguous (guard part or blade part).",
+      "fix": "Make the gem part of the guard boss: a rhombic gold bezel set into the boss, centered on the blade axis, with the blade root seated just behind it. Use a faceted amber crystal with low or no idle emission so it doesn't compete with the slot heat."
+     }
+    ],
+    "ambiguities": [
+     {
+      "where": "Rear face of the whole weapon",
+      "ambiguity": "It's unknown whether the gold root frame, horn inlays, gem and scallops repeat on the back.",
+      "resolution": "Make the blade, guard and pommel symmetric about the blade plane (mirror front to back). Use a double-sided gem (a bipyramidal crystal through the boss) or a matching gem on the back. Hidden-face detail should never just stop at the centerline."
+     },
+     {
+      "where": "Rail cross-section and blade thickness",
+      "ambiguity": "Only thin side bands are visible, so the true thickness and edge sharpness are unknown.",
+      "resolution": "Use a flattened hexagonal section per rail: central flat about 55-60% of rail width, thickness about 0.35-0.4 x rail width. Taper the outer bevels to a blunted edge about 25% of the center thickness. The inner (slot) edges are square walls with a 45-degree chamfer of about 15% of rail width, which also hosts the amber channel. Tines use a diamond section with a central ridge."
+     },
+     {
+      "where": "Slot interior walls",
+      "ambiguity": "Only the upper rail's inner wall is visible, and the depth treatment at the U-shaped end isn't defined.",
+      "resolution": "Flat inner walls the full rail thickness deep, chamfered to both faces, with a rounded U at the root (radius = half the slot width). Paint them darker (#8A7462 to #6A5040), not black."
+     },
+     {
+      "where": "Bridge depth and shape",
+      "ambiguity": "The bridge appears recessed, so it's unclear whether it is thinner than the rails.",
+      "resolution": "Build it flush and 90-100% as thick as the rails, with a concave top forming the fork crotch and a flat bottom forming the slot end. It must not be a separate floating bar."
+     },
+     {
+      "where": "Blade-to-guard joint",
+      "ambiguity": "It's unclear whether the blade root sits on top of the guard, butts against it, or passes through it.",
+      "resolution": "The blade root (the area inside the gold cusp frame) passes through a slot in the guard body. The boss wraps the front and back of the root by about 0.02 x total length. A hidden tang runs through the grip to the pommel. Make the guard body about 1.4 x blade center thickness at the boss, tapering to about 0.5 x at the horn tips."
+     },
+     {
+      "where": "Horn curvature out of plane",
+      "ambiguity": "It's unclear whether the horns bend toward or away from the viewer.",
+      "resolution": "Keep both horns in the guard plane (perpendicular to the blade, coplanar with it), swept forward in-plane only, with beveled edges and recessed gold crescent channels on both faces."
+     },
+     {
+      "where": "Guard rear spurs",
+      "ambiguity": "The pommel-side contour has one or two indistinct small points.",
+      "resolution": "Exactly two small mirrored rear spurs, each about 0.25 x horn length, pointing back toward the grip at about 45 degrees."
+     },
+     {
+      "where": "Grip cross-section and wrap",
+      "ambiguity": "It's unclear whether the wrap is modeled geometry or texture, and whether the grip is round or oval.",
+      "resolution": "Slightly oval grip (about 1.12:1, long axis in the blade plane), with a 6-8 turn helical wrap modeled as a shallow relief (about 4-6% of diameter) or as a baked normal map on a low-poly cylinder. Taper the grip about 5% thicker near the guard."
+     },
+     {
+      "where": "Pommel construction",
+      "ambiguity": "It's unclear whether the pommel has three or four sides and where the gold sits.",
+      "resolution": "A four-sided faceted pyramid, rotated 45 degrees to the blade plane. Red enamel panels on each face, gold strips along the four ridges and a gold base band, then a red collar and a gold spacer ring before the wrap."
+     }
+    ],
+    "strengths": [
+     "The split silhouette survives downsampling to 96 px: slot, fork notch, both tips and the crescent horns all stay readable.",
+     "The opening is truly empty (slot pixels match the background), and a shaded inner wall gives it depth instead of a painted line.",
+     "The structure matches the brief: two thick rails, each wider than the slot, a bridge below the fork, and two separate tips.",
+     "The blade faces are quiet, and the detail sits at the guard connection, the blade root and the pommel, as section 3 asks.",
+     "Clear three-way value grouping: light ivory blade, mid-value red guard and pommel, dark grip. A small saturated amber accent marks the focal point.",
+     "The guard uses a few large swept points rather than many spikes, and its forward-curving horns continue the original house-style guard.",
+     "The hand zone is clearly framed by red ferrules and gold spacer rings, and the pointed pommel is distinct. The grip is long enough for two hands and never reads as a second blade.",
+     "Strong family match with Sunbound and Warlink (ivory, vermilion, gold rings, wrapped grips) while staying the most distinctive silhouette of the three.",
+     "The idle amber is restrained and the slot stays dark.",
+     "No copied watermark or logo."
+    ],
+    "build_spec": {
+     "parts": [
+      {
+       "name": "Blade_Main (single mesh: root, two rails, bridge, two tines)",
+       "material": "Warm ivory forged metal (base about #E3D8C3, cool steel blend toward the tips)",
+       "shape": "Broad root into two parallel rails with a long open slot, a flush bridge, then a fork notch and two diamond-section tines. Mirrored outer contour with one shoulder step per rail at about 64% and a crescent scallop per rail at about 76%.",
+       "approx_proportion": "Blade runs from about 40% to 100% of total length L (0.60 L long). Width at root about 0.14 L. Each rail about 0.052 L wide. Slot about 0.036 L wide, from 0.45 L to 0.78 L. Bridge from 0.78 to 0.82 L (at least one rail width long). Tines about 0.18 L long. Rail thickness about 0.019 L at the center flat, edges about 0.005 L."
+      },
+      {
+       "name": "Blade_RootFrame_Gold",
+       "material": "Aged gold, shallow raised inlay",
+       "shape": "Cusped, ogee-shaped frame around the slot's U-end, its points directed up the blade. Front and back.",
+       "approx_proportion": "Spans about 0.40-0.50 L along the blade. Strip width about 0.008 L, relief about 0.002 L."
+      },
+      {
+       "name": "Slot_EnergyChannel (VFX mask / emissive inset)",
+       "material": "Amber emissive (#F5AB46 core) on a dark recessed groove",
+       "shape": "Narrow groove on both inner slot chamfers, from the root U to the bridge. Separate emissive mask or thin separate mesh.",
+       "approx_proportion": "Groove width about 0.004 L, depth about 0.002 L, from 0.45 to 0.78 L."
+      },
+      {
+       "name": "Guard_Crescent",
+       "material": "Vermilion enamel / forged red (#B93C2B lit, #702D27 recesses)",
+       "shape": "Symmetric crescent plate perpendicular to the blade. Two large horns swept forward in-plane, two small rear spurs, a raised central boss wrapping the blade root, beveled edges.",
+       "approx_proportion": "Span about 0.31 L. Axial depth at center about 0.08 L (about 0.33-0.41 L along the length), horn tips at about 0.47 L. Thickness about 1.4 x blade thickness at the boss, about 0.5 x at the horn tips."
+      },
+      {
+       "name": "Guard_HornInlays_Gold (x4: two per face)",
+       "material": "Aged gold",
+       "shape": "Crescent channels following the inner curve of each horn",
+       "approx_proportion": "Each about 0.07 L long and about 0.012 L wide at the widest point, shallow relief."
+      },
+      {
+       "name": "Guard_Gem + Bezel",
+       "material": "Amber faceted crystal in an aged-gold rhombic bezel",
+       "shape": "Rhombic table-cut gem set into the boss on the blade axis. Double-sided or mirrored on the back.",
+       "approx_proportion": "Long axis about 0.045 L, short axis about 0.03 L. Bezel rim about 0.005 L. Protrudes about 0.006 L from the boss."
+      },
+      {
+       "name": "Guard_NeckCollar + GoldSpacer + Ferrule_Upper",
+       "material": "Vermilion collar and ferrule, aged-gold spacer ring",
+       "shape": "Stacked cylindrical rings with chamfered edges",
+       "approx_proportion": "Together about 0.03 L along the length, diameter about 1.4-1.5 x grip diameter."
+      },
+      {
+       "name": "Grip_Wrap",
+       "material": "Charcoal leather wrap (#2E2F33 base, lower sheen than the metals)",
+       "shape": "Slightly oval cylinder with a 6-8 turn helical wrap relief, about 5% thicker near the guard.",
+       "approx_proportion": "About 0.19 L of wrap (roughly 0.10-0.29 L), diameter about 0.031 L. About 7 diameters long, enough for two hands. Tune to the avatar rig."
+      },
+      {
+       "name": "Ferrule_Lower + GoldSpacer",
+       "material": "Vermilion ring and aged-gold spacer",
+       "shape": "Chamfered rings between the wrap and the pommel",
+       "approx_proportion": "About 0.025 L along the length, diameter about 1.35 x grip."
+      },
+      {
+       "name": "Pommel_Point",
+       "material": "Vermilion enamel panels with aged-gold ridge strips and a base band",
+       "shape": "Four-sided faceted pyramid pointing away from the blade, rotated 45 degrees to the blade plane",
+       "approx_proportion": "About 0.075 L long (0-0.075 L), max width about 0.05 L."
+      }
+     ],
+     "sampled_palette": [
+      "Blade ivory lit face (median): #E9C8A8",
+      "Blade ivory shadow: #C5A88B",
+      "Blade ivory highlight/bevel: #FAE7D2",
+      "Blade rail side plane: #8B7467",
+      "Slot inner wall (shaded): #60412F",
+      "Tine cool steel shading: #89828A / #A08B80",
+      "Vermilion guard (median): #9D312A",
+      "Vermilion highlight: #D94D41",
+      "Vermilion shadow / deep red: #862A22 / #651A11",
+      "Gold (median): #B67B3F",
+      "Gold shadow / highlight: #93603D / #CE9552",
+      "Amber core / hot / falloff: #F58D28 / #FFAB47 / #F8850C",
+      "Grip wrap median / band highlight / gaps: #231D1A / #44352F / #1A140F",
+      "Background (presentation only): #252225",
+      "Recommended neutral-light albedo targets: ivory #E3D8C3, inner walls #B9A58C, tip steel #C9CDD0, vermilion #B93C2B, deep red #702D27, aged gold #9D7950, wrap #2E2F33, amber emissive #F5AB46"
+     ],
+     "notes": "Proportions are fractions of total length L, measured along the pommel-tip-to-blade-tip axis of the image (1686 px). They are design ratios; set the absolute scale against the Roblox avatar. Mirror everything left/right about the slot centerline and front/back about the blade plane. The concept's asymmetries in the guard horns, rail steps and tine lengths are generation artifacts and should not be reproduced. Seven parts are enough to cover the material and VFX split: Blade_Main, the root-frame and horn gold inlays (can be merged into one gold mesh), Guard (body plus collars), Gem, Grip_Wrap, Pommel, plus an emissive mask for the slot channel. Suggested pivot: the center of the upper half of the grip on the blade axis. VFX attachments: one at the slot root, one at the bridge, one per tine tip. Painting: broad gradients plus crisp bevel highlights instead of the concept's marble mottling, and enamel edge chips instead of rock cracks. Keep the slot see-through from every angle; check with effects off from the front, rear, side and three-quarter views. Budget guide: 4k-12k triangles."
+    }
+   },
+   "verify": {
+    "checks": [
+     {
+      "claim": "Issue: guard horns not mirrored (upper horn sweeps forward less than lower horn)",
+      "verdict": "confirmed",
+      "reason": "Measured along the PCA weapon axis (L=1720 px), the upper horn tip is at t=0.424 and the lower at t=0.484, about 0.06 L (~100 px) apart. The upper horn hooks back hard, while the lower one is a long forward-swept crescent. The lateral reach differs less than claimed (0.158 L vs 0.153 L, ~272 vs ~263 px, not 275 vs 250), and the forward offset is ~100 px rather than 125. The core claim holds."
+     },
+     {
+      "claim": "Issue: bridge is short and recessed, reads as a strut",
+      "verdict": "confirmed",
+      "reason": "On the bridge crop (1080-1520, 150-360) it is a waisted, hourglass strut with concave ends. Its face sits below the rail faces, with chamfered walls visible on both sides. The silhouette is one solid segment only from t~0.775 to ~0.81 (about 0.035 L, ~60 px), against a rail width of 0.048-0.053 L (83-91 px)."
+     },
+     {
+      "claim": "Issue: pommel-side guard stack is lumpy and unclear",
+      "verdict": "confirmed",
+      "reason": "In the guard-rear crop, the red ferrule, a thin gold ring, a chamfered red neck block, and the guard body with its upper rear spur stack up as separate cracked blocks with dark gaps between them (around 420-520, 520-720). Part count and seating are not clear."
+     },
+     {
+      "claim": "Issue: grip wrap value nearly matches background; warm brown not cool charcoal",
+      "verdict": "confirmed",
+      "reason": "My masked median for the wrap is #241A17 against a background of #252225. The value is almost identical and the hue is warm brown. In the 96x64 downsample the handle survives only as a faint brown line. Minor nit: the wrap is one overlapping helical strap, not 'crossing bands'."
+     },
+     {
+      "claim": "Issue: cloudy marble-like mottling on blade faces",
+      "verdict": "confirmed",
+      "reason": "The mid-blade crop (780-1180, 300-560) shows soft cloudy blotches across both rail faces. The house-style ref has smoother graded faces. It's a texture-painting issue, not geometry, so medium severity is at the high end of fair."
+     },
+     {
+      "claim": "Issue: crack/fissure lines on red guard read as rock",
+      "verdict": "confirmed",
+      "reason": "Fine dark through-lines are visible on the upper plate near (500,470), on the lower plate near (650,690)/(700,780), and on the neck block. They read as stone fissures rather than enamel chips. The same treatment shows up on the pommel panels."
+     },
+     {
+      "claim": "Issue: palette drift (ivory peach, gold brassy, amber orange; red fine)",
+      "verdict": "confirmed",
+      "reason": "Independent masked medians: ivory #E6C8AB, gold #A66E3F, red #942E26. Ivory and gold drift as described. The red is darker than the #B93C2B swatch, so calling it 'fine' is slightly generous. Their albedo target fixes that anyway."
+     },
+     {
+      "claim": "Issue: upper rail has extra shoulder step at ~64% with no counterpart; tines unequal",
+      "verdict": "overstated",
+      "reason": "The lower rail does have a matching but much smaller step: a notch at (1007,482), which projects to t=0.627, the same station as the upper shoulder at (885,285), also t=0.627. The real problem is a size mismatch, not a missing feature. The tine part is confirmed: the tips are at t=0.998 vs 0.970 (~48 px), and at t=0.94 the upper tine is ~53 px wide vs ~29 px for the lower."
+     },
+     {
+      "claim": "Issue: inconsistent rail lighting (lower rail glare vs darker upper rail)",
+      "verdict": "confirmed",
+      "reason": "I sampled #FDE2C2 at (944,496) and #CAAE95 at (862,370). In the mid-blade crop the lower rail is visibly brighter along most of its length. Severity is low, as stated."
+     },
+     {
+      "claim": "Issue: amber exists only at slot root and gem, no channel",
+      "verdict": "confirmed",
+      "reason": "The glow sits only at the U-end of the slot (~640-680, 560-600) and in the gem. Neither inner edge has a continuous emissive line or groove up toward the bridge."
+     },
+     {
+      "claim": "Issue: gem bezel straddles guard/root-frame seam",
+      "verdict": "confirmed",
+      "reason": "The rhombic bezel at about (582,620) sits across the diagonal seam between the red body and the ivory/gold root frame, overlapping the frame's lower cusp. Ownership is ambiguous."
+     },
+     {
+      "claim": "Invariant partial: opening is true 3D space",
+      "verdict": "confirmed",
+      "reason": "Slot pixels (#2C272B at (906,437)) match the background. The only inner wall visible is the upper rail's brown band (#5F402F). The lower rail's inner wall and the back view can't be seen, so 'partial' is correct for a single view."
+     },
+     {
+      "claim": "Invariant partial: substantial bridge",
+      "verdict": "confirmed",
+      "reason": "Same evidence as the bridge issue: a short, waisted, recessed strut."
+     },
+     {
+      "claim": "Invariant partial: warm ivory/steel faces",
+      "verdict": "confirmed",
+      "reason": "The faces are broad and quiet, but the ivory median is #E6C8AB (peach). Cool steel appears only on the tip facets (#A6A0AB at (1470,20))."
+     },
+     {
+      "claim": "Invariant partial: guard depth and overlap with blade base",
+      "verdict": "confirmed",
+      "reason": "The ivory root meets the red body along a diagonal butt line with a small bevel step. Nothing shows the guard wrapping the blade, and the pommel-side blocks are muddled."
+     },
+     {
+      "claim": "Invariant partial: low amber along inner edges/channel",
+      "verdict": "confirmed",
+      "reason": "The heat is a localized bloom at the root only, with no channel."
+     },
+     {
+      "claim": "Invariant partial: forged ivory, avoid noisy grunge",
+      "verdict": "confirmed",
+      "reason": "Bevels and tip facets are crisp. The cloud mottling on the faces is the weak point."
+     },
+     {
+      "claim": "Invariant partial: red as enamel/forged housings",
+      "verdict": "confirmed",
+      "reason": "The chamfers give thickness, but the fissure lines read as stone."
+     },
+     {
+      "claim": "Invariant partial: brightest highlights reserved for focal areas",
+      "verdict": "confirmed",
+      "reason": "The gem is the saturation peak, but the largest bright area is the lower rail face at mid-blade."
+     },
+     {
+      "claim": "Invariant partial: sec 7 hidden surfaces and joints",
+      "verdict": "confirmed",
+      "reason": "There is only one three-quarter view. The rear, side profile and joint construction are not shown."
+     },
+     {
+      "claim": "Ambiguity: rear face of whole weapon",
+      "verdict": "confirmed",
+      "reason": "Single view. The back is never shown."
+     },
+     {
+      "claim": "Ambiguity: rail cross-section/thickness",
+      "verdict": "confirmed",
+      "reason": "Only thin side bands (#8C7568 at (963,525)) and the upper inner wall hint at thickness. Resolving to a flattened hex section is reasonable."
+     },
+     {
+      "claim": "Ambiguity: slot interior walls",
+      "verdict": "confirmed",
+      "reason": "Only the upper rail's inner wall is visible. The U-end shows a light bevel ring plus gold frame, but its depth is undefined. Their wall paint (#8A7462-#6A5040) contradicts their own build-spec albedo target (#B9A58C); see missed."
+     },
+     {
+      "claim": "Ambiguity: bridge depth/shape",
+      "verdict": "confirmed",
+      "reason": "The bridge face is visibly recessed below the rail faces in the crop."
+     },
+     {
+      "claim": "Ambiguity: blade-to-guard joint",
+      "verdict": "confirmed",
+      "reason": "A diagonal butt joint, with no visible wrap or slot."
+     },
+     {
+      "claim": "Ambiguity: horn out-of-plane curvature",
+      "verdict": "confirmed",
+      "reason": "Both horns show inner chamfer faces at different apparent angles. Keeping them in-plane is a sensible resolution."
+     },
+     {
+      "claim": "Ambiguity: guard rear spurs 'one or two indistinct small points'",
+      "verdict": "overstated",
+      "reason": "Two rear points are clearly visible: a large one on the upper half at about (380,565) and a smaller one at the base of the lower crescent at about (600,810). They are distinct but strongly asymmetric. The upper spur is far from '0.25 x horn length small', so the resolution changes the design rather than clarifying it."
+     },
+     {
+      "claim": "Ambiguity: grip cross-section/wrap",
+      "verdict": "confirmed",
+      "reason": "A single helical strap is visible. Section and relief depth are unknowable from one view."
+     },
+     {
+      "claim": "Ambiguity: pommel construction",
+      "verdict": "confirmed",
+      "reason": "Only two red faces are visible, split by a gold ridge, with a gold base frame. A four-sided pyramid is a reasonable reading."
+     }
+    ],
+    "missed": [
+     {
+      "severity": "low",
+      "where": "Slot root U-end, inside the void at about (640-690, 560-600)",
+      "problem": "The amber bloom spills into the empty slot itself: the background inside the opening reads #73351A at (660,580) against #252225 elsewhere. A modeler could read this as a glow sprite or volume placed in the void. That conflicts with 'preserve clear dark space through the slot', and once rendered as geometry or a particle it would partly fill the opening.",
+      "fix": "Put the emissive only on the inner-wall channel and U-end chamfer surfaces, keep idle bloom post-process-only and low, and verify the slot pixels match the backdrop with effects on at idle."
+     },
+     {
+      "severity": "low",
+      "where": "Build spec vs ambiguity resolution: slot inner wall color",
+      "problem": "The ambiguity section says to paint the inner walls #8A7462-#6A5040, while the build-spec albedo targets say inner walls #B9A58C. They conflict, and the darker values are lit/shaded samples, not albedo.",
+      "fix": "Use a single albedo (about #B9A58C) and let AO and the cavity give the darker look in render. Drop the painted-dark instruction, or label it as a baked-AO target."
+     },
+     {
+      "severity": "low",
+      "where": "Grip length: invariant evidence vs build_spec",
+      "problem": "The invariant claims the wrap is about 22% of total length, while the build spec gives 0.19 L (0.10-0.29 L). The measured ferrule centers sit at t=0.083 and t=0.296 (0.21 L center to center), so the spec's own numbers disagree.",
+      "fix": "State the wrap as about 0.19-0.20 L between the ferrule inner faces, then tune to the avatar's two-hand spacing."
+     },
+     {
+      "severity": "low",
+      "where": "Upper guard rear spur, about (380,565)",
+      "problem": "The upper half's rear spur is a large, laterally reaching point that nearly matches the horn in visual weight, while the lower half's rear point is small. The 'exactly two small spurs at 0.25 x horn length' resolution quietly shrinks a prominent silhouette feature without saying so.",
+      "fix": "Decide explicitly: mirror the small lower spur (cleaner, the recommended route) and note that the large upper spur is being removed as an artifact. Or mirror the large one if the guard needs more pommel-side mass at icon size."
+     }
+    ],
+    "verdict_agrees": true,
+    "corrected_verdict": "pass_with_fixes"
+   }
+  },
+  {
+   "concept": "sunbound",
+   "qc": {
+    "verdict": "pass_with_fixes",
+    "overall": "Sunbound does its main job. It reads at once as a solid, continuous broad sword with no fork or slot, and it sits clearly apart from Oathsplitter in silhouette. The gold sun disk is a real layered boss: raised rim, inner star, faceted gem center, and it sits on the junction of the guard arms. The cloth is short, cleanly rooted and clear of the grip. The main gaps are against the written brief. The broad face is painted warm peach-ivory, not the pearl steel the brief asks for. The vermilion spine is a hairline that disappears at icon size. The gold, especially the large bright pommel block, is warmer and louder than a restrained aged-gold accent. The face carries a baked camera-dependent hotspot. All of these can be fixed in modeling and texturing without redoing the concept.",
+    "invariants": [
+     {
+      "requirement": "\"Create one solid broad sword with a continuous blade.\"",
+      "met": "yes",
+      "evidence": "Single unbroken blade plate from the stepped root flare (~x540-860) to the tip (~1505,25). No openings, the face is uninterrupted, and it is broad, about 13% of total length wide."
+     },
+     {
+      "requirement": "\"no fork, no long central slot, and no duplicated split-blade assembly\" / must be visibly different from Oathsplitter",
+      "met": "yes",
+      "evidence": "There is one symmetric spear-type point and no negative space anywhere in the blade. Next to 01_Oathsplitter.webp the twin rails and slot are absent, so the silhouettes separate at a glance."
+     },
+     {
+      "requirement": "\"heavy, decisive cutting shape\" / \"decisive executioner-like shape\" (concept brief)",
+      "met": "partial",
+      "evidence": "Heavy and broad with near-parallel edges and a stepped root flare. The tip is a symmetric diamond/spear point (kinks at ~1255,60 and ~1370,197), which reads more as a broadsword than an executioner's squared or clipped head. Acceptable if this is the approved image."
+     },
+     {
+      "requirement": "\"a broad quiet pearl-steel face\"",
+      "met": "partial",
+      "evidence": "The face is quiet, with no runes or noise. It is painted warm peach-ivory (sampled #D5BEA8 mid, #FAE2CC hotspot), well off pearl steel #C9CDD0. Only the edge bevels read cool (#F3E6E5 lit, #706366 shade)."
+     },
+     {
+      "requirement": "\"vermilion central spine/inlay concentrated near the blade root\"",
+      "met": "yes",
+      "evidence": "A red inlay comes out from under the disk at about 2 o'clock and tapers to a point near (880,385), roughly the first 30% of the exposed blade. Sampled #AB3833 / #933025."
+     },
+     {
+      "requirement": "\"with a readable assembly relationship to the pale blade\"",
+      "met": "partial",
+      "evidence": "The inlay sits in a beveled groove and visibly continues from the red guard body under the disk, which is a plausible langet. It is only ~8-10 px wide on a ~220 px blade, and in the 64 px icon test it is a faint line, so the assembly does not read at distance."
+     },
+     {
+      "requirement": "\"Keep the broad outer cutting perimeter pearl steel; do not add a full red outer-edge frame.\"",
+      "met": "yes",
+      "evidence": "Both edge bevels and the tip facets are pale and cool. Red appears only on the guard, the inner inlay and the collars."
+     },
+     {
+      "requirement": "\"a compact aged-gold sunburst-like disk the main focal ornament\" near the guard",
+      "met": "yes",
+      "evidence": "Circular disk about 9-10% of total length in diameter, centered on the guard hub (~565,540), with a 12-point star and radiating ivory relief rays on the blade root. It holds focus in both the full image and the icon test. The color is brighter and more orange than aged gold (#B6844F rim, #965723 star shade)."
+     },
+     {
+      "requirement": "\"mechanically attached, with a center, depth, and clear layering, rather than a flat oversized sticker\"",
+      "met": "yes",
+      "evidence": "Layers from back to front are red guard arms, then a raised gold rim with a beveled inner wall, then a recessed star field, then a faceted red gem center. The rim overlaps both arms and the blade root, and its cast shadow and thickness are visible on the lower-right side."
+     },
+     {
+      "requirement": "\"Keep the perimeter simple enough to read at inventory size\"",
+      "met": "yes",
+      "evidence": "The outer rim is a plain circle. At 64x43 px the disk reads as a gold roundel with a red dot."
+     },
+     {
+      "requirement": "\"Place small red or gold echoes elsewhere only where they connect the collection\"",
+      "met": "partial",
+      "evidence": "Red/gold collars at both ends of the grip are appropriate echoes. The pommel is a large faceted gold block with a bright #EEC385 highlight, a second gold mass rather than a small echo."
+     },
+     {
+      "requirement": "\"short ivory cloth or seal streamer at a pommel attachment, clear of the hand grip\"",
+      "met": "yes",
+      "evidence": "An ivory streamer hangs from a gold loop and gold/red binding cap at the pommel butt (~45-80, 870-910). It flows below and away from the wrap and never crosses the grip."
+     },
+     {
+      "requirement": "\"without becoming the main silhouette or covering the blade\" / \"Avoid ... an enormous tail\"",
+      "met": "yes",
+      "evidence": "About 24% of total length and about 4.5% wide, kept entirely in the lower-left corner, far from the blade."
+     },
+     {
+      "requirement": "\"readable fabric width and a clean attachment ... a stable root, a controlled free end\"",
+      "met": "yes",
+      "evidence": "Root is gathered in a gold cylinder cap with a red band on a ring. The free end is a clean angled cut with a red chevron mark. There is one half-twist near the root."
+     },
+     {
+      "requirement": "\"reasonable clearance from fingers and forearms\"",
+      "met": "partial",
+      "evidence": "The root is beyond the pommel, so it is clear of the hand at rest. Forearm clearance during swings cannot be judged from a static image and must be checked on the rig."
+     },
+     {
+      "requirement": "\"effects ... concentrated around the guard disk and selected spine seams\"",
+      "met": "partial",
+      "evidence": "There is amber glow only at the lower 3-4 star points of the disk (~555-600, 575-590) and none on the spine seams. A stray orange spark floats at ~(465,465) beside the upper guard arm."
+     },
+     {
+      "requirement": "Shared: \"Leave meaningful quiet surfaces. Concentrate detail at guards, connection points...\"",
+      "met": "yes",
+      "evidence": "Detail sits in the guard/disk/root-ray cluster and the pommel. The remaining ~70% of the blade face is clean."
+     },
+     {
+      "requirement": "\"The dark usable grip separates the decorated guard from the pommel\" / \"Charcoal wraps should look grippable and less reflective\"",
+      "met": "yes",
+      "evidence": "Matte spiral leather wrap between red/gold collars. Value is clearly the darkest material (#211817-#3B2F31), although the hue is warm plum-brown rather than cool charcoal #24282D."
+     },
+     {
+      "requirement": "\"Red elements are substantial structural pieces ... with visible thickness\"",
+      "met": "partial",
+      "evidence": "Guard arms and collars show chunky beveled thickness (lit #B0373D, shade #77150E). The spine inlay is too thin to read as a structural piece."
+     },
+     {
+      "requirement": "\"Reserve the brightest highlights for important edges and focal materials\" / painted highlights must not depend on one camera angle",
+      "met": "partial",
+      "evidence": "The brightest large value in the image is a soft hotspot in the middle of the blade face (~1150,300, #FAE2CC), not an edge or the focal disk. It is camera-dependent lighting baked into the paint."
+     },
+     {
+      "requirement": "Section 7: hidden surfaces (rear, side, guard, grip, pommel) with intentional thickness and credible joints",
+      "met": "partial",
+      "evidence": "Only one three-quarter front view is shown. Blade cross-section, guard depth, the rear of the disk and the pommel lug are not shown; resolutions are listed under ambiguities."
+     }
+    ],
+    "issues": [
+     {
+      "severity": "medium",
+      "where": "Broad blade face, whole length (e.g. ~1000,380 and ~1250,200)",
+      "problem": "The face is warm peach-ivory (#D5BEA8 to #FAE2CC), not the brief's pearl steel #C9CDD0. Sunbound loses the cooler pearl identity that is meant to set its calm face apart, and it drifts toward Oathsplitter's warm ivory blade.",
+      "fix": "Texture the face as a pearl-ivory blend: base about #D3D1CB with cool pearl #C9CDD0 dominant toward the tip and edges, and keep warmth (#E5DDC7) only near the root rays. Keep the warm/cool contrast with the bevels, but make the face the cooler of the two family blades."
+     },
+     {
+      "severity": "medium",
+      "where": "Red spine inlay, from the disk at 2 o'clock to its tapered end near (880,385)",
+      "problem": "The inlay is a hairline, about 4% of blade width. It vanishes at inventory size and reads more as a painted stripe than an assembled part, which weakens a top-two priority ('pearl face versus red spine').",
+      "fix": "Model it as a separate inset strip, about 10-12% of blade width at the root, tapering to a point at about 35% of exposed blade length. Seat it in a V-channel with visible ivory bevel walls about 1.5x the strip width, raise it slightly proud of the channel floor, and run it under the disk into the guard body as one red langet piece. Mirror it on the rear face."
+     },
+     {
+      "severity": "medium",
+      "where": "Blade face hotspot around (1100-1200, 260-330)",
+      "problem": "A large soft specular bloom is baked into the paint and is the brightest value on the object. It competes with the focal disk and only works for this camera, which the brief forbids.",
+      "fix": "Do not paint it into the albedo. Use a broad, even face gradient (slightly lighter toward the spine, darker toward the inner bevel line) with edge-only highlights, and let the optional inspection sweep be a moving shader or VFX highlight."
+     },
+     {
+      "severity": "medium",
+      "where": "Pommel block (~40-150, 790-900) and all gold parts",
+      "problem": "The pommel is a big faceted gold mass with a near-cream highlight (#EEC385). All gold runs saturated orange (#B6844F, #965723) instead of the muted aged gold #9D7950, so at icon size there are two competing gold focal blobs at opposite ends.",
+      "fix": "Shrink the pommel by about 20% and make its main body red (#B93C2B) or dark steel, keeping gold to a faceted end cap and the loop, matching Oathsplitter's red-and-gold pommel logic. Desaturate all gold toward #9D7950 and reserve brighter gold only for the disk rim edge."
+     },
+     {
+      "severity": "low",
+      "where": "Grip wrap (~180-420, 640-760)",
+      "problem": "The wrap is short (about 16% of total length, versus about 22% on Oathsplitter) for such a broad, heavy blade. It is unclear whether this is one- or two-handed.",
+      "fix": "Decide the hold on the actual avatar. If it is two-handed, extend the wrap by about 25% (to about 20% of total length) and keep the blade length fixed. Keep the collars so the hand zone stays clearly bounded."
+     },
+     {
+      "severity": "low",
+      "where": "Disk star points, lower-left only (~555-600, 575-590)",
+      "problem": "Amber glow appears only on the lower three or four star points. That is lighting-inconsistent and shows no 'selected spine seams' accent.",
+      "fix": "Treat the glow as emissive, not lighting. In idle, use a small even ring of low emission between the star points and around the gem. On reveal, brighten the disk briefly and run a short pulse along both edges of the red spine channel, then settle back."
+     },
+     {
+      "severity": "low",
+      "where": "Floating spark left of the upper guard arm (~465,465)",
+      "problem": "A stray ember particle sits off the object with no source. It is either a generation artifact or unexplained VFX.",
+      "fix": "Ignore it for modeling. If sparks are wanted, emit them only from the disk during the reveal."
+     },
+     {
+      "severity": "low",
+      "where": "Grip wrap color (#211817 to #3B2F31)",
+      "problem": "The wrap is warm plum-brown rather than cool charcoal #24282D, which reduces hue separation from the deep-red shadows of the collars (#77150E/#88231B).",
+      "fix": "Push the wrap base toward #2A2B2F with cool highlights around #4A4D52 and keep it low-roughness-contrast. Apply the same correction to Oathsplitter and Warlink so the family stays matched."
+     },
+     {
+      "severity": "low",
+      "where": "Cloth marking, free end (~330-440, 880-990)",
+      "problem": "The red chevron and bracketed-diamond glyph is half-legible and could read as lettering. It is also detailed enough to draw the eye away from the disk.",
+      "fix": "Keep it as a texture-only mark. Simplify it to the chevron plus a single diamond, make sure it is an original glyph rather than text or a third-party mark, and keep it at about 70% opacity of the vermilion."
+     },
+     {
+      "severity": "low",
+      "where": "Pommel loop attachment (~40-70, 860-910)",
+      "problem": "The gold ring comes out of a side facet of the pommel with no visible lug or eye, so the join is undefined.",
+      "fix": "Add a short eye lug on the pommel's end axis with a real through-hole, pass the ring through it, and hang the cloth cap from the ring. The ring stays rigid; the cloth bones start below the cap."
+     },
+     {
+      "severity": "low",
+      "where": "Whole image versus 00_original_style_ref.webp",
+      "problem": "Rendering has moved from the reference's flat painterly planes, thin orange-red guard and slim handle to heavier glossy bevels and a crimson-leaning red. The drift is shared by all three new concepts, so the family is internally consistent.",
+      "fix": "No concept change. In texturing, warm the reds slightly toward vermilion (#B93C2B, with green above blue) and keep painted value blocks broad so the result sits between the original reference and the new concepts."
+     }
+    ],
+    "ambiguities": [
+     {
+      "where": "Blade cross-section and thickness",
+      "ambiguity": "Only the front face is visible. It is unclear whether the face is flat, or has a central ridge or fuller, and how thick the blade is.",
+      "resolution": "Use a flattened hexagon cross-section: a flat central face on both sides, edge bevels about 12% of width on each side ending in a blunt land (about 0.4% of total length, not knife-thin). Core thickness about 3% of total length at the root, tapering to about 2% near the tip. The red inlay channel is the only recess. The rear face mirrors the front, including the inlay and rays."
+     },
+     {
+      "where": "Ivory sun rays on the blade root around the disk",
+      "ambiguity": "It is unclear whether the rays are geometry, shallow relief or texture, and whether they repeat on the back.",
+      "resolution": "Model them as shallow relief (about 0.5% of total length) beveled into the blade root on both faces, around 10 rays radiating from the disk center. Bake to normal maps if the triangle budget needs it. Do not add further rays elsewhere on the blade."
+     },
+     {
+      "where": "Disk, gem and guard on the rear side",
+      "ambiguity": "It is unclear whether the disk and gem appear on both faces, and how they mount to the guard and tang.",
+      "resolution": "Make the guard one red body with a central hub that has a slot for the blade tang. Mount a gold disk boss on each face of the hub, with a matching star and gem on the rear (or a plain star with a gold boss on the rear if the budget is tight). Disk thickness is about 1.5% of total length per side, the rim stands about 0.6% proud, and the gem is a separate low-poly faceted mesh for emissive control."
+     },
+     {
+      "where": "Guard arm depth and swallowtail ends",
+      "ambiguity": "Arm thickness along the blade axis is not shown, and it is unclear whether the V-notched ends are flat or beveled.",
+      "resolution": "Make the arms about 1.3x blade core thickness with a chamfered top and bottom. Each arm ends in a two-point swallowtail with a concave V notch about 30% of arm width. Inset the gold chevron trims as separate thin strips about 0.3% of length proud of the arm surface, on both faces."
+     },
+     {
+      "where": "Blade-to-guard junction",
+      "ambiguity": "It is unclear whether the ivory blade root passes through the guard or sits on its face.",
+      "resolution": "Insert the blade root into the guard slot so the stepped root flare overlaps the guard by about 2% of total length on both faces. The red spine inlay is continuous with the guard hub as one part, which gives a readable langet. The tang continues hidden through the collars into the grip core."
+     },
+     {
+      "where": "Pommel, ring and cloth root",
+      "ambiguity": "How the ring attaches, the shape of the pommel's rear facets, and where the cloth root sits relative to the grip axis.",
+      "resolution": "Use a faceted octagonal pommel with an end eye lug on the grip axis, a rigid gold ring through the lug, and a rigid gold cap with a red band crimping the cloth. Cloth is a separate mesh about 24% of total length and 4.5% wide, 6-8 bone chain, with the first bone parented rigidly to the cap. Remove the baked half-twist from the rest pose and let any twist come from simulation."
+     },
+     {
+      "where": "Grip cross-section and wrap pattern",
+      "ambiguity": "Is the grip round or oval, and is the wrap geometry or texture?",
+      "resolution": "Use a slightly oval cylinder (about 3.3% of total length in diameter, oval along the edge plane to show blade orientation by feel). The spiral wrap is a shallow modeled ridge every 2-3 bands at most, with the rest done in normal and albedo maps."
+     },
+     {
+      "where": "Overall scale and hold",
+      "ambiguity": "One- or two-handed, and the absolute size in Roblox.",
+      "resolution": "Set scale against the avatar rig: blade about 62% of total length (measured from the disk center), guard span about 20%, wrap about 16-20%, pommel and collars about 10%. Put the grip pivot at the upper third of the wrap and check two-hand fit before locking the wrap length."
+     }
+    ],
+    "strengths": [
+     "Clear silhouette difference from Oathsplitter: solid continuous broad blade with no negative space, recognizable even in a 64 px icon test.",
+     "The disk is a convincing layered mechanical boss with a plain round rim, inner star, faceted gem and visible rim thickness, not a sticker.",
+     "Large quiet blade face with detail concentrated at the guard, root rays and pommel, which matches the shared art direction.",
+     "Strong value grouping: light blade, mid red/gold guard, dark grip, light cloth, with clear material boundaries at every collar.",
+     "The broad outer cutting perimeter is kept pale and cool with no red edge frame, as the brief requires.",
+     "The cloth is well scoped: short, attached by a clean cap-and-ring root beyond the hand zone, with a controlled angled free end that never crosses the blade or grip.",
+     "Family consistency with 01 and 03: same red/gold/ivory/dark-wrap language, collar treatment and presentation angle."
+    ],
+    "build_spec": {
+     "parts": [
+      {
+       "name": "SB_Blade",
+       "material": "pearl-ivory forged metal (face) with cooler pearl-steel edge bevels",
+       "shape": "Straight broad plate with near-parallel edges, a stepped two-notch root flare (wings) and a symmetric diamond spear point over the last ~15% of length. Flattened hexagon cross-section with flat faces, ~12% bevels and a blunt edge land. Shallow ray relief around the disk on both faces, plus a V-channel for the spine inlay.",
+       "approx_proportion": "About 62% of total length (from disk center to tip). Width about 13% of length, about 16% at the root flare. Core thickness about 3% of length at the root tapering to about 2% at the tip."
+      },
+      {
+       "name": "SB_SpineInlay",
+       "material": "vermilion enamel/forged red",
+       "shape": "Tapered strip seated in a beveled V-channel along the centerline, continuous with the guard hub under the disk. Mirrored on the rear face.",
+       "approx_proportion": "Runs the first ~35% of exposed blade. About 10-12% of blade width at the root, tapering to a point. Stands about 0.3% of length proud of the channel floor."
+      },
+      {
+       "name": "SB_Guard",
+       "material": "vermilion forged metal with inset aged-gold chevron trim strips",
+       "shape": "Crossguard hub with two arms perpendicular to the blade, each ending in a V-notched swallowtail with two points. Chamfered edges. A slot receives the blade tang.",
+       "approx_proportion": "Span about 20% of total length perpendicular to the blade. Arm width about 5%. Thickness about 1.3x blade core (about 4% of length)."
+      },
+      {
+       "name": "SB_SunDisk",
+       "material": "aged gold (rim and star) and red faceted gem center (emissive-capable)",
+       "shape": "Round boss on each face of the guard hub: plain raised beveled rim, recessed 12-point star field, faceted hexagonal-dome gem center as a separate mesh.",
+       "approx_proportion": "Diameter about 9-10% of total length. About 1.5% thick per side, rim about 0.6% proud. Gem about 35% of disk diameter."
+      },
+      {
+       "name": "SB_Collars",
+       "material": "vermilion bands with aged-gold rings",
+       "shape": "Two stacked beveled cylinder rings at the top of the grip (below the disk) and two at the bottom (above the pommel).",
+       "approx_proportion": "Each set about 3% of length long and about 1.3x grip diameter."
+      },
+      {
+       "name": "SB_Grip",
+       "material": "charcoal leather wrap, matte",
+       "shape": "Slightly oval cylinder with spiral overlapping wrap bands. Ridges are mostly normal-mapped, with a few modeled.",
+       "approx_proportion": "About 16% of length (extend to about 20% if two-handed is confirmed). Diameter about 3.3% of length."
+      },
+      {
+       "name": "SB_Pommel",
+       "material": "vermilion body with aged-gold faceted end cap (recommended shift from the all-gold image)",
+       "shape": "Faceted octagonal nut tapering to a gold cap, with an end eye lug on the grip axis.",
+       "approx_proportion": "About 5% of length long and about 4.5% wide (about 20% smaller than drawn)."
+      },
+      {
+       "name": "SB_ClothRing",
+       "material": "aged gold",
+       "shape": "Rigid torus through the pommel lug, plus a small gold cylinder cap with a red band crimping the cloth root.",
+       "approx_proportion": "Ring outer diameter about 2.5% of length. Cap about 2% long."
+      },
+      {
+       "name": "SB_Cloth",
+       "material": "ivory cloth (two-sided), with a vermilion chevron and diamond mark as texture only",
+       "shape": "Single ribbon strip, slightly widening, with an angled cut free end. Separate mesh with a 6-8 bone chain whose root bone is locked to the cap. Rest pose is flat with no baked twist.",
+       "approx_proportion": "About 24% of total length, about 4.5% wide, cloth thickness about 0.3% (or a two-sided plane with a small solidify)."
+      }
+     ],
+     "sampled_palette": [
+      "Background (not a material): #2B2629",
+      "Blade face mid (warm, as drawn): #D5BEA8",
+      "Blade face hotspot (do not bake): #FAE2CC",
+      "Blade face recommended target: #D3D1CB (pearl #C9CDD0 / ivory #E5DDC7 blend)",
+      "Edge bevel lit: #F3E6E5",
+      "Edge bevel shade/side: #706366",
+      "Root sun-ray relief lit / recess: #DCC1A1 / #A3785B",
+      "Spine inlay red: #AB3833 (shade #933025)",
+      "Guard red lit: #B0373D to #B53B39",
+      "Guard red mid: #9D2621",
+      "Guard red shadow: #77150E",
+      "Disk gold rim lit: #CFA781 / #B6844F",
+      "Disk star gold shade: #965723",
+      "Pommel gold highlight / shade: #EEC385 / #A46A37",
+      "Ring gold: #8A633E",
+      "Gem red: #D74343 (core) to #A52F2B",
+      "Amber glow (star points): #D78732",
+      "Grip wrap lit / mid / dark: #625358 / #3B2F31 / #211817",
+      "Cloth ivory lit: #E5C8AF",
+      "Cloth red mark: #B16B5B to #C29D84 (painted, semi-transparent read)"
+     ],
+     "notes": "The image is a single three-quarter front view; every rear and side surface is inferred above. Hex values are point-averaged samples from the webp under the image's warm studio lighting. Under neutral light, correct toward the brief swatches: cool the face toward pearl, shift reds slightly toward vermilion (green above blue), desaturate gold toward #9D7950, and cool the wrap toward #24282D. Separate objects for emissive and animation: SB_SunDisk gem and star emissive mask, SB_SpineInlay channel-edge emissive mask, SB_Cloth with its bone chain. Effects-off must still read through mesh alone: inlay width and disk rim depth carry the read, not glow. Keep the stray spark and the lower-only star glow out of the model."
+    }
+   },
+   "verify": {
+    "checks": [
+     {
+      "claim": "Invariant 'executioner-like shape' partial: tip is a symmetric spear/diamond point, not a squared executioner head",
+      "verdict": "confirmed",
+      "reason": "Tip is a symmetric chisel-diamond point with kinks at about (1255,60) and (1370,197). Edges are near-parallel and the body is heavy, but the head is pointed, not squared or clipped."
+     },
+     {
+      "claim": "Invariant 'pearl-steel face' partial / Issue: face is warm peach-ivory, not pearl steel",
+      "verdict": "confirmed",
+      "reason": "I re-sampled (1000,380) = #D5BEA8 and (1250,200) = #FAE2CC. The face is clearly warm peach. Only the bevels read cool (upper bevel #FBF4F4). Medium severity is fair, since 'pearl face vs red spine' is priority two."
+     },
+     {
+      "claim": "Invariant 'readable assembly relationship' partial / Issue: inlay is a hairline that vanishes at icon size and reads as a painted stripe",
+      "verdict": "overstated",
+      "reason": "Width is confirmed at about 6-8 px on a 200-230 px blade (3-4%), widening to about 20 px where it leaves the disk. But in the zoomed guard crop it clearly sits in a beveled channel with lit and shaded walls, and it runs under the disk into the red guard. At a 64x43 downsample it still shows as a distinct red line. The proposed 10-12% width roughly triples what the brief calls 'as shown in the approved image'. A modest widening (about 1.5x) plus mirroring on the rear is enough."
+     },
+     {
+      "claim": "Invariant 'small red or gold echoes' partial / Issue: pommel is a big all-gold mass competing with the disk; fix is to make the pommel body red with only a gold end cap",
+      "verdict": "overstated",
+      "reason": "The pommel crop shows the pommel is already two-part: a red faceted body next to the lower collar (sample (140,800) = #C34044) and a gold faceted end cap. The recommended fix is essentially what is drawn, and the build_spec note 'shift from the all-gold image' is factually wrong. What remains true: the gold cap is large and brighter and more orange than #9D7950. At icon size it shows as a small gold blob, much weaker than the disk."
+     },
+     {
+      "claim": "Invariant forearm clearance partial (cannot judge from a static image)",
+      "verdict": "confirmed",
+      "reason": "The cloth roots below the end cap, beyond the wrap. Swing clearance needs a rig test."
+     },
+     {
+      "claim": "Invariant effects partial / Issue: glow only on the lower star points, none on spine seams",
+      "verdict": "confirmed",
+      "reason": "The guard crop shows amber glow on only the bottom three star points of the disk. No glow anywhere along the spine channel."
+     },
+     {
+      "claim": "Invariant 'red elements are substantial structural pieces' partial: spine too thin",
+      "verdict": "overstated",
+      "reason": "Guard arms and collars are chunky and beveled. The spine is thin but has visible channel walls and a faceted tapered tip, so it reads as an inset part, not a stroke."
+     },
+     {
+      "claim": "Invariant highlights partial / Issue: the face hotspot is the brightest large value in the image, not an edge",
+      "verdict": "overstated",
+      "reason": "A soft baked bloom around (1150-1250, 200-300) is real (#FDEDD9 at (1180,260)) and camera-dependent, so the fix is valid. But the upper edge bevel is brighter (#FBF4F4 at (1100,180), higher sum), so the claim that it is brighter than the edges is wrong. It competes by area, not by peak value."
+     },
+     {
+      "claim": "Invariant section 7 hidden surfaces partial (single 3/4 view)",
+      "verdict": "confirmed",
+      "reason": "There is only one front three-quarter view. Rear, side and cross-section are not shown."
+     },
+     {
+      "claim": "Issue: grip wrap short (about 16%), hold unclear",
+      "verdict": "confirmed",
+      "reason": "The wrap runs between the collars at about (170,770) and (430,630), about 295 px of about 1696 px total, so about 17%. Room for roughly one and a half hands, and the hold must be decided on the rig."
+     },
+     {
+      "claim": "Issue: stray orange spark at about (465,465)",
+      "verdict": "confirmed",
+      "reason": "An isolated orange dot sits left of the upper guard arm (#CE975D at (470,462)) with no source geometry."
+     },
+     {
+      "claim": "Issue: wrap is warm plum-brown, not cool charcoal",
+      "verdict": "confirmed",
+      "reason": "The wrap samples #5C4E51 to #645658 lit and is visibly purple-brown in the crop. Low severity is right."
+     },
+     {
+      "claim": "Issue: cloth glyph is half-legible, could read as lettering, painted semi-transparent",
+      "verdict": "overstated",
+      "reason": "The pommel crop shows a clean geometric chevron with a bracketed diamond, in solid opaque red. It does not resemble letters and is not semi-transparent (the #B16B5B sample is an edge mix). Keeping it texture-only is fine, but it needs no simplifying for legibility reasons."
+     },
+     {
+      "claim": "Issue: ring joins the pommel with no visible lug or eye",
+      "verdict": "overstated",
+      "reason": "A small stud or knob is visible where the ring meets the underside of the gold cap, around (55-75, 865-885), so there is a rudimentary attachment. It is underdefined but not absent. Adding a proper eye lug is still a sensible build choice."
+     },
+     {
+      "claim": "Issue: style drift versus 00_original_style_ref",
+      "verdict": "confirmed",
+      "reason": "The reference uses flat painterly planes, a thin orange-red crescent guard and a red spike handle with no wrap. Sunbound has glossy chunky bevels, crimson-leaning reds, a gold disk and a leather wrap. The drift is shared with the family, so it is not a concept blocker."
+     },
+     {
+      "claim": "Ambiguity: blade cross-section; resolution is a flat central face with the inlay channel as the only recess",
+      "verdict": "understated",
+      "reason": "The ambiguity is real, but the resolution contradicts the image. A narrow central groove or fuller continues past the red inlay's tip along the centerline to about (1100-1150, 285), with faces either side reading as two planes. That makes it a second recess, and the face is not one flat plane."
+     },
+     {
+      "claim": "Ambiguity: ray relief geometry versus texture",
+      "verdict": "confirmed",
+      "reason": "About 10-12 beveled rays fan from the disk onto the blade root only. They read as shallow relief, and their depth and back side are unknown."
+     },
+     {
+      "claim": "Ambiguity: rear of disk, gem and guard mounting",
+      "verdict": "confirmed",
+      "reason": "No rear view. The disk visibly overlaps both guard arms and the blade root on the front only."
+     },
+     {
+      "claim": "Ambiguity: guard arm depth and swallowtail ends",
+      "verdict": "confirmed",
+      "reason": "Each arm ends in two hooked prongs with a concave V between them, for example around (395-540, 395-475) and (640-755, 665-690). Depth along the blade axis is not shown."
+     },
+     {
+      "claim": "Ambiguity: blade-to-guard junction",
+      "verdict": "confirmed",
+      "reason": "The stepped root flare emerges between the arms and behind the disk. Whether it inserts or overlaps is not determinable, and an insert is a reasonable call."
+     },
+     {
+      "claim": "Ambiguity: pommel, ring and cloth root",
+      "verdict": "confirmed",
+      "reason": "The ring, cap with red band, and half-twist are visible. The resolution's 'vermilion body' recommendation is actually what the image already shows."
+     },
+     {
+      "claim": "Ambiguity: grip cross-section and wrap",
+      "verdict": "confirmed",
+      "reason": "Only the spiral overlapping wrap is visible. Oval versus round is not determinable."
+     },
+     {
+      "claim": "Ambiguity: overall scale and hold; blade about 62% from disk center",
+      "verdict": "confirmed",
+      "reason": "Disk center (565,540) to tip (1505,25) is about 1072 px of about 1696 px total, about 63%, which matches."
+     }
+    ],
+    "missed": [
+     {
+      "severity": "medium",
+      "where": "Blade centerline, from the red inlay tip near (880,390) up to about (1100-1150, 285)",
+      "problem": "A narrow central groove or fuller continues well past the red inlay. The faces on either side read as two slightly different planes. The first reviewer called the remaining face 'clean', resolved the cross-section as a flat face with 'the red inlay channel is the only recess', and the build_spec omits the groove. A modeler following the spec would drop a visible construction feature. The groove is also what makes the inlay read as seated in a channel, so it matters to the assembly question.",
+      "fix": "Add an empty V-groove fuller on the centerline of both faces. It continues the inlay channel at the same width and fades out at about 55-60% of exposed blade length. Make it shallow, so it cannot be mistaken for Oathsplitter's through-slot. Update SB_Blade's cross-section to a shallow central valley rather than a flat face."
+     },
+     {
+      "severity": "low",
+      "where": "build_spec SB_Pommel and issue 'Pommel block' versus the pommel at (40-200, 780-900)",
+      "problem": "The spec says the red-body pommel is a 'recommended shift from the all-gold image', but the image already has a red faceted body with a gold faceted end cap. Recording the image wrongly risks a modeler treating the drawn pommel as off-brief, or making the gold too small.",
+      "fix": "Record the pommel as drawn: red faceted body plus gold faceted end cap of about equal length. Optionally shrink the gold cap about 15% and desaturate it toward #9D7950. Keep the gold disk as the only large gold read."
+     },
+     {
+      "severity": "low",
+      "where": "Cloth streamer, lower edge from the cap at about (80,900) running along the near edge for about the first third of its length",
+      "problem": "A red stripe or border runs along the cloth's lower edge from the root. It is not in the palette or the build_spec, which lists only the chevron and diamond mark.",
+      "fix": "Include it as a thin vermilion edge stripe in the cloth texture, on both sides, or drop it deliberately. Either way, document it so the texture matches the concept."
+     },
+     {
+      "severity": "low",
+      "where": "Sun disk gem center at about (565,545)",
+      "problem": "The gem is drawn as an octagonal faceted stone with a flat table, but the build_spec calls it a 'hexagonal-dome'.",
+      "fix": "Use an 8-sided faceted gem with a flat table and a pavilion facet ring, as a separate mesh for emissive control."
+     }
+    ],
+    "verdict_agrees": true,
+    "corrected_verdict": "pass_with_fixes"
+   }
+  },
+  {
+   "concept": "warlink",
+   "qc": {
+    "verdict": "pass_with_fixes",
+    "overall": "Warlink works as a compact paired-cleaver concept. The two broad ivory cleavers with red spine housings, charcoal wraps and a short, thick, properly alternating chain clearly fit the family, and the silhouette reads well at inventory size and differs from both long swords. The weak spot is the feature the brief calls its focal detail. There is no real pommel: each grip ends in a plain red ferrule, and the steel eyelet ring simply disappears behind it, so the eyelet-to-pommel join is neither credible nor emphasized. Smaller fixes: the cutting bevel is ambiguous, the quiet state has no amber accent, the dark warm chain sits too close to the background value, and edge-on links look thicker than face-on links. A modeler can resolve all of these without redrawing the concept.",
+    "invariants": [
+     {
+      "requirement": "\"a matching pair of short, broad cleavers\"",
+      "met": "yes",
+      "evidence": "Two nearly mirror-image cleavers (left-right pixel mirror difference is only about 9/255 on average). Each blade is broad: maximum width is about 47% of blade length and about 29% of total cleaver length. Blades are short relative to the long swords."
+     },
+     {
+      "requirement": "\"connected through robust pommel eyelets by a thick dark-steel chain\"",
+      "met": "partial",
+      "evidence": "A thick dark-steel chain joins the two grip ends through large steel rings. But there is no pommel body: the grip ends in a red ferrule band, and the eyelet ring's top is hidden behind that band with no lug, tang or loop-through shown."
+     },
+     {
+      "requirement": "\"Treat the pair and chain as one weapon concept\"",
+      "met": "yes",
+      "evidence": "A single symmetric composition. The chain hangs in a U between the two pommels and both cleavers point outward and up."
+     },
+     {
+      "requirement": "\"fit the same heroic ivory/red family while providing a compact, aggressive alternative to the long swords\"",
+      "met": "yes",
+      "evidence": "Same ivory faces, red structural parts, charcoal cross-wrap and red collar/ferrule rings as Oathsplitter and Sunbound. Short, wide, hooked shapes give a clearly different silhouette."
+     },
+     {
+      "requirement": "\"small split or notched outer-tip motif, but must not become miniature copies of Oathsplitter's long opening\"",
+      "met": "yes",
+      "evidence": "A single V-notch at the outer tip forms a tall outer prong and a shorter inner prong. The notch is only about 10-12% of blade length deep and is not an enclosed slot."
+     },
+     {
+      "requirement": "\"substantial ivory cutting faces, red spine or guard components, charcoal grips, and restrained gold connection details\"",
+      "met": "yes",
+      "evidence": "Large quiet ivory faces. A red U-shaped spine housing runs the full inner edge into a red guard with one hooked quillon. Grips are charcoal cross-wrapped. Gold is limited to one rivet, a forked inlay along the spine, and two brass connector rings at the chain ends."
+     },
+     {
+      "requirement": "\"Give each blade a real cutting bevel\"",
+      "met": "partial",
+      "evidence": "The outer edge shows a light grey band of constant width from tip to heel, squared off at the heel. It could be a wide primary bevel seen in 3/4 view, or just a flat slab side. Nothing in the image shows it converging to an edge."
+     },
+     {
+      "requirement": "\"coherent side thickness\"",
+      "met": "yes",
+      "evidence": "Side and bevel planes are visible along the outer edges. The notch interior shows wall thickness. The red spine housing has a darker side facet and stands proud of the ivory."
+     },
+     {
+      "requirement": "\"a clear gripping zone\"",
+      "met": "yes",
+      "evidence": "The charcoal wrap is bracketed by a red collar at the guard and a red ferrule at the end, about 24% of cleaver length, which is one-hand sized."
+     },
+     {
+      "requirement": "\"Place chain eyelets beyond the grip so links do not pass through the fingers\"",
+      "met": "yes",
+      "evidence": "The eyelet rings sit entirely below the red ferrule. No link overlaps the wrap."
+     },
+     {
+      "requirement": "\"Build eyelets as physical loops with visible interior thickness\"",
+      "met": "yes",
+      "evidence": "The eyelet has an open center (inner diameter about 0.07 of cleaver length) with a visibly shaded inner wall and chamfered faces."
+     },
+     {
+      "requirement": "\"credible connection to the pommels\"",
+      "met": "partial",
+      "evidence": "The ring's upper arc just goes behind the red ferrule. No hole, lug or weld shows how a closed ring enters a solid end cap."
+     },
+     {
+      "requirement": "\"links must look like rigid interlocking metal pieces... alternate their orientation... preserve their open centers\"",
+      "met": "yes",
+      "evidence": "9 links: 5 face-on links with open centers alternate with 4 edge-on bars, and each bar passes through the neighbouring face-on openings. Links are chamfered and hard-edged."
+     },
+     {
+      "requirement": "\"Keep link dimensions consistent\"",
+      "met": "partial",
+      "evidence": "Outer lengths are roughly consistent, but edge-on links show a cross-section about 40 px across, while face-on rims are about 25 px wide. Edge-on links therefore read about 1.5x thicker than the same link seen face-on."
+     },
+     {
+      "requirement": "\"Bend the chain through the changing relationship between links, rather than visibly stretching\"",
+      "met": "yes",
+      "evidence": "A smooth U curve made from changing link angles. No stretched or elongated links."
+     },
+     {
+      "requirement": "\"Avoid per-link decorative noise\"",
+      "met": "yes",
+      "evidence": "Only small edge nicks and chamfer highlights per link. No engravings."
+     },
+     {
+      "requirement": "\"compact chain length... not a long-range whip\"",
+      "met": "yes",
+      "evidence": "The arc from eyelet to eyelet is about 1.0x one cleaver's length (9 steel links plus 2 brass connectors). The span between eyelets at rest is about 0.75x cleaver length. This image defines the canonical length."
+     },
+     {
+      "requirement": "\"Use local amber heat near a few links, connection points, or blade seams\" / quiet state \"Local endpoint/link heat\"",
+      "met": "no",
+      "evidence": "No amber anywhere. The faint warm-orange rim on the lower edges of the links reads as rim light, not heat. Both sibling concepts show a small amber accent in their quiet state."
+     },
+     {
+      "requirement": "Shared art direction (section 3): quiet surfaces, detail concentrated at guards and joints, red parts substantial with visible thickness, charcoal wraps less reflective",
+      "met": "yes",
+      "evidence": "The ivory faces are broad and mostly empty. Detail sits at the spine housing, guard, collar and connectors. The red parts have chunky bevels. The wrap is matte."
+     },
+     {
+      "requirement": "Section 3: \"Ivory metal should still read as forged material\"",
+      "met": "partial",
+      "evidence": "Clean bevels and edge brightness are present, but the face has blotchy, veined patches that read slightly like marble or chalk rather than forged metal."
+     },
+     {
+      "requirement": "Section 16: \"Warlink visibly contains two cleavers joined at their pommels\"",
+      "met": "yes",
+      "evidence": "Reads immediately, including at a 96x64 icon downsample."
+     },
+     {
+      "requirement": "Section 7: front, rear, side, guard, grip, pommel surfaces with intentional thickness; inspect eyelet negative space from several angles",
+      "met": "partial",
+      "evidence": "Only one 3/4 front view is given. The back faces, the guard's back side, the top of the eyelet under the ferrule and the blade cross-section are not shown (resolved in ambiguities)."
+     }
+    ],
+    "issues": [
+     {
+      "severity": "high",
+      "where": "Grip ends of both cleavers, where the red ferrule meets the steel eyelet ring (about x 400-520, y 690-830 on the left; mirrored on the right)",
+      "problem": "There is no pommel, and the eyelet's attachment cannot be built as drawn. A closed steel ring disappears behind a solid red ferrule band with no lug, slot or loop-through, so the stated invariant 'credible connection to the pommels' is not resolved. This joint is also the concept's listed focal detail.",
+      "fix": "Add a real pommel cap below the ferrule: a short faceted red/gold block, about 0.07 L long, that tapers into a forged steel lug. Make the eyelet one rigid piece with that lug (a fixed loop with a visible weld or collar), oriented in the blade plane. The brass ring becomes the first moving piece. Keep the eyelet's outer diameter about 0.15 L and inner diameter about 0.07 L."
+     },
+     {
+      "severity": "medium",
+      "where": "Pommel eyelets versus chain links (focal hierarchy)",
+      "problem": "The comparative table lists 'Pommel eyelets and blade connections' as Warlink's focal detail. In the image the eyelets are the same dark brown-grey steel and almost the same size as the chain links, so they read as just the first link. The eye goes to the ivory blades and red spine instead.",
+      "fix": "Separate the eyelet from the links: give the pommel lug a gold or red collar band, add a slightly brighter steel bevel highlight on the eyelet, and place the quiet-state amber heat at this joint (see amber issue). Keep the links plain."
+     },
+     {
+      "severity": "medium",
+      "where": "Outer cutting edge of both blades (the light grey band along the outer side, about 30-40 px wide)",
+      "problem": "The band is the same width from tip to heel and squared at the heel, so it could be a cutting bevel or a flat slab side. The brief asks for a 'real cutting bevel'. If modeled literally as a flat side, the blade will have a blunt square edge.",
+      "fix": "Model it as a flat-ground primary bevel on both faces, each about 15-18% of blade width, meeting at a small microflat (about 0.004 L). Let the bevel narrow slightly into the heel corner instead of ending square, and add a brighter thin edge highlight on the apex in texture."
+     },
+     {
+      "severity": "medium",
+      "where": "Whole chain plus charcoal grips against the background (chain mid about #4A403C, wrap about #473934, background #262324)",
+      "problem": "Value grouping: the warm, dark chain is only about one value step above the dark background, and it shares hue and value with the grip wrap. In the downsampled icon the chain becomes a faint dotted arc, and in Roblox scenes with dark floors it will disappear.",
+      "fix": "Shift chain steel cooler and slightly lighter (base about #4C5056, chamfer highlight about #A9AFB5) so it reads as steel rather than the warm charcoal leather (keep the wrap at about #2E2A2C to #3A3234). Preserve the bright chamfer edge highlights on each link and keep the link interiors darker (about #1E2023)."
+     },
+     {
+      "severity": "medium",
+      "where": "Chain, the 4 edge-on links (centered roughly at x 640, 745 and mirrored, y 880-960)",
+      "problem": "Edge-on links show a cross-section about 1.5x wider than the rim of face-on links, so as drawn they are two different link sizes. Built literally, this breaks 'keep link dimensions consistent'.",
+      "fix": "Use one link mesh for all 9 links: outer about 0.14 L x 0.10 L, a single wire section about 0.035 L, a chamfered octagonal profile, and 90 degree alternation. Ignore the drawn thickness difference."
+     },
+     {
+      "severity": "low",
+      "where": "Quiet effect state (entire concept)",
+      "problem": "No amber at all, while the brief's quiet state calls for 'local endpoint/link heat' and both sibling concepts carry a small amber accent.",
+      "fix": "Add a small amber (#F5AB46) emissive seam where the eyelet meets the pommel lug, and optionally a faint heat tint on the 1-2 links next to each end. Limit the bloom so the link gaps stay readable. The activation pulse along the chain stays an effect-state feature."
+     },
+     {
+      "severity": "low",
+      "where": "Ivory blade faces, mid and lower blade near the inlay",
+      "problem": "Blotchy, veined paint patches read slightly like marble or chalk rather than forged metal. Overall the ivory is warmer and peachier (lit about #E8D1BC, mid about #D0B198) than the warm ivory swatch #E5DDC7, and the outer bevel is warm grey (#A2918D) rather than pearl steel #C9CDD0.",
+      "fix": "Texture with broad, low-frequency face variation aligned along the blade length, a cooler pearl-steel bevel (about #C9CDD0 lit, #8E9296 shade), and darker inner edges near the spine. Pull the face toward #E5DDC7 / #CFC3A8 and drop the vein-like streaks."
+     },
+     {
+      "severity": "low",
+      "where": "Red guard and spine housing on both cleavers",
+      "problem": "Family detail mismatch: the sibling guards carry gold trim lines or inlays on the red, while Warlink's guard is plain red and its gold sits on the blade. The red pieces also have lightning-like marbled specular streaks (most visible on the collars and ferrules) that read as glossy marble.",
+      "fix": "Add a thin aged-gold (#9D7950) edge trim on the guard's front bevel or the ferrule (one band only, to stay restrained). Replace marbled streaks with soft broad enamel highlights on the bevels."
+     },
+     {
+      "severity": "low",
+      "where": "Lighting across the pair",
+      "problem": "The near-mirrored composition is also mirror-lit (left cleaver lit from the upper left, right cleaver from the upper right). This is fine for a presentation sheet but not from one light source, and it hides which faces are the real front.",
+      "fix": "None needed in the concept. In Blender, review both cleavers under one neutral key light, plus the front, rear and side views required by section 16."
+     }
+    ],
+    "ambiguities": [
+     {
+      "where": "Rear faces of both blades",
+      "ambiguity": "The back sides are never shown: does the red spine housing, gold rivet and forked gold inlay also appear on the back?",
+      "resolution": "Make the blade symmetric about its center plane. The red spine housing is a U-channel that wraps the spine and shows on both faces. The rivet is a through-rivet with a domed head on both sides. The gold inlay is repeated on the back as shallow relief (about 0.002 L)."
+     },
+     {
+      "where": "Blade cross-section",
+      "ambiguity": "Blade thickness, and whether the outer band is a bevel or a flat side.",
+      "resolution": "Spine/flat thickness about 0.035 L (L = overall cleaver length from tip to eyelet bottom). Flat-ground bevels about 15-18% of blade width per face, meeting at a small microflat on the outer edge. The red housing stands about 0.008 L proud of the ivory on each face."
+     },
+     {
+      "where": "Tip notch",
+      "ambiguity": "Notch depth and how the two prongs end in thickness.",
+      "resolution": "A V-notch about 0.07 L deep, starting about 0.25 of blade width in from the outer edge. Both prongs keep full blade thickness, with the bevel carried around the outer prong tip only. The notch walls are flat and visible from both sides."
+     },
+     {
+      "where": "Guard and hooked quillon",
+      "ambiguity": "Quillon plane, thickness, and whether the guard has a matching horn on the edge side.",
+      "resolution": "The guard is a red block band about 0.06 L thick through its depth (about 1.7x blade thickness), wrapping the blade heel. One hooked quillon on the spine side only, in the blade plane, curling toward the tip and projecting about 0.12 L. The edge side ends flush with the blade heel, as drawn."
+     },
+     {
+      "where": "Handedness of the pair",
+      "ambiguity": "Are the cleavers identical or mirrored?",
+      "resolution": "Use one source mesh plus a mirrored copy (Warlink_L / Warlink_R), so spines and quillons face inward toward the chain center in the rest pose, matching the image. Avoid mirrored UVs where text or asymmetric decals would flip (there are none here)."
+     },
+     {
+      "where": "Eyelet attachment and orientation (hidden under the ferrule)",
+      "ambiguity": "How the eyelet enters the pommel, and which plane the ring lies in.",
+      "resolution": "Add a pommel cap with a steel lug. The eyelet is a fixed, rigid loop (part of the pommel object or a welded child), and its plane matches the blade plane (it appears face-on alongside the blade faces). The brass connector is the first free-moving piece. The attachment point is the eyelet's inner bottom, kept fixed relative to the grip."
+     },
+     {
+      "where": "Brass connector rings",
+      "ambiguity": "Whether they are separate links or decoration.",
+      "resolution": "Treat them as real chain links: smaller oval rings in aged-gold metal (about 0.11 x 0.075 L, wire about 0.028 L), passing through the eyelet and link 1, rotated 90 degrees relative to the eyelet."
+     },
+     {
+      "where": "Chain link count, cross-section and rest pose",
+      "ambiguity": "Exact number of links and link profile.",
+      "resolution": "Fixed 9 dark-steel links plus 2 brass connectors (13 pieces counting the eyelets), never added to or stretched. Chamfered octagonal wire section. At rest the chain hangs in a U whose lowest point is about 0.28 L below the eyelets, with the eyelets about 0.75 L apart."
+     },
+     {
+      "where": "Grip cross-section and wrap on the hidden side",
+      "ambiguity": "Round versus oval grip, and wrap pattern continuity.",
+      "resolution": "Slightly oval cylinder (about 0.095 L across the blade plane, 0.085 L through it). The cross-wrap continues helically around the back. Wrap relief goes in the normal or height map, with only a shallow geometric bump for the silhouette."
+     },
+     {
+      "where": "Red spine housing top cap and stepped notch",
+      "ambiguity": "How the housing ends at the tip, and the depth of the step near the lower third.",
+      "resolution": "The housing ends in an angled pointed cap flush with the blade's top edge. The step is a 0.02 L inward jog in the housing's inner edge only. The outer spine line stays straight."
+     }
+    ],
+    "strengths": [
+     "Clear, distinct silhouette: two compact hooked cleavers plus a U-shaped chain read immediately, even at a 96x64 icon downsample, and cannot be confused with Oathsplitter or Sunbound.",
+     "The chain is well built: 9 rigid chamfered links alternating face-on and edge-on with open centers, bending through link angles rather than stretching, with no per-link decorative noise.",
+     "The chain length is compact and well defined (about 1.0x cleaver length), giving a canonical tether length for animation.",
+     "Eyelets sit fully beyond the grip, so links never cross the hand zone, and the gripping zone is clearly framed by a red collar and ferrule.",
+     "The tip notch is a restrained family echo of Oathsplitter's split, not a miniature copy.",
+     "Good material hierarchy on the blades: large quiet ivory faces, substantial red spine and guard parts with visible thickness, matte charcoal wrap, and gold limited to a rivet, one directional inlay and two connector rings.",
+     "Strong family consistency with 01 and 02 in shapes (collar/ferrule rings, cross-wrap, hooked red guard forms) and painting style. It also keeps the original reference's ivory-blade / red-hilt house identity."
+    ],
+    "build_spec": {
+     "parts": [
+      {
+       "name": "Blade (x2, mirrored)",
+       "material": "Warm ivory forged metal, with a pearl-steel bevel",
+       "shape": "Broad cleaver slab, slightly wider toward the tip, with a gently concave outer edge; V-notch at the outer tip forming a tall outer prong and a shorter inner prong; flat-ground primary bevel on both faces along the outer edge; squared heel corner on the edge side",
+       "approx_proportion": "Tip to guard about 0.62 L (L = cleaver length from tip to eyelet bottom, about 51% of image width per cleaver). Maximum width about 0.29 L (about 0.47 of blade length). Thickness about 0.035 L at the flat. Bevel band 15-18% of width per face. Notch depth about 0.07 L."
+      },
+      {
+       "name": "Spine housing (x2)",
+       "material": "Vermilion red enamel / forged housing",
+       "shape": "U-channel wrapping the inner spine for the full blade length; angled pointed top cap; small inward step in its inner edge at the lower third; chamfered bevels",
+       "approx_proportion": "Visible width about 0.07 L per face, stands about 0.008 L proud of the ivory, length about 0.6 L"
+      },
+      {
+       "name": "Spine rivet (x2, both faces)",
+       "material": "Aged gold",
+       "shape": "Low domed disc through-rivet",
+       "approx_proportion": "Diameter about 0.04 L, placed at about 30% down the spine housing"
+      },
+      {
+       "name": "Forked inlay (x2, both faces)",
+       "material": "Aged gold, shallow relief",
+       "shape": "Strip running along the inner edge of the spine housing on the lower half of the blade, splitting into two hooked tines just above the guard",
+       "approx_proportion": "Width about 0.012 L, length about 0.25 L, relief about 0.002 L"
+      },
+      {
+       "name": "Guard (x2)",
+       "material": "Vermilion red forged metal (optional thin aged-gold front trim)",
+       "shape": "Block band across the blade heel, with one hooked quillon on the spine side curling toward the tip, in the blade plane",
+       "approx_proportion": "Band height about 0.06 L, depth about 0.06 L, quillon projects about 0.12 L past the spine"
+      },
+      {
+       "name": "Collar ring (x2)",
+       "material": "Vermilion red",
+       "shape": "Faceted cylinder between the guard and the wrap",
+       "approx_proportion": "Diameter about 0.13 L, height about 0.04 L"
+      },
+      {
+       "name": "Grip (x2)",
+       "material": "Charcoal leather wrap, matte",
+       "shape": "Slightly oval cylinder with helical cross-wrap relief",
+       "approx_proportion": "Length about 0.24 L, about 0.095 x 0.085 L in section"
+      },
+      {
+       "name": "Ferrule / pommel cap (x2)",
+       "material": "Vermilion red with faceted bevels; new: short steel or red lug below it",
+       "shape": "Faceted ring band, then a tapered pommel block ending in a forged lug that holds the eyelet",
+       "approx_proportion": "Ferrule diameter about 0.12 L, height about 0.06 L; added pommel and lug about 0.07 L long"
+      },
+      {
+       "name": "Eyelet (x2, fixed to the pommel)",
+       "material": "Dark steel",
+       "shape": "Thick torus with a chamfered octagonal section, plane matching the blade plane, rigidly attached",
+       "approx_proportion": "Outer diameter about 0.15 L, inner about 0.07 L, section about 0.04 L"
+      },
+      {
+       "name": "Brass connector (x2, first moving link at each end)",
+       "material": "Aged gold / brass",
+       "shape": "Oval link rotated 90 degrees to the eyelet",
+       "approx_proportion": "About 0.11 x 0.075 L outer, wire about 0.028 L"
+      },
+      {
+       "name": "Chain links (x9, one shared mesh)",
+       "material": "Dark steel",
+       "shape": "Oval links with a chamfered octagonal wire section, alternating 90 degrees, open centers",
+       "approx_proportion": "About 0.14 x 0.10 L outer, wire about 0.035 L, pitch about 0.075 L. Total arc from eyelet to eyelet about 1.0 L; at rest the eyelets are about 0.75 L apart and the sag is about 0.28 L."
+      }
+     ],
+     "sampled_palette": [
+      "Ivory face lit (sampled): #E8D1BC",
+      "Ivory face mid (sampled): #D0B198",
+      "Ivory face shade (sampled): #AB9A93",
+      "Outer bevel highlight (sampled): #FAF1EB",
+      "Outer bevel / side plane (sampled, warm grey): #A2918D",
+      "Outer bevel shade (sampled): #84736E",
+      "Red lit (sampled): #CD3E35",
+      "Red base (sampled): #A52B26",
+      "Red shadow (sampled): #77251E",
+      "Red deep recess (sampled): #4E1B14",
+      "Charcoal wrap base (sampled, warm): #473934",
+      "Charcoal wrap shadow (sampled): #2E2424",
+      "Gold inlay lit (sampled): #DBAB69",
+      "Gold inlay mid (estimated): #C99A55",
+      "Gold inlay shadow (sampled): #6D4421",
+      "Brass connector highlight (sampled): #F2C275",
+      "Brass connector shade (estimated): #A86E3C",
+      "Chain steel mid (sampled, warm): #4A403C",
+      "Chain chamfer highlight (sampled): #9C8E8A",
+      "Chain interior/shadow (sampled): #231F1E",
+      "Background (sampled): #262324",
+      "Recommended build targets: ivory #E5DDC7 / shade #CFC3A8; bevel pearl steel #C9CDD0 / shade #8E9296; vermilion #B93C2B; deep red #702D27; charcoal wrap #2E2A2C; aged gold #9D7950; chain steel #4C5056 / highlight #A9AFB5; amber accent #F5AB46"
+     ],
+     "notes": "Composition: two nearly mirror-image cleavers, tips outward and up, joined at their grip ends by a U-shaped chain. Treat this image as canonical for chain length (9 steel links + 2 brass connectors + 2 fixed eyelets). Required departures from the drawing: (1) add a pommel cap and lug so the eyelet is a credible rigid loop; (2) one consistent link size, ignoring the thicker-looking edge-on links; (3) a real flat-ground cutting bevel on the outer edge; (4) cooler, slightly lighter chain steel to separate it from the warm charcoal wrap and dark backgrounds; (5) a small amber emissive seam at the eyelet/pommel joint for the quiet state. Suggested object names: Warlink_Blade_L/R (blade, housing, rivet and inlay merged, with material slots), Warlink_Hilt_L/R (guard, collar, grip, ferrule, pommel, eyelet), Warlink_Ring_L/R (brass), Warlink_Link_01..09 (instances of one mesh), or link bones on a curve rig. Pivots: each hilt at the grip center for equipping; chain endpoints at the eyelet's inner bottom. Keep the eyelets as part of the hilt so the attachment points cannot drift."
+    }
+   },
+   "verify": {
+    "checks": [
+     {
+      "claim": "HIGH issue: no pommel; the closed eyelet ring disappears behind the red ferrule with no lug, slot or loop-through, so the connection cannot be built as drawn",
+      "verdict": "overstated",
+      "reason": "Zooming into both grip ends (about x 410-530, y 700-800 on the left, mirrored on the right) shows a clear faceted hexagonal dark-steel lug/tang hanging from the bottom of the stepped red ferrule. It sits inside the top of the ring's opening and covers the ring's upper arc, so the ring reads as threaded through the lug. The connection is drawn and is buildable as a tang lug with a cross-hole. What is true: there is no distinct pommel mass. Both siblings have a faceted gold/red pommel, while Warlink ends in a plain two-tier red ferrule. This is medium at most (family consistency and focal emphasis), not a high 'cannot be built'. The fix should keep the drawn hex lug and pierce it for the ring, not invent a new 0.07 L pommel block plus lug that changes the silhouette."
+     },
+     {
+      "claim": "Invariant 'connected through robust pommel eyelets' = partial",
+      "verdict": "overstated",
+      "reason": "The rings are thick, chamfered, open-centered and joined through a visible steel lug at the end cap. The only shortfall is that the 'pommel' is a ferrule rather than a sculpted pommel. This is closer to 'yes, minor'."
+     },
+     {
+      "claim": "Invariant 'credible connection to the pommels' = partial; 'ring's upper arc just goes behind the red ferrule, no hole, lug or weld'",
+      "verdict": "refuted",
+      "reason": "A lug is plainly visible: a hex-faceted steel block between the ferrule's lower rim and the ring's inner top, on both cleavers. The evidence text misdescribes the image. The only thing unshown is the hole through the lug, which is normal for a 3/4 view and belongs in ambiguities."
+     },
+     {
+      "claim": "MEDIUM: eyelets are the same steel and nearly the same size as the links, so they read as just the first link and the focal detail is weak",
+      "verdict": "confirmed",
+      "reason": "The eyelets are about 123 px across against face-on links about 110 px long, in the same warm dark steel (#4E413D range). They are only separated by being rounder and thicker. Nothing (no gold, no heat, no pommel mass) pulls the eye to the joint that the comparative table names as focal. The suggested fixes (collar band, amber seam) are reasonable."
+     },
+     {
+      "claim": "MEDIUM: the outer grey band is constant width and squared, so it is ambiguous whether it is a bevel or a flat slab side",
+      "verdict": "confirmed",
+      "reason": "The outer edge shows a wide cool mauve-grey plane (lit about #D2C3BF to about #796C6C in shade), about 40-50 px wide on a blade about 250 px wide, constant from the tip prong to the heel, with a hard corner at the top. A thin lighter strip runs along the face's border. It reads as a thick blunt slab side with a chamfer, not as faces converging to an edge. The fix (flat-ground bevel to a microflat) is correct."
+     },
+     {
+      "claim": "Invariant 'real cutting bevel' = partial",
+      "verdict": "confirmed",
+      "reason": "Same evidence. No apex line or convergence is drawn anywhere along the outer edge."
+     },
+     {
+      "claim": "MEDIUM: chain and wrap are warm and dark, close to the background value, and the chain becomes a faint dotted arc at icon size",
+      "verdict": "overstated",
+      "reason": "The chain mid (#4E413D-#615451) is close to the background (#262324), but every link carries bright chamfer highlights (#B4A6A4) and a warm rim, and in the full-size image the arc reads clearly. The point about hue sharing with the warm wrap (#3D302D-#54423F) and the recommendation to cool the steel are valid. 'Disappears' is an exaggeration. This is low-medium."
+     },
+     {
+      "claim": "MEDIUM: edge-on links are about 1.5x thicker than face-on rims, i.e. two link sizes",
+      "verdict": "overstated",
+      "reason": "The measurement is roughly right: edge-on bars are about 40 px across, face-on rims about 25 px. But link lengths are consistent (about 100-110 px including foreshortening), and the difference is exactly what one link with a rectangular wire section (thicker axially than radially) produces. That is a consistent link, not two sizes. Built literally, it is one mesh with a roughly 0.045 x 0.028 L flattened-octagon section. The reviewer's fix (round-ish 0.035 L section, 'ignore the drawing') is acceptable but departs from the drawn chunky slab-link look for no reason."
+     },
+     {
+      "claim": "Invariant 'keep link dimensions consistent' = partial",
+      "verdict": "overstated",
+      "reason": "See above. A single rectangular-section link explains both views, so the drawing is consistent."
+     },
+     {
+      "claim": "LOW: no amber anywhere in the quiet state, while both siblings show an amber accent",
+      "verdict": "confirmed",
+      "reason": "No emissive amber appears. The orange tones are rim light on the link undersides and the brass connectors' specular. Oathsplitter has a glowing amber slot root and Sunbound has amber in its gem and a small ember, so the family mismatch is real. Section 6 asks for local amber heat. Low-medium is fair."
+     },
+     {
+      "claim": "Invariant amber heat = no",
+      "verdict": "confirmed",
+      "reason": "Same as above."
+     },
+     {
+      "claim": "LOW: ivory reads as blotchy marble/chalk and is warmer and peachier than #E5DDC7",
+      "verdict": "confirmed",
+      "reason": "The faces show faceted vein-like patches (visible in the tip crop), and samples of #C9A990 / #D1B7A2 / #B29278 are clearly peachier than the brief's swatch. This matches the reviewer."
+     },
+     {
+      "claim": "Invariant 'ivory should read as forged material' = partial",
+      "verdict": "confirmed",
+      "reason": "The patchy veining reads as stone. Partial is fair."
+     },
+     {
+      "claim": "LOW: the red guard lacks the gold trim the siblings have, and the red has marbled lightning streaks",
+      "verdict": "confirmed",
+      "reason": "Oathsplitter's guard and collars carry gold inlay lines, and Sunbound's has a gold boss and gold collar bands. Warlink's guard, collar and ferrule are all plain red with lightning-like specular streaks (visible on the collar in the guard crop)."
+     },
+     {
+      "claim": "LOW: mirror-lit composition",
+      "verdict": "confirmed",
+      "reason": "Each cleaver's outer edge plane is lit from its own outer side. The reviewer correctly says no change is needed."
+     },
+     {
+      "claim": "Invariant section 7 hidden surfaces = partial",
+      "verdict": "confirmed",
+      "reason": "Single 3/4 view only. This is correctly handled through ambiguities."
+     },
+     {
+      "claim": "Ambiguity: rear faces \u2014 resolved as symmetric with the housing as a U-channel and a through-rivet",
+      "verdict": "confirmed",
+      "reason": "Reasonable. Nothing in the image contradicts it."
+     },
+     {
+      "claim": "Ambiguity: blade cross-section \u2014 thickness about 0.035 L",
+      "verdict": "understated",
+      "reason": "The drawn side plane is about 40-50 px against L of about 890 px (0.045-0.055 L). Even allowing for part of it being bevel, 0.035 L thins the blade compared with the chunky drawn read. Use about 0.045 L at the spine/flat, or state explicitly that this is a deliberate departure."
+     },
+     {
+      "claim": "Ambiguity: tip notch \u2014 V-notch about 0.07 L deep, tall outer prong and shorter inner prong",
+      "verdict": "refuted",
+      "reason": "In the image the inner prong (spine side, tip about (77,27)) is the taller, broader one. The outer prong (about (42,52)) is a thin, shorter spike. The notch is a narrow slanted slot with a rounded root at about (107,127): about 100 px or 0.11 L deep (about 19% of blade length), not 0.07 L or 10-12%. The resolution would build a noticeably shallower notch with the prong heights reversed."
+     },
+     {
+      "claim": "Ambiguity: guard and quillon \u2014 one hooked quillon on the spine side, curling toward the tip, edge side flush",
+      "verdict": "confirmed",
+      "reason": "The guard crop shows exactly this. The guard ends at the heel corner on the edge side."
+     },
+     {
+      "claim": "Ambiguity: handedness \u2014 one mesh plus a mirrored copy",
+      "verdict": "confirmed",
+      "reason": "The cleavers are near-mirror images with spines and quillons facing inward."
+     },
+     {
+      "claim": "Ambiguity: eyelet attachment \u2014 add a pommel cap with a steel lug, eyelet fixed in the blade plane",
+      "verdict": "overstated",
+      "reason": "The lug already exists in the drawing (the hex steel tab under the ferrule). The resolution should be 'pierce the drawn hex lug, ring threaded through it or welded', not adding a new pommel cap. Eyelet orientation roughly parallel to the blade face matches the image."
+     },
+     {
+      "claim": "Ambiguity: brass connectors are real links rotated 90 degrees, passing through the eyelet and link 1",
+      "verdict": "confirmed",
+      "reason": "Visible in the eyelet crop: the brass ring passes through the eyelet's hole and into the first steel link."
+     },
+     {
+      "claim": "Ambiguity/spec: 9 links + 2 brass; arc about 1.0 L, eyelets about 0.75 L apart, sag about 0.28 L",
+      "verdict": "overstated",
+      "reason": "The count of 9 steel links (5 face-on, 4 edge-on) plus 2 brass is correct. The dimensions are inflated. L (tip to eyelet bottom) is about 890 px. The eyelet centers are about 600 px apart (about 0.67 L). The chain's lowest centerline is about 165 px below the eyelet centers (about 0.19 L; the bottom edge is about 0.25 L). The arc is about 740 px (about 0.83 L). The reviewer's own pitch (0.075 L x 9 plus connectors) also implies about 0.85 L, not 1.0 L. Since section 6 requires matching the pictured length, building at 1.0 L would add about 20% chain."
+     },
+     {
+      "claim": "Ambiguity: grip slightly oval and helical wrap",
+      "verdict": "confirmed",
+      "reason": "Reasonable. The drawn grip-zone length is about 175 px (about 0.2 L), slightly shorter than the claimed 0.24 L but still one-handed."
+     },
+     {
+      "claim": "Ambiguity: spine housing top cap and step",
+      "verdict": "overstated",
+      "reason": "An angled pointed top cap is drawn. But the most prominent housing feature, a diamond-shaped widening (boss) around the gold rivet, is omitted, while a minor 'step at the lower third' is emphasized."
+     }
+    ],
+    "missed": [
+     {
+      "severity": "medium",
+      "where": "Outer-tip notch of both cleavers (left: prongs at about (42,52) and (77,27), root at about (107,127); mirrored on the right)",
+      "problem": "The report reverses the prong hierarchy and halves the notch depth. The inner prong is the taller one, the outer one is a thin, shorter spike, and the slot is about 0.11 L deep with a rounded root. The thin outer spike is also a fragile, sub-pixel-at-distance feature at Roblox scale, and nobody flagged it.",
+      "fix": "Build the notch as drawn: about 0.11 L deep, slanted toward the spine, rounded root. Give the outer spike a minimum tip width of about 0.01 L and full blade thickness so it survives LOD and does not alias."
+     },
+     {
+      "severity": "medium",
+      "where": "build_spec chain notes and Chain links part",
+      "problem": "The 'canonical' chain dimensions (arc 1.0 L, span 0.75 L, sag 0.28 L, link 0.14 L) overstate the pictured tether by about 15-20%. Section 6 explicitly requires matching the pictured length.",
+      "fix": "Use arc about 0.83 L, rest span about 0.67 L, sag about 0.19 L at the centerline, and face-on link outer length about 0.12 L. Keep the link count fixed (9 + 2 brass) and derive pitch from it."
+     },
+     {
+      "severity": "low",
+      "where": "Spine housing around the gold rivet (left about x 230-300, y 180-260)",
+      "problem": "The housing swells into a diamond-shaped boss around the rivet, which is a key silhouette break in the red spine. It is absent from the build spec, which gives the housing a constant 0.07 L width.",
+      "fix": "Add a diamond boss about 0.11 L across, centered on the rivet, with chamfered edges matching the housing."
+     },
+     {
+      "severity": "low",
+      "where": "Ferrule at the grip end",
+      "problem": "The ferrule is drawn as a two-tier stepped red ring (a narrow upper ring plus a wider lower band), not a single band. Together with the hex lug, this is the existing 'pommel'. The spec describes a single ring and proposes a new block instead.",
+      "fix": "Model the two-tier stepped ferrule as drawn, with the hex steel lug beneath it. If more pommel emphasis is wanted, add a thin aged-gold band between the tiers rather than a new mass."
+     },
+     {
+      "severity": "low",
+      "where": "Chain link profile",
+      "problem": "Links are drawn as flat slab-section links with hard chamfers (axial thickness greater than radial rim width). The spec's round-ish 0.035 L octagonal wire would soften the chunky, forged-slab look that ties the chain to the faceted hilt style.",
+      "fix": "Use a flattened-octagon section of about 0.045 L axial by 0.028 L radial for all 9 links (one mesh)."
+     }
+    ],
+    "verdict_agrees": true,
+    "corrected_verdict": "pass_with_fixes"
+   }
+  }
+ ],
+ "videos": [
+  {
+   "video": "ribbon",
+   "reviewed": [
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/v1_full.jpg: 9 tiles at 00:00.000 through 00:08.000, 1 s apart (1.mp4 0-8 s; nothing after 8.0 s, so 8.0-9.22 s was not seen)",
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/v1_ribbon.jpg: 9 tiles at 00:03.500, 03.833, 04.167, 04.500, 04.833, 05.167, 05.500, 05.833, 06.167, about 0.333 s apart (6.167-6.7 s not covered)",
+    "Enlarged crops made from those sheets: the 03.500 tile, the 05.167 tile and the player time readout in the 04.000 tile (in the scratchpad as crop_35.png, crop_5167.png, crop_time4.png)",
+    "REFERENCE_INDEX.md: Videos section, 1.mp4 entry and 'Honest reference use'",
+    "THREE_CONCEPT_BRIEFS.md: 02 SUNBOUND section and comparison table"
+   ],
+   "observations": [
+    {
+     "interval": "00:00.000-00:02.000",
+     "what_happens": "This is a screen recording of an X/Twitter feed in a desktop browser, not the weapon clip. At 0.0 the feed shows a tropical game scene post, with the spear post's thumbnail below it. At 1.0 and 2.0 the 'roblox weapon' search results show the post 'Spear I made #roblox #RobloxDevs #blender3d' as a small inline video. The ribbon shape differs between the 1.0 and 2.0 thumbnails, so the inline video is already playing.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:03.000",
+     "what_happens": "The media viewer is open. A gold trident-headed spear is shown on a dark teal gradient background. The head points left and slightly up, and the butt points right and slightly down. A pale ribbon with a pastel pink/blue mottled pattern coils around the shaft from just behind the trident collar to the butt, then leaves the shaft as a free tail that bends upward and hooks down.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:03.500-00:04.167",
+     "what_happens": "The trident head, shaft angle and screen position match in all three tiles. Near the head the coils are tight, narrow and close to the shaft. Coil width and distance from the shaft grow toward the butt. The free tail is a tall, broad loop rising up and right at 3.5, swings below the shaft at 3.833, and is back up as a loop at 4.167.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:03.500-00:04.167 (between samples)",
+     "what_happens": "The tail probably makes a continuous up-down swing between these samples. With about 0.33 s between stills, the exact path, speed, easing and the number of swings between samples are unknown, and the motion could be aliased.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "00:04.000 and 00:03.500 player chrome",
+     "what_happens": "The embedded player has a progress bar and a time readout. Enlarged, the readout appears to say about '0:00 / 0:03' at 3.5 s and about '0:01 / 0:03' at 4.0 s. This suggests the source post is roughly a 3 s looping clip. The text is blurry and can't be confirmed exactly.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "00:04.500-00:05.167",
+     "what_happens": "At 4.5 the tail stretches out to the right as a wide, flatter loop. At 4.833 it curls up into a narrower vertical loop. At 5.167 it forms a tall loop rising high above the shaft past the butt, and the gold pointed butt spike shows below it. The coils pass both in front of and behind the shaft with consistent occlusion. The ribbon twists, so some sections face the camera fully and others are edge-on and thin.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:05.500-00:06.167",
+     "what_happens": "At 5.5 the tail is still a tall upright loop that hangs down at its end. At 5.833 it whips down and right, ending in a thin pointed tip below and behind the butt. At 6.167 it is a shorter loop with the tip flicking down and right. Throughout these tiles the inner coils behind the head hardly change, while the mid-shaft coils shift slightly.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:03.000-00:06.167 (rigid body)",
+     "what_happens": "Across every sample the spear stays put: same screen position and angle, no visible translation or rotation. Only the ribbon changes. Small changes in roll or position would not be visible at this tile size.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:03.000 vs 00:06.000",
+     "what_happens": "The ribbon shapes at 3.0 and 6.0 look very similar (tail loop rising up and right past the butt). With an apparent clip length of about 3 s, this fits a seamless loop. Whether the motion truly repeats exactly can't be confirmed from two stills.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "00:07.000-00:08.000",
+     "what_happens": "This is a different view, probably the second media item of the same post: a left-arrow carousel control appears. The spear stands vertical with the trident at the top. The ribbon spirals down the shaft with a fairly regular pitch, and a short tail hangs below the butt. The 7.0 and 8.0 tiles are nearly identical, with only a small difference at the lower tail. The view is centered and symmetrical.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:07.000-00:08.000 (motion)",
+     "what_happens": "Whether the upright view is a still image, a paused video or a slow animation can't be told from two stills 1 s apart.",
+     "confidence": "unverifiable"
+    },
+    {
+     "interval": "whole clip",
+     "what_happens": "Unknown from the stills: how the ribbon motion was made (cloth simulation, shape keys, bone chain, procedural), whether collision against the shaft is simulated, the source frame rate, the loop length, the render engine, and whether this asset runs in-engine in Roblox at all. The #blender3d tag says only that Blender was involved somewhere.",
+     "confidence": "unverifiable"
+    }
+   ],
+   "rig_and_camera": "No avatar, hand, grip pose or character rig is visible. The spear floats alone on a dark teal gradient, like a portfolio showcase. From 3.0 to 6.2 s the camera is fixed: a mild three-quarter side view looking slightly down, with the head at left and the butt at lower right, and no orbit, zoom or turntable. 7.0-8.0 s switches to a separate centered, upright front-on view. All of this is seen through an X/Twitter media player in a screen-recorded browser, so the footage is compressed and the player chrome and UI are burned in. There is no camera shake, no equip/swing, and no lighting change across the samples. Whether the ribbon is driven by bones, simulation or shape keys can't be seen.",
+   "lessons": [
+    "Pin the root hard and let freedom grow toward the tip. In the reference, the coils by the trident collar barely move and amplitude rises steadily toward the free end. For Sunbound: give the 1-2 segments nearest the pommel almost no motion, build freedom along the length, and give the tip the most swing.",
+    "Keep the weapon still while the cloth moves. The spear never moves while the ribbon animates, so the cloth is the only motion in frame and reads clearly. For the Sunbound idle/inspect showcase, hold the sword steady and let only the streamer move, plus the small guard accent. The secondary motion must not shake the main mesh.",
+    "Use a twisting flat strip, not a tube. The ribbon turns between broad face-on sections and thin edge-on sections, which creates rhythm and keeps it from looking like a heavy banner. Model the Sunbound streamer as a thin, slightly thick strip with enough length-wise loops to twist cleanly, and taper or notch the free end to a point like the reference tail.",
+    "Vary the free end's poses. Across 3.5-6.2 s the tail moves through clearly different shapes (high upright loop, low swing, wide horizontal, downward flick) rather than one repeated sway. A Sunbound idle loop needs at least 3-4 distinct key silhouettes for the tip, but with much smaller amplitude than the reference (the brief asks for restrained delayed motion that settles).",
+    "Make the idle loop seamless. Matching shapes at 3.0 and 6.0 and an apparent 0:03 clip length suggest a loop of about 3 s. Author the Sunbound streamer idle as a closed loop where the first and last frames match. Pick the loop length from your own timing tests, not from this clip.",
+    "Don't copy the wrap. The reference ribbon coils the whole shaft, including where a hand would go. Sunbound's brief requires a short streamer attached at the pommel beyond the hand area, with the grip left clear. Take only the root-pinned, tip-loose motion grading, not the full-length wrap or the ribbon's length relative to the weapon.",
+    "Scale the free length down. Here the free tail extends roughly 15-25% of the spear's length past the butt and loops above and below the shaft. For Sunbound, keep the free length short enough that, at full swing, the tip never reaches back over the grip or blade. Check this in the upright and side views.",
+    "Keep front/back occlusion clean. The coils pass correctly in front of and behind the shaft with no visible clipping in the samples. For the Sunbound streamer near the pommel, check every keyed or simulated frame for interpenetration with the pommel and grip, and add a collider or offset if needed. Whether the reference used collision is unknown.",
+    "Supply both a side view and an upright view. The reference pairs an animated side view with a calm vertical composition, where the ribbon hangs in a regular spiral with a short tail below. A matching Sunbound presentation: an animated side view plus an upright settled pose with the streamer hanging calmly below the pommel.",
+    "Treat the reference as an artistic target, not a technical spec. Sampled stills at 1 fps and 3 fps can't show the easing, the true speed, the source frame rate or the simulation method. Time the Sunbound streamer by watching your own playback at full frame rate."
+   ],
+   "cannot_tell": [
+    "The ribbon's path and easing between samples (gaps of 0.333 s and 1 s). Fast flicks between frames would not appear, and the apparent swing direction could be aliased.",
+    "How the motion was made: cloth simulation, bone chain, shape keys or procedural. Also whether there is any collision against the shaft.",
+    "Source frame rate, exact loop length and whether the loop repeats exactly. The 0:03 player readout is blurry, and 3.0 vs 6.0 is only a visual match.",
+    "Whether the spear has tiny roll or position changes below the tile resolution.",
+    "Whether the 7-8 s upright view is a still, a paused video or a slow animation.",
+    "Ribbon thickness, whether it is double-sided, and how the texture or shader was built. The pastel mottling is visible, but its channels are not.",
+    "Anything in-game: whether the asset runs in Roblox, its performance, how it attaches to an avatar, or how it behaves when equipped or swung. None of this is shown.",
+    "The 8.0-9.22 s and 6.167-6.7 s portions of the video were not covered by any tile."
+   ],
+   "index_accuracy": "Mostly accurate. 'Golden spear held largely steady while attached ribbon deforms' matches every tile from 3.0 to 6.167: the spear stays fixed and only the ribbon changes. 'Around 00:07 onward: upright composition view' matches the 7.0 and 8.0 tiles. Clarifications: (1) The ribbon is already moving in the media viewer at 3.0, and in the feed thumbnail at 1-2 s, so the 3.5 start is conservative. 0-2 s is feed browsing, not a clean view. (2) 'Progressively wider free ribbon loops' is true spatially: loops widen from the pinned coils by the head toward the free tail. It is not true over time, because the tail swings between large and smaller poses with no steady growth across 3.5-6.2 s. (3) The index doesn't mention that the ribbon wraps the entire shaft, including the would-be grip area, so 'keeping grip clear' is an adaptation for Sunbound, not something the reference shows. (4) The upright view appears to be a second carousel item (a left-arrow control appears), not a camera move within one clip. (5) The player readout suggests the source is a loop of about 3 s, which the index doesn't state; the readout is blurry, so this is inferred."
+  },
+  {
+   "video": "aura",
+   "reviewed": [
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/v2_overview.jpg: 16 tiles, burned-in 00:00:00 to 00:00:30 every 2 s (the sheet covers 0-30 s; nothing from 30-32.9 s was sampled)",
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/v2_firstperson.jpg: 10 tiles, burned-in 00:00:10 to 00:00:19 every 1 s (no 00:00:20 tile)",
+    "/root/.claude/uploads/f2ba65af-583f-596c-b738-3b83c1f77bfd/ead9afed-REFERENCE_INDEX.md: Videos section (2.mp4 entry and the honest-use notes)",
+    "/root/.claude/uploads/f2ba65af-583f-596c-b738-3b83c1f77bfd/f635e55b-THREE_CONCEPT_BRIEFS.md: sections 01 Oathsplitter, 02 Sunbound and 03 Warlink, plus the comparative acceptance table"
+   ],
+   "observations": [
+    {
+     "interval": "00:00-00:02 (overview)",
+     "what_happens": "Third-person showcase on a dark grey grid baseplate (looks like a Studio-style test place). Three white blocky avatars stand still. The left one holds a blue/violet glowing weapon low and roughly horizontal. The middle one holds an orange/red curved scythe or sickle blade upright near the shoulder, with gold spark particles around it. The right one has a cyan/green glow at hip height. A fourth weapon floats vertically at the upper right: blue/violet with a gold/orange guard accent and a star-shaped sparkle. The two tiles are almost identical. Aura shapes and positions hold steady, and only small particle details differ. The camera does not move.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:00-00:02 (overview)",
+     "what_happens": "The auras appear to be continuous looping idle effects rather than one-off reveals, because their shape and spread match across two samples 2 s apart.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "00:04-00:08 (overview)",
+     "what_happens": "Screen recording of the X/Twitter web feed. 00:04 shows a post with a still image of a red claw/scythe weapon next to a grey blade. 00:06 and 00:08 show a post whose embedded video thumbnail is a first-person green/cyan weapon. This is navigation, not gameplay footage.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:10 (both sheets)",
+     "what_happens": "The embedded clip plays in browser full screen. A small bar at top center is probably the browser's full-screen notice. The setting is a gothic courtyard with a white grid floor, and a small purple blocky dummy stands at mid-left. First-person viewmodel: a single right arm in a dark denim-like sleeve with a skin-toned hand enters from the lower center-right and holds an ornate red weapon vertically. The weapon reaches about 40% of the way down from the top of the frame. Strong red bloom covers its whole length, and small dark tendrils and a dark sphere sit at the tip. No gameplay HUD is shown.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:11-00:12 (1 fps sheet)",
+     "what_happens": "The red weapon tilts. At 00:11 it leans toward the upper left and sits larger and further right in frame as the arm comes closer to the camera. At 00:12 it is still tilted and red-glowing, with small dark flecks drifting to its left. Across all red frames the bloom hides most internal detail and edge structure on the weapon.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:12->00:13",
+     "what_happens": "The weapon changes between these two samples: the red weapon is gone by 00:13. Whether the red weapon has its own unequip effect, or whether there is an edit cut, cannot be known because nothing in between was sampled.",
+     "confidence": "unverifiable"
+    },
+    {
+     "interval": "00:13 (1 fps sheet)",
+     "what_happens": "Purple reveal burst. Both hands are now visible: the left hand rises from the lower left and the right hand is at center-right. A wide horizontal mass of dark smoke with a bright white-pink core spans the space between the hands. Violet streaks or rays shoot toward the upper right. This is the largest and most screen-covering effect in the purple sequence.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:14 (both sheets)",
+     "what_happens": "The purple has settled into two local effects. The left hand holds a swirling purple smoke orb with a dark core and a violet rim. The right hand holds a small dark claw or dagger with a localized violet glow. The burst seen at 00:13 is gone. Both hands frame the lower half of the screen with clear space between them.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:13->00:14",
+     "what_happens": "The burst resolves into localized auras within at most about one second. The true burst length and its falloff curve cannot be measured from 1 fps samples.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "00:15 (1 fps sheet)",
+     "what_happens": "Cyan/green reveal burst. The right arm is raised high at center-right and the left arm reaches toward the left. A bright green energy cluster surrounds the right hand. Long ribbon or tendril streaks trail to the left, away from the hand. Dark fragments fly outward, including a black rectangular chunk at the top center. That chunk could be debris or a magazine, which cannot be determined.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:16 (both sheets)",
+     "what_happens": "Settled cyan state. A pistol is held in both hands at the lower center, and a small cyan glow is confined to the front and top of the gun. The burst and tendrils are gone. No HUD is shown.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:17 (1 fps sheet)",
+     "what_happens": "Same pistol pose, now with the gameplay HUD: compass strip at top center (NE/E/SE), a '100/100' health bar at bottom left, hotbar icons at bottom center, a white pistol icon and a number at bottom right. The weapon and its glow sit in the clear space between the HUD elements.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:16->00:17",
+     "what_happens": "The HUD appearing after the reveal suggests the clip goes from a reveal/presentation state to an active ready state. It could also be a cut between separately recorded takes. Which one cannot be determined.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "00:18-00:19 (1 fps sheet; 00:18 overview)",
+     "what_happens": "The red weapon is back, with poses closely matching 00:10 and 00:11.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:18-00:19",
+     "what_happens": "Most likely the embedded player looping or replaying the same short presentation clip (red -> purple -> cyan in about 7-8 s). It is not new material.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "00:20-00:22 (overview)",
+     "what_happens": "Back in the X feed, the player is no longer full screen. Video thumbnails show the red weapon (00:20) and then the purple one (00:22). The first-person segment therefore ends somewhere between 00:19 and 00:20.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:24 (overview)",
+     "what_happens": "Full-screen first-person view again with the cyan pistol held in both hands at lower center, small cyan glow, no HUD, and the top-center full-screen bar visible. This is the 'cyan ready view' the index describes.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "00:26-00:30 (overview)",
+     "what_happens": "Scrolling the X feed. 00:26 shows the cyan clip thumbnail. 00:28 shows a different post with a dark blue smoky sword. 00:30 shows a post for another game ('Sword Realms' style branding) with a lobby image.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "whole clip",
+     "what_happens": "Not knowable from stills: the game's or recording's frame rate, particle emitters vs flipbooks vs mesh effects, bloom post-processing vs emissive parts, what triggers equip, exact burst durations, camera sway/bob amounts, sound sync, and the contents of 00:30-00:32.9.",
+     "confidence": "unverifiable"
+    }
+   ],
+   "rig_and_camera": "The footage is a screen recording of the X/Twitter web UI that plays embedded game clips. It is a recording of a recording, with compression, player chrome, and full-screen toggling. Two setups appear. (1) 00:00-00:02: a third-person static showcase camera on a grid baseplate, with white blocky Roblox-style avatars (classic block-body dummies) posed still with weapons attached, plus one free-floating weapon. (2) 00:10-00:19 and about 00:24: a first-person camera with a separate viewmodel. The arms have sleeves and skin-toned hands, not block-avatar arms. The camera is set in a gothic courtyard with a grid floor and a purple blocky target dummy. The viewmodel is one-handed and right of center for the red weapon, two-handed spread for the purple orb plus claw, and two-handed centered low for the cyan pistol. The gameplay HUD (compass, health, hotbar, weapon icon) shows only at 00:17. The camera stays fixed in direction across samples, with no visible look-around. Weapon position changes come from the viewmodel animation, not camera movement. Sampling is too sparse to judge micro sway.",
+   "lessons": [
+    "Reveal structure: one big burst, then a small local glow. In both observed reveals (purple at 13 s, cyan at 15 s), the burst shows up in a single 1 fps sample. One second later only an aura hugging the weapon remains. Make the equip burst a single short event, under a second at most and probably much shorter (exact length cannot be measured from these samples), then settle into a persistent accent far smaller than the burst.",
+    "Bursts throw energy away from the weapon: purple rays toward the upper right, cyan tendrils streaking left, dark fragments flung outward. Point Oathsplitter's equip ignition along the inner rails toward the twin points. Have Sunbound's reveal gather inward toward the guard disk and then collapse onto it. Have Warlink's pulse run between the two pommels along the chain.",
+    "Warlink connecting pulse: the purple burst at 13 s fills the space between two hands before splitting into two separate local auras at 14 s. Use that for Warlink: a brief bridge between the two cleavers, then local heat at each endpoint or selected links. Keep link gaps readable once settled.",
+    "Counterexample for Oathsplitter: the red weapon (10-12 s, 18-19 s) has full-length bloom that hides internal structure and edges in every sample. Do not use that for Oathsplitter. Keep the amber glow in a narrow channel along the inner edges, keep the slot dark and empty in the ready state, and keep bloom radius small enough that the opening reads at viewmodel distance.",
+    "Ready-state intensity: the settled cyan glow (16, 17, 24 s) covers only part of the weapon and leaves its silhouette fully readable. That fits the briefs' quiet states: low inner-edge heat for Oathsplitter, a small guard/spine accent for Sunbound, endpoint/link heat for Warlink.",
+    "Show vs ready: the third-person showcase auras (0-2 s) are denser and more particle-heavy (sparks, flecks, floating sparkle) than the first-person ready glows. If you build a showcase or inspect mode, it can run hotter, but the first-person ready state should be the restrained version.",
+    "HUD safe zones: in the HUD ready frame (17 s), the weapon and glow sit in the lower-center gap between the health bar (bottom left), hotbar (bottom center), weapon icon (bottom right) and compass (top center). Keep settled ready effects out of those zones. Let only the brief reveal burst cross into them.",
+    "Viewmodel framing: a one-handed long weapon was shown right of center with its tip in the upper-middle screen and the hand in the lower right. Dual items were spread to the lower left and lower right. For Oathsplitter (two-handed, long), plan for part of the blade to leave the frame and keep the twin points or slot visible during the reveal. For Sunbound, put the guard disk in the lower-center third, where the eye lands. For Warlink, frame one cleaver in each lower corner with the chain sagging between them.",
+    "Contrast via dark smoke: the purple and cyan reveals pair a bright core with dark smoke or fragments, which keeps them readable against the pale lavender environment. On amber effects, a little charcoal smoke or ember debris would add value contrast without turning the effect into an opaque white-yellow wall.",
+    "Hold one dominant hue per weapon (red, violet, cyan) in both burst and ready states. Across the Incarnam set, keep amber as the single energy hue and vary the spatial structure (inner channel, gathered guard accent, linked endpoints), not the colour."
+   ],
+   "cannot_tell": [
+    "Exact burst durations and fade curves. Samples are 1 s apart, so each burst is seen in a single frame and everything between samples is unknown.",
+    "Whether the switch between weapons (12->13, 14->15, 17->18) is an in-game equip/unequip sequence, a clip loop, or an edit cut. Whether the red weapon has an unequip effect.",
+    "Whether 18-19 s is the player looping or new footage.",
+    "The black rectangular object flying in the 15 s burst: debris, a dropped magazine, or a previous weapon.",
+    "Effect method (particle emitters, flipbooks, beams, mesh effects), whether glow is bloom post-processing or emissive material, and any texture/shader setup.",
+    "Game or recording frame rate, camera bob/sway amounts, input that triggers equip, sound timing, hit logic or collision.",
+    "The embedded player's own timecodes and the post text (too small to read on the sheets).",
+    "Content from 30-32.9 s (not sampled)."
+   ],
+   "index_accuracy": "Mostly accurate, with several gaps and small timing issues. (1) '00:00-00:04 stationary blue/orange/cyan aura displays' is right for 0-2 s, but by the 4 s sample it is already X feed navigation. There is also a fourth floating blue/violet weapon with a gold accent that the index leaves out. (2) The index does not mention 04-08 s (feed navigation, no gameplay). (3) 'Around 00:10-00:20 first-person red/purple/cyan presentations' is right in order and content, but the first-person segment ends between 19 and 20 s. The 20 s sample is the feed. The red presentation also seems to replay at 18-19 s. (4) The 'cyan' item is a pistol, not a melee weapon, and the index does not say so. It also omits that the clearest ready state with gameplay HUD is at 17 s, not only around 25 s. (5) 'Around 00:25: cyan ready view' is seen at the 24 s sample, and 26 s is back to the feed, so it is short and closer to 24 s. (6) 'Later scrolling previews repeat other material' is consistent with 26-30 s, which shows feed thumbnails including a dark blue smoky sword and another game's post, but repetition of 3.mp4 cannot be confirmed from this sheet alone. (7) The index's 'show-versus-ready effect intensity' study point is well supported: the bursts at 13 and 15 s are clearly larger than the settled states at 14 and 16-17 s."
+  },
+  {
+   "video": "chain",
+   "reviewed": [
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/vfc_overview.jpg (FULL 0.000-19.000 s, 1 fps, 20 tiles)",
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/vfc_fire1p.jpg (FULL 0.800-2.550 s, 0.25 s step, 8 tiles)",
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/vfc_extension.jpg (FULL 2.800-4.400 s, 0.2 s step, 9 tiles)",
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/vfc_dummy3p.jpg (FULL 4.800-8.133 s, 0.333 s step, 11 tiles)",
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/vfc_untextured1p.jpg (FULL 9.200-12.867 s, 0.333 s step, 12 tiles)",
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/vfc_dummyhands.jpg (FULL 13.600-16.350 s, 0.25 s step, 12 tiles)",
+    "/tmp/claude-0/-home-user-BUILD/f2ba65af-583f-596c-b738-3b83c1f77bfd/scratchpad/frames/vc_overview.jpg (Chain Weapon.mp4 0.000-23.750 s, 1.25 s step, 20 tiles)",
+    "Enlarged 2x crops I made from those sheets: crop_u1020.png (10.200), crop_d1435.png (14.350), crop_t480.png (4.800), crop_f155.png (1.550), crop_d1585.png (15.850), in the same frames directory",
+    "Context: REFERENCE_INDEX.md 'Videos' section and the 03 WARLINK section of THREE_CONCEPT_BRIEFS.md"
+   ],
+   "observations": [
+    {
+     "interval": "FULL 0.000-0.800",
+     "what_happens": "Screen recording of an X/Twitter feed with the chain video embedded as a small post thumbnail. No weapon detail can be read.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 1.050-1.300",
+     "what_happens": "First-person game view (bamboo-forest map, Roblox-style HUD: PETS/SHOP buttons, 0/5 hotbar, 1:07-1:08 timer, 'Jade Grove', '1.1% cleared'). Two blocky black-and-white arms sit low at the bottom left and right. No chain or fire is visible yet.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 1.550",
+     "what_happens": "The hands are far apart at the left and right screen edges. A bright yellow-white fire band spans between them in a shallow upward arc across the whole view. Dark chain links with white highlights show only right at the left hand; the middle of the span is fully covered by flame.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 1.800-2.300",
+     "what_happens": "The fire band drops into the lower third of the screen and flattens along the bottom. It breaks into orange square flame particles and embers, with sparks near the left hand at 1.800. By 2.300 it looks ragged and more spread out. The chain stays mostly unreadable underneath.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 1.550-2.300 (motion between samples)",
+     "what_happens": "Read together, the samples suggest this is the same separate-then-settle cycle as the untextured clip: hands apart, the arc flattens, then the effect disperses. The actual path between samples was not observed.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "FULL 2.550-3.000",
+     "what_happens": "Cut to an untextured editor-style void: dark grey background, faint grid, one white horizon/reference line, plus red ellipse outlines and black triangle markers. Close-up of a face-coloured blocky arm (red/blue/light-blue blocks, tan hand) with a grey chain leaving the wrist at the lower left (2.550).",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 3.200",
+     "what_happens": "Only chain is visible: grey rectangular links in a curve that starts near the horizon at centre frame and comes down toward the lower right. The links get larger toward the bottom right, which reads as the chain running away from the camera into depth. No hand is in frame.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 3.200 (interpretation)",
+     "what_happens": "This single frame, plus Chain Weapon.mp4 at 2.500 (chain running from the tan fist up-left out of frame), is the only evidence of 'extension'. Two things are possible: the chain lengthens, or the hand and camera move away while the length stays fixed. Stills cannot tell these apart.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "FULL 3.400-4.400",
+     "what_happens": "Empty viewport: grid, horizon line and a small centre dot only, with no arm or chain. At 3.600/3.800/4.400 a faint green outline shows at the very bottom edge. The camera holds still.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 4.800-7.800",
+     "what_happens": "Elevated third-person view from behind a blocky R6-style test avatar on a grass baseplate. The shirt is labelled 'BACK' and 'B B', with a faint 'ScalePlayer' nametag. A thin blue chain that looks long relative to the body is swung from the hands. 4.800/6.133/7.467: one arm raised (red/white sleeve) and the chain thrown into a large loop over and around the left side, with the end down near the lowered yellow hand. 5.133/5.467, 6.467/6.800 and 7.800: hand at the side, chain trailing down and to the right, past the bottom of the frame. 5.800/7.133: hands brought together at the left side, chain bunched/coiled around them in a compact clump.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 4.800-7.800 (cycle)",
+     "what_happens": "Poses repeat about every 1.33 s (4.800 ~ 6.133 ~ 7.467; 5.800 ~ 7.133), so this is a looped animation playback. With 0.333 s sampling, the true period could be a submultiple, and motion between samples is not seen.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "FULL 4.800-7.800 (attachment)",
+     "what_happens": "One end clearly stays at the raised or right hand. Whether the far end is attached to the second hand or hangs free/trails off-frame cannot be confirmed at this distance and resolution.",
+     "confidence": "unverifiable"
+    },
+    {
+     "interval": "FULL 8.000-8.133",
+     "what_happens": "Black frame (cut/transition).",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 9.200 / 11.200",
+     "what_happens": "First-person untextured void. Both arms are face-labelled debug blocks (red faces marked 'L', a green face marked 'R', blue/light-blue/green/red sides, tan blocky hands with separate finger blocks). The right fist is raised on the right, the left arm low on the left. No chain span is visible. Green and red ellipse outlines float in the view.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 9.533-9.867 / 11.533-11.867",
+     "what_happens": "Both hands are low and close together near the bottom centre. The green 'R' block is centred at 9.867, and a black triangle marker sits above. No chain span is visible: it is either out of frame below the camera or hidden behind the arms.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 10.200 / 12.200",
+     "what_happens": "Hands fully apart at the left and right screen edges. A white/light-grey chain spans between them, bowed upward: the curve rises above the straight line between the endpoints, then comes down to the right hand. At the left end the chain wraps the red wrist/forearm block in a coil of several links (a wrist cuff), and the span leaves from that coil. The right end ends at the right wrist/hand block, with a larger grey end plate visible at 10.200. The links are rigid rectangles with open centres, alternating flat and edge-on (90-degree alternation), at consistent scale.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 10.533 / 12.533",
+     "what_happens": "Hands still apart. The chain is now a shallow line with a slight downward dip in the middle (mild sag), so the upward bow is gone.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 10.867 / 12.867",
+     "what_happens": "Hands at maximum separation. The chain is almost straight and horizontal between the wrists, reading as taut. Both endpoints are still at the wrists and the left wrist coil is still visible.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 9.200-12.867 (cycle and shape progression)",
+     "what_happens": "Poses repeat about every 2.0 s (9.2~11.2, 10.2~12.2, 10.533~12.533, 10.867~12.867), a looped animation. In each separation the sampled chain goes from upward bow, to mild sag, to near-straight over about 0.67 s. That reads as delayed follow-through followed by pulling taut. The curve between samples, and whether the motion is simulated or keyed, are not observable.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "FULL 9.200-12.867 (camera)",
+     "what_happens": "The horizon line stays at roughly the same screen height in every tile. The 1P camera is essentially static while the arms move.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 13.600 / 15.350",
+     "what_happens": "Close third-person camera from behind and above the avatar's head. The arms are large face-coloured cubes with 'U' labels and yellow/green/red/cyan faces, and tan hands. One arm is raised high with the hand at the top right and the other crossed in. No chain is visible.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 13.850-14.100 / 15.600",
+     "what_happens": "Both arm cubes are gathered in front of and beside the head. The chain is not visible (it may be occluded by the head or bunched between the cubes).",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 14.350 / 16.100",
+     "what_happens": "Arms swing wide apart. A dark blue chain spans between them in a pronounced upward arc above head height. At the left cube the chain wraps around the arm/hand cube in a coil. At the right it ends at the hand on top of the cube.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 14.600 / 16.350",
+     "what_happens": "Arms apart; the arc is lower and shallower.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 14.850",
+     "what_happens": "Arms at widest; the chain is flatter, close to straight (slight residual arc).",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 15.100",
+     "what_happens": "Both cubes pulled back near the shoulders. No chain is visible between them.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 15.850",
+     "what_happens": "Hands close together in front of the head. A short, nearly straight chain segment runs between the two hands, and another chain segment sticks out past the left cube toward the left edge. The extra length appears to go outside the inter-hand gap instead of hanging in a deep sag.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "FULL 13.600-16.350 (cycle)",
+     "what_happens": "The pose sequence (raise, gather, wide bow, flatter, straight, gather, raise) matches the untextured 1P loop. It repeats about every 1.75 s here (13.6~15.35, 14.35~16.1) against about 2.0 s in 1P. That difference is within sampling quantization, so the two are plausibly the same animation seen from 3P, but this cannot be confirmed.",
+     "confidence": "inferred"
+    },
+    {
+     "interval": "FULL 17.000-19.000",
+     "what_happens": "Fire-coated first-person presentation in the bamboo map again. 17.000: hands apart with a bright flame band along the lower screen and sparks at the left hand. 18.000: the flame band runs low and thin from the left. 19.000: dark chain links with white highlights read at the left hand, then a flame band runs across to the right. This matches the 1.55-2.3 material.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "Chain Weapon.mp4 0.000-20.000",
+     "what_happens": "Same order as FULL: X feed (0.0), fire 1P (1.25), studio fist with chain running up-left out of frame (2.5), empty void (3.75), 3P avatar with long blue chain trailing to the ground (5.0-7.5), 1P untextured (8.75-12.5, with a taut straight chain at 12.5), close 3P dummy hands with arc (13.75) and gathered (15.0), fire 1P (16.25-18.75), close-up of studio arm (20.0).",
+     "confidence": "seen"
+    },
+    {
+     "interval": "Chain Weapon.mp4 21.250-23.750",
+     "what_happens": "X feed scrolling through unrelated posts (a red character in an editor, a Roblox Studio rig, a dark scene). No chain content.",
+     "confidence": "seen"
+    },
+    {
+     "interval": "All clips",
+     "what_happens": "Every tile shows a web video player bar (progress line, time readout such as '0:13 / 0:18', controls). The footage is a re-encoded screen capture of a social-media video, not a source export. Native frame rate, exact timing and anything happening between samples are unknown.",
+     "confidence": "seen"
+    }
+   ],
+   "rig_and_camera": "The clips show two kinds of rig, with no weapons held in any clip.\n\n1. A blocky Roblox R6-style test avatar on a grass baseplate. Its shirt is labelled 'BACK' / 'B B', there is a faint 'ScalePlayer' nametag, and the arm parts are face-coloured cubes labelled 'U'.\n2. A first-person arms-only rig in an untextured editor-style void (grid, horizon line, red/green ellipse outlines, black triangle markers). The arms are face-labelled blocks (red 'L', green 'R', blue/light-blue sides) with tan blocky hands.\n\nThe chain is attached at the wrists and hands. One end wraps the wrist or arm cube as a multi-link coil; the other ends at the opposite wrist/hand. The hands are empty: no cleaver, handle or pommel eyelet appears anywhere. Chain material varies by clip: light-grey alternating links (1P untextured), dark blue links (3P), and dark links under a fire effect (game 1P).\n\nCamera modes:\n- Static first-person camera with both arms entering from the screen edges (untextured void 9.2-12.9 and in-game 1.0-2.3 / 17-19).\n- Elevated, distant third-person view from behind (4.8-7.8).\n- Close third-person view from behind and above the head (13.6-16.4).\n- Free editor-style viewport shots (2.55-4.4).\n\nAll of it is recorded through an X/Twitter web video player, so the footage is re-encoded. The ellipses and triangles look like editor/debug markers, but what they are cannot be determined.",
+   "lessons": [
+    "Build the hand-separation loop around four readable chain states, as the samples show them: (1) gathered, with the span hidden or bunched; (2) snap-apart, with the chain bowed upward above the line between endpoints (follow-through lag); (3) settle, a shallow mid-span sag; (4) taut, nearly straight at maximum separation. In the reference, bow to straight takes about 0.5-0.7 s, and the full loop is about 1.75-2.0 s (sampling-limited).",
+    "Make the taut state the length check. The chain should read nearly straight exactly when the hands reach full separation, so the apparent length equals maximum endpoint distance. Slack should only appear when the endpoints are closer than that length. Never let the chain look straight at two different separations.",
+    "The bow at snap-apart curves upward, against gravity. It reads as a delayed reaction to the hands moving, not as gravity sag. Use a lagging upward or outward arc for the first beat of separation and let gravity sag show only in the settle beat.",
+    "When the hands gather, the reference hides the span: it drops out of frame in 1P and sits behind the head or between the arm cubes in 3P. At 15.85 the extra length sticks out past one hand instead of sagging deeply. Warlink needs an explicitly designed quiet rest configuration (a short loose drape between the pommels, staying inside the compact length) rather than leaving it to chance.",
+    "The reference anchors the chain at the wrists, with one end coiled around the forearm. For Warlink, move both endpoints to the cleaver pommel eyelets and keep each attachment fixed relative to its pommel at every sample. Do not copy the wrist coil, because the brief requires the chain to connect beyond the grip zone.",
+    "Close-up links are rigid rectangles with open centres, alternating 90 degrees (flat, then edge-on), at consistent scale along the whole span. In 3P at distance the same chain reads as a dark beaded line. Model full links for 1P and simplify to a bead or line silhouette for distant 3P, keeping the connected curve.",
+    "Do not copy the 4.8-7.8 third-person segment's length or behaviour. There the chain is long, whips into large loops and trails past the frame edge, which contradicts the Warlink brief's compact tether and its 'not a long-range whip' rule. Use the 9.2-16.4 two-hand loop as the motion reference.",
+    "Under the fire effect, the middle of the span is completely covered and only links right at the hand stay readable. For Warlink's local heat, keep the effect from fully covering the links. Leave link edges or the endpoints visible and let the heat sit on or near the links. The reference fire breaks into embers within about 0.5-0.75 s of sampled time.",
+    "In first person at full separation, the chain spans the entire screen width just below the horizon, with the hands at the screen edges. Check that the chain never clips through the camera near plane or covers the crosshair, and that both endpoints stay attached when one hand leaves the view.",
+    "Validate the same animation from both a static 1P camera and a behind-and-above 3P camera. The reference shows that the same pose loop gives very different silhouettes: a horizontal span in 1P, an arc over the head in 3P.",
+    "Treat all timing from this footage as approximate. It is a re-encoded social-media screen capture sampled at 3-5 fps, so use ranges, not frame-exact keys."
+   ],
+   "cannot_tell": [
+    "Whether the chain is physically simulated, procedural (spline or IK) or hand-keyed",
+    "Whether chain length actually changes during the 'extension' shot (3.2 s) or the hand or camera simply moves away",
+    "Whether the far end in the 4.8-7.8 3P whip segment is attached to the second hand or hangs free",
+    "Where the chain goes when the hands are gathered (occluded, out of frame, or collapsed)",
+    "Any collision between chain, body, arms or ground",
+    "Hit detection, reach or damage logic",
+    "Native frame rate, exact loop period and the motion between sampled frames",
+    "Whether the 1P untextured loop and the 13.6-16.4 dummy-hands loop are literally the same animation clip",
+    "What the red and green ellipse outlines and black triangle markers in the void represent",
+    "How the fire is built (particles, trail, mesh, shader) or how it is attached to the links",
+    "Whether a weapon or pommel is ever involved; no blade is visible in any frame"
+   ],
+   "index_accuracy": "The FULL Chain Weapon.mp4 entry is broadly accurate, with these corrections.\n\n- 00:01-02.6 fire 1P: 1.05-1.3 show only low arms with no chain or fire. Fire appears from about 1.55 s and the view cuts to the studio at 2.55.\n- 02.8-04.5 'animation workspace extension': only overstated. Just 2.8-3.2 show an arm and a single frame of chain stretching away (3.2); 3.4-4.4 are an empty viewport. 'Workspace' is fair (editor-style void). Whether the chain truly extends, rather than the hand moving away, cannot be verified.\n- 04.8-08.3 third-person dummy: correct, but the content ends about 7.8-8.0 (8.133 is black). The index does not mention the most important fact: the chain here is long and whip-like with large loops, which contradicts the Warlink brief.\n- 09.2-13.3 1P untextured: accurate. This is the clearest evidence for hand separation, slack versus taut and endpoint attachment.\n- 13.6-16.5 dummy hands: accurate, and it is a close behind-and-above third-person camera.\n- 16.8-end fire 1P: accurate.\n- 'Endpoint attachment' is supported only for wrist/hand attachment. No weapon or pommel appears anywhere, so pommel-eyelet attachment is not shown.\n\nChain Weapon.mp4: accurate. It follows the same order through about 20 s, then 21.25-23.75 are unrelated feed posts."
+  }
+ ],
+ "audit": {
+  "contradictions": [
+   "Environment vs brief scope: the brief is written to create assets inside the user's existing Roblox project. Sections 1, 9, 10, 13, 14 and Phases A, B and F assume Studio, the real avatar rig, camera modes and the equipment system. None of these exist here. The brief does allow a limitation route (state the missing capability, do the useful work), so this is a hard block, not a licence to fake integration.",
+   "Palette mismatch: the master prompt lists 7 swatches, including deep red #702D27. THREE_CONCEPT_BRIEFS.md lists only 6 and leaves out deep red. Use the master's 7.",
+   "Sunbound blade colour: the text asks for a 'broad quiet pearl-steel face' and gives pearl steel as #C9CDD0, a cool grey. The approved 02_Sunbound image paints the blade as warm cream/ivory, close to #E5DDC7. Either the concept or the swatch has to win. Proposal: a warm ivory base with cool pearl bevels and highlights.",
+   "Sunbound guard: the master brief treats red as 'small echoes elsewhere' and names the gold disk as the single focal point. The concept has large red swept cross-guard arms with gold trim and a red gem in the disk. 'Executioner-like' also suggests a blunt tip, but the concept has a clipped point. The image should govern the shape.",
+   "Sunbound blade relief: the concept carves sunburst rays into the ivory blade around the disk. That conflicts with 'keep much of the blade surface quiet' unless the rays stay shallow and close to the guard.",
+   "Oathsplitter grip length: the text requires a 'genuinely usable two-handed grip' with the blade at about 2/3 of total length. The concept grip only reads as about 1.5 hand widths. Lengthening the grip departs from the concept proportions. Per the brief the text invariants win, so expect a longer handle than the image.",
+   "Oathsplitter outer edges: the concept has stepped notches/hooks on the outer rail edges and an amber gem on the guard. Neither is in the text (it says 'restrained aged-gold inlay'). Notches risk the 'avoid spikes' rule. Keep them as a few large steps.",
+   "Warlink chain links: the brief requires alternating link orientation with open centres. The concept draws most links roughly face-on, which is an image artifact to correct rather than copy. The concept also shows a mirrored left/right pair, while the text says 'matching pair'. Mirrored or identical is unresolved.",
+   "Scale and orientation: the brief says to use the project's existing convention and test against the actual rig. The untracked /home/user/BUILD/incarnam-weapons/blender/lib/stage.py already hard-codes 1 BU = 1 stud = 0.28 m, +Z up, front -Y, origin at the grip. That is an unvalidated assumption standing in for the 'discover the convention' requirement.",
+   "Naming: the earlier committed set in /home/user/BUILD/iop-weapons has an 'Oathbreaker Sword' (steel blue/gold) and a charcoal/molten 'Wrathbringer' greatsword. They are easy to confuse with the new Oathsplitter, and they use a different palette. The new pack should be the authority. Keep the outputs separate in /home/user/BUILD/incarnam-weapons.",
+   "Validation demands vs tools: the brief requires effects on/off in the real preview, measured draw calls and frame time, first- and third-person checks, rapid weapon switching and reimport checks. None of these can run outside Roblox. Blender renders must not be presented as satisfying them."
+  ],
+  "gaps": [
+   "Roblox project: no files, rig type (R6, R15, Rthro or custom), avatar scale, existing weapon/Tool hierarchy, attachment names (for example RightGripAttachment) or animation conventions.",
+   "Import workflow and material target are unknown: Studio 3D Importer FBX vs glTF, MeshPart with TextureID vs SurfaceAppearance (Color/Normal/Roughness/Metalness), and whether EditableMesh or skinned meshes are used. This decides which maps to bake and how to pack them.",
+   "Project budgets and target devices: triangle and texture limits, and whether 1K or 2K maps are allowed. Roblox's per-MeshPart triangle cap affects whether the Warlink chain is one skinned mesh or several parts.",
+   "Absolute Warlink chain length: the concept gives only a ratio (about 11 to 13 links in a U between eyelets). It needs confirming in studs, or relative to cleaver length.",
+   "Flexible-motion method: Roblox has no native mesh cloth, so the Sunbound streamer and Warlink chain need bones plus authored animation, a procedural spring/CFrame script, or constraints. The brief defers this to project convention, which is unknown.",
+   "Camera modes supported (first person, third person or both), and whether an inspection/preview system already exists.",
+   "Original concept PNGs: only compressed webp copies were received. Mesh tracing and proportion work are fine at this quality, but they can't be checked against the PACK_CONTENTS sha256 values.",
+   "17 of the 22 reference PNGs were not received, including the six-weapon contact sheet, the Wayfinder/Cyber swords, both hook views' companion 002119, and the 001025 pale/red eye blade variants (the most on-family reference). iop_blade_i.png is listed as not received; 00_original_style_ref.webp looks like it (split-blade baseline), but there is no hash to confirm it.",
+   "3.mp4 (109.8 s) was not received. It held the clearest equip-reveal timing (00:30.4 to 00:31.2) and first-person presentation (00:25 to 00:35). 2.mp4 partly covers this.",
+   "There is no hand-painting or image-generation tool, so the 'stylized hand-painted' texture look must come from procedural shaders plus baked AO/curvature/gradients in Blender. Nobody has confirmed that look is acceptable."
+  ],
+  "feasible_here": [
+   "Read the 4 received videos with ffmpeg: extract frames at the intervals the index lists (1.mp4 03.5 to 06.7 s ribbon; FULL Chain Weapon 01 to 16.5 s; 2.mp4 00 to 04 s and 10 to 25 s) and make contact sheets. Report exactly which intervals were viewed.",
+   "Blockout of all 3 silhouettes in Blender at shared scale, plus a full-set comparison render and an inventory-size thumbnail check.",
+   "Full Oathsplitter mesh: a real through-slot with inner bevels, thick rails, a bridge below the fork, twin points, crescent guard with overlap, a wrapped grip with real geometry, pointed pommel, hard edges/smoothing and triangulation inspection.",
+   "Full Sunbound and Warlink meshes: solid blade with a red spine inlay as a separate part, a layered gold disk, the cloth strip as its own mesh with a bone chain, two cleavers with real bevels, eyelets with open interiors, and rigid alternating chain links along a curve with constant link pitch.",
+   "Mesh hygiene checks by script: merge by distance, non-manifold, flipped normals, loose geometry, and triangle counts per object.",
+   "UV unwrapping with controlled seams and padding. Bake base colour, roughness, metalness, tangent-space normal (OpenGL Y+, as Roblox expects), AO, and an emissive/effect mask with Cycles CPU. Check colour spaces: sRGB for colour, Non-Color for data maps.",
+   "Front, rear, side and 3/4 renders under neutral light, with and without emissive, plus wireframe/matcap renders. A slot see-through check from both sides.",
+   "Proxy-mannequin grip check using a generic block hand/arm at approximate R15 proportions, clearly labelled as a proxy and not the user's rig.",
+   "Authored Blender actions with ffmpeg turntables/previews: Warlink slack/taut/recovery with constant link count and pitch, a delayed and settling Sunbound cloth motion, and an equip reveal of emissive intensity over about 0.5 to 1 s. All labelled as Blender preview, not Roblox runtime.",
+   "Defined attachment empties (Grip, GripSecondary, VFX_*, ClothRoot, ChainEnd_L/R) with stable names, exported as FBX and glTF. A reimport round-trip check in Blender for missing textures and broken paths.",
+   "A repeatable, scoped build/export script under /home/user/BUILD/incarnam-weapons (it already has stage.py), with separate source, export and render folders, and a README with observed counts and texture sizes.",
+   "Optional and clearly labelled draft: Luau presentation scripts (preview state machine, chain/cloth CFrame solver) written against assumed attachment names. Untested and unverified."
+  ],
+  "blocked_here": [
+   {
+    "item": "Phase A rig, scale and convention discovery",
+    "why": "There is no Roblox project or place file in the container.",
+    "needed": "The user's project: an .rbxl/.rbxlx, or a Rojo repo with the default.project.json. At minimum, the rig type, the avatar's height in studs, and the existing weapon Tool/Model hierarchy with its attachment names."
+   },
+   {
+    "item": "Roblox import and orientation/scale verification",
+    "why": "There is no Studio or importer here, so the 0.28 m/stud and axis assumptions in stage.py can't be confirmed.",
+    "needed": "The user imports one test FBX (a known pose and scale cube) in Studio and reports or screenshots the resulting size and orientation. Alternatively, Studio access via an MCP or a remote computer folder."
+   },
+   {
+    "item": "Equip on the actual avatar, two-hand placement, and independent Warlink grips",
+    "why": "There is no rig, animation set or runtime.",
+    "needed": "The rig export (an FBX of their character or R15 package) plus their idle/equip animation conventions. Final validation must happen in Studio."
+   },
+   {
+    "item": "Contained preview (select, orbit, equip/unequip, effects toggle) and the visual state flow",
+    "why": "This needs Roblox runtime and UI conventions.",
+    "needed": "Project files and the existing inspection/equipment system, or permission to add an isolated developer preview script that the user runs in Studio."
+   },
+   {
+    "item": "Roblox VFX (ParticleEmitter/Beam/Trail/lights), effects-disabled vs reduced-effects views, and performance measurement",
+    "why": "These are runtime features; Blender emission is not equivalent, and there is no device profiling.",
+    "needed": "Studio and the target devices. The user runs the MicroProfiler or Stats and reports results."
+   },
+   {
+    "item": "First- and third-person camera validation",
+    "why": "There is no game camera.",
+    "needed": "Project camera modules, and a Studio playtest by the user."
+   },
+   {
+    "item": "Verifying the full reference set and concept hashes",
+    "why": "17 PNGs, 3.mp4 and the original concept PNGs were not received.",
+    "needed": "Upload the original 01-03 concept PNGs and iop_blade_i.png (highest value), then 001025, 000732 and 3.mp4. The rest are optional."
+   }
+  ],
+  "recommended_plan": [
+   "A0 (now): Record the tool facts. Ask the user once, in a batch, for the Roblox project or rig, import workflow, SurfaceAppearance vs TextureID, budgets, camera modes, chain length and mirrored vs identical cleavers. Don't stall: proceed with documented provisional assumptions (R15-scale proxy, 1 BU = 1 stud, 0.28 m/stud on export, +Z up, front -Y, origin at the leading-hand grip, SurfaceAppearance PBR maps at 1K).",
+   "A1: Pull ffmpeg frame strips from the 4 received videos at the indexed intervals and write short observations: ribbon delay and settle, chain endpoint stability, slack vs taut, reveal-to-ready intensity. List the clips and intervals reviewed. Mark 3.mp4 behaviour as unverified, from text only.",
+   "A2: Resolve the ambiguities in a short design-decision note. Sunbound: warm ivory with pearl bevels, red guard arms kept, rays shallow. Oathsplitter: grip lengthened to fit 2 hands on the proxy, 2 to 3 large edge steps. Warlink: links alternate at 90 degrees, mirrored pair, link count taken from the concept, palette of 7 swatches.",
+   "B: Block out all three in one scene at shared scale beside a labelled R15-proportion proxy mannequin. Render a silhouette-only comparison (black fill) and an inventory-size thumbnail to confirm the three read as different. Checkpoint render.",
+   "C: Finish Oathsplitter as the benchmark. Final mesh with a real slot and inner bevels, hygiene checks, UVs, baked colour/roughness/metal/normal/AO/emissive-mask maps. Neutral-light front/rear/side/3/4 views, effects off and on, wireframe, and a through-slot check from both sides. Export FBX and glTF, reimport and verify paths. Record triangle count and texture sizes.",
+   "D: Apply the same pipeline to Sunbound (separate spine, layered disk, cloth mesh with 4 to 6 bones) and Warlink (two cleavers, physical eyelets, rigid links instanced along a fixed-length curve, a lower-detail LOD for the chain). Same views, checks and records.",
+   "E: Author Blender preview actions. Sunbound cloth: delayed follow and settle, with no flips or thin edge-on read. Warlink: rest, slack, taut, recovery at constant link count and pitch. Emissive equip reveal of about 0.5 to 1 s settling to idle for all three. Render turntables and motion MP4s and label them as Blender previews.",
+   "F-prep: Create the attachment empties with documented names. Optionally draft scoped Luau presentation code (state machine, chain/cloth solver, cleanup on unequip/respawn) marked untested. Write a README with exact Studio import steps, assumptions to confirm, and a per-weapon completion report: geometry, maps, equip = not validated, motion = Blender preview only, effects = emissive mask only / Roblox VFX not built, rig/camera = proxy only.",
+   "F (needs user): The user imports a one-object orientation/scale test, then the set. Iterate on scale, pivots and grips against their real rig. Build the Roblox VFX and preview only once project access exists.",
+   "Publish the review renders and report as an artifact or send files. Commit to a branch only if the user asks."
+  ],
+  "risks": [
+   "Unvalidated scale and axis assumptions (0.28 m/stud, FBX unit scale, Y-up conversion) could make every export import at the wrong size or rotation. Mitigate by testing one known object before batch export, as the brief itself requires.",
+   "Two-handed grip length and hand placement tuned to a proxy mannequin may not fit the real avatar (Rthro and custom rigs differ a lot from R15 blocky). Expect rework.",
+   "Procedural or baked texturing without a paint tool may read as generic CG rather than the hand-painted reference finish, and it risks noisy grunge, which the brief forbids. Mitigate with broad gradient and value-group masks and restrained curvature wear.",
+   "The chain triangle count could exceed per-MeshPart limits or the 8k to 20k set budget if links are bevelled heavily. A skinned chain vs per-link parts choice made without project knowledge may not match their pipeline.",
+   "Bones and skinning exported from Blender may import differently in Roblox (bone limits, influence counts, rest-pose orientation), and this can't be tested here.",
+   "Emissive previews rendered with Blender bloom could set false expectations for Roblox's Neon/emissive and particle look. They must be clearly labelled.",
+   "Overclaiming completion: the brief explicitly forbids implying an import, performance test or rig validation happened. The report must label Blender-only status precisely.",
+   "IP: the received references include a third-party watermark/logo (001038) and recognisable third-party designs (Cyber/Wayfinder named in the index). Nothing may be traced or used as a texture. Extract only principles.",
+   "Confusion with the earlier committed 2D set (an 'Oathbreaker' sword, a different palette) and the untracked partial work in /home/user/BUILD/incarnam-weapons. Keep the new collection isolated and avoid overwriting.",
+   "CPU-only Cycles baking and rendering at 1K to 2K with many views will be slow. Budget samples and resolution, and use Workbench or EEVEE for blockout and wireframe checks.",
+   "Concept images are perspective beauty shots in compressed webp. Inferred side and rear thickness is a design guess and needs user sign-off at the Phase B checkpoint."
+  ]
+ }
+}

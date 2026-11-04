@@ -10,6 +10,6 @@ apt-get update -qq
 apt-get install -y -qq libegl1 libgl1 libgles2 libgl1-mesa-dri libegl-mesa0 \
   libxkbcommon0 libsm6 libxi6 libxxf86vm1 libxfixes3 libxrender1 ffmpeg >/dev/null
 [ -x "$VENV/bin/python" ] || python3 -m venv "$VENV"
-"$VENV/bin/pip" install -q "bpy==$BPY_VERSION"
+"$VENV/bin/pip" install -q "bpy==$BPY_VERSION" shapely
 "$VENV/bin/python" -c "import bpy; print('Blender', bpy.app.version_string, 'ready')"
 # Run scripts with:  EGL_PLATFORM=surfaceless /opt/blender-venv/bin/python your_script.py

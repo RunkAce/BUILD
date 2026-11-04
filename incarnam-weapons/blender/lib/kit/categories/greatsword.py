@@ -30,8 +30,32 @@ def _blade_shape(style, L, W):
     hw = W / 2
     shape = core.blade_outline(L, W, edge=bl.get('edge', 'straight'), tip=bl.get('tip', 'point'), holes='none',
                                notch=bl.get('notch', 'none'), single_edge=single)
-    shape = K.taper(shape, L, 0.0 if K.is_heavy(style) else (0.2 if s.get('slender') else 0.12))
+    # always taper (>= ~15% narrower where the tip begins): heavy / broad blades included, or they read as slabs
+    k = 0.22 if K.is_heavy(style) or bl.get('edge') == 'broad' else (0.22 if s.get('slender') else 0.17)
+    shape = K.taper(shape, L, k)
+    # widening edges (broad) can cancel the taper: measure and taper again until the shoulder under the tip is
+    # at least ~22% narrower than the blade just above the langet (the visible root)
+    tip_len = {'point': 0.24, 'clip': 0.2, 'split': 0.22, 'chisel': 0.1, 'hook': 0.18, 'spade': 0.26}.get(
+        bl.get('tip', 'point'), 0.22) * L
+
+    def _w(z):
+        sl = shape.intersection(box(-3, z - 0.02, 3, z + 0.02))
+        return (sl.bounds[2] - sl.bounds[0]) if not sl.is_empty else None
+
+    for _ in range(3):
+        w0, w1 = _w(L * 0.28), _w(L - tip_len - 0.05)
+        if not (w0 and w1) or w1 / w0 <= 0.78:
+            break
+        shape = K.taper(shape, L, min(0.3, w1 / w0 - 0.76))
     return shape, single, hw
+
+
+def _ridge(single, rx0, hw, z0, z1):
+    """Raised central fuller ridge (tapers to a point), on the blade centre or toward the spine."""
+    rw = hw * 0.16
+    rxc = (rx0 + hw * 0.32) if single else 0.0
+    return core.poly([(rxc - rw, z0), (rxc + rw, z0), (rxc + rw * 0.8, z1 - 0.35), (rxc, z1),
+                      (rxc - rw * 0.8, z1 - 0.35)])
 
 
 def build(style, ctx):
@@ -90,9 +114,9 @@ def build(style, ctx):
         shape = shape.difference(win)
     elif holes == 'rings':
         hx = (rx0 + hw * 0.28) if single else 0.0
-        r = hw * (0.2 if single else 0.24)
-        for k in range(3):
-            c = Point(hx, lang_top + 0.38 + k * (r * 2 + 0.2)).buffer(r, 9)
+        r = hw * (0.22 if single else 0.27)
+        for k in range(2):                                 # at most two portholes on a greatsword
+            c = Point(hx, lang_top + 0.4 + r + k * (r * 2 + 0.34)).buffer(r, 9)
             shape = shape.difference(c)
             extras.append((f'HoleBezel{k}', Point(hx, c.centroid.y).buffer(r + 0.045, 9).difference(c), 0.19,
                            M['accent']))
@@ -101,17 +125,15 @@ def build(style, ctx):
         for suffix, e, role in hp:
             extras.append((suffix, e, 0.2 if role == 'rim' else 0.09,
                            M['accent'] if role == 'rim' else (M.get('glass') or M['secondary'])))
+        # ... plus a fuller ridge running on from above the hole so the upper blade is not a blank slab
+        h_top = max((e.bounds[3] for _, e, _ in hp), default=lang_top + 0.3)
+        extras.append(('Ridge', _ridge(single, rx0, hw, h_top + 0.14, max(body_len * 0.8, h_top + 1.3)), 0.19, M['primary']))
     elif holes == 'motif':
         m = K.motif_shape(style, hw * 1.1)
         if m is not None:
             shape = shape.difference(core.place(m, cx, lang_top + 0.6))
     else:
-        rw = hw * 0.16
-        rxc = (rx0 + hw * 0.32) if single else 0.0
-        z0, z1 = lang_top - 0.05, body_len * 0.78
-        ridge = core.poly([(rxc - rw, z0), (rxc + rw, z0), (rxc + rw * 0.8, z1 - 0.35), (rxc, z1),
-                           (rxc - rw * 0.8, z1 - 0.35)])
-        extras.append(('Ridge', ridge, 0.19, M['primary']))
+        extras.append(('Ridge', _ridge(single, rx0, hw, lang_top - 0.05, body_len * 0.78), 0.19, M['primary']))
     shape = K.largest(shape.buffer(0))
 
     # --- gentle sweep for curving races

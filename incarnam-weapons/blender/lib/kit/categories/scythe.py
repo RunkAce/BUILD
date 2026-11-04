@@ -52,8 +52,9 @@ def blade_shape(style, c, hole_parts=None):
     bl = style.get('blade', {})
     s = P.sil(style)
     k = 0.82 + 0.18 * c
-    L = 2.7 * k * (1.05 if s.get('horns') else 1.0) * (1.04 if s.get('slender') else 1.0)
-    W = 0.78 * bl.get('width', 1.0) * k
+    # a real scythe: the blade's reach is over half the haft (~3.4 st on a ~6 st weapon), broad at the heel
+    L = 3.45 * k * (1.04 if s.get('horns') else 1.0) * (1.03 if s.get('slender') else 1.0)
+    W = 0.95 * bl.get('width', 1.0) * k
     hw = W / 2
     tip = bl.get('tip', 'point')
     if tip == 'chisel':                 # a chiselled scythe reads broken: use a clipped point instead
@@ -196,6 +197,146 @@ def back_piece(style, ctx, zc, sx0, c, D):
     return parts, xmin
 
 
+
+# ------------------------------------------------------------------ socket (the head junction carries the race)
+def _strip(p0, p1, p2, p3, w0, w1=0.0, n=12):
+    """Tapered thick curve (horns, tendrils): bezier centreline offset by a width easing w0 -> w1."""
+    c = [Vector((x, z, 0)) for x, z in geo.bezier(p0, p1, p2, p3, n)]
+    left, right = [], []
+    for i, p in enumerate(c):
+        t = i / (len(c) - 1)
+        d = (c[min(i + 1, len(c) - 1)] - c[max(i - 1, 0)]).normalized()
+        nrm = Vector((-d.y, d.x, 0))
+        w = (w0 + (w1 - w0) * t) / 2
+        left.append((p.x + nrm.x * w, p.y + nrm.y * w))
+        right.append((p.x - nrm.x * w, p.y - nrm.y * w))
+    return core.poly(left + list(reversed(right))).buffer(0)
+
+
+def _wobble(shape, cx, cz, amp, seed=0):
+    """Organic outline: radial sine wobble around (cx, cz) (bark, burls)."""
+    def f(x, z, *a):
+        ang = math.atan2(z - cz, x - cx)
+        k = 1.0 + amp * (0.6 * math.sin(7 * ang + seed) + 0.4 * math.sin(13 * ang + 2.1 + seed))
+        return (cx + (x - cx) * k, cz + (z - cz) * k)
+    return transform(f, shape.segmentize(0.03)).buffer(0)
+
+
+def socket_kind(style):
+    s = P.sil(style)
+    if s.get('clockwork'):
+        return 'gear'
+    if s.get('horns'):
+        return 'horn'
+    if _flag(s, 'organic', 'thorns'):
+        return 'bark'
+    if _flag(s, 'riveted', 'steam', 'tool', 'heavy'):
+        return 'rivet'
+    if _flag(s, 'feral', 'barbs') or (s.get('spikes') and s.get('chunky', 1.0) < 1.1):
+        return 'bone'
+    if _flag(s, 'round', 'portals'):
+        return 'hub'
+    return 'coffin'
+
+
+def socket(style, ctx, sw, zs0, zs1, D, c):
+    """Socket block fitted around the blade heel. Always covers x in [-sw, sw], z in [zs0, zs1] (the blade root,
+    the back piece and the heel band seat into it). Returns (parts, (gem_x, gem_z, gem_R), kind)."""
+    col, M = ctx['col'], ctx['mats']
+    kind = socket_kind(style)
+    sh = zs1 - zs0
+    parts = []
+    gz, gR = zs0 + sh * 0.4, 0.085 * c
+    half = [(sw * 0.62, zs1), (sw, zs1 - 0.1 * c), (sw * 1.04, zs0 + sh * 0.42), (sw * 0.62, zs0)]
+    coffin = core.poly(geo.mirror_x([(0, zs1)] + half + [(0, zs0)]))
+    if kind == 'gear':
+        # gear hub: a toothed wheel clamps the heel, the glow is its axle
+        zc = zs0 + sh * 0.5
+        R = min(sh * 0.56, sw * 1.9)
+        teeth, pts = 10, []
+        for i in range(teeth * 4):
+            a = 2 * math.pi * (i + 0.5) / (teeth * 4)
+            rr = R if (i % 4) in (1, 2) else R * 0.8
+            pts.append((rr * math.cos(a), zc + rr * math.sin(a)))
+        gear = core.poly(pts).buffer(0)
+        parts.append(_slab('Socket', coffin, D, col, M['secondary'], bw=0.045))
+        parts.append(_slab('SocketGear', gear.difference(Point(0, zc).buffer(R * 0.36, 16)), D + 0.05, col,
+                           M['accent'], bw=0.03))
+        return parts, (0.0, zc, R * 0.3), kind
+    if kind == 'horn':
+        # horn socket: ridged horn base whose upper corners sweep out into two curling horn points
+        body = coffin
+        horns = []
+        for sx in (1, -1):
+            x0 = sx * sw * 0.55
+            horns.append(_strip((x0, zs1 - 0.12 * c), (sx * sw * 1.25, zs1 + 0.02), (sx * sw * 1.9, zs1 + 0.16 * c),
+                                (sx * sw * 1.55, zs1 + 0.4 * c), 0.17 * c, 0.02))
+        parts.append(_slab('Socket', body, D, col, M['secondary'], bw=0.045))
+        parts.append(_slab('SocketHorns', unary_union(horns).buffer(0), D * 0.8, col, M['primary'], bw=0.035))
+        for j, t in enumerate((0.22, 0.5, 0.78)):             # horn ridges seated into the socket
+            z = zs0 + sh * t
+            rg = coffin.buffer(0.012).intersection(box(-1, z - 0.02, 1, z + 0.02))
+            if not rg.is_empty:
+                parts.append(core.plate(f'SocketRidge{j}', _biggest(rg.buffer(0)), D + 0.03, col, M['accent'],
+                                        chamfer=0.01))
+        return parts, (0.0, zs0 + sh * 0.36, gR * 0.9), kind
+    if kind == 'bone':
+        # bone knuckle: twin condyles on top, a smaller flared pair at the base, a lashing round the waist
+        rt, rb = sw * 0.8, sw * 0.62
+        shp = unary_union([box(-sw * 0.9, zs0 + rb * 0.6, sw * 0.9, zs1 - rt * 0.6),
+                           Point(sw * 0.6, zs1 - rt * 0.8).buffer(rt, 14),
+                           Point(-sw * 0.6, zs1 - rt * 0.8).buffer(rt, 14),
+                           Point(sw * 0.6, zs0 + rb * 0.75).buffer(rb, 12),
+                           Point(-sw * 0.6, zs0 + rb * 0.75).buffer(rb, 12)]).buffer(0.03).buffer(-0.03)
+        parts.append(_slab('Socket', _biggest(shp), D, col, M['secondary'], bw=0.05))
+        zl = zs0 + sh * 0.5
+        lash = shp.buffer(0.015).intersection(box(-1, zl - 0.045, 1, zl + 0.045))
+        if not lash.is_empty:
+            parts.append(core.plate('SocketLash', _biggest(lash.buffer(0)), D + 0.035, col, M['grip'], chamfer=0.012))
+        return parts, (0.0, zs1 - rt * 0.8, gR * 0.85), kind
+    if kind == 'bark':
+        # bark knot: a gnarled wooden burl grown round the heel, the glow sits in its knot-eye
+        cz = zs0 + sh * 0.5
+        burl = _wobble(coffin.buffer(0.05 * c), 0, cz, 0.13, seed=len(style.get('id', '')))
+        parts.append(_slab('Socket', burl, D, col, M['haft'], bw=0.05))
+        kz = zs0 + sh * 0.42
+        ring = Point(0, kz).buffer(gR * 1.95, 14).difference(Point(0, kz).buffer(gR * 1.35, 12))
+        ring = affinity.scale(ring, 0.85, 1.15, origin=(0, kz))
+        parts.append(core.plate('SocketKnot', ring, D + 0.04, col, M['secondary'], chamfer=0.012))
+        # root tendrils gripping the neck
+        for sx in (1, -1):
+            parts.append(core.plate(f'SocketRoot{sx}', _strip((sx * sw * 0.5, zs0 + 0.1), (sx * sw * 0.75, zs0 - 0.05),
+                                                              (sx * sw * 0.45, zs0 - 0.15), (sx * sw * 0.28, zs0 - 0.3),
+                                                              0.07 * c, 0.015), D * 0.7, col, M['haft'], chamfer=0.012))
+        return parts, (0.0, kz, gR), kind
+    if kind == 'rivet':
+        # riveted collar: a blocky iron clamp with two strapped bands and rivet heads front and back
+        blk = _chamfer_box(-sw * 1.06, zs0, sw * 1.06, zs1, 0.06 * c)
+        parts.append(_slab('Socket', blk, D, col, M['secondary'], bw=0.04))
+        for j, t in enumerate((0.16, 0.84)):
+            z = zs0 + sh * t
+            parts.append(core.plate(f'SocketStrap{j}', _chamfer_box(-sw * 1.13, z - 0.055, sw * 1.13, z + 0.055, 0.02),
+                                    D + 0.05, col, M['accent'], chamfer=0.016))
+            for i, x in enumerate((-sw * 0.72, sw * 0.72)):
+                rv = geo.lathe(f'SocketRivet{j}_{i}', [(0.0, 0.0), (0.034 * c, 0.0), (0.026 * c, 0.022), (0.0, 0.03)],
+                               segments=6, col=col, material=M['secondary'])
+                rv.rotation_euler = (math.radians(90), 0, 0)    # dome faces the front (-Y)
+                rv.location = (x, -(D + 0.05) / 2 + 0.004, z)
+                parts.append(rv)
+        return parts, (0.0, zs0 + sh * 0.5, gR), kind
+    if kind == 'hub':
+        # round hub: a disk boss over the heel ringed by an accent gate ring
+        zc = zs0 + sh * 0.48
+        R = min(sh * 0.5, sw * 1.7)
+        hub = unary_union([coffin, Point(0, zc).buffer(R, 20)]).buffer(0)
+        parts.append(_slab('Socket', hub, D, col, M['secondary'], bw=0.045))
+        ring = Point(0, zc).buffer(R * 0.74, 20).difference(Point(0, zc).buffer(R * 0.56, 20))
+        parts.append(core.plate('SocketRing', ring, D + 0.04, col, M['accent'], chamfer=0.014))
+        return parts, (0.0, zc, min(gR * 1.1, R * 0.46)), kind
+    parts.append(_slab('Socket', coffin, D, col, M['secondary'], bw=0.045))
+    return parts, (0.0, gz, gR), kind
+
+
 # ------------------------------------------------------------------ build
 def build(style, ctx):
     col, M = ctx['col'], ctx['mats']
@@ -230,11 +371,11 @@ def build(style, ctx):
     body.append(core.blade('Blade', blade, L, col, M['primary'], thickness=0.13, bevel=0.065))
     body += core.inlay_parts('Blade', hole_parts, col, M, 0.13, place_fn=lambda g: core.place(g, -sw * 0.5, zh))
 
-    # --- socket: coffin-shaped clamp (secondary) tapering into the neck; race guard seat under it
+    # --- socket: race-shaped clamp around the blade heel (gear hub, horn, bone knuckle, bark knot, riveted
+    #     collar, round hub or the plain coffin); race guard seat under it
     sh = zs1 - zs0
-    half = [(sw * 0.62, zs1), (sw, zs1 - 0.1 * c), (sw * 1.04, zs0 + sh * 0.42), (sw * 0.62, zs0)]
-    body.append(_slab('Socket', core.poly(geo.mirror_x([(0, zs1)] + half + [(0, zs0)])), D, col, M['secondary'],
-                      bw=0.045))
+    sk_parts, (gx, gz, gR), kind = socket(style, ctx, sw, zs0, zs1, D, c)
+    body += sk_parts
     prof = [(0.0, zt - 0.42), (r * 1.02, zt - 0.42), (r * 1.3, zt - 0.2), (sw * 0.6, zt - 0.03), (sw * 0.64, zt + 0.06),
             (0.0, zt + 0.06)]
     body.append(geo.lathe('Neck', prof, segments=seg, col=col, material=M['accent'], smooth_angle=35))
@@ -278,19 +419,17 @@ def build(style, ctx):
                     break
                 size *= 0.88
         if best is not None:
-            best = best.intersection(inner).buffer(0)
+            best = best.intersection(inner).buffer(0).simplify(0.006, preserve_topology=True).buffer(0)
             if not best.is_empty and best.area > 0.004:
                 body.append(core.plate('HeelMotif', best, 0.16, col, M['accent'], chamfer=0.02))
 
     # --- glow: cabochon on the socket front with an accent bezel (the single emissive accent)
-    gz = zs0 + sh * 0.4
-    gR = 0.085 * c
     bez = geo.lathe('Bezel', [(0.0, 0.0), (gR * 1.45, 0.0), (gR * 1.45, 0.03), (gR * 1.1, 0.05), (0.0, 0.05)],
                     segments=6 if s.get('faceted') else 10, col=col, material=M['accent'])
     bez.rotation_euler = (math.radians(90), 0, 0)
-    bez.location = (0, -D / 2 + 0.02, gz)
+    bez.location = (gx, -D / 2 + 0.02, gz)
     body.append(bez)
-    glow.append(P.lens('Gem', gR, col, M['glow'], depth=0.07, segments=6 if s.get('faceted') else 10, x=0,
+    glow.append(P.lens('Gem', gR, col, M['glow'], depth=0.07, segments=6 if s.get('faceted') else 10, x=gx,
                        z=gz, y=-D / 2 - 0.02))
 
     # --- back spike / counterweight / fin toward -X
@@ -305,7 +444,7 @@ def build(style, ctx):
     if _flag(s, 'spikes', 'barbs', 'feral', 'thorns'):
         body.append(P.spike('TopSpike', (0, 0, zs1 + 0.05), (0, 0, 1), 0.34 * c, 0.055 * c, col, M['primary']))
         top = zs1 + 0.05 + 0.34 * c
-    elif s.get('horns'):
+    elif s.get('horns') and kind != 'horn':
         for sx in (1, -1):
             body.append(P.spike(f'TopHorn{sx}', (sx * sw * 0.4, 0, zs1 + 0.03), (sx * 0.5, 0, 1), 0.26 * c,
                                 0.05 * c, col, M['primary']))

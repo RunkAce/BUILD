@@ -32,8 +32,8 @@ def _edge_x(edge, t, i, xe, seed=3):
     w = 1.0 - 0.16 * t
     if edge == 'leaf':
         w *= 0.92 + 0.16 * math.sin(math.pi * min(1.0, t * 1.05))
-    elif edge == 'broad':
-        w *= 1.0 + 0.22 * t
+    elif edge == 'broad':         # katana keeps its taper: broad races only lose the narrowing
+        w *= 1.0 + 0.1 * t
     elif edge == 'wavy':
         w *= 0.93 + 0.1 * math.sin(t * math.pi * 7)
     elif edge == 'crystal':
@@ -101,8 +101,8 @@ def tsuba_shape(style, R):
         base = Point(0, 0).buffer(R * 1.05, 6)
     elif s.get('clockwork'):
         base = core.GUARDS['gear'](R / 0.6, R)
-    elif s.get('heavy') or s.get('tool') or s.get('riveted'):
-        base = box(-R * 0.92, -R * 0.92, R * 0.92, R * 0.92).buffer(R * 0.1, 3)
+    elif s.get('heavy') or s.get('tool') or s.get('riveted'):   # kaku-gata: square with well-rounded corners
+        base = box(-R * 0.74, -R * 0.74, R * 0.74, R * 0.74).buffer(R * 0.22, 5)
     else:                         # four-lobed (mokko-like)
         base = unary_union([Point(dx, dz).buffer(R * 0.62, 16) for dx, dz in
                             ((R * 0.4, 0), (-R * 0.4, 0), (0, R * 0.36), (0, -R * 0.36))])
@@ -126,7 +126,10 @@ def build(style, ctx):
     body, glow = [], []
 
     L = 3.3 + (0.14 if slender else 0.0) - (0.12 if heavy else 0.0) - (0.3 if P.tassel_kind(style) else 0.0)
-    W = 0.37 * K.clamp(bl.get('width', 1.0), 0.84, 1.22) * min(ch, 1.15) * (0.9 if slender else 1.0)
+    # a katana stays a katana: race width only nudges it (0.85-1.0) and chunkiness is ignored here;
+    # heavy races read through a thicker kasane + mune instead of a wider (cleaver) blade
+    W = 0.37 * K.clamp(bl.get('width', 1.0), 0.85, 1.0) * (0.9 if slender else 1.0)
+    bt = 0.11 + (0.035 if heavy else 0.0) + 0.02 * max(0.0, min(ch, 1.15) - 1.0) / 0.15
     shape, xs, xe = outline(L, W, bl)
     # porthole / coin slot (inlaid race holes) just above the horimono
     shape, hole_parts = core.inlaid_hole(shape, bl.get('holes', 'none'), 0.17 + min(W * 0.86, 0.34) * 1.12)
@@ -135,30 +138,30 @@ def build(style, ctx):
     strip = shape.intersection(box(xs - W * 0.15, 0.0, xs + 1.0, L * 0.8)).buffer(0)
     shape_b = core.bend(shape, k)
     strip_b = K.largest(core.bend(strip, k)) if not strip.is_empty else None
-    body.append(core.blade('Blade', core.place(shape_b, 0, ROOT), L, col, M['primary'], thickness=0.11, bevel=0.055))
-    body += core.inlay_parts('Blade', [(n_, core.bend(g_, k), r_) for n_, g_, r_ in hole_parts], col, M, 0.11,
+    body.append(core.blade('Blade', core.place(shape_b, 0, ROOT), L, col, M['primary'], thickness=bt, bevel=0.055))
+    body += core.inlay_parts('Blade', [(n_, core.bend(g_, k), r_) for n_, g_, r_ in hole_parts], col, M, bt,
                              place_fn=lambda g: core.place(g, 0, ROOT))
     if strip_b is not None and strip_b.area > 0.01:
-        body.append(core.plate('Spine', core.place(strip_b, 0, ROOT), 0.135, col, M['primary'], chamfer=0.018))
+        body.append(core.plate('Spine', core.place(strip_b, 0, ROOT), bt + 0.025 + (0.015 if heavy else 0.0), col, M['primary'], chamfer=0.018))
 
     # --- habaki (accent) gripping the blade root, carrying the motif2 glow gem
     hx0, hx1 = xe - 0.045, xs + 0.045
     hab = core.poly([(hx0 - 0.015, TSUBA_Z + 0.03), (hx1 + 0.015, TSUBA_Z + 0.03), (hx1, ROOT + 0.09),
                      (hx0 + 0.05, ROOT + 0.04)])
-    body.append(core.plate('Habaki', hab, 0.17, col, M['accent'], chamfer=0.025))
+    body.append(core.plate('Habaki', hab, bt + 0.06, col, M['accent'], chamfer=0.025))
     hc = (hx0 + hx1) / 2
     gem = core.motif_plate('HabakiGem', style, 0.14, hc, (TSUBA_Z + ROOT) / 2 + 0.04, 0.21, col, M['glow'], key='motif2')
     if gem is not None:
         glow.append(gem)
     # horimono: the race motif inlaid on the blade above the habaki (focal)
     msz = min(W * 0.86, 0.34)
-    m = core.motif_plate('Horimono', style, msz, (xe + xs) / 2 + W * 0.04, ROOT + 0.09 + msz * 0.62 + 0.05, 0.145,
+    m = core.motif_plate('Horimono', style, msz, (xe + xs) / 2 + W * 0.04, ROOT + 0.09 + msz * 0.62 + 0.05, bt + 0.035,
                          col, M['accent'])
     if m is not None:
         body.append(m)
 
     # --- seppa + tsuba (horizontal) with accent rim and sukashi cut-outs
-    R = 0.45 * min(ch, 1.12)
+    R = min(0.42, 0.45 * min(ch, 1.12))
     ts = tsuba_shape(style, R)
     solid = ts
     cut = K.motif_shape(style, R * 0.44, key='motif2')

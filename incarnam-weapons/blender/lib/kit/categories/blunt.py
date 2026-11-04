@@ -45,6 +45,11 @@ def _along_x(obj, x, z, sign=1):
     return obj
 
 
+# Long two-handed variants scale their head with the haft so they read as mauls, not staves.
+LONG_HEAD = dict(mace=1.4, motif=1.45, club_r=1.65, club_h=1.45)
+LONG_TOP = dict(club=3.3, hammer=3.95, mace=3.6, motif=3.55)      # haft top (head socket) when long
+
+
 def is_long(style):
     s = P.sil(style)
     return bool(_flag(s, 'heavy', 'tool', 'riveted', 'steam') or s.get('chunky', 1.0) >= 1.1)
@@ -206,11 +211,75 @@ def flange_shape(style, Rin, Rout, za, zb):
                       (Rout * 0.72, za + h * 0.04), (Rin, za)])
 
 
+def fletched_vanes(style, ctx, Rm, z0, z1, Hm, c, k):
+    """Archer's mace: three tall fletching vanes (notched feather barbs, a slight helical twist like an arrow's
+    fletch) over a lower tier of three short vanes in the secondary enamel, offset 60 degrees."""
+    col, M = ctx['col'], ctx['mats']
+    Rin = Rm * 0.55
+
+    def vane(Rout, h):
+        za, zb = -h / 2, h / 2                    # built around z=0 so the twist pivots on the vane's centre
+        A, B = Vector((Rout * 0.6, za + h * 0.1)), Vector((Rout * 1.1, zb))
+        sh = core.poly([(Rin, za), (A.x, A.y), (B.x, B.y), (Rout * 0.78, zb - h * 0.02), (Rin, zb - h * 0.14)])
+        e = (B - A).normalized()
+        out, inn = Vector((e.y, -e.x)), Vector((-e.y, e.x))
+        dep = (Rout - Rin) * 0.32
+        for t in (0.36, 0.66):                    # feather barbs: slits running down-in from the outer edge
+            p = A + (B - A) * t
+            tri = [p + out * 0.04, p - e * 0.075 + out * 0.04, p - e * 0.12 + inn * dep]
+            sh = sh.difference(core.poly([(q.x, q.y) for q in tri]))
+        return _biggest(sh.buffer(0))
+
+    parts = []
+    big = vane(Rm + 0.27 * c * k, Hm * 0.9)
+    small = vane(Rm + 0.15 * c * k, Hm * 0.42)
+    zm_big = z0 + Hm * 0.5
+    zm_small = z0 + Hm * 0.25
+    for j in range(3):
+        a = math.radians(90 + 120 * j)            # front (-Y, 270 deg) sits between two tall vanes
+        f = core.blade(f'Vane{j}', big, Hm, col, M['primary'], thickness=0.07, bevel=0.028)
+        f.rotation_euler = (math.radians(9), 0, a)
+        f.location = (0, 0, zm_big)
+        parts.append(f)
+        a2 = a + math.pi / 3
+        f2 = core.blade(f'VaneLow{j}', small, Hm * 0.5, col, M['secondary'], thickness=0.06, bevel=0.024)
+        f2.rotation_euler = (math.radians(9), 0, a2)
+        f2.location = (0, 0, zm_small)
+        parts.append(f2)
+    return parts
+
+
+def halo_crown(style, ctx, Rm, z0, z1, Hm, c, k):
+    """Portal mace: four gate-shaped flanges, each pierced by a round portal, rise past the cap as posts that
+    carry a horizontal halo ring. Returns (parts, crest_z)."""
+    col, M = ctx['col'], ctx['mats']
+    Rin = Rm * 0.55
+    Rout = Rm + 0.22 * c * k
+    Rh = Rout * 1.08                              # the halo flares out past the flanges: a crown, not a cage
+    za = z0 + Hm * 0.1
+    h = z1 - za
+    zr = z1 + Hm * 0.26
+    pw = 0.042 * c * k
+    outer = geo.bezier((Rin, za), (Rout * 1.12, za + h * 0.04), (Rout * 1.06, z1 - h * 0.12), (Rh + pw, zr + 0.02), 14)
+    inner = geo.bezier((Rh - pw, zr + 0.02), (Rout * 0.8, z1 + Hm * 0.02), (Rout * 0.6, z1 - h * 0.03),
+                       (Rin, z1 - h * 0.08), 10)
+    sh = core.poly(outer + inner).buffer(0)
+    hx = (Rm * 1.05 + Rout) / 2
+    sh = sh.difference(Point(hx, za + h * 0.48).buffer((Rout - Rm * 1.05) * 0.3, 14)).buffer(0)
+    parts = []
+    for j in range(4):
+        f = core.blade(f'Flange{j}', _biggest(sh), Hm, col, M['primary'], thickness=0.075, bevel=0.03)
+        f.rotation_euler = (0, 0, math.radians(45 + 90 * j))
+        parts.append(f)
+    parts.append(P.ring_h('Halo', zr, Rh, 0.034 * c * k, col, M['accent'], sides=6, samples=28))
+    return parts, z1 + 0.03
+
+
 def head_mace(style, ctx, zb, c, long):
     col, M = ctx['col'], ctx['mats']
     s = P.sil(style)
     parts, glow = [], []
-    k = 1.15 if long else 1.0
+    k = LONG_HEAD['mace'] if long else 1.0
     Rm = 0.2 * c * k
     Hm = 0.74 * c * k
     z0, z1 = zb, zb + Hm
@@ -255,21 +324,28 @@ def head_mace(style, ctx, zb, c, long):
                            rot_offset=0.0))
     parts.append(core.collar('CoreBandLo', z0 + 0.01, col, M['accent'], r=Rm * 0.82, h=0.07, segments=seg))
     parts.append(core.collar('CoreBandHi', z1 - 0.01, col, M['accent'], r=Rm * 0.82, h=0.07, segments=seg))
-    # flanges
-    n = 8 if s.get('clockwork') else 6
-    Rout = Rm + (0.25 if not s.get('slender') else 0.22) * c * k
-    fs = flange_shape(style, Rm * 0.55, Rout, z0 + Hm * 0.08, z1 - Hm * 0.08)
-    for j in range(n):
-        a = 2 * math.pi * j / n + (math.pi / n if n == 8 else 0.0)   # keep the front (-Y) between two flanges
-        f = core.blade(f'Flange{j}', fs, Hm, col, M['primary'], thickness=0.075 if n == 8 else 0.085, bevel=0.03)
-        f.rotation_euler = (0, 0, a)
-        parts.append(f)
+    # flanges (race driven: fletched vanes, halo crown, gear teeth, barbs, round lobes, trapezoids)
+    gem_dz = 0.0
+    crest_z = z1 + 0.03
+    if s.get('portals'):
+        fp, crest_z = halo_crown(style, ctx, Rm, z0, z1, Hm, c, k)
+        parts += fp
+    elif s.get('slender'):
+        parts += fletched_vanes(style, ctx, Rm, z0, z1, Hm, c, k)
+        gem_dz = Hm * 0.14                       # the lower vane tier points at the viewer: lift the gem clear
+    else:
+        n = 8 if s.get('clockwork') else 6
+        Rout = Rm + 0.25 * c * k
+        fs = flange_shape(style, Rm * 0.55, Rout, z0 + Hm * 0.08, z1 - Hm * 0.08)
+        for j in range(n):
+            a = 2 * math.pi * j / n + (math.pi / n if n == 8 else 0.0)   # keep the front (-Y) between two flanges
+            f = core.blade(f'Flange{j}', fs, Hm, col, M['primary'], thickness=0.075 if n == 8 else 0.085, bevel=0.03)
+            f.rotation_euler = (0, 0, a)
+            parts.append(f)
     # glow: cabochon on the core front, between two flanges (front is at -90 deg = between 240 and 300)
     gR = 0.07 * c
-    if True:
-        glow.append(P.lens('Gem', gR, col, M['glow'], depth=0.06, segments=6 if faceted else 10, z=zc,
-                           y=-Rm * 0.98))
-        crest_z = z1 + 0.03
+    glow.append(P.lens('Gem', gR, col, M['glow'], depth=0.06, segments=6 if faceted else 10, z=zc + gem_dz,
+                       y=-Rm * (0.98 if not gem_dz else 0.9)))
     # crest: race motif standing on the top, seated into the cap
     top = z1 + 0.05
     fn = style.get('motif')
@@ -282,7 +358,7 @@ def head_mace(style, ctx, zb, c, long):
             top = cz + shp.bounds[3]
     if _flag(s, 'spikes', 'barbs') and not fn:
         parts.append(P.spike('TopSpike', (0, 0, z1), (0, 0, 1), 0.28 * c, 0.05 * c, col, M['primary']))
-    return parts, glow, zc, top, Rout
+    return parts, glow, zc, top, Rm + 0.25 * c * k
 
 
 def head_club(style, ctx, zb, c, long):
@@ -290,9 +366,11 @@ def head_club(style, ctx, zb, c, long):
     s = P.sil(style)
     parts, glow = [], []
     r = P.haft_r(style)
-    k = 1.22 if long else 1.0
-    Hc = 1.2 * c * k
-    Rc = 0.25 * c * k
+    kh = LONG_HEAD['club_h'] if long else 1.0
+    kr = LONG_HEAD['club_r'] if long else 1.0
+    k = (kh + kr) / 2                         # studs / spikes / reach follow the head's mass
+    Hc = 1.2 * c * kh
+    Rc = 0.25 * c * kr
     z0 = zb - 0.35
     mat = M['primary'] if s.get('organic') else M['haft']
     seg = 7 if _flag(s, 'feral', 'spikes') else 8
@@ -374,7 +452,7 @@ def head_motif(style, ctx, zb, c, long):
     col, M = ctx['col'], ctx['mats']
     s = P.sil(style)
     parts, glow = [], []
-    k = 1.15 if long else 1.0
+    k = LONG_HEAD['motif'] if long else 1.0
     S = 0.84 * c * k
     zc = zb + 0.1 + S / 2
     fn = style.get('motif')
@@ -468,7 +546,7 @@ def build(style, ctx):
     long = is_long(style)
     body, glow = [], []
     if long:
-        zt = 3.95 if kind != 'club' else 3.7
+        zt = LONG_TOP.get(kind, 3.95)
         ga, gb = 0.42, 2.05
         body += P.haft(style, ctx, 0.0, zt, keep_clear=[(ga, gb)])
         body += P.grip_zone(style, ctx, ga, gb)

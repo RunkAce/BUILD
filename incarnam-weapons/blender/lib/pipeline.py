@@ -47,7 +47,7 @@ def attachment(name, loc, col, parent=None, axis_up=(0, 0, 1)):
 
 
 def finish(name, col, body_parts, out_root, grip_point, attachments, glow_parts=(), extra_meshes=(),
-           tex=2048, bake_samples=16, glow_spec='amber'):
+           tex=2048, bake_samples=16, glow_spec='amber', export_dir=None, source_dir=None, glow_mat=None):
     """Returns dict with objects and stats. grip_point is moved to the origin."""
     off = (-grip_point[0], -grip_point[1], -grip_point[2])
     everything = list(body_parts) + list(glow_parts) + list(extra_meshes)
@@ -57,7 +57,8 @@ def finish(name, col, body_parts, out_root, grip_point, attachments, glow_parts=
     topo_before = optimize.topology_report(body)
     hidden_removed = optimize.remove_hidden_faces(body, occluders=list(glow_parts) + list(extra_meshes))
     paint.unwrap(body)
-    maps_dir = os.path.join(out_root, 'export', name, 'textures')
+    exp = export_dir or os.path.join(out_root, 'export', name)
+    maps_dir = os.path.join(exp, 'textures')
     maps = paint.bake_maps(body, maps_dir, name, size=tex, samples=bake_samples)
     body.data.materials.clear()
     body.data.materials.append(paint.baked_material(f'{name}_Baked', maps))
@@ -69,7 +70,7 @@ def finish(name, col, body_parts, out_root, grip_point, attachments, glow_parts=
         hidden_removed += optimize.remove_hidden_faces(glow, occluders=[body])
         paint.unwrap(glow)
         glow.data.materials.clear()
-        gm = paint.painted(f'{name}_GlowMat', glow_spec, height=1.0)
+        gm = glow_mat or paint.painted(f'{name}_GlowMat', glow_spec, height=1.0)
         glow.data.materials.append(gm)
 
     att_objs = {}
@@ -96,9 +97,8 @@ def finish(name, col, body_parts, out_root, grip_point, attachments, glow_parts=
     stats['bounds_studs'] = {'min': [round(c, 3) for c in lo], 'max': [round(c, 3) for c in hi],
                              'length': round(hi.z - lo.z, 3)}
 
-    src = os.path.join(out_root, 'source')
+    src = source_dir or os.path.join(out_root, 'source')
     os.makedirs(src, exist_ok=True)
-    exp = os.path.join(out_root, 'export', name)
     os.makedirs(exp, exist_ok=True)
     stage.export_fbx(os.path.join(exp, f'{name}.fbx'), meshes + list(att_objs.values()))
     with open(os.path.join(exp, f'{name}_stats.json'), 'w') as fh:

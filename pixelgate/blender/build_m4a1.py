@@ -30,8 +30,23 @@ ROOT_DIR = os.path.join(os.path.dirname(HERE), 'Weapons', ID)
 PREVIEW = '--preview' in sys.argv
 FPS = 30
 
-BORE = 0.125                 # bore line height (authoring z)
-GRIP = (1.0, 0.0, -0.20)     # right-hand grip point -> Root/origin
+# ------------------------------------------------------------------ real-world layout (mm), stylised on top
+# Reference: M4 carbine 838 mm overall (stock extended), 368 mm barrel (14.5 in), ~25 deg pistol-grip rake,
+# lower receiver ~7.5-8.5 in, magwell ~1.25 in wide. x = mm from butt (0) to muzzle (838), z = mm from bore line.
+S = 3.0 / 838.0              # studs per mm  (gun = 3.0 studs, sized for R6/R15 viewmodels)
+W = 1.2 * S                  # stylisation: widths 20% chunkier than real
+BORE = 0.0
+
+
+def mm(pts):
+    return G.P([(x * S, z * S) for x, z in pts])
+
+
+def mmbox(x0, z0, x1, z1, r=0.0):
+    return G.rbox(x0 * S, z0 * S, x1 * S, z1 * S, r * S)
+
+
+GRIP = (300 * S, 0.0, -92 * S)    # centre of the right hand on the pistol grip -> Root/origin
 
 
 def build():
@@ -40,118 +55,115 @@ def build():
     col = stage.collection(NAME)
     M = G.mats(NAME, {
         'receiver': ('anodized', 'Body'), 'furniture': ('polymer', 'Furniture'), 'steel': ('blacksteel', 'MetalAccent'),
-        'bright': ('steel', 'MetalAccent'), 'mag': ('anodized', 'Magazine')})
+        'bright': ('steel', 'MetalAccent'), 'mag': ('anodized', 'Magazine'),
+        'round': ('polymer', 'Furniture', False), 'roundsteel': ('blacksteel', 'MetalAccent', False)})
     B = {k: [] for k in ('Root', 'Trigger', 'Magazine', 'ChargingHandle', 'BoltCarrier', 'DustCover', 'Selector')}
     R = B['Root']
 
-    # ---- upper receiver: flat-top with ejection port through-hole (bolt carrier shows through it)
-    upper = G.P([(0.97, 0.05), (1.62, 0.05), (1.64, 0.08), (1.64, 0.205), (0.97, 0.205)])
-    port = G.rbox(1.15, 0.085, 1.37, 0.165, 0.008)
-    R.append(G.side('Upper', upper.difference(port), 0.13, col, M['receiver'], chamfer=0.02))
-    R.append(G.side('PortCoverL', port.buffer(0.01), 0.012, col, M['receiver'], y=-0.059))      # left side closed
-    # forward-assist housing (right side) + brass deflector
-    R.append(G.tube('ForwardAssist', [(0.0, 0.0), (0.03, 0.0), (0.03, 0.09), (0.036, 0.1), (0.036, 0.13), (0.0, 0.13)],
-                    col, M['receiver'], y=0.072, z=0.16, segments=10))
-    R[-1].location = (0.98, 0.072, 0.16)
-    R.append(G.side('Deflector', G.P([(1.08, 0.09), (1.15, 0.09), (1.15, 0.19), (1.1, 0.19)]), 0.03, col, M['receiver'],
-                    y=0.075))
-    # top rail with teeth (upper) + rear folding sight
-    R.append(G.side('UpperRailBase', G.rbox(0.99, 0.2, 1.62, 0.235, 0.005), 0.085, col, M['receiver'], chamfer=0.008))
-    R.append(G.side('UpperRailTeeth', G.teeth_along_x(1.0, 1.61, 0.042, 0.022, 0.03, 0.233), 0.085, col, M['receiver'],
-                    chamfer=0.005))
-    rs = G.P([(1.02, 0.262), (1.14, 0.262), (1.14, 0.3), (1.1, 0.36), (1.06, 0.36), (1.02, 0.3)]).difference(
-        Point(1.08, 0.33, ).buffer(0.012, 8))
-    R.append(G.side('RearSight', rs, 0.07, col, M['receiver'], chamfer=0.008))
+    def side(name, shape, width_mm, mat, chamfer_mm=3.5, y_mm=0.0, bone='Root'):
+        B[bone].append(G.side(name, shape, width_mm * W, col, mat, chamfer=chamfer_mm * W, y=y_mm * W))
 
-    # ---- lower receiver with flared magwell, trigger guard, pistol grip
-    lower = G.P([(0.95, 0.055), (1.5, 0.055), (1.5, -0.04), (1.44, -0.06), (1.43, -0.25), (1.19, -0.25), (1.17, -0.08),
-                 (1.0, -0.09), (0.95, -0.03)])
-    R.append(G.side('Lower', lower, 0.12, col, M['receiver'], chamfer=0.02))
-    guard = G.P([(1.04, -0.09), (1.18, -0.09), (1.18, -0.2), (1.06, -0.2), (1.02, -0.16)]).difference(
-        G.rbox(1.06, -0.18, 1.16, -0.1, 0.015))
-    R.append(G.side('TriggerGuard', guard, 0.065, col, M['receiver'], chamfer=0.01))
-    grip = G.P([(0.9, -0.07), (1.1, -0.08), (1.07, -0.17), (1.05, -0.24), (1.03, -0.27), (1.035, -0.32),
-                (1.0, -0.46), (0.94, -0.49), (0.86, -0.47), (0.855, -0.43), (0.91, -0.3), (0.92, -0.2), (0.88, -0.12)])
-    R.append(G.side('PistolGrip', grip, 0.115, col, M['furniture'], chamfer=0.022))
-    # grip texture panels (shallow inlays)
-    R.append(G.side('GripPanel', G.P([(0.93, -0.2), (1.02, -0.19), (0.98, -0.42), (0.92, -0.42)]), 0.125, col,
-                    M['furniture'], chamfer=0.008))
-    # mag release (right) + selector axle
-    R.append(G.side('MagRelease', G.rbox(1.44, -0.02, 1.48, 0.02, 0.008), 0.15, col, M['steel'], chamfer=0.006))
+    def front(name, shape_yz, x0_mm, x1_mm, mat, chamfer_mm=2.0, bone='Root'):
+        """Rear-view part: 2D (y, z) shape extruded along x (sight towers, ears) - openings run along the bore."""
+        o = G.side(name, shape_yz, (x1_mm - x0_mm) * S, col, mat, chamfer=chamfer_mm * S)
+        o.rotation_euler = (0, 0, math.radians(90))      # shape u -> y, thickness -> x
+        o.location = ((x0_mm + x1_mm) / 2 * S, 0, 0)
+        B[bone].append(o)
 
-    # ---- buffer tube + collapsible stock
-    R.append(G.tube('BufferTube', [(0.0, 0.0), (0.055, 0.0), (0.055, 0.66), (0.06, 0.68), (0.06, 0.70), (0.0, 0.70)],
-                    col, M['receiver'], segments=12))
-    R[-1].location = (0.28, 0.0, BORE)
-    stock = G.P([(0.0, -0.2), (0.05, -0.215), (0.12, -0.2), (0.36, -0.01), (0.62, 0.06), (0.62, 0.19), (0.3, 0.205),
-                 (0.05, 0.21), (0.0, 0.2)]).difference(G.rbox(0.14, -0.08, 0.3, 0.04, 0.03))
-    R.append(G.side('Stock', stock, 0.12, col, M['furniture'], chamfer=0.024))
-    R.append(G.side('ButtPad', G.P([(-0.03, -0.215), (0.02, -0.225), (0.02, 0.215), (-0.03, 0.205)]), 0.13, col,
-                    M['steel'], chamfer=0.012))
-    R.append(G.side('StockLever', G.P([(0.4, -0.0), (0.56, 0.04), (0.56, 0.0), (0.42, -0.04)]), 0.05, col, M['steel'],
-                    chamfer=0.006))
+    def round_x(name, x0, prof, z_mm=0.0, y_mm=0.0, mat=None, seg=12, bone='Root'):
+        o = G.tube(name, [(r * W, dx * S) for r, dx in prof], col, mat, segments=seg)
+        o.location = (x0 * S, y_mm * W, z_mm * S)
+        B[bone].append(o)
 
-    # ---- handguard (slotted), rail, gas-block front sight, barrel, flash hider
-    hg = G.rbox(1.64, 0.0, 2.27, 0.245, 0.04)
-    slots = unary_union([G.rbox(1.72 + i * 0.1, 0.04, 1.78 + i * 0.1, 0.075, 0.016) for i in range(5)] +
-                        [G.rbox(1.72 + i * 0.1, 0.16, 1.78 + i * 0.1, 0.195, 0.016) for i in range(5)])
-    R.append(G.side('Handguard', hg.difference(slots), 0.16, col, M['receiver'], chamfer=0.018))
-    R.append(G.side('HandguardRail', G.rbox(1.65, 0.24, 2.26, 0.265, 0.004), 0.085, col, M['receiver'], chamfer=0.006))
-    R.append(G.side('HandguardTeeth', G.teeth_along_x(1.66, 2.25, 0.042, 0.022, 0.03, 0.263), 0.085, col,
-                    M['receiver'], chamfer=0.005))
-    R.append(G.side('DeltaRing', G.rbox(1.6, -0.01, 1.66, 0.255, 0.01), 0.175, col, M['steel'], chamfer=0.01))
-    fs = G.P([(2.27, 0.06), (2.36, 0.06), (2.36, 0.18), (2.33, 0.42), (2.3, 0.42), (2.27, 0.18)]).difference(
-        G.rbox(2.29, 0.25, 2.34, 0.36, 0.01))
-    R.append(G.side('FrontSight', fs, 0.08, col, M['steel'], chamfer=0.01))
-    R.append(G.side('SightPost', G.rbox(2.305, 0.25, 2.325, 0.37, 0.002), 0.018, col, M['bright'], chamfer=0.003))
-    R.append(G.tube('Barrel', [(0.0, 0.0), (0.036, 0.0), (0.036, 0.36), (0.032, 0.38), (0.032, 0.55), (0.0, 0.55)],
-                    col, M['steel'], segments=12))
-    R[-1].location = (2.25, 0.0, BORE)
-    fh = G.tube('FlashHider', [(0.0, 0.0), (0.045, 0.0), (0.05, 0.02), (0.05, 0.13), (0.044, 0.15), (0.0, 0.15)],
-                col, M['steel'], segments=6)
-    fh.location = (2.8, 0.0, BORE)
-    R.append(fh)
+    # ---- upper receiver (flat-top), ejection port as a real opening, port backing on the left
+    port = mmbox(375, -10, 440, 12, 3)
+    side('Upper', mm([(292, -18), (475, -18), (476, 22), (296, 22), (290, 14)]).difference(port), 36, M['receiver'], 4)
+    side('PortBacking', port.buffer(2 * S), 4, M['receiver'], 1, y_mm=-16)
+    side('UpperRail', mmbox(294, 21, 472, 30, 1), 26, M['receiver'], 2)
+    side('RailTeeth', G.teeth_along_x(296 * S, 470 * S, 10 * S, 5 * S, 6 * S, 29 * S), 26, M['receiver'], 1.2)
+    # brass deflector + forward assist: RIGHT side, just behind the port (not inline with the stock)
+    side('Deflector', mm([(362, -2), (374, -2), (374, 16), (366, 18)]), 10, M['receiver'], 2, y_mm=19)
+    round_x('ForwardAssist', 330, [(0, 0), (8.5, 0), (9.5, 4), (9.5, 26), (8, 30), (0, 30)], z_mm=9, y_mm=19,
+            mat=M['receiver'], seg=10)
+    round_x('FAButton', 324, [(0, 0), (6.5, 0), (7, 2), (7, 7), (0, 7)], z_mm=9, y_mm=19, mat=M['steel'], seg=10)
+    # rear sight: base on the rail (side profile) + aperture tower built in REAR view, so the peep hole runs
+    # ALONG the sight line (x), between two protective ears; centre z 53 = front post tip -> clear sight picture
+    side('RearSightBase', mm([(300, 30), (336, 30), (336, 38), (330, 42), (306, 42), (300, 38)]), 26, M['receiver'], 2.5)
+    front('RearSightTower', G.rbox(-13 * W, 38 * S, 13 * W, 64 * S, 1.5 * S).difference(
+        G.rbox(-6 * W, 59 * S, 6 * W, 70 * S, 1 * S)).difference(Point(0, 53 * S).buffer(3.8 * S, 12)),
+        312, 326, M['receiver'], 2)
 
-    # ---- detail pass: pins, bolt catch, raised panels, seams, cheek riser, sling slot, end cap
-    for nm, x, z in (('PivotPin', 1.47, 0.03), ('TakedownPin', 0.99, 0.03), ('TriggerPin', 1.125, -0.045),
-                     ('HammerPin', 1.03, -0.045)):
-        R.append(G.pin(nm, x, z, 0.014 if 'Pin' in nm[:6] else 0.011, 0.135, col, M['steel']))
-    R.append(G.side('BoltCatch', G.P([(1.42, -0.02), (1.47, -0.02), (1.47, 0.03), (1.43, 0.04)]), 0.012, col, M['steel'],
-                    y=-0.066, chamfer=0.003))
-    R.append(G.side('MagwellPanel', G.P([(1.17, -0.06), (1.45, -0.06), (1.44, -0.24), (1.19, -0.24)]).difference(
-        G.rbox(1.22, -0.2, 1.4, -0.1, 0.02)), 0.15, col, M['receiver'], chamfer=0.01))
-    R.append(G.side('LowerPanel', G.rbox(1.0, -0.075, 1.17, 0.035, 0.012), 0.145, col, M['receiver'], chamfer=0.01))
-    R.append(G.side('UpperSeam', G.rbox(0.97, 0.045, 1.62, 0.058, 0.003), 0.136, col, M['steel'], chamfer=0.003))
-    R.append(G.side('CheekRiser', G.P([(0.06, 0.2), (0.5, 0.18), (0.5, 0.235), (0.08, 0.25)]), 0.105, col,
-                    M['furniture'], chamfer=0.018))
-    R.append(G.side('SlingSlot', G.rbox(0.03, -0.17, 0.09, -0.12, 0.01).difference(G.rbox(0.045, -0.16, 0.075, -0.13, 0.006)),
-                    0.13, col, M['steel'], chamfer=0.005))
-    R.append(G.side('ButtRibs', unary_union([G.rbox(-0.035, -0.18 + 0.07 * i, 0.0, -0.16 + 0.07 * i, 0.004)
-                                              for i in range(6)]), 0.14, col, M['steel'], chamfer=0.004))
-    R.append(G.side('EndCap', G.rbox(2.24, 0.005, 2.29, 0.24, 0.02), 0.17, col, M['steel'], chamfer=0.012))
-    R.append(G.side('GasBlock', G.rbox(2.26, 0.075, 2.37, 0.175, 0.012), 0.09, col, M['steel'], chamfer=0.01))
+    # ---- lower receiver: magwell (with flare), trigger area, grip seat behind the trigger guard
+    side('Lower', mm([(285, -17), (482, -17), (482, -34), (472, -36), (475, -88), (390, -88), (393, -56), (340, -56),
+                      (334, -46), (290, -46), (285, -36)]), 38, M['receiver'], 4)
+    side('MagwellFrame', mm([(390, -56), (476, -56), (478, -90), (388, -90)]).difference(mmbox(400, -82, 466, -62, 4)),
+         42, M['receiver'], 2.5)
+    side('TriggerGuard', mm([(393, -56), (393, -80), (346, -80), (334, -64), (334, -56)]).difference(
+        mm([(387, -59), (387, -74), (349, -74), (341, -62), (341, -59)])), 12, M['receiver'], 2)
+    for nm, x, z in (('TakedownPin', 296, -26), ('PivotPin', 474, -26), ('TriggerPin', 365, -32), ('HammerPin', 340, -32)):
+        o = G.pin(nm, x * S, z * S, 3.6 * S, 44 * W, col, M['steel'])
+        R.append(o)
+    side('BoltCatch', mm([(396, -22), (412, -20), (412, -12), (398, -14)]), 3, M['steel'], 1, y_mm=-20)
+    round_x('MagRelease', 395, [(0, 0), (5, 0), (5, 1), (0, 1)], z_mm=-25, mat=M['steel'], seg=8)
+    B['Root'][-1].rotation_euler = (0, 0, math.radians(90))
+    B['Root'][-1].location = (395 * S, 21 * W, -25 * S)
+
+    # ---- pistol grip: ~25 deg rake, finger groove, beavertail tucked under the lower (seated, not floating)
+    side('PistolGrip', mm([(284, -42), (335, -42), (332, -57), (326, -69), (327, -79), (318, -100), (301, -138),
+                           (297, -150), (257, -153), (253, -146), (268, -108), (281, -70), (285, -55), (281, -48)]),
+         32, M['furniture'], 6)
+    side('GripTexture', mm([(286, -72), (318, -74), (300, -126), (270, -130)]), 34, M['furniture'], 2)
+
+    # ---- buffer tube (coaxial with the bore) + castle nut + collapsible stock
+    round_x('BufferTube', 110, [(0, 0), (15, 0), (15, 172), (0, 172)], z_mm=2, mat=M['roundsteel'])
+    round_x('CastleNut', 274, [(0, 0), (18, 0), (19, 3), (19, 10), (18, 12), (0, 12)], z_mm=2, mat=M['steel'], seg=8)
+    side('Stock', mm([(0, -88), (10, -93), (55, -63), (100, -37), (176, -21), (176, 21), (60, 29), (8, 33),
+                      (0, 29)]).difference(mmbox(58, -38, 102, -22, 7)), 44, M['furniture'], 7)
+    side('StockShell', mm([(62, -15), (178, -15), (178, 25), (66, 28)]), 50, M['furniture'], 5)   # tube housing layer
+    side('ButtPad', mm([(-7, -89), (3, -95), (3, 34), (-7, 30)]), 48, M['steel'], 3)
+    side('StockLever', mm([(120, -34), (170, -24), (170, -18), (124, -27)]), 14, M['steel'], 2)
+
+    # ---- round ribbed handguard (carbine length), delta ring, front sight base / A-frame, barrel, birdcage
+    ribs = [(0, 0), (29, 0)]
+    for i in range(14):
+        x = 6 + i * 12
+        ribs += [(29, x), (27, x + 3), (27, x + 9), (29, x + 12)]
+    ribs += [(29, 175), (0, 175)]
+    round_x('Handguard', 482, ribs, z_mm=-3, mat=M['round'], seg=14)
+    round_x('DeltaRing', 470, [(0, 0), (33, 0), (34, 3), (34, 12), (31, 15), (0, 15)], z_mm=-3, mat=M['steel'], seg=16)
+    round_x('HandguardCap', 652, [(0, 0), (30, 0), (30, 7), (0, 7)], z_mm=-3, mat=M['steel'], seg=14)
+    # front sight: A-frame body (side) stays below the sight line; ears + post built in rear view with an open
+    # channel along x, post tip at z 53 (aperture centre) so it sits in the middle of the peep hole
+    side('FrontSightBase', mm([(657, -14), (690, -14), (690, 14), (684, 14), (680, 38), (666, 38), (662, 14),
+                               (657, 14)]).difference(mm([(668, 18), (678, 18), (676, 31), (670, 31)])), 26,
+         M['steel'], 3)
+    front('FrontSightEars', G.rbox(-12 * W, 36 * S, 12 * W, 62 * S, 1.5 * S).difference(
+        G.rbox(-6.5 * W, 41 * S, 6.5 * W, 70 * S, 1.5 * S)), 666, 680, M['steel'], 2)
+    front('SightPost', G.rbox(-1.8 * W, 38 * S, 1.8 * W, 53 * S, 0.4 * S), 670, 676, M['bright'], 0.6)
+    round_x('Barrel', 470, [(0, 0), (9, 0), (9, 220), (8.2, 224), (8.2, 313), (0, 313)], mat=M['roundsteel'], seg=12)
+    hider = [(0, 0), (11, 0)]
+    for i in range(3):
+        x = 6 + i * 15
+        hider += [(11, x), (9, x + 2), (9, x + 11), (11, x + 13)]
+    hider += [(11, 52), (10, 55), (0, 55)]
+    round_x('FlashHider', 783, hider, mat=M['roundsteel'], seg=8)
 
     # ---- moving parts
-    trig = G.P([(1.115, -0.085), (1.14, -0.085), (1.135, -0.13), (1.12, -0.175), (1.105, -0.17), (1.115, -0.12)])
-    B['Trigger'].append(G.side('Trigger', trig, 0.025, col, M['bright'], chamfer=0.005))
-    B['Selector'].append(G.side('Selector', G.P([(1.0, -0.035), (1.06, -0.015), (1.06, 0.005), (1.0, 0.0)]), 0.012,
-                                col, M['steel'], y=-0.068, chamfer=0.003))
-    ch = unary_union([G.rbox(0.9, 0.17, 1.0, 0.2, 0.006)])
-    B['ChargingHandle'].append(G.side('ChargingHandle', ch, 0.05, col, M['steel'], chamfer=0.006))
-    B['ChargingHandle'].append(G.side('ChargingLatch', G.rbox(0.88, 0.165, 0.92, 0.205, 0.008), 0.17, col, M['steel'],
-                                      chamfer=0.008))
-    B['BoltCarrier'].append(G.side('BoltCarrier', G.rbox(1.1, 0.09, 1.42, 0.16, 0.01), 0.1, col, M['bright'],
-                                   chamfer=0.01))
-    dc = G.rbox(1.15, 0.083, 1.37, 0.167, 0.006)
-    B['DustCover'].append(G.side('DustCover', dc, 0.012, col, M['receiver'], y=0.069, chamfer=0.004))
-    mag = G.P([(1.205, -0.06), (1.415, -0.06), (1.43, -0.32), (1.47, -0.62), (1.45, -0.68), (1.27, -0.68),
-               (1.245, -0.62), (1.21, -0.32)])
-    B['Magazine'].append(G.side('Magazine', mag, 0.09, col, M['mag'], chamfer=0.014))
-    B['Magazine'].append(G.side('MagRibs', unary_union([G.rbox(1.24 + 0.006 * i, -0.2 - 0.12 * i, 1.42 + 0.01 * i,
-                                                                -0.17 - 0.12 * i, 0.008) for i in range(4)]),
-                                0.098, col, M['mag'], chamfer=0.005))
-    B['Magazine'].append(G.side('MagBase', G.rbox(1.25, -0.72, 1.48, -0.66, 0.012), 0.11, col, M['furniture'],
-                                chamfer=0.012))
+    side('Trigger', mm([(361, -38), (369, -38), (369, -50), (365, -62), (358, -71), (354, -69), (360, -58), (362, -48)]),
+         7, M['bright'], 1.2, bone='Trigger')
+    side('Selector', mm([(312, -32), (330, -28), (330, -23), (312, -26)]), 3, M['steel'], 0.8, y_mm=-21,
+         bone='Selector')
+    side('ChargingHandle', mmbox(276, 17, 300, 27, 2), 14, M['steel'], 2, bone='ChargingHandle')
+    side('ChargingLatch', mmbox(276, 16, 287, 28, 3), 50, M['steel'], 2.5, bone='ChargingHandle')
+    side('BoltCarrier', mmbox(360, -9, 455, 11, 3), 26, M['bright'], 2.5, bone='BoltCarrier')
+    side('DustCover', mmbox(372, -12, 443, 14, 2), 4, M['receiver'], 1, y_mm=19, bone='DustCover')
+    mag = mm([(398, -50), (468, -50), (470, -110), (480, -170), (496, -226), (434, -238), (424, -226), (412, -170),
+              (402, -110)])
+    side('Magazine', mag, 28, M['mag'], 4, bone='Magazine')
+    ribs = unary_union([mm([(395, -120 - i * 22), (505, -120 - i * 22), (505, -112 - i * 22), (395, -112 - i * 22)])
+                        for i in range(4)]).intersection(mag.buffer(-4 * S))
+    side('MagRibs', ribs, 30, M['mag'], 1.5, bone='Magazine')
+    side('MagBase', mm([(430, -250), (502, -238), (500, -226), (428, -236)]), 32, M['furniture'], 3, bone='Magazine')
     for k in B:
         G.apply(B[k])
     return col, M, B
@@ -159,12 +171,12 @@ def build():
 
 BONES = {   # bone: (head, tail, parent) in authoring coords; tails point +Z (see gunkit.rig axes note)
     'Root': ((GRIP[0], 0, GRIP[2]), (GRIP[0], 0, GRIP[2] + 0.2), None),
-    'Trigger': ((1.125, 0, -0.088), (1.125, 0, 0.012), 'Root'),
-    'Magazine': ((1.31, 0, -0.06), (1.31, 0, 0.04), 'Root'),
-    'ChargingHandle': ((0.95, 0, 0.185), (0.95, 0, 0.285), 'Root'),
-    'BoltCarrier': ((1.26, 0, 0.125), (1.26, 0, 0.225), 'Root'),
-    'DustCover': ((1.26, 0.069, 0.083), (1.26, 0.069, 0.183), 'Root'),
-    'Selector': ((1.02, -0.068, -0.012), (1.02, -0.068, 0.088), 'Root'),
+    'Trigger': ((365 * S, 0, -36 * S), (365 * S, 0, -36 * S + 0.1), 'Root'),
+    'Magazine': ((433 * S, 0, -50 * S), (433 * S, 0, -50 * S + 0.1), 'Root'),
+    'ChargingHandle': ((288 * S, 0, 22 * S), (288 * S, 0, 22 * S + 0.1), 'Root'),
+    'BoltCarrier': ((406 * S, 0, 0.0), (406 * S, 0, 0.1), 'Root'),
+    'DustCover': ((408 * S, 19 * W, -12 * S), (408 * S, 19 * W, -12 * S + 0.1), 'Root'),
+    'Selector': ((314 * S, -21 * W, -29 * S), (314 * S, -21 * W, -29 * S + 0.1), 'Root'),
 }
 # pose axes for a +Z-pointing bone (roll 0): loc (dx, dz, -dy) world; rot about world Y -> (0,0,-a), world X -> (a,0,0)
 
@@ -177,7 +189,7 @@ def animate(arm):
             G.key(arm, b, f, loc=(0, 0, 0), rot=(0, 0, 0))
 
     acts['Fire'] = G.new_action(arm, 'Fire')                     # 1 shot @ ~800 rpm: 2.25 frames ~ use 4-frame cycle
-    for f, tr, bolt, dc in ((1, 0, 0, 0), (2, -14, -0.12, -100), (3, -14, -0.2, -100), (4, -6, -0.05, -100), (5, 0, 0, -100)):
+    for f, tr, bolt, dc in ((1, 0, 0, 0), (2, -14, -0.13, -100), (3, -14, -0.215, -100), (4, -6, -0.05, -100), (5, 0, 0, -100)):
         G.key(arm, 'Trigger', f, rot=(0, 0, -tr))
         G.key(arm, 'BoltCarrier', f, loc=(bolt, 0, 0))
         G.key(arm, 'DustCover', f, rot=(dc, 0, 0))
@@ -248,10 +260,47 @@ EVENTS = {
     'Reload_Empty': {'MagOut': 0.3, 'MagIn': 1.65, 'BoltRelease': 2.2, 'AmmoCommit': 2.25, 'End': 2.6},
     'Inspect': {'End': 3.0},
 }
-ATTACH = {   # authoring coords
-    'GripRight': GRIP, 'RightHandIK': GRIP, 'LeftHandIK': (1.95, 0.0, 0.0), 'GripLeft': (1.95, 0.0, 0.0),
-    'Muzzle': (2.95, 0.0, BORE), 'ADS': (1.08, 0.0, 0.33), 'Ejection': (1.26, 0.075, 0.125),
-    'MagazineSeat': (1.31, 0.0, -0.06),
+
+def sight_check(mesh, rv):
+    """Sight picture from the ADS attachment down the bore + ray test: the post must be the first thing the
+    centre line meets, and lines just above/beside the post must escape (nothing blocking the sight line)."""
+    from mathutils.bvhtree import BVHTree
+    bpy.context.view_layer.update()
+    ads = bpy.data.objects['ADS'].matrix_world.translation.copy()
+    fwd = (bpy.data.objects['Muzzle'].matrix_world.translation - ads)
+    fwd.z = 0
+    fwd.normalize()
+    up = Vector((0, 0, 1))
+    right = fwd.cross(up).normalized()
+    dg = bpy.context.evaluated_depsgraph_get()
+    tree = BVHTree.FromObject(mesh, dg)
+    post_d = (673 - 312) * S
+    res = {}
+    for tag, dz, dy, want_hit in (('centre_below_tip', -1.5, 0, True), ('above_tip', 2.5, 0, False),
+                                  ('left_of_post', 0, -3.5, False), ('right_of_post', 0, 3.5, False)):
+        # aim at a point beside / above the post tip at the post's distance
+        tgt = ads + fwd * post_d + up * (dz * S) + right * (dy * W)
+        d = (tgt - ads).normalized()
+        hit = tree.ray_cast(ads + d * 1e-4, d, 10.0)
+        dist = None if hit[0] is None else round((hit[0] - ads).length / S, 1)
+        ok = (dist is not None and abs(dist - (post_d / S)) < 8) if want_hit else (dist is None)
+        res[tag] = {'hit_mm': dist, 'ok': ok}
+    print('SIGHT_CHECK', json.dumps(res))
+    sc = bpy.context.scene
+    cam = sc.camera
+    cam.data.type = 'PERSP'
+    cam.data.lens = 60
+    cam.data.clip_start = 0.002
+    cam.location = ads - fwd * 0.12
+    cam.rotation_euler = fwd.to_track_quat('-Z', 'Y').to_euler()
+    sc.render.resolution_x, sc.render.resolution_y = 900, 600
+    stage.render(os.path.join(rv, f'{ID}_sight_picture.png'), samples=32)
+    return res
+
+ATTACH = {   # authoring coords (real-world placements)
+    'GripRight': GRIP, 'RightHandIK': GRIP, 'LeftHandIK': (590 * S, 0.0, -32 * S), 'GripLeft': (590 * S, 0.0, -32 * S),
+    'Muzzle': (838 * S, 0.0, 0.0), 'ADS': (312 * S, 0.0, 53 * S), 'Ejection': (408 * S, 20 * W, 0.0),
+    'MagazineSeat': (433 * S, 0.0, -50 * S),
 }
 
 
@@ -364,6 +413,7 @@ if __name__ == '__main__':
         view = 'side' if v == 'side' else 'three_quarter'
         stage.ortho_camera([mesh], view, res=res)
         stage.render(os.path.join(rv, f'{ID}_{v}.png'), samples=48)
+    sight_check(mesh, rv)
     for actn, frames in (('Reload_Empty', (1, 14, 22, 40, 52, 63, 68)), ('Inspect', (1, 30, 58, 66))):
         arm.animation_data.action = acts[actn]
         for f in frames:

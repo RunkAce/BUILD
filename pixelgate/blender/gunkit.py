@@ -39,8 +39,11 @@ MASK = {'Body': (1, 0, 0), 'Furniture': (0, 1, 0), 'MetalAccent': (0, 0, 1), 'Ma
 def mats(prefix, roles):
     """roles: {role_name: (factory_key, mask_slot)} -> {role_name: material}; stores mask slot on material."""
     out = {}
-    for i, (role, (key, slot)) in enumerate(roles.items()):
-        m = paint.painted(f'{prefix}_{role}', FACTORY[key], height=3.0, seed=i * 1.9, streak=0.35, bevel_radius=0.005, ao_dist=0.025, flat_light=True)
+    for i, (role, spec) in enumerate(roles.items()):
+        key, slot = spec[0], spec[1]
+        flat = spec[2] if len(spec) > 2 else True       # False for round/lathed parts (smooth light, no facet banding)
+        m = paint.painted(f'{prefix}_{role}', FACTORY[key], height=3.0, seed=i * 1.9, streak=0.35, bevel_radius=0.005,
+                          ao_dist=0.025, flat_light=flat)
         m['mask_slot'] = slot
         out[role] = m
     return out

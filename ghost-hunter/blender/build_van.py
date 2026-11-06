@@ -47,8 +47,8 @@ PROF = K.P([(0, 1.4), (19.95, 1.4), (20.2, 1.95), (20.2, 3.55), (19.95, 4.25), (
             (15.0, 9.1), (0.4, 9.1), (0, 8.7)], r=0.18)
 WS_A, WS_B = Vector((17.95, 0, 4.8)), Vector((15.65, 0, 8.5))           # windshield line (side view)
 DOOR = K.P([(15.05, 1.62), (17.98, 1.62), (17.98, 4.72), (15.6, 8.4), (15.05, 8.4)])
-SLIDE = K.rbox(10.2, FLOOR + 0.05, 14.55, 8.45, 0.08)
-REAR = (2.1, 8.6, 3.45)      # rear opening z0, z1, half width
+SLIDE = K.rbox(10.2, FLOOR + 0.05, 14.55, 8.68, 0.08)   # 6.6 studs clear: tall avatars walk in
+REAR = (FLOOR - 0.02, 8.7, 3.45)   # rear opening z0 (no sill: flush with the floor), z1, half width
 ARCHES = [Point(AX_R, WR).buffer(ARCH_R, 24), Point(AX_F, WR).buffer(ARCH_R, 24)]
 FRONT_DOOR = DOOR.difference(ARCHES[1].buffer(0.06)).buffer(-0.05, join_style='mitre')
 
@@ -147,8 +147,13 @@ def build(col, M):
 
     # ------------------------------------------------------------ exterior trim on the body
     add('Body', K.block('FrontBumper', 19.55, -HW + 0.05, 1.45, 20.6, HW - 0.05, 2.35, col, M['trim'], 0.15))
-    add('Body', K.block('RearBumper', -0.35, -HW + 0.05, 1.45, 0.6, HW - 0.05, 2.15, col, M['trim'], 0.12))
-    add('Body', K.block('RearStep', -0.75, -1.6, 1.55, -0.2, 1.6, 1.8, col, M['steel'], 0.04))
+    # rear entry: bumper top sits just under the cargo floor, two steps below it -> every rise <= 0.7 stud,
+    # so R6/R15 avatars walk in without jumping (ground 0 -> 0.66 -> 1.3 -> bumper 1.93 -> floor 1.95)
+    add('Body', K.block('RearBumper', -0.35, -HW + 0.05, 1.2, 0.6, HW - 0.05, 1.93, col, M['trim'], 0.1))
+    add('Body', K.block('RearStepMid', -1.15, -1.7, 1.1, -0.3, 1.7, 1.3, col, M['steel'], 0.04))
+    add('Body', K.block('RearStepLow', -1.95, -1.7, 0.46, -0.3, 1.7, 0.66, col, M['steel'], 0.04))
+    for yy in (-1.5, 1.5):
+        add('Body', K.block(f'RearStepHanger{yy}', -0.5, yy - 0.12, 0.46, -0.3, yy + 0.12, 1.25, col, M['trim'], 0.02))
     add('Body', K.front('GrilleFrame', K.rbox(-2.25, 2.45, 2.25, 3.85, 0.2), 20.12, 20.3, col, M['trim'], 0.05))
     for i in range(4):
         z = 2.65 + i * 0.3
@@ -178,7 +183,12 @@ def build(col, M):
     for y in (-1.6, 1.4):
         add('Body', K.rod(f'Wiper{y}', (17.75, y - 0.9, 5.05), (17.25, y + 0.6, 5.75), 0.035, col, M['trim'], 6))
     # side step under the sliding door, fuel cap, exhaust
-    add('Body', K.block('SideStep', 10.4, -HW - 0.3, 1.15, 14.35, -HW + 0.4, 1.4, col, M['steel'], 0.04))
+    # side entry: two running steps under the sliding door (0 -> 0.7 -> 1.4 -> floor 1.95)
+    add('Body', K.block('SideStep', 10.4, -HW - 0.85, 1.15, 14.35, -HW + 0.4, 1.4, col, M['steel'], 0.04))
+    add('Body', K.block('SideStepLow', 10.4, -HW - 1.7, 0.5, 14.35, -HW - 0.8, 0.7, col, M['steel'], 0.04))
+    for xx in (10.8, 13.95):
+        add('Body', K.block(f'SideStepHanger{xx}', xx - 0.12, -HW - 1.0, 0.5, xx + 0.12, -HW - 0.8, 1.2, col,
+                            M['trim'], 0.02))
     add('Body', K.lathe_y('FuelCap', [(0, 0), (0.28, 0), (0.3, 0.03), (0.3, 0.06), (0, 0.06)], col, M['trim'],
                           (12.2, HW - 0.02, 4.0), 12))
     add('Body', K.lathe_x('Exhaust', [(0, 0), (0.16, 0), (0.16, 1.4), (0.2, 1.45), (0.2, 1.7), (0, 1.7)], col,
@@ -220,7 +230,7 @@ def build(col, M):
                        y=s * (HW + 0.005)))
         add(nm, K.side(f'{nm}Stripe', FRONT_DOOR.intersection(K.rbox(0, 2.85, 40, 3.2)), 0.04, col, M['stripe'],
                        0.01, y=s * (HW + 0.005)))
-        add('Glass', K.side(f'{nm}Glass', win_door.buffer(0.03), 0.05, col, M['glass'], 0.01, y=s * (HW - T / 2)))
+        add(f'{nm}Glass', K.side(f'{nm}Glass', win_door.buffer(0.03), 0.05, col, M['glass'], 0.01, y=s * (HW - T / 2)))
     slide = SLIDE.buffer(-0.05, join_style='mitre')
     add('SlidingDoor', K.side('SlidingDoor', slide, T, col, M['paint'], 0.05, y=-(HW - T / 2)))
     add('SlidingDoor', K.block('SlideHandle', 13.6, -HW - 0.08, 4.3, 14.2, -HW + 0.02, 4.45, col, M['trim'], 0.02))
@@ -236,7 +246,7 @@ def build(col, M):
         add(nm, K.front(f'{nm}Skirt', panel.intersection(K.rbox(-9, 0, 9, 2.6)), -0.01, 0.0, col, M['skirt'], 0.004))
         add(nm, K.front(f'{nm}Stripe', panel.intersection(K.rbox(-9, 2.85, 9, 3.2)), -0.01, 0.0, col, M['stripe'],
                         0.004))
-        add('Glass', K.front(f'{nm}Glass', win.buffer(0.03), 0.1, 0.15, col, M['glass'], 0.01))
+        add(f'{nm}Glass', K.front(f'{nm}Glass', win.buffer(0.03), 0.1, 0.15, col, M['glass'], 0.01))
         add(nm, K.block(f'{nm}Handle', -0.08, s * 0.3 - 0.25, 4.9, 0.0, s * 0.3 + 0.25, 5.05, col, M['trim'], 0.01))
         for zz in (2.9, 7.6):     # hinges
             add('Body', K.block(f'{nm}Hinge{zz}', -0.1, s * hy - 0.18, zz, 0.05, s * hy + 0.12, zz + 0.45, col,
@@ -344,9 +354,10 @@ def build(col, M):
         add(I, K.block(f'SeatBase{s}', 15.25, yc - 0.8, FLOOR, 16.45, yc + 0.8, 3.38, col, M['case'], 0.05))
         add(I, K.side(f'Headrest{s}', K.P([(15.0, 6.45), (15.45, 6.45), (15.4, 7.2), (14.95, 7.2)], r=0.1), 1.1, col,
                       M['seat'], 0.1, y=yc))
-    add(I, K.rod('GearStick', (16.4, 0.0, 3.4), (16.1, 0.0, 4.2), 0.05, col, M['steel'], 6))
+    # dash-mounted shifter (keeps the cab aisle clear for walking through to the seats)
+    add(I, K.rod('GearStick', (16.6, 0.0, 4.1), (16.45, 0.0, 4.55), 0.05, col, M['steel'], 6))
     add(I, K.lathe_z('GearKnob', [(0, 0), (0.12, 0.02), (0.14, 0.12), (0.08, 0.22), (0, 0.22)], col, M['trim'],
-                     (16.1, 0.0, 4.15), 8))
+                     (16.45, 0.0, 4.5), 8))
     # cab bulkhead pillars (leave the walk-through open)
     for s in (1, -1):
         ya, yb = (wy - 1.0, wy) if s > 0 else (-wy, -wy + 1.0)
@@ -442,7 +453,8 @@ BAKE_GROUPS = {   # one texture set per group, shared by its MeshParts
     'Interior': (['Interior', 'SteeringWheel'], 2048),
     'Wheels': (['Wheel_FL', 'Wheel_FR', 'Wheel_RL', 'Wheel_RR'], 1024),
 }
-FLAT = {'Glass': 'glass', 'HeadLights': 'head', 'TailLights': 'tail', 'LightBar': 'bar', 'CabinLights': 'cabinlight',
+FLAT = {'Glass': 'glass', 'FrontDoorLGlass': 'glass', 'FrontDoorRGlass': 'glass', 'RearDoorLGlass': 'glass',
+        'RearDoorRGlass': 'glass', 'HeadLights': 'head', 'TailLights': 'tail', 'LightBar': 'bar', 'CabinLights': 'cabinlight',
         'Screen1': 'screen', 'Screen2': 'screen', 'Screen3': 'screen'}
 FRONT_HINGE_X = 17.98
 
@@ -454,6 +466,8 @@ def pivots(screens):
           'SteeringWheel': (16.15, 2.15, 5.35),
           'Wheel_FL': (AX_F, WY, WR), 'Wheel_FR': (AX_F, -WY, WR), 'Wheel_RL': (AX_R, WY, WR),
           'Wheel_RR': (AX_R, -WY, WR)}
+    for d in ('FrontDoorL', 'FrontDoorR', 'RearDoorL', 'RearDoorR'):
+        pv[f'{d}Glass'] = pv[d]
     for i, (c, _) in enumerate(screens):
         pv[f'Screen{i + 1}'] = c
     return pv
@@ -539,7 +553,8 @@ def write_config(stats):
         'Neon': {'HeadLights': [255, 244, 214], 'TailLights': [224, 38, 46], 'LightBar': [108, 255, 176],
                  'CabinLights': [158, 247, 255], 'Screen1': [45, 224, 138], 'Screen2': [45, 224, 138],
                  'Screen3': [45, 224, 138]},
-        'Glass': {'Part': 'Glass', 'Color': [14, 22, 24], 'Transparency': 0.55},
+        'Glass': {'Parts': ['Glass', 'FrontDoorLGlass', 'FrontDoorRGlass', 'RearDoorLGlass', 'RearDoorRGlass'],
+                  'Color': [14, 22, 24], 'Transparency': 0.55},
         'NoCollide': ['HeadLights', 'TailLights', 'LightBar', 'CabinLights', 'Screen1', 'Screen2', 'Screen3',
                       'SteeringWheel'],
     }
@@ -547,6 +562,8 @@ def write_config(stats):
         e = dict(d)
         hinge = Vector(game_pos(pivots([])[n]))
         e['HingeOffset'] = [round(x, 3) for x in (hinge - Vector(P[n]['box_centre']))]   # from the part's centre
+        if f'{n}Glass' in P:
+            e['Attached'] = [f'{n}Glass']       # moves with the door
         cfg['Doors'][n] = e
     path = os.path.join(OUT, 'Roblox', 'GhostVanConfig.luau')
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -609,7 +626,7 @@ def finish(col, M, J, screens):
     stats['points'] = {k: game_pos(v) for k, v in {
         'DriverSeat': (15.85, 2.15, 3.7), 'PassengerSeat': (15.85, -2.15, 3.7), 'Stool': (7.3, 1.3, FLOOR + 1.7),
         'CabinLight': (7.5, 0, ROOF - 0.6), 'HeadLightL': (20.3, 3.05, 3.15), 'HeadLightR': (20.3, -3.05, 3.15),
-        'LightBar': (14.0, 0, ROOF + 0.8), 'RearEntry': (-1.5, 0, 0.0), 'SideEntry': (12.4, -HW - 1.5, 0.0),
+        'LightBar': (14.0, 0, ROOF + 0.8), 'RearEntry': (-3.0, 0, 0.0), 'SideEntry': (12.4, -HW - 2.0, 0.0),
         'Spotlight': (11.45, 2.3, ROOF + 0.62)}.items()}
     stats['screens'] = {f'Screen{i + 1}': {'centre': game_pos(c), 'size': list(sz), 'faces': 'Right (+X, into the cabin)'}
                         for i, (c, sz) in enumerate(screens)}

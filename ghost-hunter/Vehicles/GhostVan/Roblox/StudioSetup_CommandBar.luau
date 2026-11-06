@@ -12,6 +12,8 @@ local fidelity = {
 	FrontDoorL = Enum.CollisionFidelity.Hull, FrontDoorR = Enum.CollisionFidelity.Hull,
 	RearDoorL = Enum.CollisionFidelity.Hull, RearDoorR = Enum.CollisionFidelity.Hull,
 	SlidingDoor = Enum.CollisionFidelity.Box, Glass = Enum.CollisionFidelity.Hull,
+	FrontDoorLGlass = Enum.CollisionFidelity.Box, FrontDoorRGlass = Enum.CollisionFidelity.Box,
+	RearDoorLGlass = Enum.CollisionFidelity.Box, RearDoorRGlass = Enum.CollisionFidelity.Box,
 	Wheel_FL = Enum.CollisionFidelity.Hull, Wheel_FR = Enum.CollisionFidelity.Hull,
 	Wheel_RL = Enum.CollisionFidelity.Hull, Wheel_RR = Enum.CollisionFidelity.Hull,
 }

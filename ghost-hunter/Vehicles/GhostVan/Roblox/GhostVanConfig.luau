@@ -4,33 +4,37 @@
 return {
 	Name = "GhostVan",
 	BodyPart = "Body",
-	BodyBoxCentre = Vector3.new(0.0, 6.41, 1.12),
+	BodyBoxCentre = Vector3.new(0.49, 6.41, 1.445),
 	Doors = {
 		FrontDoorL = {
 			Kind = "Hinge",
 			Angle = -72,
 			HingeOffset = Vector3.new(-0.035, -0.01, -1.465),
+			Attached = { "FrontDoorLGlass" },
 		},
 		FrontDoorR = {
 			Kind = "Hinge",
 			Angle = 72,
 			HingeOffset = Vector3.new(0.035, -0.01, -1.465),
+			Attached = { "FrontDoorRGlass" },
 		},
 		RearDoorL = {
 			Kind = "Hinge",
 			Angle = -100,
-			HingeOffset = Vector3.new(-1.725, -0.05, 0.085),
+			HingeOffset = Vector3.new(-1.725, -0.015, 0.085),
+			Attached = { "RearDoorLGlass" },
 		},
 		RearDoorR = {
 			Kind = "Hinge",
 			Angle = 100,
-			HingeOffset = Vector3.new(1.725, -0.05, -0.053),
+			HingeOffset = Vector3.new(1.725, -0.015, -0.053),
+			Attached = { "RearDoorRGlass" },
 		},
 		SlidingDoor = {
 			Kind = "Slide",
 			Out = 0.42,
 			Back = 4.4,
-			HingeOffset = Vector3.new(0.085, -0.025, 0.0),
+			HingeOffset = Vector3.new(0.085, -0.14, 0.0),
 		},
 	},
 	Points = {
@@ -41,8 +45,8 @@ return {
 		HeadLightL = Vector3.new(-3.05, 3.15, -9.5),
 		HeadLightR = Vector3.new(3.05, 3.15, -9.5),
 		LightBar = Vector3.new(0.0, 9.9, -3.2),
-		RearEntry = Vector3.new(-0.0, 0.0, 12.3),
-		SideEntry = Vector3.new(5.5, 0.0, -1.6),
+		RearEntry = Vector3.new(-0.0, 0.0, 13.8),
+		SideEntry = Vector3.new(6.0, 0.0, -1.6),
 		Spotlight = Vector3.new(-2.3, 9.72, -0.65),
 	},
 	Screens = {
@@ -89,7 +93,7 @@ return {
 		Screen3 = Vector3.new(45, 224, 138),
 	},
 	Glass = {
-		Part = "Glass",
+		Parts = { "Glass", "FrontDoorLGlass", "FrontDoorRGlass", "RearDoorLGlass", "RearDoorRGlass" },
 		Color = Vector3.new(14, 22, 24),
 		Transparency = 0.55,
 	},

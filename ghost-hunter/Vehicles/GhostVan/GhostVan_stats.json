@@ -3,7 +3,7 @@
  "units": "studs",
  "parts": {
   "Body": {
-   "triangles": 10777,
+   "triangles": 11007,
    "pivot": [
     0.0,
     0.0,
@@ -11,21 +11,21 @@
    ],
    "texture_set": "Exterior",
    "health": {
-    "non_manifold_edges": 1503,
+    "non_manifold_edges": 1577,
     "loose_verts": 0,
     "zero_area_faces": 0,
-    "signed_volume": 318.347322,
+    "signed_volume": 314.373237,
     "normals_outward": true
    },
    "box_centre": [
-    0.0,
+    0.49,
     6.41,
-    1.12
+    1.445
    ],
    "box_size": [
-    9.44,
+    10.42,
     11.92,
-    21.96
+    22.61
    ]
   },
   "FrontDoorL": {
@@ -92,22 +92,22 @@
     "non_manifold_edges": 0,
     "loose_verts": 0,
     "zero_area_faces": 0,
-    "signed_volume": 6.858825,
+    "signed_volume": 7.10228,
     "normals_outward": true
    },
    "box_centre": [
     3.915,
-    5.225,
+    5.34,
     -1.575
    ],
    "box_size": [
     0.33,
-    6.35,
+    6.58,
     4.25
    ]
   },
   "RearDoorL": {
-   "triangles": 728,
+   "triangles": 716,
    "pivot": [
     -3.45,
     5.3,
@@ -118,22 +118,22 @@
     "non_manifold_edges": 0,
     "loose_verts": 0,
     "zero_area_faces": 0,
-    "signed_volume": 4.257078,
+    "signed_volume": 4.49048,
     "normals_outward": true
    },
    "box_centre": [
     -1.725,
-    5.35,
+    5.315,
     10.715
    ],
    "box_size": [
     3.39,
-    6.44,
+    6.71,
     0.33
    ]
   },
   "RearDoorR": {
-   "triangles": 1056,
+   "triangles": 1040,
    "pivot": [
     3.45,
     5.3,
@@ -144,22 +144,22 @@
     "non_manifold_edges": 0,
     "loose_verts": 0,
     "zero_area_faces": 0,
-    "signed_volume": 4.428448,
+    "signed_volume": 4.661992,
     "normals_outward": true
    },
    "box_centre": [
     1.725,
-    5.35,
+    5.315,
     10.853
    ],
    "box_size": [
     3.39,
-    6.44,
+    6.71,
     0.605
    ]
   },
   "Interior": {
-   "triangles": 3433,
+   "triangles": 3445,
    "pivot": [
     0.0,
     0.0,
@@ -167,10 +167,10 @@
    ],
    "texture_set": "Interior",
    "health": {
-    "non_manifold_edges": 959,
+    "non_manifold_edges": 961,
     "loose_verts": 0,
     "zero_area_faces": 0,
-    "signed_volume": 138.391142,
+    "signed_volume": 140.698679,
     "normals_outward": true
    },
    "box_centre": [
@@ -315,7 +315,7 @@
    ]
   },
   "Glass": {
-   "triangles": 1004,
+   "triangles": 12,
    "pivot": [
     0.0,
     0.0,
@@ -326,18 +326,122 @@
     "non_manifold_edges": 0,
     "loose_verts": 0,
     "zero_area_faces": 0,
-    "signed_volume": 2.216645,
+    "signed_volume": 1.352742,
     "normals_outward": true
    },
    "box_centre": [
     0.0,
     6.597,
-    1.864
+    -5.915
    ],
    "box_size": [
-    7.8,
+    6.9,
     3.356,
-    17.671
+    2.112
+   ]
+  },
+  "FrontDoorLGlass": {
+   "triangles": 164,
+   "pivot": [
+    -3.95,
+    5.0,
+    -7.18
+   ],
+   "texture_set": null,
+   "health": {
+    "non_manifold_edges": 0,
+    "loose_verts": 0,
+    "zero_area_faces": 0,
+    "signed_volume": 0.185132,
+    "normals_outward": true
+   },
+   "box_centre": [
+    -3.875,
+    6.555,
+    -5.596
+   ],
+   "box_size": [
+    0.05,
+    3.17,
+    2.173
+   ]
+  },
+  "FrontDoorRGlass": {
+   "triangles": 164,
+   "pivot": [
+    3.95,
+    5.0,
+    -7.18
+   ],
+   "texture_set": null,
+   "health": {
+    "non_manifold_edges": 0,
+    "loose_verts": 0,
+    "zero_area_faces": 0,
+    "signed_volume": 0.185132,
+    "normals_outward": true
+   },
+   "box_centre": [
+    3.875,
+    6.555,
+    -5.596
+   ],
+   "box_size": [
+    0.05,
+    3.17,
+    2.173
+   ]
+  },
+  "RearDoorLGlass": {
+   "triangles": 332,
+   "pivot": [
+    -3.45,
+    5.3,
+    10.8
+   ],
+   "texture_set": null,
+   "health": {
+    "non_manifold_edges": 0,
+    "loose_verts": 0,
+    "zero_area_faces": 0,
+    "signed_volume": 0.246822,
+    "normals_outward": true
+   },
+   "box_centre": [
+    -1.675,
+    6.95,
+    10.675
+   ],
+   "box_size": [
+    2.55,
+    1.96,
+    0.05
+   ]
+  },
+  "RearDoorRGlass": {
+   "triangles": 332,
+   "pivot": [
+    3.45,
+    5.3,
+    10.8
+   ],
+   "texture_set": null,
+   "health": {
+    "non_manifold_edges": 0,
+    "loose_verts": 0,
+    "zero_area_faces": 0,
+    "signed_volume": 0.246822,
+    "normals_outward": true
+   },
+   "box_centre": [
+    1.675,
+    6.95,
+    10.675
+   ],
+   "box_size": [
+    2.55,
+    1.96,
+    0.05
    ]
   },
   "HeadLights": {
@@ -523,13 +627,13 @@
    ]
   }
  },
- "hidden_faces_removed": 3628,
- "triangles_before_optimise": 30074,
- "triangles_total": 24582,
+ "hidden_faces_removed": 3683,
+ "triangles_before_optimise": 30354,
+ "triangles_total": 24796,
  "bounds_roblox": {
-  "size_x_width": 9.44,
+  "size_x_width": 10.42,
   "size_y_height": 12.35,
-  "size_z_length": 21.96
+  "size_z_length": 22.61
  },
  "textures": {
   "Exterior": {
@@ -590,10 +694,10 @@
   "RearEntry": [
    -0.0,
    0.0,
-   12.3
+   13.8
   ],
   "SideEntry": [
-   5.5,
+   6.0,
    0.0,
    -1.6
   ],

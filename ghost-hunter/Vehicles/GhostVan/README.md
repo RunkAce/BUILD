@@ -10,10 +10,11 @@ This is an original high-roof panel van. It has no real make, no badges and no c
 
 | | |
 |---|---|
-| Overall | about 9.4 wide (with mirrors) x 12.4 tall (with antennas) x 22 long (with the rear step) |
+| Overall | about 10.4 wide (with the side steps) x 12.4 tall (with antennas) x 22.6 long (with the rear steps) |
 | Body box | 8 wide x 9.1 tall to the roof x 20.2 long |
 | Cargo floor | 1.95 studs off the ground; about 6.8 studs of headroom (an R6 avatar is 5 tall) |
-| Rear opening | 6.9 wide x 6.5 tall. The side sliding door is 4.3 x 6.4 |
+| Rear opening | 6.9 wide x 6.75 tall, flush with the floor. The side sliding door is 4.3 wide x 6.7 tall |
+| Steps | Rear: 0.66, 1.3, then the bumper at 1.93. Side: 0.7, then 1.4. Every rise is 0.7 studs or less, so avatars walk in without jumping |
 
 **Orientation:** the front faces **-Z (LookVector)**, up is +Y, and the driver side is -X (left). The model origin is on the ground, halfway between the axles.
 
@@ -41,19 +42,35 @@ This is an original high-roof panel van. It has no real make, no badges and no c
 | Interior | Interior | The HQ furniture, the cab and the dash. |
 | SteeringWheel | Interior | Its own part, so it can turn. |
 | Wheel_FL / FR / RL / RR | Wheels | Each part's box centre is its axle centre. They are ready for HingeConstraints if you ever make the van drivable. |
-| Glass | (none) | Every window. The script sets it to Glass at 0.55 transparency. |
+| Glass | (none) | The windshield. The script sets it to Glass at 0.55 transparency. |
+| FrontDoorLGlass / FrontDoorRGlass / RearDoorLGlass / RearDoorRGlass | (none) | Each door's window, a separate part. The door script moves it with its door. |
 | HeadLights, TailLights, LightBar, CabinLights | (none) | The script sets them to Neon and adds a SpotLight, PointLights and a SurfaceLight. |
 | Screen1 / 2 / 3 | (none) | The monitor screens face +X (into the van). Each gets a SurfaceGui called `Feed`, so you can swap in camera feeds or EMF readouts. |
 
 ## Setting it up in Studio
 
-1. **Import:** go to File > Import 3D, choose `Exports/GhostVan.fbx` and keep it as one model. Check that it comes in about 22 studs long. If it doesn't, set the importer's unit to make it match.
+1. **Import:** go to File > Import 3D, choose `Exports/GhostVan.fbx` and keep it as one model. Check that it comes in about 22.6 studs long. If it doesn't, set the importer's unit to make it match.
 2. **Textures:** upload the 12 PNGs from `Textures/`. Paste the asset ids into `GhostVanConfig.TextureSets`.
 3. **Scripts:** put `GhostVanConfig` (as a ModuleScript) and `GhostVanSetup` (as a Script) inside the model.
 4. **Command Bar:** select the model and run `StudioSetup_CommandBar.luau` in the Command Bar. That sets the collision fidelity and the SurfaceAppearances.
 5. **Lights:** turn them on or off from any server script with `van:SetAttribute("LightsOn", false)`.
 
 Move or rotate the whole model with `Model:PivotTo()`, never single parts. The door hinges are worked out in the van's own frame.
+
+## Avatar fit
+
+Tested in Blender with `blender/fitcheck.py`. It places avatar-sized collision boxes at each spot, with the doors open, and checks that nothing overlaps.
+
+| Spot | R6 (5 tall) | R15 (5.3 tall) | Tall avatar (6.6) | Headroom |
+|---|---|---|---|---|
+| Rear doorway | fits | fits | fits | 6.77 |
+| Cargo HQ, front to back | fits | fits | fits | 6.85 |
+| Side doorway | fits | fits | fits | 6.68 |
+| Walk-through into the cab | fits | fits | fits | 6.85 |
+| Standing in the cab | fits | fits | too low | 6.16 |
+| Seats | head clears with 3.7 studs above the cab cushions and 5 above the desk stool | | | |
+
+The aisle between the desk and the shelves is 4.65 wide, so an R6 avatar with arms out (4 wide) fits down the middle. R6 arms don't collide, so if you hug one side they only clip through the shelves or stool visually.
 
 ## Checked so far
 

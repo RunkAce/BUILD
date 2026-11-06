@@ -43,12 +43,14 @@ for n, c in Config.Neon do
 		p.CastShadow = false
 	end
 end
-local glass = part(Config.Glass.Part)
-if glass then
-	glass.Material = Enum.Material.Glass
-	glass.Color = rgb(Config.Glass.Color)
-	glass.Transparency = Config.Glass.Transparency
-	glass.CastShadow = false
+for _, n in Config.Glass.Parts do
+	local glass = part(n)
+	if glass then
+		glass.Material = Enum.Material.Glass
+		glass.Color = rgb(Config.Glass.Color)
+		glass.Transparency = Config.Glass.Transparency
+		glass.CastShadow = false
+	end
 end
 
 -- ------------------------------------------------------------------ screens: SurfaceGui ready for camera feeds
@@ -143,6 +145,14 @@ local function makeDoor(name: string, d: any)
 	local closed = p.CFrame
 	local hinge = closed * CFrame.new(d.HingeOffset)        -- door parts share the van's orientation
 	local rel = hinge:Inverse() * closed
+	-- parts that ride along with the door (its window glass): keep their offset from the door
+	local riders: { { part: BasePart, offset: CFrame } } = {}
+	for _, an in d.Attached or {} do
+		local a = part(an)
+		if a then
+			table.insert(riders, { part = a, offset = closed:Inverse() * a.CFrame })
+		end
+	end
 	local t = Instance.new("NumberValue")
 	t.Name = "OpenAmount"
 	t.Parent = p
@@ -154,6 +164,9 @@ local function makeDoor(name: string, d: any)
 			local out = math.clamp(a / 0.25, 0, 1)
 			local back = math.clamp((a - 0.25) / 0.75, 0, 1)
 			p.CFrame = closed * CFrame.new(d.Out * out, 0, d.Back * back)
+		end
+		for _, r in riders do
+			r.part.CFrame = p.CFrame * r.offset
 		end
 	end)
 	local prompt = Instance.new("ProximityPrompt")
